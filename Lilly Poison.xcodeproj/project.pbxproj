@@ -10,6 +10,8 @@
 		13794DDA16EBE0C6003EF093 /* LPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DD916EBE0C6003EF093 /* LPDataSource.m */; };
 		13794DDD16EBE223003EF093 /* LPTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DDC16EBE223003EF093 /* LPTableViewController.m */; };
 		13794DE016EBF463003EF093 /* LPEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DDF16EBF462003EF093 /* LPEntry.m */; };
+		13794DE216EBFF75003EF093 /* test-1.html in Resources */ = {isa = PBXBuildFile; fileRef = 13794DE116EBFF75003EF093 /* test-1.html */; };
+		13794DE516EC000A003EF093 /* LPEntryCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DE416EC000A003EF093 /* LPEntryCell.m */; };
 		13EB1A1F16EBA9EE00170579 /* LPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EB1A1E16EBA9EE00170579 /* LPMainViewController.m */; };
 		13EB1A2216EBAB3A00170579 /* LPInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EB1A2116EBAB3A00170579 /* LPInfoViewController.m */; };
 		13EB1A2516EBABCA00170579 /* swollowed.html in Resources */ = {isa = PBXBuildFile; fileRef = 13EB1A2416EBABCA00170579 /* swollowed.html */; };
@@ -57,6 +59,9 @@
 		13794DDC16EBE223003EF093 /* LPTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTableViewController.m; sourceTree = "<group>"; };
 		13794DDE16EBF462003EF093 /* LPEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPEntry.h; sourceTree = "<group>"; };
 		13794DDF16EBF462003EF093 /* LPEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPEntry.m; sourceTree = "<group>"; };
+		13794DE116EBFF75003EF093 /* test-1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "test-1.html"; sourceTree = "<group>"; };
+		13794DE316EC000A003EF093 /* LPEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPEntryCell.h; sourceTree = "<group>"; };
+		13794DE416EC000A003EF093 /* LPEntryCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPEntryCell.m; sourceTree = "<group>"; };
 		13EB1A1D16EBA9EE00170579 /* LPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPMainViewController.h; sourceTree = "<group>"; };
 		13EB1A1E16EBA9EE00170579 /* LPMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPMainViewController.m; sourceTree = "<group>"; };
 		13EB1A2016EBAB3A00170579 /* LPInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPInfoViewController.h; sourceTree = "<group>"; };
@@ -128,6 +133,7 @@
 				13EB1A2416EBABCA00170579 /* swollowed.html */,
 				13EB1A2C16EBCC5600170579 /* header.html */,
 				13EB1A2E16EBCC6600170579 /* footer.html */,
+				13794DE116EBFF75003EF093 /* test-1.html */,
 			);
 			name = content;
 			sourceTree = "<group>";
@@ -182,6 +188,8 @@
 				13794DDC16EBE223003EF093 /* LPTableViewController.m */,
 				13794DDE16EBF462003EF093 /* LPEntry.h */,
 				13794DDF16EBF462003EF093 /* LPEntry.m */,
+				13794DE316EC000A003EF093 /* LPEntryCell.h */,
+				13794DE416EC000A003EF093 /* LPEntryCell.m */,
 			);
 			name = "Lilly Poison";
 			path = "Lilly Poisen";
@@ -305,6 +313,7 @@
 				13EB1A2D16EBCC5600170579 /* header.html in Resources */,
 				13EB1A2F16EBCC6600170579 /* footer.html in Resources */,
 				13EB1A3116EBD1FB00170579 /* style.css in Resources */,
+				13794DE216EBFF75003EF093 /* test-1.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -348,6 +357,7 @@
 				13794DDA16EBE0C6003EF093 /* LPDataSource.m in Sources */,
 				13794DDD16EBE223003EF093 /* LPTableViewController.m in Sources */,
 				13794DE016EBF463003EF093 /* LPEntry.m in Sources */,
+				13794DE516EC000A003EF093 /* LPEntryCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

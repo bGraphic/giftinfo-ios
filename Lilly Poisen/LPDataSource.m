@@ -8,6 +8,7 @@
 
 #import "LPDataSource.h"
 #import "LPEntry.h"
+#import "LPEntryCell.h"
 
 @interface LPDataSource ()
 
@@ -23,10 +24,10 @@
 
     if(self)
     {
-        LPEntry *entry1 = [LPEntry entryWithKey:@"white-sprite" andName:@"White Sprite" withSynonyms:@"hvit sprit"];
-        LPEntry *entry2 = [LPEntry entryWithKey:@"baby-oil" andName:@"Baby Oil" withSynonyms:@"barne olje"];
-        LPEntry *entry3 = [LPEntry entryWithKey:@"petrol" andName:@"Bensin" withSynonyms:@"petrol"];
-        LPEntry *entry4 = [LPEntry entryWithKey:@"test" andName:@"Test" withSynonyms:@"test, prøve, hei på deg, hei"];
+        LPEntry *entry1 = [LPEntry entryWithKey:@"test-1" andName:@"White Sprite" withSynonyms:@"hvit sprit"];
+        LPEntry *entry2 = [LPEntry entryWithKey:@"test-1" andName:@"Baby Oil" withSynonyms:@"barne olje"];
+        LPEntry *entry3 = [LPEntry entryWithKey:@"test-1" andName:@"Bensin" withSynonyms:@"petrol"];
+        LPEntry *entry4 = [LPEntry entryWithKey:@"test-1" andName:@"Test" withSynonyms:@"test, prøve, hei på deg, hei"];
         
         self.poisonData = [NSArray arrayWithObjects:entry1, entry2, entry3, entry4, nil];
     }
@@ -85,12 +86,12 @@
 {
     static NSString *CellIdentifier = @"PoisonCell";
     
-    [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
+    [tableView registerClass:[LPEntryCell class] forCellReuseIdentifier:CellIdentifier];
     
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     if(!cell)
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[LPEntryCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     
 
     LPEntry *poisonEntry;
