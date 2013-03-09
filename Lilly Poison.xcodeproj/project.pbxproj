@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13794DDA16EBE0C6003EF093 /* LPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DD916EBE0C6003EF093 /* LPDataSource.m */; };
+		13794DDD16EBE223003EF093 /* LPTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DDC16EBE223003EF093 /* LPTableViewController.m */; };
 		13EB1A1F16EBA9EE00170579 /* LPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EB1A1E16EBA9EE00170579 /* LPMainViewController.m */; };
 		13EB1A2216EBAB3A00170579 /* LPInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EB1A2116EBAB3A00170579 /* LPInfoViewController.m */; };
 		13EB1A2516EBABCA00170579 /* swollowed.html in Resources */ = {isa = PBXBuildFile; fileRef = 13EB1A2416EBABCA00170579 /* swollowed.html */; };
@@ -48,6 +50,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		13794DD816EBE0C6003EF093 /* LPDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPDataSource.h; sourceTree = "<group>"; };
+		13794DD916EBE0C6003EF093 /* LPDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPDataSource.m; sourceTree = "<group>"; };
+		13794DDB16EBE223003EF093 /* LPTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTableViewController.h; sourceTree = "<group>"; };
+		13794DDC16EBE223003EF093 /* LPTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTableViewController.m; sourceTree = "<group>"; };
 		13EB1A1D16EBA9EE00170579 /* LPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPMainViewController.h; sourceTree = "<group>"; };
 		13EB1A1E16EBA9EE00170579 /* LPMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPMainViewController.m; sourceTree = "<group>"; };
 		13EB1A2016EBAB3A00170579 /* LPInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPInfoViewController.h; sourceTree = "<group>"; };
@@ -167,6 +173,10 @@
 				13EB1A1E16EBA9EE00170579 /* LPMainViewController.m */,
 				13EB1A2016EBAB3A00170579 /* LPInfoViewController.h */,
 				13EB1A2116EBAB3A00170579 /* LPInfoViewController.m */,
+				13794DD816EBE0C6003EF093 /* LPDataSource.h */,
+				13794DD916EBE0C6003EF093 /* LPDataSource.m */,
+				13794DDB16EBE223003EF093 /* LPTableViewController.h */,
+				13794DDC16EBE223003EF093 /* LPTableViewController.m */,
 			);
 			name = "Lilly Poison";
 			path = "Lilly Poisen";
@@ -330,6 +340,8 @@
 				13EC392416EB9FE8005244BD /* Lilly_Poisen.xcdatamodeld in Sources */,
 				13EB1A1F16EBA9EE00170579 /* LPMainViewController.m in Sources */,
 				13EB1A2216EBAB3A00170579 /* LPInfoViewController.m in Sources */,
+				13794DDA16EBE0C6003EF093 /* LPDataSource.m in Sources */,
+				13794DDD16EBE223003EF093 /* LPTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
