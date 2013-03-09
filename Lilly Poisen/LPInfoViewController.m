@@ -10,7 +10,7 @@
 
 @interface LPInfoViewController ()
 
-@property NSURL *contentUrl;
+//@property NSURL *contentUrl;q
 
 @end
 
@@ -40,15 +40,6 @@
     {
         _contentKey = newContentKey;
         
-        @try {
-            self.contentUrl = [NSURL fileURLWithPath:[[NSBundle mainBundle]
-                                                      pathForResource:newContentKey ofType:@"html"] isDirectory:NO];
-        } @catch (NSException *ex)
-        {
-            NSLog(@"Could not find file: %@ because: %@", newContentKey, ex.description);
-        }
-        
-        // Update the view.
         [self configureView];
     }
 }
@@ -56,9 +47,36 @@
 - (void)configureView
 {
     // Update the user interface for the detail item.
-    if (self.contentUrl)
+    if (self.contentKey)
     {
-        [self.webView loadRequest:[NSURLRequest requestWithURL:self.contentUrl]];
+        NSString *headerPath = [[NSBundle mainBundle] pathForResource:@"header" ofType:@"html"];
+        
+        NSError *headerError;
+        NSString *headerString = [NSString stringWithContentsOfFile:headerPath encoding:NSUTF8StringEncoding error:&headerError];
+        
+        if(headerError)
+            NSLog(@"Problems loading content %@", headerError.description);
+        
+        NSString *contentPath = [[NSBundle mainBundle] pathForResource:self.contentKey ofType:@"html"];
+        
+        NSError *contentError;
+        NSString *contentString = [NSString stringWithContentsOfFile:contentPath encoding:NSUTF8StringEncoding error:&contentError];
+        
+        if(contentError)
+            NSLog(@"Problems loading content %@", contentError.description);
+        
+        NSString *footerPath = [[NSBundle mainBundle] pathForResource:@"footer" ofType:@"html"];
+        
+        NSError *footerError;
+        NSString *footerString = [NSString stringWithContentsOfFile:footerPath encoding:NSUTF8StringEncoding error:&footerError];
+        
+        if(footerError)
+            NSLog(@"Problems loading content %@", footerError.description);
+        
+        
+        NSString *htmlString = [NSString stringWithFormat:@"%@\n%@\n%@", headerString, contentString, footerString];
+        
+        [self.webView loadHTMLString:htmlString baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] resourcePath]]];
     }
 }
 

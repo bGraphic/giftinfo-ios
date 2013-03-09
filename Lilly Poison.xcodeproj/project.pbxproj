@@ -13,6 +13,9 @@
 		13EB1A2916EBC25A00170579 /* eye_contact.html in Resources */ = {isa = PBXBuildFile; fileRef = 13EB1A2616EBC25A00170579 /* eye_contact.html */; };
 		13EB1A2A16EBC25A00170579 /* inhaled.html in Resources */ = {isa = PBXBuildFile; fileRef = 13EB1A2716EBC25A00170579 /* inhaled.html */; };
 		13EB1A2B16EBC25A00170579 /* skin_contact.html in Resources */ = {isa = PBXBuildFile; fileRef = 13EB1A2816EBC25A00170579 /* skin_contact.html */; };
+		13EB1A2D16EBCC5600170579 /* header.html in Resources */ = {isa = PBXBuildFile; fileRef = 13EB1A2C16EBCC5600170579 /* header.html */; };
+		13EB1A2F16EBCC6600170579 /* footer.html in Resources */ = {isa = PBXBuildFile; fileRef = 13EB1A2E16EBCC6600170579 /* footer.html */; };
+		13EB1A3116EBD1FB00170579 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 13EB1A3016EBD1FB00170579 /* style.css */; };
 		13EC390916EB9FE8005244BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390816EB9FE8005244BD /* UIKit.framework */; };
 		13EC390B16EB9FE8005244BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390A16EB9FE8005244BD /* Foundation.framework */; };
 		13EC390D16EB9FE8005244BD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390C16EB9FE8005244BD /* CoreGraphics.framework */; };
@@ -53,6 +56,9 @@
 		13EB1A2616EBC25A00170579 /* eye_contact.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = eye_contact.html; sourceTree = "<group>"; };
 		13EB1A2716EBC25A00170579 /* inhaled.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = inhaled.html; sourceTree = "<group>"; };
 		13EB1A2816EBC25A00170579 /* skin_contact.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = skin_contact.html; sourceTree = "<group>"; };
+		13EB1A2C16EBCC5600170579 /* header.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = header.html; sourceTree = "<group>"; };
+		13EB1A2E16EBCC6600170579 /* footer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = footer.html; sourceTree = "<group>"; };
+		13EB1A3016EBD1FB00170579 /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
 		13EC390516EB9FE8005244BD /* Lilly Poison.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lilly Poison.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13EC390816EB9FE8005244BD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		13EC390A16EB9FE8005244BD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -106,10 +112,13 @@
 		13EB1A2316EBABAD00170579 /* content */ = {
 			isa = PBXGroup;
 			children = (
+				13EB1A3016EBD1FB00170579 /* style.css */,
 				13EB1A2616EBC25A00170579 /* eye_contact.html */,
 				13EB1A2716EBC25A00170579 /* inhaled.html */,
 				13EB1A2816EBC25A00170579 /* skin_contact.html */,
 				13EB1A2416EBABCA00170579 /* swollowed.html */,
+				13EB1A2C16EBCC5600170579 /* header.html */,
+				13EB1A2E16EBCC6600170579 /* footer.html */,
 			);
 			name = content;
 			sourceTree = "<group>";
@@ -278,6 +287,9 @@
 				13EB1A2916EBC25A00170579 /* eye_contact.html in Resources */,
 				13EB1A2A16EBC25A00170579 /* inhaled.html in Resources */,
 				13EB1A2B16EBC25A00170579 /* skin_contact.html in Resources */,
+				13EB1A2D16EBCC5600170579 /* header.html in Resources */,
+				13EB1A2F16EBCC6600170579 /* footer.html in Resources */,
+				13EB1A3116EBD1FB00170579 /* style.css in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

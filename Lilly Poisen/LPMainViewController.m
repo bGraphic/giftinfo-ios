@@ -50,7 +50,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self performSegueWithIdentifier:@"showContent" sender:self];
+    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:self.tableView.indexPathForSelectedRow];
+    
+    if(cell.reuseIdentifier)
+        [self performSegueWithIdentifier:@"showContent" sender:self];
 }
 
 

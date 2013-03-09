@@ -236,9 +236,6 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Lilly Poison" id="gtV-VO-ut1"/>
-                    <connections>
-                        <segue destination="0y4-42-f1P" kind="push" identifier="openInfoHtml" id="Xau-Uj-pSE"/>
-                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mr7-O1-EqY" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -279,7 +276,4 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
-    <inferredMetricsTieBreakers>
-        <segue reference="jz9-s9-sn1"/>
-    </inferredMetricsTieBreakers>
 </document>
