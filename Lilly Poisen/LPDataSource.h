@@ -8,6 +8,6 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LPDataSource : NSObject <UITableViewDataSource>
+@interface LPDataSource : NSObject <UITableViewDataSource, UISearchDisplayDelegate>
 
 @end

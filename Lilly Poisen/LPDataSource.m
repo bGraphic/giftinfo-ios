@@ -11,6 +11,7 @@
 @interface LPDataSource ()
 
 @property NSArray *poisonData;
+@property NSMutableArray *filteredData;
 
 @end
 
@@ -27,6 +28,25 @@
     return self;
 }
 
+- (void) filterData:(NSString *) string
+{
+    self.filteredData = [[NSMutableArray alloc] initWithObjects:@"search", nil];
+}
+
+#pragma mark - Search Display Delegate
+
+- (void)searchDisplayController:(UISearchDisplayController *)controller didHideSearchResultsTableView:(UITableView *)tableView
+{
+    self.filteredData = nil;
+}
+
+- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
+{    
+    [self filterData:searchString];
+
+    return YES;
+}
+
 
 #pragma mark - Table view data source
 
@@ -37,7 +57,10 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return self.poisonData.count;
+    if(self.filteredData)
+        return self.filteredData.count;
+    else
+        return self.poisonData.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -51,7 +74,15 @@
     if(!cell)
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     
-    cell.textLabel.text = self.poisonData[indexPath.row];
+
+    NSString *poisonEntry;
+    
+    if(self.filteredData)
+        poisonEntry = self.filteredData[indexPath.row];
+    else
+        poisonEntry = self.poisonData[indexPath.row];
+    
+    cell.textLabel.text = poisonEntry;
     
     return cell;
 }

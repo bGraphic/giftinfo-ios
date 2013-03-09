@@ -191,7 +191,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gpp-FI-YGd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <searchDisplayController id="Ni7-ZO-UYb">
                     <connections>
-                        <outlet property="delegate" destination="uOL-K2-nVU" id="6yR-FN-Ib0"/>
+                        <outlet property="delegate" destination="8Ah-hN-KcZ" id="ytn-iz-GwD"/>
                         <outlet property="searchBar" destination="dze-g6-goy" id="UwG-FO-8H3"/>
                         <outlet property="searchContentsController" destination="uOL-K2-nVU" id="bIW-Tw-Jyb"/>
                         <outlet property="searchResultsDataSource" destination="8Ah-hN-KcZ" id="FPo-l0-CMH"/>
