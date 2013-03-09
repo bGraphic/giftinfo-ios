@@ -7,6 +7,7 @@
 //
 
 #import "LPDataSource.h"
+#import "LPEntry.h"
 
 @interface LPDataSource ()
 
@@ -22,7 +23,13 @@
 
     if(self)
     {
-        self.poisonData = [NSArray arrayWithObjects:@"poison a", @"poison b", @"poison c", @"poison d", nil];
+        LPEntry *entry1 = [LPEntry entryWithKey:@"white-sprite" andName:@"White Sprite" withSynonyms:@"hvit sprit"];
+        LPEntry *entry2 = [LPEntry entryWithKey:@"baby-oil" andName:@"Baby Oil" withSynonyms:@"barne olje"];
+        LPEntry *entry3 = [LPEntry entryWithKey:@"petrol" andName:@"Bensin" withSynonyms:@"petrol"];
+        LPEntry *entry4 = [LPEntry entryWithKey:@"test" andName:@"Test" withSynonyms:@"test, prøve, hei på deg, hei"];
+        
+        
+        self.poisonData = [NSArray arrayWithObjects:entry1, entry2, entry3, entry4, nil];
     }
     
     return self;
@@ -35,9 +42,14 @@
     else
         [self.filteredData removeAllObjects];
     
-    // Filter the array using NSPredicate
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF contains[c] %@", searchText];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name beginswith[c] %@", searchText];
     self.filteredData = [NSMutableArray arrayWithArray:[self.poisonData filteredArrayUsingPredicate:predicate]];
+    
+    if(self.filteredData.count == 0)
+    {
+        predicate = [NSPredicate predicateWithFormat:@"SELF.name contains[c] %@", searchText];
+        self.filteredData = [NSMutableArray arrayWithArray:[self.poisonData filteredArrayUsingPredicate:predicate]];
+    }
 }
 
 #pragma mark - Search Display Delegate
@@ -82,14 +94,14 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     
 
-    NSString *poisonEntry;
+    LPEntry *poisonEntry;
     
     if(self.filteredData)
         poisonEntry = self.filteredData[indexPath.row];
     else
         poisonEntry = self.poisonData[indexPath.row];
     
-    cell.textLabel.text = poisonEntry;
+    cell.textLabel.text = poisonEntry.name;
     
     return cell;
 }
