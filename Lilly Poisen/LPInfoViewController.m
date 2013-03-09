@@ -10,8 +10,6 @@
 
 @interface LPInfoViewController ()
 
-//@property NSURL *contentUrl;q
-
 @end
 
 @implementation LPInfoViewController
