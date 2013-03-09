@@ -43,6 +43,7 @@
     if([segue.identifier isEqualToString:@"showContent"] && cell.reuseIdentifier)
     {
         [[segue destinationViewController] setContentKey:cell.reuseIdentifier];
+        [[segue destinationViewController] setTitle:cell.textLabel.text];
     }
 }
 
