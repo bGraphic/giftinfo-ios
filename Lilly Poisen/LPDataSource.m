@@ -28,7 +28,6 @@
         LPEntry *entry3 = [LPEntry entryWithKey:@"petrol" andName:@"Bensin" withSynonyms:@"petrol"];
         LPEntry *entry4 = [LPEntry entryWithKey:@"test" andName:@"Test" withSynonyms:@"test, prøve, hei på deg, hei"];
         
-        
         self.poisonData = [NSArray arrayWithObjects:entry1, entry2, entry3, entry4, nil];
     }
     
