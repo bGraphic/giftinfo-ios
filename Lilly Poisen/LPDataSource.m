@@ -22,15 +22,22 @@
 
     if(self)
     {
-        self.poisonData = [NSArray arrayWithObjects:@"poison a", @"poison b", nil];
+        self.poisonData = [NSArray arrayWithObjects:@"poison a", @"poison b", @"poison c", @"poison d", nil];
     }
     
     return self;
 }
 
-- (void) filterData:(NSString *) string
+- (void) filterContentForSearchText:(NSString*)searchText
 {
-    self.filteredData = [[NSMutableArray alloc] initWithObjects:@"search", nil];
+    if(!self.filteredData)
+        self.filteredData = [NSMutableArray arrayWithCapacity:self.poisonData.count];
+    else
+        [self.filteredData removeAllObjects];
+    
+    // Filter the array using NSPredicate
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF contains[c] %@", searchText];
+    self.filteredData = [NSMutableArray arrayWithArray:[self.poisonData filteredArrayUsingPredicate:predicate]];
 }
 
 #pragma mark - Search Display Delegate
@@ -42,7 +49,7 @@
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
 {    
-    [self filterData:searchString];
+    [self filterContentForSearchText:searchString];
 
     return YES;
 }
