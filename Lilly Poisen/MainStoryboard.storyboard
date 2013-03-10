@@ -9,9 +9,9 @@
             <objects>
                 <navigationController definesPresentationContext="YES" toolbarHidden="NO" id="pIc-uV-b2x" sceneMemberID="viewController">
                     <toolbarItems>
-                        <barButtonItem title="22 22 22 22" width="149" id="U16-3s-RQo"/>
+                        <barButtonItem title="113" width="115" id="U16-3s-RQo"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="5u6-bO-73c"/>
-                        <barButtonItem title="113" width="149" id="Xp0-41-bW7"/>
+                        <barButtonItem title="Giftinformasjon: 22 59 13 00" width="185" id="Xp0-41-bW7"/>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nap-bd-yGA">
@@ -274,6 +274,26 @@
             <point key="canvasLocation" x="1368" y="146"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="LPDataSource" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPDataSource.h"/>
+        </class>
+        <class className="LPInfoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPInfoViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="LPMainViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPMainViewController.h"/>
+        </class>
+        <class className="LPTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTableViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
