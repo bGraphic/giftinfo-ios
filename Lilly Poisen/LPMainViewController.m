@@ -8,6 +8,7 @@
 
 #import "LPMainViewController.h"
 #import "LPInfoViewController.h"
+#import "LPEntryViewCell.h"
 
 @interface LPMainViewController ()
 
@@ -51,10 +52,27 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:self.tableView.indexPathForSelectedRow];
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:tableView.indexPathForSelectedRow];
     
-    if(cell.reuseIdentifier)
+    if([cell isKindOfClass:[LPEntryViewCell class]])
+    {
+        LPEntryViewCell *entryCell = (LPEntryViewCell *) cell;
+        
+        UIStoryboard * storyboard = self.storyboard;
+        
+        LPInfoViewController * detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
+        
+        detail.contentKey = entryCell.key;
+        detail.title = entryCell.name;
+        
+        NSLog(@"%@", entryCell.key);
+        
+        [self.navigationController pushViewController: detail animated: YES];
+    }
+    else if(cell.reuseIdentifier)
+    {
         [self performSegueWithIdentifier:@"showContent" sender:self];
+    }
 }
 
 @end

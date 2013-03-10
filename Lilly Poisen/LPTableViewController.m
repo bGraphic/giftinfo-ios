@@ -7,6 +7,8 @@
 //
 
 #import "LPTableViewController.h"
+#import "LPInfoViewController.h"
+#import "LPEntryViewCell.h"
 
 @interface LPTableViewController ()
 
@@ -17,6 +19,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.toolbarItems = self.navigationController.toolbarItems;
 }
 
 - (void)didReceiveMemoryWarning
@@ -25,6 +29,16 @@
     // Dispose of any resources that can be recreated.
 }
 
+#pragma mark - Segue
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    LPEntryViewCell *cell = (LPEntryViewCell *)[self.tableView cellForRowAtIndexPath:self.tableView.indexPathForSelectedRow];
+    
+    if([segue.identifier isEqualToString:@"showContent"] && cell.reuseIdentifier)
+    {
+        [[segue destinationViewController] setContentKey:cell.key];
+    }
+}
 
 #pragma mark - Table view delegate
 

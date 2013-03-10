@@ -8,12 +8,14 @@
 
 #import "LPDataSource.h"
 #import "LPEntry.h"
-#import "LPEntryCell.h"
+#import "LPEntryViewCell.h"
+#import "LPInfoViewController.h"
 
 @interface LPDataSource ()
 
 @property NSArray *poisonData;
 @property NSMutableArray *filteredData;
+@property NSString *selectedKey;
 
 @end
 
@@ -66,7 +68,6 @@
     return YES;
 }
 
-
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
@@ -86,12 +87,12 @@
 {
     static NSString *CellIdentifier = @"PoisonCell";
     
-    [tableView registerClass:[LPEntryCell class] forCellReuseIdentifier:CellIdentifier];
+    [tableView registerClass:[LPEntryViewCell class] forCellReuseIdentifier:CellIdentifier];
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    LPEntryViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     if(!cell)
-        cell = [[LPEntryCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[LPEntryViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     
 
     LPEntry *poisonEntry;
@@ -102,6 +103,8 @@
         poisonEntry = self.poisonData[indexPath.row];
     
     cell.textLabel.text = poisonEntry.name;
+    cell.key = poisonEntry.key;
+    cell.name = poisonEntry.name;
     
     return cell;
 }

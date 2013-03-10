@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LPEntryCell : UITableViewCell
+@interface LPEntryViewCell : UITableViewCell
 
 @property (strong, nonatomic) NSString *key;
+@property (strong, nonatomic) NSString *name;
 
 @end

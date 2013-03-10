@@ -6,8 +6,8 @@
 //  Copyright (c) 2013 bGraphic. All rights reserved.
 //
 
-#import "LPEntryCell.h"
+#import "LPEntryViewCell.h"
 
-@implementation LPEntryCell
+@implementation LPEntryViewCell
 
 @end

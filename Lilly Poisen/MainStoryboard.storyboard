@@ -217,16 +217,19 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Lilly Poison" id="gtV-VO-ut1"/>
+                    <connections>
+                        <segue destination="0y4-42-f1P" kind="push" identifier="showContent" id="bbA-9O-0sE"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mr7-O1-EqY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="QTu-MI-hN2" customClass="LPDataSource"/>
             </objects>
             <point key="canvasLocation" x="1005" y="-297"/>
         </scene>
-        <!--Info View Controller - Title-->
+        <!--contentView-->
         <scene sceneID="x43-hK-VcX">
             <objects>
-                <viewController id="0y4-42-f1P" customClass="LPInfoViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="contentView" storyboardIdentifier="contentView" title="contentView" id="0y4-42-f1P" userLabel="contentView" customClass="LPInfoViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="xLN-Dh-I94">
                         <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -258,4 +261,7 @@
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="jz9-s9-sn1"/>
+    </inferredMetricsTieBreakers>
 </document>
