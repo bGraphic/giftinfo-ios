@@ -54,20 +54,27 @@
 {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:tableView.indexPathForSelectedRow];
     
-    if([cell isKindOfClass:[LPEntryViewCell class]])
+    if(tableView == self.searchDisplayController.searchResultsTableView)
     {
-        LPEntryViewCell *entryCell = (LPEntryViewCell *) cell;
-        
         UIStoryboard * storyboard = self.storyboard;
         
-        LPInfoViewController * detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
-        
-        detail.contentKey = entryCell.key;
-        detail.title = entryCell.name;
-        
-        NSLog(@"%@", entryCell.key);
-        
-        [self.navigationController pushViewController: detail animated: YES];
+        if(indexPath.row != [tableView numberOfRowsInSection:indexPath.section]-1)
+        {
+            LPEntryViewCell *entryCell = (LPEntryViewCell *) cell;
+            
+            LPInfoViewController * detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
+            
+            detail.contentKey = entryCell.key;
+            detail.title = entryCell.name;
+            
+            [self.navigationController pushViewController: detail animated: YES];
+        }
+        else
+        {
+            LPInfoViewController * detail = [storyboard instantiateViewControllerWithIdentifier:@"tableView"];
+            
+            [self.navigationController pushViewController: detail animated: YES];
+        }
     }
     else if(cell.reuseIdentifier)
     {

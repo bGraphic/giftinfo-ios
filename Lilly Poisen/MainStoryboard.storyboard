@@ -202,10 +202,10 @@
             </objects>
             <point key="canvasLocation" x="466" y="-19"/>
         </scene>
-        <!--Table View Controller - Lilly Poison-->
+        <!--tableView-->
         <scene sceneID="BAK-QL-aKe">
             <objects>
-                <tableViewController id="FCD-TZ-I4L" customClass="LPTableViewController" sceneMemberID="viewController">
+                <tableViewController restorationIdentifier="tableView" storyboardIdentifier="tableView" title="tableView" id="FCD-TZ-I4L" userLabel="tableView" customClass="LPTableViewController" sceneMemberID="viewController">
                     <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="B6T-zB-ieJ">
                         <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -218,7 +218,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Lilly Poison" id="gtV-VO-ut1"/>
                     <connections>
-                        <segue destination="0y4-42-f1P" kind="push" identifier="showContent" id="bbA-9O-0sE"/>
+                        <segue destination="0y4-42-f1P" kind="push" identifier="showContent" id="ySr-81-ngl"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mr7-O1-EqY" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -253,15 +253,35 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7WZ-EQ-o5V" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1005" y="366"/>
+            <point key="canvasLocation" x="1368" y="146"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="LPDataSource" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPDataSource.h"/>
+        </class>
+        <class className="LPInfoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPInfoViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="LPMainViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPMainViewController.h"/>
+        </class>
+        <class className="LPTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTableViewController.h"/>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="jz9-s9-sn1"/>
+        <segue reference="ySr-81-ngl"/>
     </inferredMetricsTieBreakers>
 </document>

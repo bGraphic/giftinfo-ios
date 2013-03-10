@@ -78,17 +78,26 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     if(self.filteredData)
-        return self.filteredData.count;
+        return self.filteredData.count+1;
     else
         return self.poisonData.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    if(self.filteredData && indexPath.row == self.filteredData.count)
+    {   
+        static NSString *CellIdentifier = @"AllEntriesViewCell";
+        [tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:CellIdentifier];
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+        
+        cell.textLabel.text = @"Se over oversikt over alle stoffer";
+        
+        return cell;
+    }
+    
     static NSString *CellIdentifier = @"PoisonCell";
-    
     [tableView registerClass:[LPEntryViewCell class] forCellReuseIdentifier:CellIdentifier];
-    
     LPEntryViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     if(!cell)
