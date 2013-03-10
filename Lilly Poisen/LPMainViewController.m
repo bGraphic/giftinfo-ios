@@ -58,23 +58,14 @@
     {
         UIStoryboard * storyboard = self.storyboard;
         
-        if(indexPath.row != [tableView numberOfRowsInSection:indexPath.section]-1)
-        {
-            LPEntryViewCell *entryCell = (LPEntryViewCell *) cell;
-            
-            LPInfoViewController * detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
-            
-            detail.contentKey = entryCell.key;
-            detail.title = entryCell.name;
-            
-            [self.navigationController pushViewController: detail animated: YES];
-        }
-        else
-        {
-            LPInfoViewController * detail = [storyboard instantiateViewControllerWithIdentifier:@"tableView"];
-            
-            [self.navigationController pushViewController: detail animated: YES];
-        }
+        LPEntryViewCell *entryCell = (LPEntryViewCell *) cell;
+        
+        LPInfoViewController * detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
+        
+        detail.contentKey = entryCell.key;
+        detail.title = entryCell.name;
+        
+        [self.navigationController pushViewController: detail animated: YES];
     }
     else if(cell.reuseIdentifier)
     {
