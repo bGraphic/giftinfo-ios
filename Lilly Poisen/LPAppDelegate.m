@@ -7,6 +7,7 @@
 //
 
 #import "LPAppDelegate.h"
+#import "TestFlight.h"
 
 @implementation LPAppDelegate
 
@@ -16,6 +17,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
+    [self setUpTestFlight];
+    
     return YES;
 }
 
@@ -140,6 +143,16 @@
 - (NSURL *)applicationDocumentsDirectory
 {
     return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+}
+
+#pragma mark - Test Flight
+
+- (void)setUpTestFlight
+{
+#if ADHOC
+    [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
+    [TestFlight takeOff:@"2841f101-4339-4501-8a5d-bc6ceefe00b3"];
+#endif
 }
 
 @end
