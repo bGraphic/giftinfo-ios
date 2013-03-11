@@ -14,6 +14,7 @@
 @interface Poison : NSManagedObject
 
 @property (nonatomic, retain) NSString * key;
+@property (nonatomic, retain) NSString * name;
 @property (nonatomic, retain) NSSet *synonyms;
 @end
 

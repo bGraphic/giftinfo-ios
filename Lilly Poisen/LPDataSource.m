@@ -7,7 +7,9 @@
 //
 
 #import "LPDataSource.h"
-#import "LPEntry.h"
+#import "LPAppDelegate.h"
+#import "Poison.h"
+#import "Term.h"
 #import "LPEntryViewCell.h"
 #import "LPInfoViewController.h"
 
@@ -26,12 +28,26 @@
 
     if(self)
     {
-        LPEntry *entry1 = [LPEntry entryWithKey:@"test-1" andName:@"White Sprite" withSynonyms:@"hvit sprit"];
-        LPEntry *entry2 = [LPEntry entryWithKey:@"test-1" andName:@"Baby Oil" withSynonyms:@"barne olje"];
-        LPEntry *entry3 = [LPEntry entryWithKey:@"test-1" andName:@"Bensin" withSynonyms:@"petrol"];
-        LPEntry *entry4 = [LPEntry entryWithKey:@"test-1" andName:@"Test" withSynonyms:@"test, prøve, hei på deg, hei"];
+        LPAppDelegate *appDelegate = (LPAppDelegate *)[UIApplication sharedApplication].delegate;
+    
+        NSManagedObjectContext *context = appDelegate.managedObjectContext;
         
-        self.poisonData = [NSArray arrayWithObjects:entry1, entry2, entry3, entry4, nil];
+        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
+        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Poison"
+                                                  inManagedObjectContext:context];
+        
+        [fetchRequest setEntity:entity];
+        
+        NSError *error;
+        
+        self.poisonData = [context executeFetchRequest:fetchRequest error:&error];
+        for (Poison *poison in self.poisonData) {
+            NSLog(@"Poison: %@", poison.name);
+        }
+        
+        if (error) {
+            NSLog(@"Whoops, couldn't fetch: %@", [error localizedDescription]);
+        }
     }
     
     return self;
@@ -86,14 +102,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"PoisonCell";
+    
     [tableView registerClass:[LPEntryViewCell class] forCellReuseIdentifier:CellIdentifier];
     LPEntryViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
-    
-    if(!cell)
-        cell = [[LPEntryViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    
 
-    LPEntry *poisonEntry;
+    Poison *poisonEntry;
     
     if(self.filteredData)
         poisonEntry = self.filteredData[indexPath.row];
@@ -101,6 +114,12 @@
         poisonEntry = self.poisonData[indexPath.row];
     
     cell.textLabel.text = poisonEntry.name;
+    
+    for(Term *term in poisonEntry.synonyms)
+    {
+        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@", cell.detailTextLabel.text, term.term];
+    }
+    
     cell.key = poisonEntry.key;
     cell.name = poisonEntry.name;
     

@@ -13,6 +13,7 @@
 @implementation Poison
 
 @dynamic key;
+@dynamic name;
 @dynamic synonyms;
 
 @end
