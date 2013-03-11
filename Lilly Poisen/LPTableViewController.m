@@ -29,22 +29,22 @@
     // Dispose of any resources that can be recreated.
 }
 
-#pragma mark - Segue
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    LPEntryViewCell *cell = (LPEntryViewCell *)[self.tableView cellForRowAtIndexPath:self.tableView.indexPathForSelectedRow];
-    
-    if([segue.identifier isEqualToString:@"showContent"] && cell.reuseIdentifier)
-    {
-        [[segue destinationViewController] setContentKey:cell.key];
-    }
-}
-
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    [self performSegueWithIdentifier:@"showContent" sender:self];
+    UITableViewCell *cell = [tableView cellForRowAtIndexPath:tableView.indexPathForSelectedRow];
+    
+    UIStoryboard * storyboard = self.storyboard;
+    
+    LPEntryViewCell *entryCell = (LPEntryViewCell *) cell;
+    
+    LPInfoViewController * detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
+    
+    detail.contentKey = entryCell.key;
+    detail.title = entryCell.name;
+    
+    [self.navigationController pushViewController: detail animated: YES];
 }
 
 @end

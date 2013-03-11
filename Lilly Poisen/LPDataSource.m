@@ -15,7 +15,10 @@
 
 @interface LPDataSource ()
 
+@property (nonatomic) NSManagedObjectContext *context;
+
 @property NSArray *poisonData;
+@property NSArray *termData;
 @property NSMutableArray *filteredData;
 @property NSString *selectedKey;
 
@@ -28,19 +31,15 @@
 
     if(self)
     {
-        LPAppDelegate *appDelegate = (LPAppDelegate *)[UIApplication sharedApplication].delegate;
-    
-        NSManagedObjectContext *context = appDelegate.managedObjectContext;
-        
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
         NSEntityDescription *entity = [NSEntityDescription entityForName:@"Poison"
-                                                  inManagedObjectContext:context];
+                                                  inManagedObjectContext:self.context];
         
         [fetchRequest setEntity:entity];
         
         NSError *error;
         
-        self.poisonData = [context executeFetchRequest:fetchRequest error:&error];
+        self.poisonData = [self.context executeFetchRequest:fetchRequest error:&error];
         for (Poison *poison in self.poisonData) {
             NSLog(@"Poison: %@", poison.name);
         }
@@ -53,19 +52,27 @@
     return self;
 }
 
+- (NSManagedObjectContext *) context
+{
+    LPAppDelegate *appDelegate = (LPAppDelegate *)[UIApplication sharedApplication].delegate;
+    
+    return appDelegate.managedObjectContext;
+}
+
 - (void) filterContentForSearchText:(NSString*)searchText
 {
+
     if(!self.filteredData)
         self.filteredData = [NSMutableArray arrayWithCapacity:self.poisonData.count];
     else
         [self.filteredData removeAllObjects];
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"SELF.name beginswith[c] %@", searchText];
-    self.filteredData = [NSMutableArray arrayWithArray:[self.poisonData filteredArrayUsingPredicate:predicate]];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ANY SELF.synonyms.term beginswith[c] %@", searchText];
+    self.filteredData = [NSMutableArray arrayWithArray:[self.filteredData filteredArrayUsingPredicate:predicate]];
     
     if(self.filteredData.count == 0)
     {
-        predicate = [NSPredicate predicateWithFormat:@"SELF.name contains[c] %@", searchText];
+        predicate = [NSPredicate predicateWithFormat:@"ANY SELF.synonyms.term contains[c] %@", searchText];
         self.filteredData = [NSMutableArray arrayWithArray:[self.poisonData filteredArrayUsingPredicate:predicate]];
     }
 }
@@ -113,15 +120,21 @@
     else
         poisonEntry = self.poisonData[indexPath.row];
     
-    cell.textLabel.text = poisonEntry.name;
+    NSString *synonymsString;
     
     for(Term *term in poisonEntry.synonyms)
     {
-        cell.detailTextLabel.text = [NSString stringWithFormat:@"%@, %@", cell.detailTextLabel.text, term.term];
+        if(!synonymsString)
+            synonymsString = term.term;
+        else
+            synonymsString = [NSString stringWithFormat:@"%@, %@", synonymsString, term.term];
     }
     
     cell.key = poisonEntry.key;
     cell.name = poisonEntry.name;
+    
+    cell.textLabel.text = poisonEntry.name;
+    cell.detailTextLabel.text = synonymsString;
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
