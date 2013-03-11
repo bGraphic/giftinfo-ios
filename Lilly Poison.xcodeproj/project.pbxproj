@@ -11,7 +11,6 @@
 		131341D216EDF78700734F5E /* Poison.m in Sources */ = {isa = PBXBuildFile; fileRef = 131341D116EDF78700734F5E /* Poison.m */; };
 		13794DDA16EBE0C6003EF093 /* LPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DD916EBE0C6003EF093 /* LPDataSource.m */; };
 		13794DDD16EBE223003EF093 /* LPTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DDC16EBE223003EF093 /* LPTableViewController.m */; };
-		13794DE016EBF463003EF093 /* LPEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DDF16EBF462003EF093 /* LPEntry.m */; };
 		13794DE216EBFF75003EF093 /* test-1.html in Resources */ = {isa = PBXBuildFile; fileRef = 13794DE116EBFF75003EF093 /* test-1.html */; };
 		13794DE516EC000A003EF093 /* LPEntryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DE416EC000A003EF093 /* LPEntryViewCell.m */; };
 		1397DDA116ED099C0061087F /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1397DD9D16ED099C0061087F /* libTestFlight.a */; };
@@ -67,8 +66,6 @@
 		13794DD916EBE0C6003EF093 /* LPDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPDataSource.m; sourceTree = "<group>"; };
 		13794DDB16EBE223003EF093 /* LPTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTableViewController.h; sourceTree = "<group>"; };
 		13794DDC16EBE223003EF093 /* LPTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTableViewController.m; sourceTree = "<group>"; };
-		13794DDE16EBF462003EF093 /* LPEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPEntry.h; sourceTree = "<group>"; };
-		13794DDF16EBF462003EF093 /* LPEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPEntry.m; sourceTree = "<group>"; };
 		13794DE116EBFF75003EF093 /* test-1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "test-1.html"; sourceTree = "<group>"; };
 		13794DE316EC000A003EF093 /* LPEntryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPEntryViewCell.h; sourceTree = "<group>"; };
 		13794DE416EC000A003EF093 /* LPEntryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPEntryViewCell.m; sourceTree = "<group>"; };
@@ -141,6 +138,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		131341D316EE0C0200734F5E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				13EC392216EB9FE8005244BD /* Lilly_Poisen.xcdatamodeld */,
+				131341D016EDF78700734F5E /* Poison.h */,
+				131341D116EDF78700734F5E /* Poison.m */,
+				131341C416EDF08900734F5E /* Term.h */,
+				131341C516EDF08900734F5E /* Term.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		131341D416EE0C3B00734F5E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				13EB1A1D16EBA9EE00170579 /* LPMainViewController.h */,
+				13EB1A1E16EBA9EE00170579 /* LPMainViewController.m */,
+				13EB1A2016EBAB3A00170579 /* LPInfoViewController.h */,
+				13EB1A2116EBAB3A00170579 /* LPInfoViewController.m */,
+				13794DDB16EBE223003EF093 /* LPTableViewController.h */,
+				13794DDC16EBE223003EF093 /* LPTableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		1397DD9C16ED099C0061087F /* TestFlightSDK1.2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -152,7 +174,7 @@
 			path = TestFlightSDK1.2;
 			sourceTree = "<group>";
 		};
-		13EB1A2316EBABAD00170579 /* content */ = {
+		13EB1A2316EBABAD00170579 /* Content */ = {
 			isa = PBXGroup;
 			children = (
 				13EB1A3016EBD1FB00170579 /* style.css */,
@@ -164,7 +186,7 @@
 				13EB1A2E16EBCC6600170579 /* footer.html */,
 				13794DE116EBFF75003EF093 /* test-1.html */,
 			);
-			name = content;
+			name = Content;
 			sourceTree = "<group>";
 		};
 		13EC38FC16EB9FE8005244BD = {
@@ -204,26 +226,15 @@
 		13EC391016EB9FE8005244BD /* Lilly Poison */ = {
 			isa = PBXGroup;
 			children = (
-				13EB1A2316EBABAD00170579 /* content */,
+				131341D416EE0C3B00734F5E /* Controller */,
+				131341D316EE0C0200734F5E /* Model */,
+				13EB1A2316EBABAD00170579 /* Content */,
 				13EC391916EB9FE8005244BD /* LPAppDelegate.h */,
 				13EC391A16EB9FE8005244BD /* LPAppDelegate.m */,
-				13EC392216EB9FE8005244BD /* Lilly_Poisen.xcdatamodeld */,
-				131341D016EDF78700734F5E /* Poison.h */,
-				131341D116EDF78700734F5E /* Poison.m */,
-				131341C416EDF08900734F5E /* Term.h */,
-				131341C516EDF08900734F5E /* Term.m */,
 				13EC391116EB9FE8005244BD /* Supporting Files */,
 				13EC394316EBA0A8005244BD /* MainStoryboard.storyboard */,
-				13EB1A1D16EBA9EE00170579 /* LPMainViewController.h */,
-				13EB1A1E16EBA9EE00170579 /* LPMainViewController.m */,
-				13EB1A2016EBAB3A00170579 /* LPInfoViewController.h */,
-				13EB1A2116EBAB3A00170579 /* LPInfoViewController.m */,
 				13794DD816EBE0C6003EF093 /* LPDataSource.h */,
 				13794DD916EBE0C6003EF093 /* LPDataSource.m */,
-				13794DDB16EBE223003EF093 /* LPTableViewController.h */,
-				13794DDC16EBE223003EF093 /* LPTableViewController.m */,
-				13794DDE16EBF462003EF093 /* LPEntry.h */,
-				13794DDF16EBF462003EF093 /* LPEntry.m */,
 				13794DE316EC000A003EF093 /* LPEntryViewCell.h */,
 				13794DE416EC000A003EF093 /* LPEntryViewCell.m */,
 			);
@@ -394,7 +405,6 @@
 				13EB1A2216EBAB3A00170579 /* LPInfoViewController.m in Sources */,
 				13794DDA16EBE0C6003EF093 /* LPDataSource.m in Sources */,
 				13794DDD16EBE223003EF093 /* LPTableViewController.m in Sources */,
-				13794DE016EBF463003EF093 /* LPEntry.m in Sources */,
 				13794DE516EC000A003EF093 /* LPEntryViewCell.m in Sources */,
 				131341C616EDF08900734F5E /* Term.m in Sources */,
 				131341D216EDF78700734F5E /* Poison.m in Sources */,
