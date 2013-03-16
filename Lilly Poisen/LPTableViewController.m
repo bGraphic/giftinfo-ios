@@ -8,7 +8,7 @@
 
 #import "LPTableViewController.h"
 #import "LPInfoViewController.h"
-#import "LPEntryViewCell.h"
+#import "Poison+LPEntry.h"
 
 @interface LPTableViewController ()
 
@@ -40,7 +40,7 @@
     
     Poison *poison = [self.dataSource getPoisonAtIndexPath:indexPath];
     
-    detail.contentKey = poison.key;
+    detail.htmlContentString = poison.htmlString;
     detail.title = poison.name;
     
     [self.navigationController pushViewController: detail animated: YES];

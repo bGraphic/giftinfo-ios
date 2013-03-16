@@ -8,7 +8,7 @@
 
 #import "LPMainViewController.h"
 #import "LPInfoViewController.h"
-#import "Poison.h"
+#import "Poison+LPEntry.h"
 
 @interface LPMainViewController ()
 
@@ -46,7 +46,16 @@
     
     if([segue.identifier isEqualToString:@"showContent"] && cell.reuseIdentifier)
     {
-        [[segue destinationViewController] setContentKey:cell.reuseIdentifier];
+        NSString *contentPath = [[NSBundle mainBundle] pathForResource:cell.reuseIdentifier ofType:@"html"];
+        
+        NSError *contentError;
+        NSString *contentString = [NSString stringWithContentsOfFile:contentPath encoding:NSUTF8StringEncoding error:&contentError];
+        
+        if(contentError)
+            NSLog(@"Problems loading content %@", contentError.description);
+
+        
+        [[segue destinationViewController] setHtmlContentString:contentString];
         [[segue destinationViewController] setTitle:cell.textLabel.text];
     }
 }
@@ -65,7 +74,7 @@
         
         Poison *poison = [self.dataSource getPoisonAtIndexPath:indexPath];
         
-        detail.contentKey = poison.key;
+        detail.htmlContentString = poison.htmlString;
         detail.title = poison.name;
         
         [self.navigationController pushViewController: detail animated: YES];
