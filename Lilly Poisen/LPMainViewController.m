@@ -20,10 +20,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    
-    self.toolbarItems = self.navigationController.toolbarItems;
-    
-    self.searchDisplayController.searchResultsDataSource = self.dataSource;
 }
 
 - (void)didReceiveMemoryWarning
@@ -33,7 +29,6 @@
 }
 
 - (void)viewDidUnload {
-    [self setDataSource:nil];
     [super viewDidUnload];
 }
 
@@ -68,16 +63,7 @@
     
     if(self.tableView != tableView)
     {
-        UIStoryboard * storyboard = self.storyboard;
-        
-        LPInfoViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
-        
-        Poison *poison = [self.dataSource getPoisonAtIndexPath:indexPath];
-        
-        detail.htmlContentString = poison.htmlString;
-        detail.title = poison.name;
-        
-        [self.navigationController pushViewController: detail animated: YES];
+        [super tableView:tableView didSelectRowAtIndexPath:indexPath];
     }
     else if(cell.reuseIdentifier)
     {
