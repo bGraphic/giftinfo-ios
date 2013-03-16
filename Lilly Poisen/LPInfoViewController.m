@@ -22,6 +22,10 @@
     [self configureView];
     
     self.toolbarItems = self.navigationController.toolbarItems;
+    
+    CGRect frame = self.webView.frame;
+    frame.size.height -= 20;
+    self.webView.frame = frame;
 }
 
 - (void)didReceiveMemoryWarning

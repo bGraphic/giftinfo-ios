@@ -66,6 +66,16 @@
     
 //    [self loadData];
     
+    UIWindow *window = [[[UIApplication sharedApplication] delegate] window];
+    UINavigationController *navController = (UINavigationController *) window.rootViewController;
+    
+//    CGRect toolbarFrame = navController.toolbar.frame;
+//    toolbarFrame.size.height += 50;
+//    toolbarFrame.origin.y -= 50;
+//    navController.toolbar.frame = toolbarFrame;
+//    
+//    NSLog(@"%@", window.rootViewController.description);
+    
     return YES;
 }
 

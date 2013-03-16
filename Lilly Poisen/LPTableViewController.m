@@ -23,10 +23,20 @@
     self.poisonDataSource = [[LPDataSource alloc] init];
     
     self.toolbarItems = self.navigationController.toolbarItems;
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 30, 0);
+    self.tableView.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, 20, 0);
+    
     
     self.tableView.dataSource = self.poisonDataSource;
     self.searchDisplayController.delegate = self.poisonDataSource;
     self.searchDisplayController.searchResultsDataSource = self.poisonDataSource;
+    
+    
+//    UIStoryboard * storyboard = self.storyboard;
+//    UIViewController *phoneController = [storyboard instantiateViewControllerWithIdentifier:@"phoneBooth"];
+//    
+//    [self addChildViewController:phoneController];
+//    [view addSubview:phoneController.view];
 }
 
 - (void)didReceiveMemoryWarning
@@ -39,10 +49,10 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UIStoryboard * storyboard = self.storyboard;
     
     Poison *poison = [self.poisonDataSource getPoisonAtIndexPath:indexPath];
     
+    UIStoryboard * storyboard = self.storyboard;
     LPInfoViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
     detail.htmlContentString = poison.htmlContentString;
     detail.title = poison.name;

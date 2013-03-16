@@ -22,6 +22,10 @@
 
     self.tableView.dataSource = self;
     
+    CGRect toolbarFrame = self.navigationController.toolbar.frame;
+    toolbarFrame.size.height += 20;
+    toolbarFrame.origin.y -= 20;
+    self.navigationController.toolbar.frame = toolbarFrame;
 }
 
 - (void)didReceiveMemoryWarning
