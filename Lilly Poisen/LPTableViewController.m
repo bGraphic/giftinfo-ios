@@ -41,8 +41,7 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    
+{   
     Poison *poison = [self.poisonDataSource getPoisonAtIndexPath:indexPath];
     
     UIStoryboard * storyboard = self.storyboard;
