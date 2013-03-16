@@ -30,13 +30,6 @@
     self.tableView.dataSource = self.poisonDataSource;
     self.searchDisplayController.delegate = self.poisonDataSource;
     self.searchDisplayController.searchResultsDataSource = self.poisonDataSource;
-    
-    
-//    UIStoryboard * storyboard = self.storyboard;
-//    UIViewController *phoneController = [storyboard instantiateViewControllerWithIdentifier:@"phoneBooth"];
-//    
-//    [self addChildViewController:phoneController];
-//    [view addSubview:phoneController.view];
 }
 
 - (void)didReceiveMemoryWarning
