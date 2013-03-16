@@ -21,6 +21,7 @@
     [super viewDidLoad];
     
     self.toolbarItems = self.navigationController.toolbarItems;
+    self.searchDisplayController.searchResultsDataSource = self.dataSource;
 }
 
 - (void)didReceiveMemoryWarning
@@ -47,4 +48,8 @@
     [self.navigationController pushViewController: detail animated: YES];
 }
 
+- (void)viewDidUnload {
+    [self setDataSource:nil];
+    [super viewDidUnload];
+}
 @end

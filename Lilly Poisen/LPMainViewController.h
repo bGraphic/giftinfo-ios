@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LPDataSource.h"
 
 @interface LPMainViewController : UITableViewController <UITableViewDelegate>
+
+@property (strong, nonatomic) IBOutlet LPDataSource *dataSource;
 
 @end

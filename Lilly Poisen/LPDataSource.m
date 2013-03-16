@@ -110,8 +110,12 @@
 {
     static NSString *CellIdentifier = @"PoisonCell";
     
-    [tableView registerClass:[LPEntryViewCell class] forCellReuseIdentifier:CellIdentifier];
-    LPEntryViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    LPEntryViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    
+    if(!cell)
+    {
+        cell = [[LPEntryViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
 
     Poison *poisonEntry;
     

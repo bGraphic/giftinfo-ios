@@ -22,6 +22,8 @@
 	// Do any additional setup after loading the view.
     
     self.toolbarItems = self.navigationController.toolbarItems;
+    
+    self.searchDisplayController.searchResultsDataSource = self.dataSource;
 }
 
 - (void)didReceiveMemoryWarning
@@ -31,6 +33,7 @@
 }
 
 - (void)viewDidUnload {
+    [self setDataSource:nil];
     [super viewDidUnload];
 }
 
@@ -54,7 +57,9 @@
 {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:tableView.indexPathForSelectedRow];
     
-    if([self.searchDisplayController isActive] && self.searchDisplayController.searchResultsTableView == tableView)
+    NSLog(@"%@", [indexPath description]);
+    
+    if(self.tableView != tableView)
     {
         UIStoryboard * storyboard = self.storyboard;
         
