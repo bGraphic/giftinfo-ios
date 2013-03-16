@@ -20,6 +20,7 @@
 @property NSArray *termData;
 @property NSMutableArray *filteredData;
 @property NSString *selectedKey;
+@property NSString *searchString;
 
 @end
 
@@ -33,8 +34,10 @@
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
         NSEntityDescription *entity = [NSEntityDescription entityForName:@"Poison"
                                                   inManagedObjectContext:self.context];
+        NSSortDescriptor *nameSort = [[NSSortDescriptor alloc]initWithKey:@"name"  ascending:YES];
         
         [fetchRequest setEntity:entity];
+        [fetchRequest setSortDescriptors:[NSArray arrayWithObject:nameSort]];
         
         NSError *error;
         
@@ -60,7 +63,6 @@
 
 - (void) filterContentForSearchText:(NSString*)searchText
 {
-
     if(!self.filteredData)
         self.filteredData = [NSMutableArray arrayWithCapacity:self.poisonData.count];
     else
@@ -92,7 +94,10 @@
 }
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
-{    
+{
+    
+    self.searchString = searchString;
+    
     [self filterContentForSearchText:searchString];
 
     return YES;
