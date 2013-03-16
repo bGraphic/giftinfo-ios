@@ -54,7 +54,7 @@
 {
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:tableView.indexPathForSelectedRow];
     
-    if(tableView == self.searchDisplayController.searchResultsTableView)
+    if([self.searchDisplayController isActive] && self.searchDisplayController.searchResultsTableView == tableView)
     {
         UIStoryboard * storyboard = self.storyboard;
         
