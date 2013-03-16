@@ -10,23 +10,23 @@
 		131341C616EDF08900734F5E /* Term.m in Sources */ = {isa = PBXBuildFile; fileRef = 131341C516EDF08900734F5E /* Term.m */; };
 		13794DDA16EBE0C6003EF093 /* LPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DD916EBE0C6003EF093 /* LPDataSource.m */; };
 		13794DDD16EBE223003EF093 /* LPTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DDC16EBE223003EF093 /* LPTableViewController.m */; };
-		13794DE216EBFF75003EF093 /* test-1.html in Resources */ = {isa = PBXBuildFile; fileRef = 13794DE116EBFF75003EF093 /* test-1.html */; };
 		13794DE516EC000A003EF093 /* LPEntryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DE416EC000A003EF093 /* LPEntryViewCell.m */; };
 		1381B33C16F123A700143FEA /* color.png in Resources */ = {isa = PBXBuildFile; fileRef = 1381B33B16F123A700143FEA /* color.png */; };
 		1381B34516F4A4B400143FEA /* Poison.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B34416F4A4B400143FEA /* Poison.m */; };
+		1381B34F16F4B60E00143FEA /* eye_contact.html in Resources */ = {isa = PBXBuildFile; fileRef = 1381B34716F4B60E00143FEA /* eye_contact.html */; };
+		1381B35016F4B60E00143FEA /* footer.html in Resources */ = {isa = PBXBuildFile; fileRef = 1381B34816F4B60E00143FEA /* footer.html */; };
+		1381B35116F4B60E00143FEA /* header.html in Resources */ = {isa = PBXBuildFile; fileRef = 1381B34916F4B60E00143FEA /* header.html */; };
+		1381B35216F4B60E00143FEA /* inhaled.html in Resources */ = {isa = PBXBuildFile; fileRef = 1381B34A16F4B60E00143FEA /* inhaled.html */; };
+		1381B35316F4B60E00143FEA /* skin_contact.html in Resources */ = {isa = PBXBuildFile; fileRef = 1381B34B16F4B60E00143FEA /* skin_contact.html */; };
+		1381B35416F4B60E00143FEA /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 1381B34C16F4B60E00143FEA /* style.css */; };
+		1381B35516F4B60E00143FEA /* swollowed.html in Resources */ = {isa = PBXBuildFile; fileRef = 1381B34D16F4B60E00143FEA /* swollowed.html */; };
+		1381B35616F4B60E00143FEA /* test-1.html in Resources */ = {isa = PBXBuildFile; fileRef = 1381B34E16F4B60E00143FEA /* test-1.html */; };
 		1397DDA116ED099C0061087F /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1397DD9D16ED099C0061087F /* libTestFlight.a */; };
 		1397DDA216ED099C0061087F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1397DD9E16ED099C0061087F /* README.md */; };
 		1397DDA316ED099C0061087F /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 1397DD9F16ED099C0061087F /* release_notes.md */; };
 		1397DDA716ED0A060061087F /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1397DDA616ED0A060061087F /* libz.1.1.3.dylib */; };
 		13EB1A1F16EBA9EE00170579 /* LPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EB1A1E16EBA9EE00170579 /* LPMainViewController.m */; };
 		13EB1A2216EBAB3A00170579 /* LPInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EB1A2116EBAB3A00170579 /* LPInfoViewController.m */; };
-		13EB1A2516EBABCA00170579 /* swollowed.html in Resources */ = {isa = PBXBuildFile; fileRef = 13EB1A2416EBABCA00170579 /* swollowed.html */; };
-		13EB1A2916EBC25A00170579 /* eye_contact.html in Resources */ = {isa = PBXBuildFile; fileRef = 13EB1A2616EBC25A00170579 /* eye_contact.html */; };
-		13EB1A2A16EBC25A00170579 /* inhaled.html in Resources */ = {isa = PBXBuildFile; fileRef = 13EB1A2716EBC25A00170579 /* inhaled.html */; };
-		13EB1A2B16EBC25A00170579 /* skin_contact.html in Resources */ = {isa = PBXBuildFile; fileRef = 13EB1A2816EBC25A00170579 /* skin_contact.html */; };
-		13EB1A2D16EBCC5600170579 /* header.html in Resources */ = {isa = PBXBuildFile; fileRef = 13EB1A2C16EBCC5600170579 /* header.html */; };
-		13EB1A2F16EBCC6600170579 /* footer.html in Resources */ = {isa = PBXBuildFile; fileRef = 13EB1A2E16EBCC6600170579 /* footer.html */; };
-		13EB1A3116EBD1FB00170579 /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 13EB1A3016EBD1FB00170579 /* style.css */; };
 		13EC390916EB9FE8005244BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390816EB9FE8005244BD /* UIKit.framework */; };
 		13EC390B16EB9FE8005244BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390A16EB9FE8005244BD /* Foundation.framework */; };
 		13EC390D16EB9FE8005244BD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390C16EB9FE8005244BD /* CoreGraphics.framework */; };
@@ -65,12 +65,19 @@
 		13794DD916EBE0C6003EF093 /* LPDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPDataSource.m; sourceTree = "<group>"; };
 		13794DDB16EBE223003EF093 /* LPTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTableViewController.h; sourceTree = "<group>"; };
 		13794DDC16EBE223003EF093 /* LPTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTableViewController.m; sourceTree = "<group>"; };
-		13794DE116EBFF75003EF093 /* test-1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "test-1.html"; sourceTree = "<group>"; };
 		13794DE316EC000A003EF093 /* LPEntryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPEntryViewCell.h; sourceTree = "<group>"; };
 		13794DE416EC000A003EF093 /* LPEntryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPEntryViewCell.m; sourceTree = "<group>"; };
 		1381B33B16F123A700143FEA /* color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = color.png; sourceTree = "<group>"; };
 		1381B34316F4A4B400143FEA /* Poison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Poison.h; sourceTree = "<group>"; };
 		1381B34416F4A4B400143FEA /* Poison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Poison.m; sourceTree = "<group>"; };
+		1381B34716F4B60E00143FEA /* eye_contact.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = eye_contact.html; sourceTree = "<group>"; };
+		1381B34816F4B60E00143FEA /* footer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = footer.html; sourceTree = "<group>"; };
+		1381B34916F4B60E00143FEA /* header.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = header.html; sourceTree = "<group>"; };
+		1381B34A16F4B60E00143FEA /* inhaled.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = inhaled.html; sourceTree = "<group>"; };
+		1381B34B16F4B60E00143FEA /* skin_contact.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = skin_contact.html; sourceTree = "<group>"; };
+		1381B34C16F4B60E00143FEA /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		1381B34D16F4B60E00143FEA /* swollowed.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = swollowed.html; sourceTree = "<group>"; };
+		1381B34E16F4B60E00143FEA /* test-1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "test-1.html"; sourceTree = "<group>"; };
 		1397DD9D16ED099C0061087F /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		1397DD9E16ED099C0061087F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		1397DD9F16ED099C0061087F /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
@@ -81,13 +88,6 @@
 		13EB1A1E16EBA9EE00170579 /* LPMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPMainViewController.m; sourceTree = "<group>"; };
 		13EB1A2016EBAB3A00170579 /* LPInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPInfoViewController.h; sourceTree = "<group>"; };
 		13EB1A2116EBAB3A00170579 /* LPInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPInfoViewController.m; sourceTree = "<group>"; };
-		13EB1A2416EBABCA00170579 /* swollowed.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = swollowed.html; sourceTree = "<group>"; };
-		13EB1A2616EBC25A00170579 /* eye_contact.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = eye_contact.html; sourceTree = "<group>"; };
-		13EB1A2716EBC25A00170579 /* inhaled.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = inhaled.html; sourceTree = "<group>"; };
-		13EB1A2816EBC25A00170579 /* skin_contact.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = skin_contact.html; sourceTree = "<group>"; };
-		13EB1A2C16EBCC5600170579 /* header.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = header.html; sourceTree = "<group>"; };
-		13EB1A2E16EBCC6600170579 /* footer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = footer.html; sourceTree = "<group>"; };
-		13EB1A3016EBD1FB00170579 /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
 		13EC390516EB9FE8005244BD /* Lilly Poison.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lilly Poison.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13EC390816EB9FE8005244BD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		13EC390A16EB9FE8005244BD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -173,6 +173,21 @@
 			name = Resources;
 			sourceTree = "<group>";
 		};
+		1381B34616F4B60E00143FEA /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				1381B34716F4B60E00143FEA /* eye_contact.html */,
+				1381B34816F4B60E00143FEA /* footer.html */,
+				1381B34916F4B60E00143FEA /* header.html */,
+				1381B34A16F4B60E00143FEA /* inhaled.html */,
+				1381B34B16F4B60E00143FEA /* skin_contact.html */,
+				1381B34C16F4B60E00143FEA /* style.css */,
+				1381B34D16F4B60E00143FEA /* swollowed.html */,
+				1381B34E16F4B60E00143FEA /* test-1.html */,
+			);
+			path = Content;
+			sourceTree = SOURCE_ROOT;
+		};
 		1397DD9C16ED099C0061087F /* TestFlightSDK1.2 */ = {
 			isa = PBXGroup;
 			children = (
@@ -182,21 +197,6 @@
 				1397DDA016ED099C0061087F /* TestFlight.h */,
 			);
 			path = TestFlightSDK1.2;
-			sourceTree = "<group>";
-		};
-		13EB1A2316EBABAD00170579 /* Content */ = {
-			isa = PBXGroup;
-			children = (
-				13EB1A3016EBD1FB00170579 /* style.css */,
-				13EB1A2616EBC25A00170579 /* eye_contact.html */,
-				13EB1A2716EBC25A00170579 /* inhaled.html */,
-				13EB1A2816EBC25A00170579 /* skin_contact.html */,
-				13EB1A2416EBABCA00170579 /* swollowed.html */,
-				13EB1A2C16EBCC5600170579 /* header.html */,
-				13EB1A2E16EBCC6600170579 /* footer.html */,
-				13794DE116EBFF75003EF093 /* test-1.html */,
-			);
-			name = Content;
 			sourceTree = "<group>";
 		};
 		13EC38FC16EB9FE8005244BD = {
@@ -236,10 +236,10 @@
 		13EC391016EB9FE8005244BD /* Lilly Poison */ = {
 			isa = PBXGroup;
 			children = (
+				1381B34616F4B60E00143FEA /* Content */,
 				1381B33A16F1239D00143FEA /* Resources */,
 				131341D416EE0C3B00734F5E /* Controller */,
 				131341D316EE0C0200734F5E /* Model */,
-				13EB1A2316EBABAD00170579 /* Content */,
 				13EC391916EB9FE8005244BD /* LPAppDelegate.h */,
 				13EC391A16EB9FE8005244BD /* LPAppDelegate.m */,
 				13EC391116EB9FE8005244BD /* Supporting Files */,
@@ -364,17 +364,17 @@
 				13EC391F16EB9FE8005244BD /* Default@2x.png in Resources */,
 				13EC392116EB9FE8005244BD /* Default-568h@2x.png in Resources */,
 				13EC394416EBA0A8005244BD /* MainStoryboard.storyboard in Resources */,
-				13EB1A2516EBABCA00170579 /* swollowed.html in Resources */,
-				13EB1A2916EBC25A00170579 /* eye_contact.html in Resources */,
-				13EB1A2A16EBC25A00170579 /* inhaled.html in Resources */,
-				13EB1A2B16EBC25A00170579 /* skin_contact.html in Resources */,
-				13EB1A2D16EBCC5600170579 /* header.html in Resources */,
-				13EB1A2F16EBCC6600170579 /* footer.html in Resources */,
-				13EB1A3116EBD1FB00170579 /* style.css in Resources */,
-				13794DE216EBFF75003EF093 /* test-1.html in Resources */,
 				1397DDA216ED099C0061087F /* README.md in Resources */,
 				1397DDA316ED099C0061087F /* release_notes.md in Resources */,
 				1381B33C16F123A700143FEA /* color.png in Resources */,
+				1381B34F16F4B60E00143FEA /* eye_contact.html in Resources */,
+				1381B35016F4B60E00143FEA /* footer.html in Resources */,
+				1381B35116F4B60E00143FEA /* header.html in Resources */,
+				1381B35216F4B60E00143FEA /* inhaled.html in Resources */,
+				1381B35316F4B60E00143FEA /* skin_contact.html in Resources */,
+				1381B35416F4B60E00143FEA /* style.css in Resources */,
+				1381B35516F4B60E00143FEA /* swollowed.html in Resources */,
+				1381B35616F4B60E00143FEA /* test-1.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
