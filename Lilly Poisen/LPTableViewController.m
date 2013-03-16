@@ -20,8 +20,13 @@
 {
     [super viewDidLoad];
     
+    self.poisonDataSource = [[LPDataSource alloc] init];
+    
     self.toolbarItems = self.navigationController.toolbarItems;
-    self.searchDisplayController.searchResultsDataSource = self.dataSource;
+    
+    self.tableView.dataSource = self.poisonDataSource;
+    self.searchDisplayController.delegate = self.poisonDataSource;
+    self.searchDisplayController.searchResultsDataSource = self.poisonDataSource;
 }
 
 - (void)didReceiveMemoryWarning
@@ -38,7 +43,7 @@
     
     LPInfoViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
     
-    Poison *poison = [self.dataSource getPoisonAtIndexPath:indexPath];
+    Poison *poison = [self.poisonDataSource getPoisonAtIndexPath:indexPath];
     
     detail.htmlContentString = poison.htmlString;
     detail.title = poison.name;
@@ -47,7 +52,7 @@
 }
 
 - (void)viewDidUnload {
-    [self setDataSource:nil];
+    [self setPoisonDataSource:nil];
     [super viewDidUnload];
 }
 

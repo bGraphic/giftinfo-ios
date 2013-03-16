@@ -190,7 +190,6 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Lilly Poison" id="Ml9-me-Vl5"/>
                     <connections>
-                        <outlet property="dataSource" destination="8Ah-hN-KcZ" id="Q86-Pd-MfH"/>
                         <outlet property="searchDisplayController" destination="Ni7-ZO-UYb" id="mmQ-ul-tPJ"/>
                         <segue destination="0y4-42-f1P" kind="push" identifier="showContent" id="jz9-s9-sn1"/>
                     </connections>
@@ -198,14 +197,11 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gpp-FI-YGd" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <searchDisplayController id="Ni7-ZO-UYb">
                     <connections>
-                        <outlet property="delegate" destination="8Ah-hN-KcZ" id="ytn-iz-GwD"/>
                         <outlet property="searchBar" destination="dze-g6-goy" id="UwG-FO-8H3"/>
                         <outlet property="searchContentsController" destination="uOL-K2-nVU" id="bIW-Tw-Jyb"/>
-                        <outlet property="searchResultsDataSource" destination="8Ah-hN-KcZ" id="FPo-l0-CMH"/>
                         <outlet property="searchResultsDelegate" destination="uOL-K2-nVU" id="ajo-ql-zGc"/>
                     </connections>
                 </searchDisplayController>
-                <customObject id="8Ah-hN-KcZ" customClass="LPDataSource"/>
             </objects>
             <point key="canvasLocation" x="466" y="-19"/>
         </scene>
@@ -227,24 +223,19 @@
                         </searchBar>
                         <sections/>
                         <connections>
-                            <outlet property="dataSource" destination="QTu-MI-hN2" id="hYt-AP-URd"/>
                             <outlet property="delegate" destination="FCD-TZ-I4L" id="SdJ-28-M9w"/>
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Lilly Poison" id="gtV-VO-ut1"/>
                     <connections>
-                        <outlet property="dataSource" destination="QTu-MI-hN2" id="3ZI-C5-ctE"/>
                         <outlet property="searchDisplayController" destination="oHl-3x-TdB" id="pv3-0y-aiG"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Mr7-O1-EqY" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="QTu-MI-hN2" customClass="LPDataSource"/>
                 <searchDisplayController id="oHl-3x-TdB">
                     <connections>
-                        <outlet property="delegate" destination="QTu-MI-hN2" id="U1M-qJ-Fzl"/>
                         <outlet property="searchBar" destination="1RZ-sF-ped" id="NbI-rZ-h1g"/>
                         <outlet property="searchContentsController" destination="FCD-TZ-I4L" id="U5r-31-dCD"/>
-                        <outlet property="searchResultsDataSource" destination="QTu-MI-hN2" id="rwB-Y1-zvT"/>
                         <outlet property="searchResultsDelegate" destination="FCD-TZ-I4L" id="e7b-uU-OEI"/>
                     </connections>
                 </searchDisplayController>
@@ -277,6 +268,26 @@
             <point key="canvasLocation" x="1005" y="385"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="LPDataSource" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPDataSource.h"/>
+        </class>
+        <class className="LPInfoViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPInfoViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="LPMainViewController" superclassName="LPTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPMainViewController.h"/>
+        </class>
+        <class className="LPTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="poisonDataSource" candidateClass="LPDataSource"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

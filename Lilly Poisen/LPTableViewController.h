@@ -11,6 +11,6 @@
 
 @interface LPTableViewController : UITableViewController
 
-@property (strong, nonatomic) IBOutlet LPDataSource *dataSource;
+@property (strong, nonatomic) IBOutlet LPDataSource *poisonDataSource;
 
 @end
