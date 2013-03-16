@@ -2,7 +2,7 @@
 //  Poison.m
 //  Lilly Poison
 //
-//  Created by Benedicte Raae on 11.03.13.
+//  Created by Benedicte Raae on 16.03.13.
 //  Copyright (c) 2013 bGraphic. All rights reserved.
 //
 
@@ -14,6 +14,10 @@
 
 @dynamic key;
 @dynamic name;
+@dynamic symptoms;
+@dynamic action;
+@dynamic coal;
+@dynamic risk;
 @dynamic synonyms;
 
 @end

@@ -2,7 +2,7 @@
 //  Poison.h
 //  Lilly Poison
 //
-//  Created by Benedicte Raae on 11.03.13.
+//  Created by Benedicte Raae on 16.03.13.
 //  Copyright (c) 2013 bGraphic. All rights reserved.
 //
 
@@ -15,6 +15,10 @@
 
 @property (nonatomic, retain) NSString * key;
 @property (nonatomic, retain) NSString * name;
+@property (nonatomic, retain) NSString * symptoms;
+@property (nonatomic, retain) NSString * action;
+@property (nonatomic, retain) NSNumber * coal;
+@property (nonatomic, retain) NSString * risk;
 @property (nonatomic, retain) NSSet *synonyms;
 @end
 

@@ -8,12 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		131341C616EDF08900734F5E /* Term.m in Sources */ = {isa = PBXBuildFile; fileRef = 131341C516EDF08900734F5E /* Term.m */; };
-		131341D216EDF78700734F5E /* Poison.m in Sources */ = {isa = PBXBuildFile; fileRef = 131341D116EDF78700734F5E /* Poison.m */; };
 		13794DDA16EBE0C6003EF093 /* LPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DD916EBE0C6003EF093 /* LPDataSource.m */; };
 		13794DDD16EBE223003EF093 /* LPTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DDC16EBE223003EF093 /* LPTableViewController.m */; };
 		13794DE216EBFF75003EF093 /* test-1.html in Resources */ = {isa = PBXBuildFile; fileRef = 13794DE116EBFF75003EF093 /* test-1.html */; };
 		13794DE516EC000A003EF093 /* LPEntryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DE416EC000A003EF093 /* LPEntryViewCell.m */; };
 		1381B33C16F123A700143FEA /* color.png in Resources */ = {isa = PBXBuildFile; fileRef = 1381B33B16F123A700143FEA /* color.png */; };
+		1381B34516F4A4B400143FEA /* Poison.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B34416F4A4B400143FEA /* Poison.m */; };
 		1397DDA116ED099C0061087F /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1397DD9D16ED099C0061087F /* libTestFlight.a */; };
 		1397DDA216ED099C0061087F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1397DD9E16ED099C0061087F /* README.md */; };
 		1397DDA316ED099C0061087F /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 1397DD9F16ED099C0061087F /* release_notes.md */; };
@@ -61,8 +61,6 @@
 /* Begin PBXFileReference section */
 		131341C416EDF08900734F5E /* Term.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Term.h; sourceTree = "<group>"; };
 		131341C516EDF08900734F5E /* Term.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Term.m; sourceTree = "<group>"; };
-		131341D016EDF78700734F5E /* Poison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Poison.h; sourceTree = "<group>"; };
-		131341D116EDF78700734F5E /* Poison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Poison.m; sourceTree = "<group>"; };
 		13794DD816EBE0C6003EF093 /* LPDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPDataSource.h; sourceTree = "<group>"; };
 		13794DD916EBE0C6003EF093 /* LPDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPDataSource.m; sourceTree = "<group>"; };
 		13794DDB16EBE223003EF093 /* LPTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTableViewController.h; sourceTree = "<group>"; };
@@ -71,6 +69,8 @@
 		13794DE316EC000A003EF093 /* LPEntryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPEntryViewCell.h; sourceTree = "<group>"; };
 		13794DE416EC000A003EF093 /* LPEntryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPEntryViewCell.m; sourceTree = "<group>"; };
 		1381B33B16F123A700143FEA /* color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = color.png; sourceTree = "<group>"; };
+		1381B34316F4A4B400143FEA /* Poison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Poison.h; sourceTree = "<group>"; };
+		1381B34416F4A4B400143FEA /* Poison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Poison.m; sourceTree = "<group>"; };
 		1397DD9D16ED099C0061087F /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		1397DD9E16ED099C0061087F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		1397DD9F16ED099C0061087F /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
@@ -143,9 +143,9 @@
 		131341D316EE0C0200734F5E /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				1381B34316F4A4B400143FEA /* Poison.h */,
+				1381B34416F4A4B400143FEA /* Poison.m */,
 				13EC392216EB9FE8005244BD /* Lilly_Poisen.xcdatamodeld */,
-				131341D016EDF78700734F5E /* Poison.h */,
-				131341D116EDF78700734F5E /* Poison.m */,
 				131341C416EDF08900734F5E /* Term.h */,
 				131341C516EDF08900734F5E /* Term.m */,
 			);
@@ -419,7 +419,7 @@
 				13794DDD16EBE223003EF093 /* LPTableViewController.m in Sources */,
 				13794DE516EC000A003EF093 /* LPEntryViewCell.m in Sources */,
 				131341C616EDF08900734F5E /* Term.m in Sources */,
-				131341D216EDF78700734F5E /* Poison.m in Sources */,
+				1381B34516F4A4B400143FEA /* Poison.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

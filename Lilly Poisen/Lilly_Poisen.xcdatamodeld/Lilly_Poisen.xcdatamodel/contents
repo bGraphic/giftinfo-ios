@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model name="" userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="2057" systemVersion="12C3006" minimumToolsVersion="Automatic" macOSVersion="Automatic" iOSVersion="Automatic">
     <entity name="Poison" representedClassName="Poison" syncable="YES">
+        <attribute name="action" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="coal" optional="YES" attributeType="Boolean" syncable="YES"/>
         <attribute name="key" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="name" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="risk" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="symptoms" optional="YES" attributeType="String" syncable="YES"/>
         <relationship name="synonyms" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Term" inverseName="poison" inverseEntity="Term" syncable="YES"/>
     </entity>
     <entity name="Term" representedClassName="Term" syncable="YES">
@@ -10,7 +14,7 @@
         <relationship name="poison" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Poison" inverseName="synonyms" inverseEntity="Poison" syncable="YES"/>
     </entity>
     <elements>
-        <element name="Poison" positionX="-45" positionY="0" width="128" height="88"/>
+        <element name="Poison" positionX="-45" positionY="0" width="128" height="150"/>
         <element name="Term" positionX="144" positionY="-0" width="128" height="73"/>
     </elements>
 </model>
