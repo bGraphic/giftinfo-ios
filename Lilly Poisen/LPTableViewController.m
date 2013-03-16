@@ -34,16 +34,14 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:tableView.indexPathForSelectedRow];
-    
     UIStoryboard * storyboard = self.storyboard;
     
-    LPEntryViewCell *entryCell = (LPEntryViewCell *) cell;
+    LPInfoViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
     
-    LPInfoViewController * detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
+    Poison *poison = [self.dataSource getPoisonAtIndexPath:indexPath];
     
-    detail.contentKey = entryCell.key;
-    detail.title = entryCell.name;
+    detail.contentKey = poison.key;
+    detail.title = poison.name;
     
     [self.navigationController pushViewController: detail animated: YES];
 }
@@ -52,4 +50,5 @@
     [self setDataSource:nil];
     [super viewDidUnload];
 }
+
 @end

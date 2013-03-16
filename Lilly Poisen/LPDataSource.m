@@ -8,7 +8,6 @@
 
 #import "LPDataSource.h"
 #import "LPAppDelegate.h"
-#import "Poison.h"
 #import "Term.h"
 #import "LPEntryViewCell.h"
 #import "LPInfoViewController.h"
@@ -77,6 +76,14 @@
     }
 }
 
+- (Poison *) getPoisonAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(self.filteredData)
+        return self.filteredData[indexPath.row];
+    else
+        return self.poisonData[indexPath.row];
+}
+
 #pragma mark - Search Display Delegate
 
 - (void)searchDisplayController:(UISearchDisplayController *)controller didHideSearchResultsTableView:(UITableView *)tableView
@@ -110,19 +117,14 @@
 {
     static NSString *CellIdentifier = @"PoisonCell";
     
-    LPEntryViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if(!cell)
     {
-        cell = [[LPEntryViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
 
-    Poison *poisonEntry;
-    
-    if(self.filteredData)
-        poisonEntry = self.filteredData[indexPath.row];
-    else
-        poisonEntry = self.poisonData[indexPath.row];
+    Poison *poisonEntry = [self getPoisonAtIndexPath:indexPath];
     
     NSString *synonymsString;
     
@@ -133,9 +135,6 @@
         else
             synonymsString = [NSString stringWithFormat:@"%@, %@", synonymsString, term.term];
     }
-    
-    cell.key = poisonEntry.key;
-    cell.name = poisonEntry.name;
     
     cell.textLabel.text = poisonEntry.name;
     cell.detailTextLabel.text = synonymsString;
