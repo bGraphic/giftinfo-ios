@@ -22,6 +22,8 @@
 		1381B35516F4B60E00143FEA /* swollowed.html in Resources */ = {isa = PBXBuildFile; fileRef = 1381B34D16F4B60E00143FEA /* swollowed.html */; };
 		1381B35616F4B60E00143FEA /* test-1.html in Resources */ = {isa = PBXBuildFile; fileRef = 1381B34E16F4B60E00143FEA /* test-1.html */; };
 		1381B35F16F4E22C00143FEA /* Poison+LPEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B35E16F4E22C00143FEA /* Poison+LPEntry.m */; };
+		1381B36216F4E82800143FEA /* LPHtmlStringHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B36116F4E82800143FEA /* LPHtmlStringHelper.m */; };
+		1381B36416F4E9F800143FEA /* summary.html in Resources */ = {isa = PBXBuildFile; fileRef = 1381B36316F4E9F800143FEA /* summary.html */; };
 		1397DDA116ED099C0061087F /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1397DD9D16ED099C0061087F /* libTestFlight.a */; };
 		1397DDA216ED099C0061087F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1397DD9E16ED099C0061087F /* README.md */; };
 		1397DDA316ED099C0061087F /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 1397DD9F16ED099C0061087F /* release_notes.md */; };
@@ -81,6 +83,9 @@
 		1381B34E16F4B60E00143FEA /* test-1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "test-1.html"; sourceTree = "<group>"; };
 		1381B35D16F4E22C00143FEA /* Poison+LPEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Poison+LPEntry.h"; sourceTree = "<group>"; };
 		1381B35E16F4E22C00143FEA /* Poison+LPEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Poison+LPEntry.m"; sourceTree = "<group>"; };
+		1381B36016F4E82800143FEA /* LPHtmlStringHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPHtmlStringHelper.h; sourceTree = "<group>"; };
+		1381B36116F4E82800143FEA /* LPHtmlStringHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPHtmlStringHelper.m; sourceTree = "<group>"; };
+		1381B36316F4E9F800143FEA /* summary.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = summary.html; sourceTree = "<group>"; };
 		1397DD9D16ED099C0061087F /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		1397DD9E16ED099C0061087F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		1397DD9F16ED099C0061087F /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
@@ -172,6 +177,8 @@
 			isa = PBXGroup;
 			children = (
 				1381B33B16F123A700143FEA /* color.png */,
+				1381B36016F4E82800143FEA /* LPHtmlStringHelper.h */,
+				1381B36116F4E82800143FEA /* LPHtmlStringHelper.m */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -187,6 +194,7 @@
 				1381B34C16F4B60E00143FEA /* style.css */,
 				1381B34D16F4B60E00143FEA /* swollowed.html */,
 				1381B34E16F4B60E00143FEA /* test-1.html */,
+				1381B36316F4E9F800143FEA /* summary.html */,
 			);
 			path = Content;
 			sourceTree = SOURCE_ROOT;
@@ -380,6 +388,7 @@
 				1381B35416F4B60E00143FEA /* style.css in Resources */,
 				1381B35516F4B60E00143FEA /* swollowed.html in Resources */,
 				1381B35616F4B60E00143FEA /* test-1.html in Resources */,
+				1381B36416F4E9F800143FEA /* summary.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +435,7 @@
 				131341C616EDF08900734F5E /* Term.m in Sources */,
 				1381B34516F4A4B400143FEA /* Poison.m in Sources */,
 				1381B35F16F4E22C00143FEA /* Poison+LPEntry.m in Sources */,
+				1381B36216F4E82800143FEA /* LPHtmlStringHelper.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

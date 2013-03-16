@@ -7,20 +7,17 @@
 //
 
 #import "Poison+LPEntry.h"
+#import "LPHtmlStringHelper.h"
 
 @implementation Poison (LPEntry)
 
-- (NSString *) htmlString
+- (NSString *) htmlContentString
 {
-    NSString *contentPath = [[NSBundle mainBundle] pathForResource:self.key ofType:@"html"];
+    NSString *contentString = [LPHtmlStringHelper stringFromHtmlFileWithName:self.key];
+    NSString *summaryString = [LPHtmlStringHelper stringFromHtmlFileWithName:@"summary"];
+    summaryString = [NSString stringWithFormat:summaryString, self.risk, self.symptoms, [self.coal stringValue], self.action];
     
-    NSError *contentError;
-    NSString *contentString = [NSString stringWithContentsOfFile:contentPath encoding:NSUTF8StringEncoding error:&contentError];
-    
-    if(contentError)
-        NSLog(@"Problems loading content %@", contentError.description);
-    
-    return contentString;
+    return [NSString stringWithFormat:@"%@\n%@\n%@", summaryString, contentString, self.name];
 }
 
 @end

@@ -41,11 +41,10 @@
 {
     UIStoryboard * storyboard = self.storyboard;
     
-    LPInfoViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
-    
     Poison *poison = [self.poisonDataSource getPoisonAtIndexPath:indexPath];
     
-    detail.htmlContentString = poison.htmlString;
+    LPInfoViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
+    detail.htmlContentString = poison.htmlContentString;
     detail.title = poison.name;
     
     [self.navigationController pushViewController: detail animated: YES];

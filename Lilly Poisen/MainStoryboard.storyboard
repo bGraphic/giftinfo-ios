@@ -268,26 +268,6 @@
             <point key="canvasLocation" x="1005" y="385"/>
         </scene>
     </scenes>
-    <classes>
-        <class className="LPDataSource" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPDataSource.h"/>
-        </class>
-        <class className="LPInfoViewController" superclassName="UIViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPInfoViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="webView" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="LPMainViewController" superclassName="LPTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPMainViewController.h"/>
-        </class>
-        <class className="LPTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="poisonDataSource" candidateClass="LPDataSource"/>
-            </relationships>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

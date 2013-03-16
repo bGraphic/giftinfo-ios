@@ -10,6 +10,6 @@
 
 @interface Poison (LPEntry)
 
-@property (strong, nonatomic, readonly) NSString *htmlString;
+@property (strong, nonatomic, readonly) NSString *htmlContentString;
 
 @end
