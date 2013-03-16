@@ -23,8 +23,8 @@
     self.poisonDataSource = [[LPDataSource alloc] init];
     
     self.toolbarItems = self.navigationController.toolbarItems;
-    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 30, 0);
-    self.tableView.scrollIndicatorInsets = UIEdgeInsetsMake(0, 0, 20, 0);
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 10, 0);
+    self.tableView.scrollIndicatorInsets = UIEdgeInsetsMake(5, 0, 10, 0);
     
     
     self.tableView.dataSource = self.poisonDataSource;

@@ -24,8 +24,11 @@
     self.toolbarItems = self.navigationController.toolbarItems;
     
     CGRect frame = self.webView.frame;
-    frame.size.height -= 20;
+    frame.size.height -= 5;
     self.webView.frame = frame;
+    
+    self.webView.scrollView.scrollIndicatorInsets = UIEdgeInsetsMake(5, 0, 5, 0);
+    self.webView.scrollView.bounces = NO;
 }
 
 - (void)didReceiveMemoryWarning
