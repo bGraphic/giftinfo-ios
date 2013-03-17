@@ -10,7 +10,7 @@
 #import "LPAppDelegate.h"
 #import "Term.h"
 #import "LPEntryViewCell.h"
-#import "LPInfoViewController.h"
+#import "LPContentViewController.h"
 
 @interface LPDataSource ()
 

@@ -1,33 +1,34 @@
 //
-//  LPInfoViewController.m
+//  LPContentViewController.m
 //  Lilly Poison
 //
-//  Created by Benedicte Raae on 09.03.13.
+//  Created by Benedicte Raae on 17.03.13.
 //  Copyright (c) 2013 bGraphic. All rights reserved.
 //
 
-#import "LPInfoViewController.h"
+#import "LPContentViewController.h"
 
-@interface LPInfoViewController ()
+@interface LPContentViewController ()
 
 @end
 
-@implementation LPInfoViewController
+@implementation LPContentViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
+    self.webView.delegate = self;
+    
     [self configureView];
     
     self.toolbarItems = self.navigationController.toolbarItems;
     
-    CGRect frame = self.webView.frame;
-    frame.size.height -= 5;
-    self.webView.frame = frame;
+    self.toolbarItems = self.navigationController.toolbarItems;
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 10, 0);
+    self.tableView.scrollIndicatorInsets = UIEdgeInsetsMake(5, 0, 10, 0);
     
-    self.webView.scrollView.scrollIndicatorInsets = UIEdgeInsetsMake(5, 0, 5, 0);
     self.webView.scrollView.bounces = NO;
 }
 
@@ -42,8 +43,8 @@
 - (void)setHtmlContentString:(NSString *) newHtmlContentString
 {
     _htmlContentString = newHtmlContentString;
-
-    [self configureView];
+    
+//    [self configureView];
 }
 
 - (void)configureView
@@ -74,8 +75,24 @@
     }
 }
 
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return self.webView.frame.size.height + 10.f;
+}
+
 - (void)viewDidUnload {
     [self setWebView:nil];
     [super viewDidUnload];
 }
+
+- (void) webViewDidFinishLoad:(UIWebView *)sender {
+    [self performSelector:@selector(calculateWebViewSize) withObject:nil afterDelay:0.1];
+}
+
+- (void) calculateWebViewSize {
+    [self.webView sizeToFit];
+    [self.tableView reloadData];
+}
+
 @end

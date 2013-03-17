@@ -1,14 +1,14 @@
 //
-//  LPInfoViewController.h
+//  LPContentViewController.h
 //  Lilly Poison
 //
-//  Created by Benedicte Raae on 09.03.13.
+//  Created by Benedicte Raae on 17.03.13.
 //  Copyright (c) 2013 bGraphic. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface LPInfoViewController : UIViewController
+@interface LPContentViewController : UITableViewController <UIWebViewDelegate>
 
 @property (strong, nonatomic) NSString *htmlContentString;
 

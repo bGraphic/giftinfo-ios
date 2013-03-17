@@ -7,7 +7,7 @@
 //
 
 #import "LPMainViewController.h"
-#import "LPInfoViewController.h"
+#import "LPContentViewController.h"
 #import "Poison+LPEntry.h"
 #import "LPHtmlStringHelper.h"
 
@@ -127,7 +127,7 @@
         else
         {
             UIStoryboard * storyboard = self.storyboard;
-            LPInfoViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
+            LPContentViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
             
             NSDictionary *topic = [self topicAtIndexPath:indexPath];
             

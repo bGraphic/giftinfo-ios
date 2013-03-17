@@ -26,12 +26,12 @@
 		1381B36416F4E9F800143FEA /* summary.html in Resources */ = {isa = PBXBuildFile; fileRef = 1381B36316F4E9F800143FEA /* summary.html */; };
 		1381B36A16F4F7EA00143FEA /* LPToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B36916F4F7EA00143FEA /* LPToolbar.m */; };
 		1381B36C16F5D18700143FEA /* main-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1381B36B16F5D18700143FEA /* main-info.plist */; };
+		1381B36F16F5F5EB00143FEA /* LPContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B36E16F5F5EB00143FEA /* LPContentViewController.m */; };
 		1397DDA116ED099C0061087F /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1397DD9D16ED099C0061087F /* libTestFlight.a */; };
 		1397DDA216ED099C0061087F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1397DD9E16ED099C0061087F /* README.md */; };
 		1397DDA316ED099C0061087F /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 1397DD9F16ED099C0061087F /* release_notes.md */; };
 		1397DDA716ED0A060061087F /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1397DDA616ED0A060061087F /* libz.1.1.3.dylib */; };
 		13EB1A1F16EBA9EE00170579 /* LPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EB1A1E16EBA9EE00170579 /* LPMainViewController.m */; };
-		13EB1A2216EBAB3A00170579 /* LPInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EB1A2116EBAB3A00170579 /* LPInfoViewController.m */; };
 		13EC390916EB9FE8005244BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390816EB9FE8005244BD /* UIKit.framework */; };
 		13EC390B16EB9FE8005244BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390A16EB9FE8005244BD /* Foundation.framework */; };
 		13EC390D16EB9FE8005244BD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390C16EB9FE8005244BD /* CoreGraphics.framework */; };
@@ -91,6 +91,8 @@
 		1381B36816F4F7EA00143FEA /* LPToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPToolbar.h; sourceTree = "<group>"; };
 		1381B36916F4F7EA00143FEA /* LPToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPToolbar.m; sourceTree = "<group>"; };
 		1381B36B16F5D18700143FEA /* main-info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "main-info.plist"; sourceTree = "<group>"; };
+		1381B36D16F5F5EB00143FEA /* LPContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPContentViewController.h; sourceTree = "<group>"; };
+		1381B36E16F5F5EB00143FEA /* LPContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPContentViewController.m; sourceTree = "<group>"; };
 		1397DD9D16ED099C0061087F /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		1397DD9E16ED099C0061087F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		1397DD9F16ED099C0061087F /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
@@ -99,8 +101,6 @@
 		1397DDA616ED0A060061087F /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
 		13EB1A1D16EBA9EE00170579 /* LPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPMainViewController.h; sourceTree = "<group>"; };
 		13EB1A1E16EBA9EE00170579 /* LPMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPMainViewController.m; sourceTree = "<group>"; };
-		13EB1A2016EBAB3A00170579 /* LPInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPInfoViewController.h; sourceTree = "<group>"; };
-		13EB1A2116EBAB3A00170579 /* LPInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPInfoViewController.m; sourceTree = "<group>"; };
 		13EC390516EB9FE8005244BD /* Lilly Poison.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lilly Poison.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13EC390816EB9FE8005244BD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		13EC390A16EB9FE8005244BD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -170,10 +170,10 @@
 			children = (
 				13EB1A1D16EBA9EE00170579 /* LPMainViewController.h */,
 				13EB1A1E16EBA9EE00170579 /* LPMainViewController.m */,
-				13EB1A2016EBAB3A00170579 /* LPInfoViewController.h */,
-				13EB1A2116EBAB3A00170579 /* LPInfoViewController.m */,
 				13794DDB16EBE223003EF093 /* LPTableViewController.h */,
 				13794DDC16EBE223003EF093 /* LPTableViewController.m */,
+				1381B36D16F5F5EB00143FEA /* LPContentViewController.h */,
+				1381B36E16F5F5EB00143FEA /* LPContentViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -437,7 +437,6 @@
 				13EC391B16EB9FE8005244BD /* LPAppDelegate.m in Sources */,
 				13EC392416EB9FE8005244BD /* Lilly_Poisen.xcdatamodeld in Sources */,
 				13EB1A1F16EBA9EE00170579 /* LPMainViewController.m in Sources */,
-				13EB1A2216EBAB3A00170579 /* LPInfoViewController.m in Sources */,
 				13794DDA16EBE0C6003EF093 /* LPDataSource.m in Sources */,
 				13794DDD16EBE223003EF093 /* LPTableViewController.m in Sources */,
 				13794DE516EC000A003EF093 /* LPEntryViewCell.m in Sources */,
@@ -446,6 +445,7 @@
 				1381B35F16F4E22C00143FEA /* Poison+LPEntry.m in Sources */,
 				1381B36216F4E82800143FEA /* LPHtmlStringHelper.m in Sources */,
 				1381B36A16F4F7EA00143FEA /* LPToolbar.m in Sources */,
+				1381B36F16F5F5EB00143FEA /* LPContentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

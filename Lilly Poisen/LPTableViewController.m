@@ -7,7 +7,7 @@
 //
 
 #import "LPTableViewController.h"
-#import "LPInfoViewController.h"
+#import "LPContentViewController.h"
 #import "Poison+LPEntry.h"
 
 @interface LPTableViewController ()
@@ -45,7 +45,7 @@
     Poison *poison = [self.poisonDataSource getPoisonAtIndexPath:indexPath];
     
     UIStoryboard * storyboard = self.storyboard;
-    LPInfoViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
+    LPContentViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
     detail.htmlContentString = poison.htmlContentString;
     detail.title = poison.name;
     
