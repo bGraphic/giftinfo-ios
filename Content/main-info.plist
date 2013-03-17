@@ -3,6 +3,19 @@
 <plist version="1.0">
 <array>
 	<dict>
+		<key>title</key>
+		<string></string>
+		<key>topics</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>Alfabetisk liste</string>
+			</dict>
+		</array>
+		<key>footer</key>
+		<string></string>
+	</dict>
+	<dict>
 		<key>footer</key>
 		<string>Ved bevisstløshet ring 113</string>
 		<key>title</key>

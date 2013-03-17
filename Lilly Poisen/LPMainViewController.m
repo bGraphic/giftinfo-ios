@@ -120,16 +120,22 @@
     }
     else
     {
-
-        UIStoryboard * storyboard = self.storyboard;
-        LPInfoViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
-        
-        NSDictionary *topic = [self topicAtIndexPath:indexPath];
-        
-        detail.htmlContentString = [LPHtmlStringHelper stringFromHtmlFileWithName:topic[@"html"]];
-        detail.title = topic[@"title"];
-        
-        [self.navigationController pushViewController: detail animated: YES];
+        if(indexPath.section == 0)
+        {
+            [self performSegueWithIdentifier:@"showTable" sender:self];
+        }
+        else
+        {
+            UIStoryboard * storyboard = self.storyboard;
+            LPInfoViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
+            
+            NSDictionary *topic = [self topicAtIndexPath:indexPath];
+            
+            detail.htmlContentString = [LPHtmlStringHelper stringFromHtmlFileWithName:topic[@"html"]];
+            detail.title = topic[@"title"];
+            
+            [self.navigationController pushViewController: detail animated: YES];
+        }
     }
 }
 
