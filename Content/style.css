@@ -1,11 +1,11 @@
 
 body {
-    padding: 0 0.5em;
+    padding: 1em 0.5em 2em;
+    background-color: rgba(203,210,216,0.2);
 }
 
 ul,
 ol {
-    margin-left: 0;
     padding-left: 1.5em;
 }
 
@@ -19,7 +19,7 @@ li {
    ========================================================================== */
 
 /**
- * Set all font to sans-serif   
+ * Set all font to serif   
  */
  
 html,
@@ -27,11 +27,16 @@ button,
 input,
 select,
 textarea {
-    font-family: sans-serif;
+    font-family: georgia, serif;
+}
+
+body {
+	font-size: 90%;
+	line-height: 150%;
 }
 
 p {
-    line-height: 150%;
+
 }
 
 /**
@@ -39,6 +44,10 @@ p {
  * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
  * and Chrome.
  */
+ 
+h1, h2, h3, h4, h5, h6 {
+	font-family: sans-serif;
+}
 
 h1 {
     font-size: 2em;
@@ -52,7 +61,7 @@ h2 {
 
 h3 {
     font-size: 1.17em;
-    margin: 1em 0;
+    margin: 1em 0 -0.2em;
 }
 
 h4 {
