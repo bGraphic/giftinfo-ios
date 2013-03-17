@@ -22,6 +22,13 @@
     [self configureView];
     
     self.toolbarItems = self.navigationController.toolbarItems;
+    
+    CGRect frame = self.webView.frame;
+    frame.size.height -= 5;
+    self.webView.frame = frame;
+    
+    self.webView.scrollView.scrollIndicatorInsets = UIEdgeInsetsMake(5, 0, 5, 0);
+    self.webView.scrollView.bounces = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -32,20 +39,17 @@
 
 #pragma mark - Content
 
-- (void)setContentKey:(NSString *) newContentKey
+- (void)setHtmlContentString:(NSString *) newHtmlContentString
 {
-    if (![_contentKey isEqualToString:newContentKey])
-    {
-        _contentKey = newContentKey;
-        
-        [self configureView];
-    }
+    _htmlContentString = newHtmlContentString;
+
+    [self configureView];
 }
 
 - (void)configureView
 {
     // Update the user interface for the detail item.
-    if (self.contentKey)
+    if (self.htmlContentString)
     {
         NSString *headerPath = [[NSBundle mainBundle] pathForResource:@"header" ofType:@"html"];
         
@@ -54,14 +58,6 @@
         
         if(headerError)
             NSLog(@"Problems loading content %@", headerError.description);
-        
-        NSString *contentPath = [[NSBundle mainBundle] pathForResource:self.contentKey ofType:@"html"];
-        
-        NSError *contentError;
-        NSString *contentString = [NSString stringWithContentsOfFile:contentPath encoding:NSUTF8StringEncoding error:&contentError];
-        
-        if(contentError)
-            NSLog(@"Problems loading content %@", contentError.description);
         
         NSString *footerPath = [[NSBundle mainBundle] pathForResource:@"footer" ofType:@"html"];
         
@@ -72,7 +68,7 @@
             NSLog(@"Problems loading content %@", footerError.description);
         
         
-        NSString *htmlString = [NSString stringWithFormat:@"%@\n%@\n%@", headerString, contentString, footerString];
+        NSString *htmlString = [NSString stringWithFormat:@"%@\n%@\n%@", headerString, self.htmlContentString, footerString];
         
         [self.webView loadHTMLString:htmlString baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] resourcePath]]];
     }

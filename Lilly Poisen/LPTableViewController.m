@@ -8,7 +8,7 @@
 
 #import "LPTableViewController.h"
 #import "LPInfoViewController.h"
-#import "LPEntryViewCell.h"
+#import "Poison+LPEntry.h"
 
 @interface LPTableViewController ()
 
@@ -20,8 +20,16 @@
 {
     [super viewDidLoad];
     
+    self.poisonDataSource = [[LPDataSource alloc] init];
+    
     self.toolbarItems = self.navigationController.toolbarItems;
-    self.searchDisplayController.searchResultsDataSource = self.dataSource;
+    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 10, 0);
+    self.tableView.scrollIndicatorInsets = UIEdgeInsetsMake(5, 0, 10, 0);
+    
+    
+    self.tableView.dataSource = self.poisonDataSource;
+    self.searchDisplayController.delegate = self.poisonDataSource;
+    self.searchDisplayController.searchResultsDataSource = self.poisonDataSource;
 }
 
 - (void)didReceiveMemoryWarning
@@ -33,23 +41,20 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:tableView.indexPathForSelectedRow];
+{   
+    Poison *poison = [self.poisonDataSource getPoisonAtIndexPath:indexPath];
     
     UIStoryboard * storyboard = self.storyboard;
-    
-    LPEntryViewCell *entryCell = (LPEntryViewCell *) cell;
-    
-    LPInfoViewController * detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
-    
-    detail.contentKey = entryCell.key;
-    detail.title = entryCell.name;
+    LPInfoViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
+    detail.htmlContentString = poison.htmlContentString;
+    detail.title = poison.name;
     
     [self.navigationController pushViewController: detail animated: YES];
 }
 
 - (void)viewDidUnload {
-    [self setDataSource:nil];
+    [self setPoisonDataSource:nil];
     [super viewDidUnload];
 }
+
 @end

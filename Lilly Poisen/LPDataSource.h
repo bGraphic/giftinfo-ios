@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Poison.h"
 
 @interface LPDataSource : NSObject <UITableViewDataSource, UISearchDisplayDelegate>
+
+- (Poison *) getPoisonAtIndexPath:(NSIndexPath *)indexPath;
 
 @end

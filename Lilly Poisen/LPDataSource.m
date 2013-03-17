@@ -8,7 +8,6 @@
 
 #import "LPDataSource.h"
 #import "LPAppDelegate.h"
-#import "Poison.h"
 #import "Term.h"
 #import "LPEntryViewCell.h"
 #import "LPInfoViewController.h"
@@ -21,6 +20,7 @@
 @property NSArray *termData;
 @property NSMutableArray *filteredData;
 @property NSString *selectedKey;
+@property NSString *searchString;
 
 @end
 
@@ -34,14 +34,16 @@
         NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
         NSEntityDescription *entity = [NSEntityDescription entityForName:@"Poison"
                                                   inManagedObjectContext:self.context];
+        NSSortDescriptor *nameSort = [[NSSortDescriptor alloc]initWithKey:@"name"  ascending:YES];
         
         [fetchRequest setEntity:entity];
+        [fetchRequest setSortDescriptors:[NSArray arrayWithObject:nameSort]];
         
         NSError *error;
         
         self.poisonData = [self.context executeFetchRequest:fetchRequest error:&error];
         for (Poison *poison in self.poisonData) {
-            NSLog(@"Poison: %@", poison.name);
+//            NSLog(@"Poison: %@", poison.name);
         }
         
         if (error) {
@@ -61,7 +63,6 @@
 
 - (void) filterContentForSearchText:(NSString*)searchText
 {
-
     if(!self.filteredData)
         self.filteredData = [NSMutableArray arrayWithCapacity:self.poisonData.count];
     else
@@ -77,6 +78,14 @@
     }
 }
 
+- (Poison *) getPoisonAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(self.filteredData)
+        return self.filteredData[indexPath.row];
+    else
+        return self.poisonData[indexPath.row];
+}
+
 #pragma mark - Search Display Delegate
 
 - (void)searchDisplayController:(UISearchDisplayController *)controller didHideSearchResultsTableView:(UITableView *)tableView
@@ -85,7 +94,10 @@
 }
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
-{    
+{
+    
+    self.searchString = searchString;
+    
     [self filterContentForSearchText:searchString];
 
     return YES;
@@ -110,19 +122,14 @@
 {
     static NSString *CellIdentifier = @"PoisonCell";
     
-    LPEntryViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
     if(!cell)
     {
-        cell = [[LPEntryViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
 
-    Poison *poisonEntry;
-    
-    if(self.filteredData)
-        poisonEntry = self.filteredData[indexPath.row];
-    else
-        poisonEntry = self.poisonData[indexPath.row];
+    Poison *poisonEntry = [self getPoisonAtIndexPath:indexPath];
     
     NSString *synonymsString;
     
@@ -134,13 +141,11 @@
             synonymsString = [NSString stringWithFormat:@"%@, %@", synonymsString, term.term];
     }
     
-    cell.key = poisonEntry.key;
-    cell.name = poisonEntry.name;
-    
     cell.textLabel.text = poisonEntry.name;
     cell.detailTextLabel.text = synonymsString;
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.selectionStyle = UITableViewCellSelectionStyleGray;
     
     return cell;
 }

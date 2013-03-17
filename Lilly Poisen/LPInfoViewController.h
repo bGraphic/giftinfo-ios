@@ -10,7 +10,7 @@
 
 @interface LPInfoViewController : UIViewController
 
-@property (strong, nonatomic) NSString *contentKey;
+@property (strong, nonatomic) NSString *htmlContentString;
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 

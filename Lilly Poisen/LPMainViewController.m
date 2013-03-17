@@ -8,73 +8,134 @@
 
 #import "LPMainViewController.h"
 #import "LPInfoViewController.h"
-#import "LPEntryViewCell.h"
+#import "Poison+LPEntry.h"
+#import "LPHtmlStringHelper.h"
 
 @interface LPMainViewController ()
+
+@property (strong, nonatomic) NSArray *mainInfoData;
 
 @end
 
 @implementation LPMainViewController
 
-- (void)viewDidLoad
+- (void) viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view.
+
+    self.tableView.dataSource = self;
     
-    self.toolbarItems = self.navigationController.toolbarItems;
+    CGRect toolbarFrame = self.navigationController.toolbar.frame;
+    toolbarFrame.size.height += 10;
+    toolbarFrame.origin.y -= 5;
+    self.navigationController.toolbar.frame = toolbarFrame;
     
-    self.searchDisplayController.searchResultsDataSource = self.dataSource;
+    
+    [self loadTableData];
 }
 
-- (void)didReceiveMemoryWarning
+- (void) didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
 
-- (void)viewDidUnload {
-    [self setDataSource:nil];
+- (void) viewDidUnload {
     [super viewDidUnload];
 }
 
 
-#pragma mark - Segue
+#pragma mark - Table View Data Source
 
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+- (void) loadTableData
 {
-    UITableViewCell *cell = [self.tableView cellForRowAtIndexPath:self.tableView.indexPathForSelectedRow];
+    NSString *propertyFile = [[NSBundle mainBundle] pathForResource:@"main-info" ofType:@"plist"];
+    self.mainInfoData = [NSArray arrayWithContentsOfFile:propertyFile];
+}
+
+- (NSDictionary *) topicAtIndexPath:(NSIndexPath *) indexPath
+{
+    NSDictionary *section = self.mainInfoData[indexPath.section];
+    NSDictionary *topic = section[@"topics"][indexPath.row];
     
-    if([segue.identifier isEqualToString:@"showContent"] && cell.reuseIdentifier)
+    return topic;
+}
+
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
+{
+    return self.mainInfoData.count;
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    return self.mainInfoData[section][@"title"];
+}
+
+- (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
+{
+    return self.mainInfoData[section][@"footer"];
+}
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    NSDictionary *sectionDict = self.mainInfoData[section];
+    NSArray *topics = sectionDict[@"topics"];
+    
+    return topics.count;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(self.tableView != tableView)
     {
-        [[segue destinationViewController] setContentKey:cell.reuseIdentifier];
-        [[segue destinationViewController] setTitle:cell.textLabel.text];
+        return [super tableView:tableView cellForRowAtIndexPath:indexPath];
+    }
+    else
+    {
+        NSString *CellIdentifier = @"infoCell";
+        
+        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+        
+        if(!cell)
+        {
+            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
+        }
+        
+        cell.textLabel.text = [self topicAtIndexPath:indexPath][@"title"];
+        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+        cell.selectionStyle = UITableViewCellSelectionStyleGray;
+        
+        return cell;
     }
 }
+
 
 #pragma mark - Table View Delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView cellForRowAtIndexPath:tableView.indexPathForSelectedRow];
-    
-    NSLog(@"%@", [indexPath description]);
-    
     if(self.tableView != tableView)
     {
-        UIStoryboard * storyboard = self.storyboard;
-        
-        LPEntryViewCell *entryCell = (LPEntryViewCell *) cell;
-        
-        LPInfoViewController * detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
-        
-        detail.contentKey = entryCell.key;
-        detail.title = entryCell.name;
-        
-        [self.navigationController pushViewController: detail animated: YES];
+        [super tableView:tableView didSelectRowAtIndexPath:indexPath];
     }
-    else if(cell.reuseIdentifier)
+    else
     {
-        [self performSegueWithIdentifier:@"showContent" sender:self];
+        if(indexPath.section == 0)
+        {
+            [self performSegueWithIdentifier:@"showTable" sender:self];
+        }
+        else
+        {
+            UIStoryboard * storyboard = self.storyboard;
+            LPInfoViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
+            
+            NSDictionary *topic = [self topicAtIndexPath:indexPath];
+            
+            detail.htmlContentString = [LPHtmlStringHelper stringFromHtmlFileWithName:topic[@"html"]];
+            detail.title = topic[@"title"];
+            
+            [self.navigationController pushViewController: detail animated: YES];
+        }
     }
 }
 
