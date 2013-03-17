@@ -8,7 +8,7 @@
 
 #import "LPTableViewController.h"
 #import "LPContentViewController.h"
-#import "Poison+LPEntry.h"
+#import "Poison.h"
 
 @interface LPTableViewController ()
 

@@ -8,7 +8,7 @@
 
 #import "LPMainViewController.h"
 #import "LPContentViewController.h"
-#import "Poison+LPEntry.h"
+#import "Poison.h"
 #import "LPHtmlStringHelper.h"
 
 @interface LPMainViewController ()

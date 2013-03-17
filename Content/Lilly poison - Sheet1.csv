@@ -1,0 +1,85 @@
+Lagt inn tekst?,key,name,synonyms,risk,symptoms,coal,action
+Ja,Acetyl,Acetylsalisylsyre,"Dispril, Aspirin, Globoid.","Farlig ved overdosering, spesielt for småbarn","Slapphet, rødhet i huden, feber, pustevansker, bevisstløshet, kramper",Ja,
+,tranqualizer,Beroligende midler ,,Farlige ved overdosering,"Sløvhet, bevisstløshet, pustevansker",Ja,
+Ja,Fluor,Fluorpreparater ,"Flux, fluortabletter?",25 mg fluorid eller 1 ss tannkrem er ufarlig,"Kvalme, brekninger, diaré, kramper",Nei,Gi melk å drikke
+,Cough,Hostesaft,Hostemedisin,"Kan være farlig ved overdosering, spesielt de reseptpliktige","Bevisstløshet, pustevansker",Ja,
+,Iron,Jerntabletter,jern,Farlige ved overdosering,"Magesmerter, kvalme, diaré, slapphet, Nei bevisstløshet, kramper, leverskade, nyreskade",Nei,
+Ja,Malaria,"Malariatabletter (Klorokin, hydroksyklorokin)",malariamedisin,"Svært farlige, spesielt for barn","Alvorlige symptomer som pustevansker, bevisstløshet, kramper, hjertepåvirkning",Ja,Haster! Ring 113
+Ja,Vitamin,Multivitaminer – uten jern ,"Multivitaminer, a-vitamin, b-vitamin, d-vitamin, tran",Lite farlig (inntil 20 tabletter er ufarlig),"Kan gi brekninger, magesmerter og diaré pga. søtningsstoffer",Ja,
+Ja,Nosedrops,Nesedråper,,Enkelte typer kan gi forgiftning ved overdosering. Spesielt farlig for små barn,"Sløvhet, uro, kramper, hjertepåvirkning",Ja,
+Ja,Paracet,Paracetamol,"smertestillende, febernedsettende, febermedisin",Farlig ved overdosering,"Kvalme, brekninger, magesmerter, leverskade",Ja,
+Ja,Painkiller,Ibuprofen,"smertestillende, febernedsettende, febermedisin",Over 400 mg er farlig,"kvalme, brekninger, magesmerter, leverskade, sløvhet",Ja,
+Ja,P_pill,P-piller,,Et brett er ufarlig,"Kvalme, brekninger",Ja,
+,Motionsickness,Reisesyketabeletter,,Farlige ved overdosering,"Uro, sløvhet, bevisstløshet, kramper",Ja,
+,Sleepingpills,Sovemedisiner,sovemedisin,Farlige ved overdosering,"Sløvhet, bevisstløshet, pustevansker",Ja,
+,Manlyman,Aftershave,"after shave, manneparfyme, godlukt, eau de vie, etterbarberingsvann",Farlig for barn,"Sløvhet, bevisstløshet, pustevanker",Nei,Gi drikke. Skyll øyne. 
+,Alcohol,"Alkohol, etanol, sprit",,Farlig for barn,"Sløvhet, bevisstløshet, pustevanker",Nei,Gi drikke. Skyll øyne/hud. 
+,,,,,,Nei,Gi drikke. Skyll øyne/hud. 
+,,,,,,Nei,
+,Degrease,Avfettingsmidler,,Kan være farlig,Avhengig av innholdsstoffer,Nei,Gi drikke. Skyll øyne/hud.
+,Toiletopeners,Avløpsåpnere,"WC And, domestos Fresh, dovask, plumbo",Svært farlige,Sterkt etsende (alkaiske),Nei,"Unngår brekninger. Gi øyeblikkelig drikke, gjerne melk. Langvarig skylling ved søl på hud/øyne. Se også  generelle tiltak."
+,Battery,Batterier,Duracell,Kan være farlig,Fare for etseskade,Nei,Gi drikke. Skyll øyne/hud.
+,Petrol,Bensin,"Blyfri 95, Blyfri 98, Blyfri",Svært farlige,Se oljebaserte produkter,Nei,Se oljebaserte produkter
+,Carbattery_acid,Bilbatterisyre,"Batterisyre, bil",Kan være farlig,Sterkt etsende (syre),Nei,Se avløpsåpnere
+,Fertilizer,Blomstergjødning ,"Blomstergjødsel, substral, gjøssel, jøssel",Lite farlig,Som regel ingen symptomer,Nei,Gi drikke. Skyll øyne i 30 minutter. 
+,Flowerwater,Blomstervann ,,Ufarlig,Ingen symptomer,Nei,Ingen behandling nødvendig
+,Crayons,Blyanter/fargestifter til barn ,Blyant,Ufarlig,Ingen symptomer,Nei,Ingen behandling nødvendig
+,Extinguisher,Brannslukningsapparat - pulver ,"Brannapparat, pulverapparat",Lite farlig,"Hoste, pustevansker",Nei,Gi drikke. Skyll øyne/hud.
+,Breakfluid,Bremsevæske til bil,,Svært farlige,"Bevisstløshet, nyreskader, pustevansker",Nei,Viktig å følge opp alle inntak. Skyll øyne/hud.
+,Desinfetction,Desinfeksjonsmidler,"pyrisept, sårrens",,Irriterer slimhinner,Nei,Gi drikke. Skyll øyne/hud.
+,Desinfetction_wound,Desinfikesjonsmildler – sårdesinfeksjon,"pyrisept, sårrens",Lite farlig ved små inntak,Irriterer slimhinner,Nei,Gi drikke. Skyll øyne/hud.
+,Desinfection_other,Desinfeksjonsmidler – andre desinfeksjonsmidler,,Kan være svært farlige,Avhengig av innholdsstoffer,Nei,Gi drikke. Skyll øyne/hud.
+,Etheric_oils,Duftolje/eteriske oljer ,"Massasjelukt, smådufteflasker, ylang ylang, musk, rosmarin, duftkonsentrat, ",Kan være svært farlige,"Irritasjon i munn og svelg, bevisstløshet, kramper",Nei,Gi drikke. Skyll øyne/hud.
+,Vinegar,Eddikessens 35% ,Eddik,Farlig,Sterkt etsende (syre),Nei,Se avløpsåpnere
+,Stainremover,Flekkfjernere ,,Kan være farlige,Avhengig av innholdsstoffer,Nei,Gi drikke. Skyll øyne/hud
+,Frostfluid,Frostvæske,,Svært farlig,"Bevisstløshet, nyreskader, pustevansker",Nei,Viktig å følge opp alle inntak. Skyll øyne/hud Gi drikke
+,Matches,Fyrstikker,,Lite farlig (inntill 20 fyrstikker er ufarlig),"Kvalme, magesmerter",Nei,Gi drikke. Skyll øyne/hud
+,Greensoap,Grønnsåpe,,Vanligvis lite farlig,Irriterte slimhinner,Nei,Gi drikke. Skyll øyne/hud.
+,Lotion,Hudkrem / lotion / solkrem,,Ufarlig,Ingen symptomer,Nei,Ingen behandling nødvendig
+,Handsoap,Håndsåpe,,Lite farlig,Kvalme og brekninger,Nei,Gi drikke. Skyll øyne
+,Shampoo,Hårsjampoo,"Sjampoo, Schampo, sjampo",Lite farlig,Kvalme og brekninger,Nei,Gi drikke. Skyll øyne
+,Hairstyling,Hårstylingsprodukter,,Lite farlige ved små inntak,Irriterer slimhinne og øyne,Nei,Gi drikke. Skyll øyne
+,Calc,Kalk til plen (dolomittkalk),,Ufarlig,Ingen symptomer,Nei,Gi drikke
+,Cau_soda,Kaustisk soda,,Svært farlig,Sterkt etsende (alkaisk),Nei,Se avløpsåpnere
+,Bleach,Klorbaserte blekemidler,,Farlige,Irriterende til etsende,Nei,Gi drikke. Skyll øyne i 30 minutter. Skyll hud 
+,Lampoil,Lampeolje,,Farlig,Se oljebaserte produkter,,Se oljebaserte produkter
+,Glue,Lim:,,,,Nei,
+,paperglue,Lim – papirlim,,Ufarlig,ingen symptomer,Nei,Gi drikke. Skyll øyne/hud
+,Contactglue,Lim – kontaktlim,,Farlig,"Ved svelging eller innånding av større mengder damp: svimmelhet, kvalme, hodepine, bevistløshet, hjertepåvirkning",Nei,Gi rikelig med drikke. Ved innånding: Frisk luft og hvile. Skyll øyne/hud
+,superglue,Lim – superlim,,"Ufarlig, untatt ved øyekontakt",Kan gi øyeskader,Nei,Gi drikke. Skyll øyne/hud
+,Lye,Lut,,Svært farlig,Sterkt etsende (alkaisk),Nei,Se avløpsåpnere
+,Paint_waterbased,"Maling, lakk og beis: – vannbasert",,Lite farlig ved små inntak,Irriterer slimhinner,Nei,Gi drikke. Skyll øyne/hud Gi drikke. Skyll øyne/hud
+,Paint_other,"Maling, lakk og beis – andre",,Kan være farlige,Avhengig av virkestoffer,Nei,Gi drikke. Skyll øyne/hud
+,Paintremover_metanol,Maling- og lakkfjernere: Metanol (bl.a. modellfly-drivstoff),,Svært farlig,"Bevisstløshet, synsforstyrrelser, pustevansker",Nei,Viktig å følge opp alle inntak. Skyll øyne/hud
+,Furniturepolish,Møbelpolish ,Teakolje,Farlig,Se oljebaserte produkter,Nei,Se oljebaserte produkter
+,Nailpolishremover,Neglelakkfjerner,aceton,Mer enn 20 ml er farlig for småbarn,"Sløvhet, bevisstløshet, pustevansker",Nei,Gi drikke. Skyll øyne/hud.
+,Nailpolish_aceton_etyl,Neglelakk m/ aceteon/etylacetat,,Mer enn 20 ml er farlig for småbarn,"Sløvhet, bevisstløshet, pustevansker",Nei,Gi drikke. Skyll øyne/hud.
+,Petroliumbased,Oljebaserte produkter (petroleumsdestillater),,Farlige,"Ved små inntak: fare for alvorlig lungpåvirkning hvis noe kommer over i luftveien. Ved større inntak også: sløvhet, bevisstløshet",Nei,"Unngå brekninger. Gi noen spiseskjeer fløte, smeltet fløteiskrem eller matolje. Skyll øyne/hud."
+,,Oppvaskmiddel:,,,,Nei,Gi drikke. Skyll øyne. 
+,Dish_detergent_hand,Oppvaskmiddel – flytende (ikke til maskin) (håndvask),"Zalo, Yes",Lite farlige,Kvalme og diaré,Nei,Gi drikke. Skyll øyne
+,Dish_detergent_machine,Oppvaskmiddel – pulver til oppvaskmaskin,Yes,Sterkt irriterende,"Kvalme, oppkast, diaré, etsende",Nei,Gi drikke. Skyll øyne
+,Ovenclean,Ovnsrens,"Mr. Muscle, mrmuscle, mistermuskel",Kan være svært farlig,Sterkt etsende (alkaisk),Nei,Se avløpsåpnere
+,Perfume,Parfyme,,Farlig for barn,"Sløvhet, bevisstløshet, pustevansker",Nei,Gi drikke. Skyll øyne. 
+,Ratpoison,Rottegift (blodfortynnende) ,,Farlig,Blåmerker og blødninger. Symptomene kan komme etter 2-3 dager. ,Nei,
+,Rustremover,Rustfjernere,rustbjørn,Mange er farlige,Avhengig av innholdsstoffer,Nei,Se avløpsåpnere
+,Redspirit,Rødsprit,,Farlig,"Sløvhet, bevisstløshet, pustevansker",Nei,Gi drikke. Skyll øyne/hud
+,Salmiak,Salmiakk,Amoniakk,Farlig,Etsende (alkaisk),Nei,Se avløpsåpnere
+,Sement,Sement,,"Kan være farlig, spesielt for øyne","Irriterende til etsende, kan gi alvorlig etseskade på øyne",Nei,Gi drikke. Skyll/vask hud. Langvarig skylling av øyne
+,Silikagel,Silikagel,"silica gel, pakkekuler, kleskuler, kuler til tøy, oppbevaringskuler",Ufarlig. Tas ikke opp. Kommer ut naturlig. ,Ingen symptomer,Nei,ngen behandling nødvendig
+,Fabric_softener,"Skyllemidler, tøymyknere ","Milo, Neutral, Nøytral skyllemiddel",Lite farlige ved små inntak,"Irriterer slimhinner, kvalme, brekninger",Nei,Gi drikke. Skyll øyne/hud
+,Fungus_killer,Sopp- og algedreper,,Kan være svært irriterende / farlig,Avhengig av innholdsstoffer,Nei,Gi drikke. Skyll øyne/hud
+,Silver_polish,"Sølv-, kobber- og messingpuss",Sølvpuss,Kan være farlige,Avhengig av innholdsstoffer,Nei,Gi drikke. Skyll øyne/hud
+,Firebrackets, Tennbriketter,,Lite farlige ,"Irriterende til etsende, kan gi alvorlig etseskade på øyne",Nei,Gi drikke
+,Lighter_fluid,Tennvæske,,Farlig,Se oljebaserte produkter,Nei,Se oljebaserte produkter
+,Thermometers,Termometere,,,,Nei,
+,Thermo_quicksliver,– kvikksølv (gamle) ,,"Farlig damp, ufarlig å svelge",Fare for lungeskade ved innånding av damp,Nei,Fjern kvikksølvsøl (ikke støvsug).
+,thermo_other,– andre termometere,,Ufarlig,Ingen symptomer,Nei,Ingen behandling nødvendig
+Ja,Tobacco,Tobakk,,Farlig. Inntil en halv sigarett er ufarlig. ,"Brennende følelse i munn og svelg, kvalme, brekninger, magesmerter, bevisstløshet, kramper",Ja,Fjern eventuelle rester av tobakk fra munnen. Gi drikke.
+,,snus,"snuff, skruf, ",,,,Fjern eventuelle rester av tobakk fra munnen. Gi drikke.
+,,sigaretter,"malboro, prince, dunhill",,,,Fjern eventuelle rester av tobakk fra munnen. Gi drikke.
+,,Nikotintyggegummi,Nikotintyggis,,,,
+,,Pipetobakk,,,,,Fjern eventuelle rester av tobakk fra munnen. Gi drikke.
+,Pesticides,Ugress- og plantevernmidler,,Mange er farlige,Avhengig av virkestoffer,Nei,Gi drikke. Skyll øyne/hud.
+,Detergent_clothes,Vaskepulver (til klær),"Omo, Omo color, neurtral",Lite farlig ved små inntak,Irriterer slimhinner,Nei,Gi drikke. Skyll øyne/hud.
+,Window_wash,Vindusspylervæske,,Farlig,"Sløvhet, bevisstløshet, pustevansker",Nei,Gi drikke. Skyll øyne/hud.
+,White_spirit,White spirit,"kvitsprit, hvitsprit, whitesprit, «nafta» (petroleum), «white spirit type 1», «white spirit type 2», «white spirit type 3», «mineralsk terpentin», «laknnafta», white-sprit eller «essence de petrole»",Farlig,Se oljebaserte produkter,,Se oljebaserte produkter

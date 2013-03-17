@@ -1,0 +1,1519 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+
+<plist version="1.0">
+        <array>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string>Ja</string>
+                        <key>key</key>
+                        <string>Acetyl</string>
+                        <key>name</key>
+                        <string>Acetylsalisylsyre</string>
+                        <key>synonyms</key>
+                        <string>Dispril, Aspirin, Globoid.</string>
+                        <key>risk</key>
+                        <string>Farlig ved overdosering, spesielt for småbarn</string>
+                        <key>symptoms</key>
+                        <string>Slapphet, rødhet i huden, feber, pustevansker, bevisstløshet, kramper</string>
+                        <key>coal</key>
+                        <string>Ja</string>
+                        <key>action</key>
+                        <string></string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>tranqualizer</string>
+                        <key>name</key>
+                        <string>Beroligende midler</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Farlige ved overdosering</string>
+                        <key>symptoms</key>
+                        <string>Sløvhet, bevisstløshet, pustevansker</string>
+                        <key>coal</key>
+                        <string>Ja</string>
+                        <key>action</key>
+                        <string></string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string>Ja</string>
+                        <key>key</key>
+                        <string>Fluor</string>
+                        <key>name</key>
+                        <string>Fluorpreparater</string>
+                        <key>synonyms</key>
+                        <string>Flux, fluortabletter?</string>
+                        <key>risk</key>
+                        <string>25 mg fluorid eller 1 ss tannkrem er ufarlig</string>
+                        <key>symptoms</key>
+                        <string>Kvalme, brekninger, diaré, kramper</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi melk å drikke</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Cough</string>
+                        <key>name</key>
+                        <string>Hostesaft</string>
+                        <key>synonyms</key>
+                        <string>Hostemedisin</string>
+                        <key>risk</key>
+                        <string>Kan være farlig ved overdosering, spesielt de reseptpliktige</string>
+                        <key>symptoms</key>
+                        <string>Bevisstløshet, pustevansker</string>
+                        <key>coal</key>
+                        <string>Ja</string>
+                        <key>action</key>
+                        <string></string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Iron</string>
+                        <key>name</key>
+                        <string>Jerntabletter</string>
+                        <key>synonyms</key>
+                        <string>jern</string>
+                        <key>risk</key>
+                        <string>Farlige ved overdosering</string>
+                        <key>symptoms</key>
+                        <string>Magesmerter, kvalme, diaré, slapphet, Nei bevisstløshet, kramper, leverskade, nyreskade</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string></string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string>Ja</string>
+                        <key>key</key>
+                        <string>Malaria</string>
+                        <key>name</key>
+                        <string>Malariatabletter (Klorokin, hydroksyklorokin)</string>
+                        <key>synonyms</key>
+                        <string>malariamedisin</string>
+                        <key>risk</key>
+                        <string>Svært farlige, spesielt for barn</string>
+                        <key>symptoms</key>
+                        <string>Alvorlige symptomer som pustevansker, bevisstløshet, kramper, hjertepåvirkning</string>
+                        <key>coal</key>
+                        <string>Ja</string>
+                        <key>action</key>
+                        <string>Haster! Ring 113</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string>Ja</string>
+                        <key>key</key>
+                        <string>Vitamin</string>
+                        <key>name</key>
+                        <string>Multivitaminer – uten jern</string>
+                        <key>synonyms</key>
+                        <string>Multivitaminer, a-vitamin, b-vitamin, d-vitamin, tran</string>
+                        <key>risk</key>
+                        <string>Lite farlig (inntil 20 tabletter er ufarlig)</string>
+                        <key>symptoms</key>
+                        <string>Kan gi brekninger, magesmerter og diaré pga. søtningsstoffer</string>
+                        <key>coal</key>
+                        <string>Ja</string>
+                        <key>action</key>
+                        <string></string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string>Ja</string>
+                        <key>key</key>
+                        <string>Nosedrops</string>
+                        <key>name</key>
+                        <string>Nesedråper</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Enkelte typer kan gi forgiftning ved overdosering. Spesielt farlig for små barn</string>
+                        <key>symptoms</key>
+                        <string>Sløvhet, uro, kramper, hjertepåvirkning</string>
+                        <key>coal</key>
+                        <string>Ja</string>
+                        <key>action</key>
+                        <string></string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string>Ja</string>
+                        <key>key</key>
+                        <string>Paracet</string>
+                        <key>name</key>
+                        <string>Paracetamol</string>
+                        <key>synonyms</key>
+                        <string>smertestillende, febernedsettende, febermedisin</string>
+                        <key>risk</key>
+                        <string>Farlig ved overdosering</string>
+                        <key>symptoms</key>
+                        <string>Kvalme, brekninger, magesmerter, leverskade</string>
+                        <key>coal</key>
+                        <string>Ja</string>
+                        <key>action</key>
+                        <string></string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string>Ja</string>
+                        <key>key</key>
+                        <string>Painkiller</string>
+                        <key>name</key>
+                        <string>Ibuprofen</string>
+                        <key>synonyms</key>
+                        <string>smertestillende, febernedsettende, febermedisin</string>
+                        <key>risk</key>
+                        <string>Over 400 mg er farlig</string>
+                        <key>symptoms</key>
+                        <string>kvalme, brekninger, magesmerter, leverskade, sløvhet</string>
+                        <key>coal</key>
+                        <string>Ja</string>
+                        <key>action</key>
+                        <string></string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string>Ja</string>
+                        <key>key</key>
+                        <string>P_pill</string>
+                        <key>name</key>
+                        <string>P-piller</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Et brett er ufarlig</string>
+                        <key>symptoms</key>
+                        <string>Kvalme, brekninger</string>
+                        <key>coal</key>
+                        <string>Ja</string>
+                        <key>action</key>
+                        <string></string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Motionsickness</string>
+                        <key>name</key>
+                        <string>Reisesyketabeletter</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Farlige ved overdosering</string>
+                        <key>symptoms</key>
+                        <string>Uro, sløvhet, bevisstløshet, kramper</string>
+                        <key>coal</key>
+                        <string>Ja</string>
+                        <key>action</key>
+                        <string></string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Sleepingpills</string>
+                        <key>name</key>
+                        <string>Sovemedisiner</string>
+                        <key>synonyms</key>
+                        <string>sovemedisin</string>
+                        <key>risk</key>
+                        <string>Farlige ved overdosering</string>
+                        <key>symptoms</key>
+                        <string>Sløvhet, bevisstløshet, pustevansker</string>
+                        <key>coal</key>
+                        <string>Ja</string>
+                        <key>action</key>
+                        <string></string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Manlyman</string>
+                        <key>name</key>
+                        <string>Aftershave</string>
+                        <key>synonyms</key>
+                        <string>after shave, manneparfyme, godlukt, eau de vie, etterbarberingsvann</string>
+                        <key>risk</key>
+                        <string>Farlig for barn</string>
+                        <key>symptoms</key>
+                        <string>Sløvhet, bevisstløshet, pustevanker</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne.</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Alcohol</string>
+                        <key>name</key>
+                        <string>Alkohol, etanol, sprit</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Farlig for barn</string>
+                        <key>symptoms</key>
+                        <string>Sløvhet, bevisstløshet, pustevanker</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne/hud.</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string></string>
+                        <key>name</key>
+                        <string></string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string></string>
+                        <key>symptoms</key>
+                        <string></string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne/hud.</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string></string>
+                        <key>name</key>
+                        <string></string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string></string>
+                        <key>symptoms</key>
+                        <string></string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string></string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Degrease</string>
+                        <key>name</key>
+                        <string>Avfettingsmidler</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Kan være farlig</string>
+                        <key>symptoms</key>
+                        <string>Avhengig av innholdsstoffer</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne/hud.</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Toiletopeners</string>
+                        <key>name</key>
+                        <string>Avløpsåpnere</string>
+                        <key>synonyms</key>
+                        <string>WC And, domestos Fresh, dovask, plumbo</string>
+                        <key>risk</key>
+                        <string>Svært farlige</string>
+                        <key>symptoms</key>
+                        <string>Sterkt etsende (alkaiske)</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Unngår brekninger. Gi øyeblikkelig drikke, gjerne melk. Langvarig skylling ved søl på hud/øyne. Se også  generelle tiltak.</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Battery</string>
+                        <key>name</key>
+                        <string>Batterier</string>
+                        <key>synonyms</key>
+                        <string>Duracell</string>
+                        <key>risk</key>
+                        <string>Kan være farlig</string>
+                        <key>symptoms</key>
+                        <string>Fare for etseskade</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne/hud.</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Petrol</string>
+                        <key>name</key>
+                        <string>Bensin</string>
+                        <key>synonyms</key>
+                        <string>Blyfri 95, Blyfri 98, Blyfri</string>
+                        <key>risk</key>
+                        <string>Svært farlige</string>
+                        <key>symptoms</key>
+                        <string>Se oljebaserte produkter</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Se oljebaserte produkter</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Carbattery_acid</string>
+                        <key>name</key>
+                        <string>Bilbatterisyre</string>
+                        <key>synonyms</key>
+                        <string>Batterisyre, bil</string>
+                        <key>risk</key>
+                        <string>Kan være farlig</string>
+                        <key>symptoms</key>
+                        <string>Sterkt etsende (syre)</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Se avløpsåpnere</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Fertilizer</string>
+                        <key>name</key>
+                        <string>Blomstergjødning</string>
+                        <key>synonyms</key>
+                        <string>Blomstergjødsel, substral, gjøssel, jøssel</string>
+                        <key>risk</key>
+                        <string>Lite farlig</string>
+                        <key>symptoms</key>
+                        <string>Som regel ingen symptomer</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne i 30 minutter.</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Flowerwater</string>
+                        <key>name</key>
+                        <string>Blomstervann</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Ufarlig</string>
+                        <key>symptoms</key>
+                        <string>Ingen symptomer</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Ingen behandling nødvendig</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Crayons</string>
+                        <key>name</key>
+                        <string>Blyanter/fargestifter til barn</string>
+                        <key>synonyms</key>
+                        <string>Blyant</string>
+                        <key>risk</key>
+                        <string>Ufarlig</string>
+                        <key>symptoms</key>
+                        <string>Ingen symptomer</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Ingen behandling nødvendig</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Extinguisher</string>
+                        <key>name</key>
+                        <string>Brannslukningsapparat - pulver</string>
+                        <key>synonyms</key>
+                        <string>Brannapparat, pulverapparat</string>
+                        <key>risk</key>
+                        <string>Lite farlig</string>
+                        <key>symptoms</key>
+                        <string>Hoste, pustevansker</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne/hud.</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Breakfluid</string>
+                        <key>name</key>
+                        <string>Bremsevæske til bil</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Svært farlige</string>
+                        <key>symptoms</key>
+                        <string>Bevisstløshet, nyreskader, pustevansker</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Viktig å følge opp alle inntak. Skyll øyne/hud.</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Desinfetction</string>
+                        <key>name</key>
+                        <string>Desinfeksjonsmidler</string>
+                        <key>synonyms</key>
+                        <string>pyrisept, sårrens</string>
+                        <key>risk</key>
+                        <string></string>
+                        <key>symptoms</key>
+                        <string>Irriterer slimhinner</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne/hud.</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Desinfetction_wound</string>
+                        <key>name</key>
+                        <string>Desinfikesjonsmildler – sårdesinfeksjon</string>
+                        <key>synonyms</key>
+                        <string>pyrisept, sårrens</string>
+                        <key>risk</key>
+                        <string>Lite farlig ved små inntak</string>
+                        <key>symptoms</key>
+                        <string>Irriterer slimhinner</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne/hud.</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Desinfection_other</string>
+                        <key>name</key>
+                        <string>Desinfeksjonsmidler – andre desinfeksjonsmidler</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Kan være svært farlige</string>
+                        <key>symptoms</key>
+                        <string>Avhengig av innholdsstoffer</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne/hud.</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Etheric_oils</string>
+                        <key>name</key>
+                        <string>Duftolje/eteriske oljer</string>
+                        <key>synonyms</key>
+                        <string>Massasjelukt, smådufteflasker, ylang ylang, musk, rosmarin, duftkonsentrat, </string>
+                        <key>risk</key>
+                        <string>Kan være svært farlige</string>
+                        <key>symptoms</key>
+                        <string>Irritasjon i munn og svelg, bevisstløshet, kramper</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne/hud.</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Vinegar</string>
+                        <key>name</key>
+                        <string>Eddikessens 35%</string>
+                        <key>synonyms</key>
+                        <string>Eddik</string>
+                        <key>risk</key>
+                        <string>Farlig</string>
+                        <key>symptoms</key>
+                        <string>Sterkt etsende (syre)</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Se avløpsåpnere</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Stainremover</string>
+                        <key>name</key>
+                        <string>Flekkfjernere</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Kan være farlige</string>
+                        <key>symptoms</key>
+                        <string>Avhengig av innholdsstoffer</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne/hud</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Frostfluid</string>
+                        <key>name</key>
+                        <string>Frostvæske</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Svært farlig</string>
+                        <key>symptoms</key>
+                        <string>Bevisstløshet, nyreskader, pustevansker</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Viktig å følge opp alle inntak. Skyll øyne/hud Gi drikke</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Matches</string>
+                        <key>name</key>
+                        <string>Fyrstikker</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Lite farlig (inntill 20 fyrstikker er ufarlig)</string>
+                        <key>symptoms</key>
+                        <string>Kvalme, magesmerter</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne/hud</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Greensoap</string>
+                        <key>name</key>
+                        <string>Grønnsåpe</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Vanligvis lite farlig</string>
+                        <key>symptoms</key>
+                        <string>Irriterte slimhinner</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne/hud.</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Lotion</string>
+                        <key>name</key>
+                        <string>Hudkrem / lotion / solkrem</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Ufarlig</string>
+                        <key>symptoms</key>
+                        <string>Ingen symptomer</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Ingen behandling nødvendig</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Handsoap</string>
+                        <key>name</key>
+                        <string>Håndsåpe</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Lite farlig</string>
+                        <key>symptoms</key>
+                        <string>Kvalme og brekninger</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Shampoo</string>
+                        <key>name</key>
+                        <string>Hårsjampoo</string>
+                        <key>synonyms</key>
+                        <string>Sjampoo, Schampo, sjampo</string>
+                        <key>risk</key>
+                        <string>Lite farlig</string>
+                        <key>symptoms</key>
+                        <string>Kvalme og brekninger</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Hairstyling</string>
+                        <key>name</key>
+                        <string>Hårstylingsprodukter</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Lite farlige ved små inntak</string>
+                        <key>symptoms</key>
+                        <string>Irriterer slimhinne og øyne</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Calc</string>
+                        <key>name</key>
+                        <string>Kalk til plen (dolomittkalk)</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Ufarlig</string>
+                        <key>symptoms</key>
+                        <string>Ingen symptomer</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Cau_soda</string>
+                        <key>name</key>
+                        <string>Kaustisk soda</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Svært farlig</string>
+                        <key>symptoms</key>
+                        <string>Sterkt etsende (alkaisk)</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Se avløpsåpnere</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Bleach</string>
+                        <key>name</key>
+                        <string>Klorbaserte blekemidler</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Farlige</string>
+                        <key>symptoms</key>
+                        <string>Irriterende til etsende</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne i 30 minutter. Skyll hud</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Lampoil</string>
+                        <key>name</key>
+                        <string>Lampeolje</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Farlig</string>
+                        <key>symptoms</key>
+                        <string>Se oljebaserte produkter</string>
+                        <key>coal</key>
+                        <string></string>
+                        <key>action</key>
+                        <string>Se oljebaserte produkter</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Glue</string>
+                        <key>name</key>
+                        <string>Lim:</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string></string>
+                        <key>symptoms</key>
+                        <string></string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string></string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>paperglue</string>
+                        <key>name</key>
+                        <string>Lim – papirlim</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Ufarlig</string>
+                        <key>symptoms</key>
+                        <string>ingen symptomer</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne/hud</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Contactglue</string>
+                        <key>name</key>
+                        <string>Lim – kontaktlim</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Farlig</string>
+                        <key>symptoms</key>
+                        <string>Ved svelging eller innånding av større mengder damp: svimmelhet, kvalme, hodepine, bevistløshet, hjertepåvirkning</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi rikelig med drikke. Ved innånding: Frisk luft og hvile. Skyll øyne/hud</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>superglue</string>
+                        <key>name</key>
+                        <string>Lim – superlim</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Ufarlig, untatt ved øyekontakt</string>
+                        <key>symptoms</key>
+                        <string>Kan gi øyeskader</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne/hud</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Lye</string>
+                        <key>name</key>
+                        <string>Lut</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Svært farlig</string>
+                        <key>symptoms</key>
+                        <string>Sterkt etsende (alkaisk)</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Se avløpsåpnere</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Paint_waterbased</string>
+                        <key>name</key>
+                        <string>Maling, lakk og beis: – vannbasert</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Lite farlig ved små inntak</string>
+                        <key>symptoms</key>
+                        <string>Irriterer slimhinner</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne/hud Gi drikke. Skyll øyne/hud</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Paint_other</string>
+                        <key>name</key>
+                        <string>Maling, lakk og beis – andre</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Kan være farlige</string>
+                        <key>symptoms</key>
+                        <string>Avhengig av virkestoffer</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne/hud</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Paintremover_metanol</string>
+                        <key>name</key>
+                        <string>Maling- og lakkfjernere: Metanol (bl.a. modellfly-drivstoff)</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Svært farlig</string>
+                        <key>symptoms</key>
+                        <string>Bevisstløshet, synsforstyrrelser, pustevansker</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Viktig å følge opp alle inntak. Skyll øyne/hud</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Furniturepolish</string>
+                        <key>name</key>
+                        <string>Møbelpolish</string>
+                        <key>synonyms</key>
+                        <string>Teakolje</string>
+                        <key>risk</key>
+                        <string>Farlig</string>
+                        <key>symptoms</key>
+                        <string>Se oljebaserte produkter</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Se oljebaserte produkter</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Nailpolishremover</string>
+                        <key>name</key>
+                        <string>Neglelakkfjerner</string>
+                        <key>synonyms</key>
+                        <string>aceton</string>
+                        <key>risk</key>
+                        <string>Mer enn 20 ml er farlig for småbarn</string>
+                        <key>symptoms</key>
+                        <string>Sløvhet, bevisstløshet, pustevansker</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne/hud.</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Nailpolish_aceton_etyl</string>
+                        <key>name</key>
+                        <string>Neglelakk m/ aceteon/etylacetat</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Mer enn 20 ml er farlig for småbarn</string>
+                        <key>symptoms</key>
+                        <string>Sløvhet, bevisstløshet, pustevansker</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne/hud.</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Petroliumbased</string>
+                        <key>name</key>
+                        <string>Oljebaserte produkter (petroleumsdestillater)</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Farlige</string>
+                        <key>symptoms</key>
+                        <string>Ved små inntak: fare for alvorlig lungpåvirkning hvis noe kommer over i luftveien. Ved større inntak også: sløvhet, bevisstløshet</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Unngå brekninger. Gi noen spiseskjeer fløte, smeltet fløteiskrem eller matolje. Skyll øyne/hud.</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string></string>
+                        <key>name</key>
+                        <string>Oppvaskmiddel:</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string></string>
+                        <key>symptoms</key>
+                        <string></string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne.</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Dish_detergent_hand</string>
+                        <key>name</key>
+                        <string>Oppvaskmiddel – flytende (ikke til maskin) (håndvask)</string>
+                        <key>synonyms</key>
+                        <string>Zalo, Yes</string>
+                        <key>risk</key>
+                        <string>Lite farlige</string>
+                        <key>symptoms</key>
+                        <string>Kvalme og diaré</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Dish_detergent_machine</string>
+                        <key>name</key>
+                        <string>Oppvaskmiddel – pulver til oppvaskmaskin</string>
+                        <key>synonyms</key>
+                        <string>Yes</string>
+                        <key>risk</key>
+                        <string>Sterkt irriterende</string>
+                        <key>symptoms</key>
+                        <string>Kvalme, oppkast, diaré, etsende</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Ovenclean</string>
+                        <key>name</key>
+                        <string>Ovnsrens</string>
+                        <key>synonyms</key>
+                        <string>Mr. Muscle, mrmuscle, mistermuskel</string>
+                        <key>risk</key>
+                        <string>Kan være svært farlig</string>
+                        <key>symptoms</key>
+                        <string>Sterkt etsende (alkaisk)</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Se avløpsåpnere</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Perfume</string>
+                        <key>name</key>
+                        <string>Parfyme</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Farlig for barn</string>
+                        <key>symptoms</key>
+                        <string>Sløvhet, bevisstløshet, pustevansker</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne.</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Ratpoison</string>
+                        <key>name</key>
+                        <string>Rottegift (blodfortynnende)</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Farlig</string>
+                        <key>symptoms</key>
+                        <string>Blåmerker og blødninger. Symptomene kan komme etter 2-3 dager.</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string></string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Rustremover</string>
+                        <key>name</key>
+                        <string>Rustfjernere</string>
+                        <key>synonyms</key>
+                        <string>rustbjørn</string>
+                        <key>risk</key>
+                        <string>Mange er farlige</string>
+                        <key>symptoms</key>
+                        <string>Avhengig av innholdsstoffer</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Se avløpsåpnere</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Redspirit</string>
+                        <key>name</key>
+                        <string>Rødsprit</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Farlig</string>
+                        <key>symptoms</key>
+                        <string>Sløvhet, bevisstløshet, pustevansker</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne/hud</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Salmiak</string>
+                        <key>name</key>
+                        <string>Salmiakk</string>
+                        <key>synonyms</key>
+                        <string>Amoniakk</string>
+                        <key>risk</key>
+                        <string>Farlig</string>
+                        <key>symptoms</key>
+                        <string>Etsende (alkaisk)</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Se avløpsåpnere</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Sement</string>
+                        <key>name</key>
+                        <string>Sement</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Kan være farlig, spesielt for øyne</string>
+                        <key>symptoms</key>
+                        <string>Irriterende til etsende, kan gi alvorlig etseskade på øyne</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll/vask hud. Langvarig skylling av øyne</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Silikagel</string>
+                        <key>name</key>
+                        <string>Silikagel</string>
+                        <key>synonyms</key>
+                        <string>silica gel, pakkekuler, kleskuler, kuler til tøy, oppbevaringskuler</string>
+                        <key>risk</key>
+                        <string>Ufarlig. Tas ikke opp. Kommer ut naturlig.</string>
+                        <key>symptoms</key>
+                        <string>Ingen symptomer</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>ngen behandling nødvendig</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Fabric_softener</string>
+                        <key>name</key>
+                        <string>Skyllemidler, tøymyknere </string>
+                        <key>synonyms</key>
+                        <string>Milo, Neutral, Nøytral skyllemiddel</string>
+                        <key>risk</key>
+                        <string>Lite farlige ved små inntak</string>
+                        <key>symptoms</key>
+                        <string>Irriterer slimhinner, kvalme, brekninger</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne/hud</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Fungus_killer</string>
+                        <key>name</key>
+                        <string>Sopp- og algedreper</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Kan være svært irriterende / farlig</string>
+                        <key>symptoms</key>
+                        <string>Avhengig av innholdsstoffer</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne/hud</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Silver_polish</string>
+                        <key>name</key>
+                        <string>Sølv-, kobber- og messingpuss</string>
+                        <key>synonyms</key>
+                        <string>Sølvpuss</string>
+                        <key>risk</key>
+                        <string>Kan være farlige</string>
+                        <key>symptoms</key>
+                        <string>Avhengig av innholdsstoffer</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne/hud</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Firebrackets</string>
+                        <key>name</key>
+                        <string>Tennbriketter</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Lite farlige</string>
+                        <key>symptoms</key>
+                        <string>Irriterende til etsende, kan gi alvorlig etseskade på øyne</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Lighter_fluid</string>
+                        <key>name</key>
+                        <string>Tennvæske</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Farlig</string>
+                        <key>symptoms</key>
+                        <string>Se oljebaserte produkter</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Se oljebaserte produkter</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Thermometers</string>
+                        <key>name</key>
+                        <string>Termometere</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string></string>
+                        <key>symptoms</key>
+                        <string></string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string></string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Thermo_quicksliver</string>
+                        <key>name</key>
+                        <string>– kvikksølv (gamle)</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Farlig damp, ufarlig å svelge</string>
+                        <key>symptoms</key>
+                        <string>Fare for lungeskade ved innånding av damp</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Fjern kvikksølvsøl (ikke støvsug).</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>thermo_other</string>
+                        <key>name</key>
+                        <string>– andre termometere</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Ufarlig</string>
+                        <key>symptoms</key>
+                        <string>Ingen symptomer</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Ingen behandling nødvendig</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string>Ja</string>
+                        <key>key</key>
+                        <string>Tobacco</string>
+                        <key>name</key>
+                        <string>Tobakk</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Farlig. Inntil en halv sigarett er ufarlig.</string>
+                        <key>symptoms</key>
+                        <string>Brennende følelse i munn og svelg, kvalme, brekninger, magesmerter, bevisstløshet, kramper</string>
+                        <key>coal</key>
+                        <string>Ja</string>
+                        <key>action</key>
+                        <string>Fjern eventuelle rester av tobakk fra munnen. Gi drikke.</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string></string>
+                        <key>name</key>
+                        <string>snus</string>
+                        <key>synonyms</key>
+                        <string>snuff, skruf, </string>
+                        <key>risk</key>
+                        <string></string>
+                        <key>symptoms</key>
+                        <string></string>
+                        <key>coal</key>
+                        <string></string>
+                        <key>action</key>
+                        <string>Fjern eventuelle rester av tobakk fra munnen. Gi drikke.</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string></string>
+                        <key>name</key>
+                        <string>sigaretter</string>
+                        <key>synonyms</key>
+                        <string>malboro, prince, dunhill</string>
+                        <key>risk</key>
+                        <string></string>
+                        <key>symptoms</key>
+                        <string></string>
+                        <key>coal</key>
+                        <string></string>
+                        <key>action</key>
+                        <string>Fjern eventuelle rester av tobakk fra munnen. Gi drikke.</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string></string>
+                        <key>name</key>
+                        <string>Nikotintyggegummi</string>
+                        <key>synonyms</key>
+                        <string>Nikotintyggis</string>
+                        <key>risk</key>
+                        <string></string>
+                        <key>symptoms</key>
+                        <string></string>
+                        <key>coal</key>
+                        <string></string>
+                        <key>action</key>
+                        <string></string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string></string>
+                        <key>name</key>
+                        <string>Pipetobakk</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string></string>
+                        <key>symptoms</key>
+                        <string></string>
+                        <key>coal</key>
+                        <string></string>
+                        <key>action</key>
+                        <string>Fjern eventuelle rester av tobakk fra munnen. Gi drikke.</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Pesticides</string>
+                        <key>name</key>
+                        <string>Ugress- og plantevernmidler</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Mange er farlige</string>
+                        <key>symptoms</key>
+                        <string>Avhengig av virkestoffer</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne/hud.</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Detergent_clothes</string>
+                        <key>name</key>
+                        <string>Vaskepulver (til klær)</string>
+                        <key>synonyms</key>
+                        <string>Omo, Omo color, neurtral</string>
+                        <key>risk</key>
+                        <string>Lite farlig ved små inntak</string>
+                        <key>symptoms</key>
+                        <string>Irriterer slimhinner</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne/hud.</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>Window_wash</string>
+                        <key>name</key>
+                        <string>Vindusspylervæske</string>
+                        <key>synonyms</key>
+                        <string></string>
+                        <key>risk</key>
+                        <string>Farlig</string>
+                        <key>symptoms</key>
+                        <string>Sløvhet, bevisstløshet, pustevansker</string>
+                        <key>coal</key>
+                        <string>Nei</string>
+                        <key>action</key>
+                        <string>Gi drikke. Skyll øyne/hud.</string>
+                </dict>
+                <dict>
+                        <key>Lagt inn tekst?</key>
+                        <string></string>
+                        <key>key</key>
+                        <string>White_spirit</string>
+                        <key>name</key>
+                        <string>White spirit</string>
+                        <key>synonyms</key>
+                        <string>kvitsprit, hvitsprit, whitesprit, «nafta» (petroleum), «white spirit type 1», «white spirit type 2», «white spirit type 3», «mineralsk terpentin», «laknnafta», white-sprit eller «essence de petrole»</string>
+                        <key>risk</key>
+                        <string>Farlig</string>
+                        <key>symptoms</key>
+                        <string>Se oljebaserte produkter</string>
+                        <key>coal</key>
+                        <string></string>
+                        <key>action</key>
+                        <string>Se oljebaserte produkter</string>
+                </dict>
+        </array>
+</plist>

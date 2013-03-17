@@ -17,7 +17,6 @@
 @property (nonatomic) NSManagedObjectContext *context;
 
 @property NSArray *poisonData;
-@property NSArray *termData;
 @property NSMutableArray *filteredData;
 @property NSString *selectedKey;
 @property NSString *searchString;
@@ -31,24 +30,7 @@
 
     if(self)
     {
-        NSFetchRequest *fetchRequest = [[NSFetchRequest alloc] init];
-        NSEntityDescription *entity = [NSEntityDescription entityForName:@"Poison"
-                                                  inManagedObjectContext:self.context];
-        NSSortDescriptor *nameSort = [[NSSortDescriptor alloc]initWithKey:@"name"  ascending:YES];
-        
-        [fetchRequest setEntity:entity];
-        [fetchRequest setSortDescriptors:[NSArray arrayWithObject:nameSort]];
-        
-        NSError *error;
-        
-        self.poisonData = [self.context executeFetchRequest:fetchRequest error:&error];
-        for (Poison *poison in self.poisonData) {
-//            NSLog(@"Poison: %@", poison.name);
-        }
-        
-        if (error) {
-            NSLog(@"Whoops, couldn't fetch: %@", [error localizedDescription]);
-        }
+        [self loadPoisonData];
     }
     
     return self;
@@ -68,14 +50,15 @@
     else
         [self.filteredData removeAllObjects];
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"ANY SELF.synonyms.term beginswith[c] %@", searchText];
-    self.filteredData = [NSMutableArray arrayWithArray:[self.filteredData filteredArrayUsingPredicate:predicate]];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(SELF.name contains[c] %@) OR (ANY SELF.synonyms contains[c] %@)", searchText, searchText];
     
-    if(self.filteredData.count == 0)
-    {
-        predicate = [NSPredicate predicateWithFormat:@"ANY SELF.synonyms.term contains[c] %@", searchText];
-        self.filteredData = [NSMutableArray arrayWithArray:[self.poisonData filteredArrayUsingPredicate:predicate]];
-    }
+    self.filteredData = [NSMutableArray arrayWithArray:[self.poisonData filteredArrayUsingPredicate:predicate]];
+    
+//    if(self.filteredData.count == 0)
+//    {
+//        predicate = [NSPredicate predicateWithFormat:@"ANY SELF.synonyms contains[c] %@", searchText];
+//        self.filteredData = [NSMutableArray arrayWithArray:[self.poisonData filteredArrayUsingPredicate:predicate]];
+//    }
 }
 
 - (Poison *) getPoisonAtIndexPath:(NSIndexPath *)indexPath
@@ -105,6 +88,26 @@
 
 #pragma mark - Table view data source
 
+- (void) loadPoisonData
+{
+    NSString *propertyFile = [[NSBundle mainBundle] pathForResource:@"poison-data" ofType:@"plist"];
+    NSArray *poisonRawData = [NSArray arrayWithContentsOfFile:propertyFile];
+    
+    NSMutableArray *poisonDataUnsorted = [NSMutableArray arrayWithCapacity:poisonRawData.count];
+    
+    for(NSDictionary *poisonDict in poisonRawData)
+    {
+        [poisonDataUnsorted addObject:[Poison poisonWithDict:poisonDict]];
+    }
+    
+    NSSortDescriptor *lastDescriptor =
+    [[NSSortDescriptor alloc] initWithKey:@"name"
+                                ascending:YES
+                                 selector:@selector(localizedCaseInsensitiveCompare:)];
+    
+    self.poisonData = [poisonDataUnsorted sortedArrayUsingDescriptors:[NSArray arrayWithObject:lastDescriptor]];
+}
+
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
@@ -131,14 +134,18 @@
 
     Poison *poisonEntry = [self getPoisonAtIndexPath:indexPath];
     
+    
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(SELF contains[c] %@)", self.searchString];
+    
+    
     NSString *synonymsString;
     
-    for(Term *term in poisonEntry.synonyms)
+    for(NSString *synonym in [poisonEntry.synonyms filteredArrayUsingPredicate:predicate])
     {
         if(!synonymsString)
-            synonymsString = term.term;
+            synonymsString = synonym;
         else
-            synonymsString = [NSString stringWithFormat:@"%@, %@", synonymsString, term.term];
+            synonymsString = [NSString stringWithFormat:@"%@, %@", synonymsString, synonym];
     }
     
     cell.textLabel.text = poisonEntry.name;
@@ -149,45 +156,5 @@
     
     return cell;
 }
-
-/*
- // Override to support conditional editing of the table view.
- - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the specified item to be editable.
- return YES;
- }
- */
-
-/*
- // Override to support editing the table view.
- - (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
- {
- if (editingStyle == UITableViewCellEditingStyleDelete) {
- // Delete the row from the data source
- [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
- }
- else if (editingStyle == UITableViewCellEditingStyleInsert) {
- // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
- }
- }
- */
-
-/*
- // Override to support rearranging the table view.
- - (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
- {
- }
- */
-
-/*
- // Override to support conditional rearranging of the table view.
- - (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
- {
- // Return NO if you do not want the item to be re-orderable.
- return YES;
- }
- */
-
 
 @end

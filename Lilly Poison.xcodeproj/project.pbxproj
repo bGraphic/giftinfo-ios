@@ -8,6 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		131341C616EDF08900734F5E /* Term.m in Sources */ = {isa = PBXBuildFile; fileRef = 131341C516EDF08900734F5E /* Term.m */; };
+		1321793E16F601F900E93451 /* acetyl.html in Resources */ = {isa = PBXBuildFile; fileRef = 1321793416F601F900E93451 /* acetyl.html */; };
+		1321793F16F601F900E93451 /* Fluor.html in Resources */ = {isa = PBXBuildFile; fileRef = 1321793516F601F900E93451 /* Fluor.html */; };
+		1321794016F601F900E93451 /* Malaria.html in Resources */ = {isa = PBXBuildFile; fileRef = 1321793616F601F900E93451 /* Malaria.html */; };
+		1321794116F601F900E93451 /* Nosedrops.html in Resources */ = {isa = PBXBuildFile; fileRef = 1321793716F601F900E93451 /* Nosedrops.html */; };
+		1321794216F601F900E93451 /* P_pill.html in Resources */ = {isa = PBXBuildFile; fileRef = 1321793816F601F900E93451 /* P_pill.html */; };
+		1321794316F601F900E93451 /* Painkiller.html in Resources */ = {isa = PBXBuildFile; fileRef = 1321793916F601F900E93451 /* Painkiller.html */; };
+		1321794416F601F900E93451 /* Paracet.html in Resources */ = {isa = PBXBuildFile; fileRef = 1321793A16F601F900E93451 /* Paracet.html */; };
+		1321794516F601F900E93451 /* Tobacco.html in Resources */ = {isa = PBXBuildFile; fileRef = 1321793B16F601F900E93451 /* Tobacco.html */; };
+		1321794616F601F900E93451 /* tranqualizer.html in Resources */ = {isa = PBXBuildFile; fileRef = 1321793C16F601F900E93451 /* tranqualizer.html */; };
+		1321794716F601F900E93451 /* Vitamin.html in Resources */ = {isa = PBXBuildFile; fileRef = 1321793D16F601F900E93451 /* Vitamin.html */; };
+		1321794916F604A600E93451 /* poison-data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1321794816F604A600E93451 /* poison-data.plist */; };
 		13794DDA16EBE0C6003EF093 /* LPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DD916EBE0C6003EF093 /* LPDataSource.m */; };
 		13794DDD16EBE223003EF093 /* LPTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DDC16EBE223003EF093 /* LPTableViewController.m */; };
 		13794DE516EC000A003EF093 /* LPEntryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DE416EC000A003EF093 /* LPEntryViewCell.m */; };
@@ -21,7 +32,6 @@
 		1381B35416F4B60E00143FEA /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 1381B34C16F4B60E00143FEA /* style.css */; };
 		1381B35516F4B60E00143FEA /* swollowed.html in Resources */ = {isa = PBXBuildFile; fileRef = 1381B34D16F4B60E00143FEA /* swollowed.html */; };
 		1381B35616F4B60E00143FEA /* test-1.html in Resources */ = {isa = PBXBuildFile; fileRef = 1381B34E16F4B60E00143FEA /* test-1.html */; };
-		1381B35F16F4E22C00143FEA /* Poison+LPEntry.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B35E16F4E22C00143FEA /* Poison+LPEntry.m */; };
 		1381B36216F4E82800143FEA /* LPHtmlStringHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B36116F4E82800143FEA /* LPHtmlStringHelper.m */; };
 		1381B36416F4E9F800143FEA /* summary.html in Resources */ = {isa = PBXBuildFile; fileRef = 1381B36316F4E9F800143FEA /* summary.html */; };
 		1381B36A16F4F7EA00143FEA /* LPToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B36916F4F7EA00143FEA /* LPToolbar.m */; };
@@ -42,7 +52,6 @@
 		13EC391D16EB9FE8005244BD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 13EC391C16EB9FE8005244BD /* Default.png */; };
 		13EC391F16EB9FE8005244BD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13EC391E16EB9FE8005244BD /* Default@2x.png */; };
 		13EC392116EB9FE8005244BD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13EC392016EB9FE8005244BD /* Default-568h@2x.png */; };
-		13EC392416EB9FE8005244BD /* Lilly_Poisen.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 13EC392216EB9FE8005244BD /* Lilly_Poisen.xcdatamodeld */; };
 		13EC392C16EB9FE8005244BD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC392B16EB9FE8005244BD /* SenTestingKit.framework */; };
 		13EC392D16EB9FE8005244BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390816EB9FE8005244BD /* UIKit.framework */; };
 		13EC392E16EB9FE8005244BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390A16EB9FE8005244BD /* Foundation.framework */; };
@@ -66,6 +75,17 @@
 /* Begin PBXFileReference section */
 		131341C416EDF08900734F5E /* Term.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Term.h; sourceTree = "<group>"; };
 		131341C516EDF08900734F5E /* Term.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Term.m; sourceTree = "<group>"; };
+		1321793416F601F900E93451 /* acetyl.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = acetyl.html; sourceTree = "<group>"; };
+		1321793516F601F900E93451 /* Fluor.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Fluor.html; sourceTree = "<group>"; };
+		1321793616F601F900E93451 /* Malaria.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Malaria.html; sourceTree = "<group>"; };
+		1321793716F601F900E93451 /* Nosedrops.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Nosedrops.html; sourceTree = "<group>"; };
+		1321793816F601F900E93451 /* P_pill.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = P_pill.html; sourceTree = "<group>"; };
+		1321793916F601F900E93451 /* Painkiller.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Painkiller.html; sourceTree = "<group>"; };
+		1321793A16F601F900E93451 /* Paracet.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Paracet.html; sourceTree = "<group>"; };
+		1321793B16F601F900E93451 /* Tobacco.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Tobacco.html; sourceTree = "<group>"; };
+		1321793C16F601F900E93451 /* tranqualizer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = tranqualizer.html; sourceTree = "<group>"; };
+		1321793D16F601F900E93451 /* Vitamin.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Vitamin.html; sourceTree = "<group>"; };
+		1321794816F604A600E93451 /* poison-data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "poison-data.plist"; sourceTree = "<group>"; };
 		13794DD816EBE0C6003EF093 /* LPDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPDataSource.h; sourceTree = "<group>"; };
 		13794DD916EBE0C6003EF093 /* LPDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPDataSource.m; sourceTree = "<group>"; };
 		13794DDB16EBE223003EF093 /* LPTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTableViewController.h; sourceTree = "<group>"; };
@@ -83,8 +103,6 @@
 		1381B34C16F4B60E00143FEA /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
 		1381B34D16F4B60E00143FEA /* swollowed.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = swollowed.html; sourceTree = "<group>"; };
 		1381B34E16F4B60E00143FEA /* test-1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "test-1.html"; sourceTree = "<group>"; };
-		1381B35D16F4E22C00143FEA /* Poison+LPEntry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Poison+LPEntry.h"; sourceTree = "<group>"; };
-		1381B35E16F4E22C00143FEA /* Poison+LPEntry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Poison+LPEntry.m"; sourceTree = "<group>"; };
 		1381B36016F4E82800143FEA /* LPHtmlStringHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPHtmlStringHelper.h; sourceTree = "<group>"; };
 		1381B36116F4E82800143FEA /* LPHtmlStringHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPHtmlStringHelper.m; sourceTree = "<group>"; };
 		1381B36316F4E9F800143FEA /* summary.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = summary.html; sourceTree = "<group>"; };
@@ -115,7 +133,6 @@
 		13EC391C16EB9FE8005244BD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		13EC391E16EB9FE8005244BD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		13EC392016EB9FE8005244BD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
-		13EC392316EB9FE8005244BD /* Lilly_Poisen.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Lilly_Poisen.xcdatamodel; sourceTree = "<group>"; };
 		13EC392A16EB9FE8005244BD /* Lilly PoisonTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lilly PoisonTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13EC392B16EB9FE8005244BD /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		13EC393416EB9FE8005244BD /* Lilly PoisonTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lilly PoisonTests-Info.plist"; sourceTree = "<group>"; };
@@ -158,7 +175,6 @@
 			children = (
 				1381B34316F4A4B400143FEA /* Poison.h */,
 				1381B34416F4A4B400143FEA /* Poison.m */,
-				13EC392216EB9FE8005244BD /* Lilly_Poisen.xcdatamodeld */,
 				131341C416EDF08900734F5E /* Term.h */,
 				131341C516EDF08900734F5E /* Term.m */,
 			);
@@ -193,6 +209,17 @@
 		1381B34616F4B60E00143FEA /* Content */ = {
 			isa = PBXGroup;
 			children = (
+				1321794816F604A600E93451 /* poison-data.plist */,
+				1321793416F601F900E93451 /* acetyl.html */,
+				1321793516F601F900E93451 /* Fluor.html */,
+				1321793616F601F900E93451 /* Malaria.html */,
+				1321793716F601F900E93451 /* Nosedrops.html */,
+				1321793816F601F900E93451 /* P_pill.html */,
+				1321793916F601F900E93451 /* Painkiller.html */,
+				1321793A16F601F900E93451 /* Paracet.html */,
+				1321793B16F601F900E93451 /* Tobacco.html */,
+				1321793C16F601F900E93451 /* tranqualizer.html */,
+				1321793D16F601F900E93451 /* Vitamin.html */,
 				1381B34716F4B60E00143FEA /* eye_contact.html */,
 				1381B34816F4B60E00143FEA /* footer.html */,
 				1381B34916F4B60E00143FEA /* header.html */,
@@ -267,8 +294,6 @@
 				13794DD916EBE0C6003EF093 /* LPDataSource.m */,
 				13794DE316EC000A003EF093 /* LPEntryViewCell.h */,
 				13794DE416EC000A003EF093 /* LPEntryViewCell.m */,
-				1381B35D16F4E22C00143FEA /* Poison+LPEntry.h */,
-				1381B35E16F4E22C00143FEA /* Poison+LPEntry.m */,
 			);
 			name = "Lilly Poison";
 			path = "Lilly Poisen";
@@ -398,6 +423,17 @@
 				1381B35616F4B60E00143FEA /* test-1.html in Resources */,
 				1381B36416F4E9F800143FEA /* summary.html in Resources */,
 				1381B36C16F5D18700143FEA /* main-info.plist in Resources */,
+				1321793E16F601F900E93451 /* acetyl.html in Resources */,
+				1321793F16F601F900E93451 /* Fluor.html in Resources */,
+				1321794016F601F900E93451 /* Malaria.html in Resources */,
+				1321794116F601F900E93451 /* Nosedrops.html in Resources */,
+				1321794216F601F900E93451 /* P_pill.html in Resources */,
+				1321794316F601F900E93451 /* Painkiller.html in Resources */,
+				1321794416F601F900E93451 /* Paracet.html in Resources */,
+				1321794516F601F900E93451 /* Tobacco.html in Resources */,
+				1321794616F601F900E93451 /* tranqualizer.html in Resources */,
+				1321794716F601F900E93451 /* Vitamin.html in Resources */,
+				1321794916F604A600E93451 /* poison-data.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -435,14 +471,12 @@
 			files = (
 				13EC391716EB9FE8005244BD /* main.m in Sources */,
 				13EC391B16EB9FE8005244BD /* LPAppDelegate.m in Sources */,
-				13EC392416EB9FE8005244BD /* Lilly_Poisen.xcdatamodeld in Sources */,
 				13EB1A1F16EBA9EE00170579 /* LPMainViewController.m in Sources */,
 				13794DDA16EBE0C6003EF093 /* LPDataSource.m in Sources */,
 				13794DDD16EBE223003EF093 /* LPTableViewController.m in Sources */,
 				13794DE516EC000A003EF093 /* LPEntryViewCell.m in Sources */,
 				131341C616EDF08900734F5E /* Term.m in Sources */,
 				1381B34516F4A4B400143FEA /* Poison.m in Sources */,
-				1381B35F16F4E22C00143FEA /* Poison+LPEntry.m in Sources */,
 				1381B36216F4E82800143FEA /* LPHtmlStringHelper.m in Sources */,
 				1381B36A16F4F7EA00143FEA /* LPToolbar.m in Sources */,
 				1381B36F16F5F5EB00143FEA /* LPContentViewController.m in Sources */,
@@ -706,19 +740,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCVersionGroup section */
-		13EC392216EB9FE8005244BD /* Lilly_Poisen.xcdatamodeld */ = {
-			isa = XCVersionGroup;
-			children = (
-				13EC392316EB9FE8005244BD /* Lilly_Poisen.xcdatamodel */,
-			);
-			currentVersion = 13EC392316EB9FE8005244BD /* Lilly_Poisen.xcdatamodel */;
-			path = Lilly_Poisen.xcdatamodeld;
-			sourceTree = "<group>";
-			versionGroupType = wrapper.xcdatamodel;
-		};
-/* End XCVersionGroup section */
 	};
 	rootObject = 13EC38FD16EB9FE8005244BD /* Project object */;
 }

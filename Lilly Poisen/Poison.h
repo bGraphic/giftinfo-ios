@@ -7,26 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CoreData/CoreData.h>
 
 @class Term;
 
-@interface Poison : NSManagedObject
+@interface Poison : NSObject
 
-@property (nonatomic, retain) NSString * key;
-@property (nonatomic, retain) NSString * name;
-@property (nonatomic, retain) NSString * symptoms;
-@property (nonatomic, retain) NSString * action;
-@property (nonatomic, retain) NSNumber * coal;
-@property (nonatomic, retain) NSString * risk;
-@property (nonatomic, retain) NSSet *synonyms;
-@end
+@property (nonatomic, strong) NSString * key;
+@property (nonatomic, strong) NSString * name;
+@property (nonatomic, strong) NSString * symptoms;
+@property (nonatomic, strong) NSString * action;
+@property (nonatomic, strong) NSString * coal;
+@property (nonatomic, strong) NSString * risk;
+@property (nonatomic, strong) NSArray *synonyms;
 
-@interface Poison (CoreDataGeneratedAccessors)
+@property (strong, nonatomic, readonly) NSString *htmlContentString;
 
-- (void)addSynonymsObject:(Term *)value;
-- (void)removeSynonymsObject:(Term *)value;
-- (void)addSynonyms:(NSSet *)values;
-- (void)removeSynonyms:(NSSet *)values;
++ (Poison *) poisonWithDict:(NSDictionary *) poisonDict;
 
 @end

@@ -17,54 +17,11 @@
 @synthesize managedObjectModel = _managedObjectModel;
 @synthesize persistentStoreCoordinator = _persistentStoreCoordinator;
 
-- (void)loadData
-{
-    NSManagedObjectContext *context = [self managedObjectContext];
-    
-    Term *term1 = [NSEntityDescription insertNewObjectForEntityForName:@"Term" inManagedObjectContext:context];
-    Term *term2 = [NSEntityDescription insertNewObjectForEntityForName:@"Term" inManagedObjectContext:context];
-    Term *term3 = [NSEntityDescription insertNewObjectForEntityForName:@"Term" inManagedObjectContext:context];
-    Term *term4 = [NSEntityDescription insertNewObjectForEntityForName:@"Term" inManagedObjectContext:context];
-    Term *term5 = [NSEntityDescription insertNewObjectForEntityForName:@"Term" inManagedObjectContext:context];
-    
-    term1.term = @"test";
-    term2.term = @"medisin";
-    term3.term = @"white sprite";
-    term4.term = @"baby olje";
-    term5.term = @"olje";
-    
-    Poison *poison1 = [NSEntityDescription insertNewObjectForEntityForName:@"Poison" inManagedObjectContext:context];
-    Poison *poison2 = [NSEntityDescription insertNewObjectForEntityForName:@"Poison" inManagedObjectContext:context];
-    Poison *poison3 = [NSEntityDescription insertNewObjectForEntityForName:@"Poison" inManagedObjectContext:context];
-    
-    poison1.key = @"test-1";
-    poison1.name = @"medisin";
-    [poison1 addSynonymsObject:term1];
-    [poison1 addSynonymsObject:term2];
-    
-    poison2.key = @"test-1";
-    poison2.name = @"White Sprite";
-    [poison2 addSynonymsObject:term1];
-    [poison2 addSynonymsObject:term3];
-    [poison2 addSynonymsObject:term5];
-    
-    poison3.key = @"test-1";
-    poison3.name = @"Babyolje";
-    [poison3 addSynonymsObject:term4];
-    
-    NSError *error;
-    if (![context save:&error]) {
-        NSLog(@"Whoops, couldn't save: %@", [error localizedDescription]);
-    }
-}
-
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [self setUpTestFlight];
     
     [self customizeAppearance];
-    
-//    [self loadData];
     
     return YES;
 }
