@@ -43,7 +43,7 @@
         
         self.poisonData = [self.context executeFetchRequest:fetchRequest error:&error];
         for (Poison *poison in self.poisonData) {
-            NSLog(@"Poison: %@", poison.name);
+//            NSLog(@"Poison: %@", poison.name);
         }
         
         if (error) {
@@ -145,6 +145,7 @@
     cell.detailTextLabel.text = synonymsString;
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.selectionStyle = UITableViewCellSelectionStyleGray;
     
     return cell;
 }

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>footer</key>
+		<string>Ved bevisstløshet ring 113</string>
+		<key>title</key>
+		<string>Generelle råd</string>
+		<key>topics</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>Svelging</string>
+				<key>html</key>
+				<string>swollowed</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Hudkontakt</string>
+				<key>html</key>
+				<string>skin_contact</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Søl i øyet</string>
+				<key>html</key>
+				<string>eye_contact</string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Innånding</string>
+				<key>html</key>
+				<string>inhaled</string>
+			</dict>
+		</array>
+	</dict>
+	<dict>
+		<key>title</key>
+		<string>Mer om</string>
+		<key>topics</key>
+		<array>
+			<dict>
+				<key>title</key>
+				<string>Brekning</string>
+				<key>html</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Medisink kull</string>
+				<key>html</key>
+				<string></string>
+			</dict>
+			<dict>
+				<key>title</key>
+				<string>Bevisstløshet</string>
+				<key>html</key>
+				<string></string>
+			</dict>
+		</array>
+	</dict>
+</array>
+</plist>

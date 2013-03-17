@@ -12,6 +12,9 @@
 
 + (NSString *) stringFromHtmlFileWithName:(NSString *) name
 {
+    if(!name || [name isEqualToString:@""])
+        return @"";
+    
     NSString *contentPath = [[NSBundle mainBundle] pathForResource:name ofType:@"html"];
     
     NSError *contentError;
