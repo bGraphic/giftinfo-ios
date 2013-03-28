@@ -23,6 +23,8 @@
 
 @property (strong, nonatomic, readonly) NSString *htmlContentString;
 
-+ (Poison *) poisonWithDict:(NSDictionary *) poisonDict;
++ (NSArray *) poisonWithDict:(NSDictionary *) poisonDict;
+
++ (NSArray *) poisonList;
 
 @end

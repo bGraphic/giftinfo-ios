@@ -30,7 +30,7 @@
 
     if(self)
     {
-        [self loadPoisonData];
+        self.poisonData = [Poison poisonList];
     }
     
     return self;
@@ -87,54 +87,6 @@
 }
 
 #pragma mark - Table view data source
-
-- (void) loadPoisonData
-{
-    
-    NSString *contentPath = [[NSBundle mainBundle] pathForResource:@"poisons" ofType:@"json"];
-
-    NSData *data = [NSData dataWithContentsOfFile:contentPath];
-    
-    NSError *error;
-    
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-    
-    if(error) {
-        NSLog(@"Error: %@", [error description]);
-    }
-    
-    NSArray *poisonRawData = [json objectForKey:@"posts"];
-    
-    NSMutableArray *poisonDataUnsorted = [NSMutableArray arrayWithCapacity:poisonRawData.count];
-    
-    for(NSDictionary *poisonDict in poisonRawData)
-    {
-        if([[poisonDict[@"title"] componentsSeparatedByString:@","] count] > 1)
-        {
-            NSLog(@"more than one title %@", poisonDict[@"title"]);
-            
-            for (NSString *nameRawData in [poisonDict[@"title"] componentsSeparatedByString:@","])
-            {
-                NSString *name = [nameRawData stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
-                
-                Poison *poison = [Poison poisonWithDict:poisonDict];
-                poison.name = name;
-                [poisonDataUnsorted addObject:poison];
-            }
-        }
-        else
-        {
-            [poisonDataUnsorted addObject:[Poison poisonWithDict:poisonDict]];
-        }
-    }
-
-    NSSortDescriptor *lastDescriptor =
-    [[NSSortDescriptor alloc] initWithKey:@"name"
-                                ascending:YES
-                                 selector:@selector(localizedCaseInsensitiveCompare:)];
-    
-    self.poisonData = [poisonDataUnsorted sortedArrayUsingDescriptors:[NSArray arrayWithObject:lastDescriptor]];
-}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
