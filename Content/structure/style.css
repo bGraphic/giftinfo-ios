@@ -1,0 +1,88 @@
+
+body {
+    background-color: rgba(0,0,0,0.0);
+}
+
+ul,
+ol {
+    padding-left: 1.5em;
+}
+
+li {
+    margin-bottom: 0.5em;
+}
+
+
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+
+/**
+ * Set all font to serif   
+ */
+ 
+html,
+button,
+input,
+select,
+textarea {
+    font-family: georgia, serif;
+}
+
+body {
+	font-size: 90%;
+	line-height: 150%;
+}
+
+p {
+
+}
+
+/**
+ * Address font sizes and margins set differently in IE 6/7.
+ * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ */
+ 
+h1, h2, h3, h4, h5, h6 {
+	font-family: sans-serif;
+}
+
+h1 {
+    font-size: 2em;
+    margin: 0.67em 0;
+}
+
+h2 {
+    font-size: 1.5em;
+    margin: 0.83em 0;
+}
+
+h3 {
+    font-size: 1.17em;
+    margin: 1em 0 -0.2em;
+}
+
+h4 {
+    font-size: 1em;
+    margin: 1.33em 0;
+}
+
+h5 {
+    font-size: 0.83em;
+    margin: 1.67em 0;
+}
+
+h6 {
+    font-size: 0.67em;
+    margin: 2.33em 0;
+}
+
+b,
+strong {
+    font-weight: bold;
+}
+
+blockquote {
+    margin: 1em 40px;
+}
