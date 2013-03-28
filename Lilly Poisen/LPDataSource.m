@@ -90,16 +90,33 @@
 
 - (void) loadPoisonData
 {
-    NSString *propertyFile = [[NSBundle mainBundle] pathForResource:@"poison-data" ofType:@"plist"];
-    NSArray *poisonRawData = [NSArray arrayWithContentsOfFile:propertyFile];
     
+    NSString *contentPath = [[NSBundle mainBundle] pathForResource:@"poisons" ofType:@"json"];
+
+    NSData *data = [NSData dataWithContentsOfFile:contentPath];
+    
+    NSError *error;
+    
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+    
+    NSLog(@"Error %@", error.description);
+    
+    NSLog(@"json dict: %@", [json description]);
+    
+    NSArray *poisonRawData = [json objectForKey:@"posts"];
+
+    NSLog(@"raw data: %@", [poisonRawData description]);
+    
+//    NSString *propertyFile = [[NSBundle mainBundle] pathForResource:@"poison-data" ofType:@"plist"];
+//    NSArray *poisonRawData = [NSArray arrayWithContentsOfFile:propertyFile];
+//    
     NSMutableArray *poisonDataUnsorted = [NSMutableArray arrayWithCapacity:poisonRawData.count];
     
     for(NSDictionary *poisonDict in poisonRawData)
     {
         [poisonDataUnsorted addObject:[Poison poisonWithDict:poisonDict]];
     }
-    
+
     NSSortDescriptor *lastDescriptor =
     [[NSSortDescriptor alloc] initWithKey:@"name"
                                 ascending:YES

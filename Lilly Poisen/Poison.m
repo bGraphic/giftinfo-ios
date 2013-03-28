@@ -15,11 +15,11 @@
 
 - (NSString *) htmlContentString
 {
-    NSString *contentString = [LPHtmlStringHelper stringFromHtmlFileWithName:self.key];
+    NSString *contentString = self.content;
     NSString *summaryString = [LPHtmlStringHelper stringFromHtmlFileWithName:@"summary"];
     summaryString = [NSString stringWithFormat:summaryString, self.risk, self.symptoms, self.coal, self.action];
     
-    return [NSString stringWithFormat:@"%@\n%@\n%@", summaryString, contentString, self.name];
+    return [NSString stringWithFormat:@"%@\n%@", summaryString, contentString];
 }
 
 + (Poison *) poisonWithDict:(NSDictionary *) poisonDict
@@ -27,12 +27,12 @@
     Poison *poison = [[Poison alloc] init];
     if(poison)
     {
-        poison.key = poisonDict[@"key"];
-        poison.name = poisonDict[@"name"];
-        poison.symptoms = poisonDict[@"symptoms"];
-        poison.action = poisonDict[@"action"];
-        poison.coal = poisonDict[@"coal"];
-        poison.risk = poisonDict[@"risk"];
+        poison.name = poisonDict[@"title"];
+        poison.content = poisonDict[@"content"];
+        poison.symptoms = poisonDict[@"custom_fields"][@"wpcf-symptoms"][0];
+        poison.action = poisonDict[@"custom_fields"][@"wpcf-action"][0];
+        poison.coal = poisonDict[@"custom_fields"][@"wpcf-coal"][0];
+        poison.risk = poisonDict[@"custom_fields"][@"wpcf-risk"][0];
         poison.synonyms = [poisonDict[@"synonyms"] componentsSeparatedByString:@", "];
     }
     

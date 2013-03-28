@@ -12,13 +12,13 @@
 
 @interface Poison : NSObject
 
-@property (nonatomic, strong) NSString * key;
 @property (nonatomic, strong) NSString * name;
+@property (nonatomic, strong) NSString * content;
 @property (nonatomic, strong) NSString * symptoms;
 @property (nonatomic, strong) NSString * action;
 @property (nonatomic, strong) NSString * coal;
 @property (nonatomic, strong) NSString * risk;
-@property (nonatomic, strong) NSArray *synonyms;
+@property (nonatomic, strong) NSArray * synonyms;
 
 @property (strong, nonatomic, readonly) NSString *htmlContentString;
 

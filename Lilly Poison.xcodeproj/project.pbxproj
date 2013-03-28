@@ -87,6 +87,7 @@
 		1397DDA216ED099C0061087F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1397DD9E16ED099C0061087F /* README.md */; };
 		1397DDA316ED099C0061087F /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 1397DD9F16ED099C0061087F /* release_notes.md */; };
 		1397DDA716ED0A060061087F /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1397DDA616ED0A060061087F /* libz.1.1.3.dylib */; };
+		13D7F440170455EB001D7F93 /* poisons.json in Resources */ = {isa = PBXBuildFile; fileRef = 13D7F43F170455EB001D7F93 /* poisons.json */; };
 		13EB1A1F16EBA9EE00170579 /* LPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EB1A1E16EBA9EE00170579 /* LPMainViewController.m */; };
 		13EC390916EB9FE8005244BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390816EB9FE8005244BD /* UIKit.framework */; };
 		13EC390B16EB9FE8005244BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390A16EB9FE8005244BD /* Foundation.framework */; };
@@ -209,6 +210,7 @@
 		1397DDA016ED099C0061087F /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		1397DDA416ED09EE0061087F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		1397DDA616ED0A060061087F /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		13D7F43F170455EB001D7F93 /* poisons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = poisons.json; sourceTree = "<group>"; };
 		13EB1A1D16EBA9EE00170579 /* LPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPMainViewController.h; sourceTree = "<group>"; };
 		13EB1A1E16EBA9EE00170579 /* LPMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPMainViewController.m; sourceTree = "<group>"; };
 		13EC390516EB9FE8005244BD /* Lilly Poison.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lilly Poison.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -292,6 +294,7 @@
 				132D26DD170076AA00967E5C /* structure */,
 				132D26E3170076AA00967E5C /* general */,
 				132D26EE170076AA00967E5C /* poisons */,
+				13D7F43F170455EB001D7F93 /* poisons.json */,
 			);
 			name = Content;
 			sourceTree = "<group>";
@@ -642,6 +645,7 @@
 				132D2765170076AA00967E5C /* Tranqualizer.html in Resources */,
 				132D2766170076AA00967E5C /* Vitamin.html in Resources */,
 				132D2767170076AA00967E5C /* White_spirit.html in Resources */,
+				13D7F440170455EB001D7F93 /* poisons.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
