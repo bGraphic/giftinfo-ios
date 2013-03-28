@@ -8,34 +8,80 @@
 
 /* Begin PBXBuildFile section */
 		131341C616EDF08900734F5E /* Term.m in Sources */ = {isa = PBXBuildFile; fileRef = 131341C516EDF08900734F5E /* Term.m */; };
-		1321793E16F601F900E93451 /* acetyl.html in Resources */ = {isa = PBXBuildFile; fileRef = 1321793416F601F900E93451 /* acetyl.html */; };
-		1321793F16F601F900E93451 /* Fluor.html in Resources */ = {isa = PBXBuildFile; fileRef = 1321793516F601F900E93451 /* Fluor.html */; };
-		1321794016F601F900E93451 /* Malaria.html in Resources */ = {isa = PBXBuildFile; fileRef = 1321793616F601F900E93451 /* Malaria.html */; };
-		1321794116F601F900E93451 /* Nosedrops.html in Resources */ = {isa = PBXBuildFile; fileRef = 1321793716F601F900E93451 /* Nosedrops.html */; };
-		1321794216F601F900E93451 /* P_pill.html in Resources */ = {isa = PBXBuildFile; fileRef = 1321793816F601F900E93451 /* P_pill.html */; };
-		1321794316F601F900E93451 /* Painkiller.html in Resources */ = {isa = PBXBuildFile; fileRef = 1321793916F601F900E93451 /* Painkiller.html */; };
-		1321794416F601F900E93451 /* Paracet.html in Resources */ = {isa = PBXBuildFile; fileRef = 1321793A16F601F900E93451 /* Paracet.html */; };
-		1321794516F601F900E93451 /* Tobacco.html in Resources */ = {isa = PBXBuildFile; fileRef = 1321793B16F601F900E93451 /* Tobacco.html */; };
-		1321794616F601F900E93451 /* tranqualizer.html in Resources */ = {isa = PBXBuildFile; fileRef = 1321793C16F601F900E93451 /* tranqualizer.html */; };
-		1321794716F601F900E93451 /* Vitamin.html in Resources */ = {isa = PBXBuildFile; fileRef = 1321793D16F601F900E93451 /* Vitamin.html */; };
-		1321794916F604A600E93451 /* poison-data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1321794816F604A600E93451 /* poison-data.plist */; };
+		132D2724170076AA00967E5C /* footer.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26DE170076AA00967E5C /* footer.html */; };
+		132D2725170076AA00967E5C /* header.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26DF170076AA00967E5C /* header.html */; };
+		132D2726170076AA00967E5C /* main-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 132D26E0170076AA00967E5C /* main-info.plist */; };
+		132D2727170076AA00967E5C /* poison-data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 132D26E1170076AA00967E5C /* poison-data.plist */; };
+		132D2728170076AA00967E5C /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 132D26E2170076AA00967E5C /* style.css */; };
+		132D2729170076AA00967E5C /* eye_contact.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26E4170076AA00967E5C /* eye_contact.html */; };
+		132D272A170076AA00967E5C /* inhaled.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26E5170076AA00967E5C /* inhaled.html */; };
+		132D272B170076AA00967E5C /* skin_contact.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26E6170076AA00967E5C /* skin_contact.html */; };
+		132D272C170076AA00967E5C /* summary.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26E7170076AA00967E5C /* summary.html */; };
+		132D272D170076AA00967E5C /* swallow_general.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26E8170076AA00967E5C /* swallow_general.html */; };
+		132D272E170076AA00967E5C /* swollowed.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26E9170076AA00967E5C /* swollowed.html */; };
+		132D272F170076AA00967E5C /* test-1.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26EA170076AA00967E5C /* test-1.html */; };
+		132D2730170076AA00967E5C /* test.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26EB170076AA00967E5C /* test.html */; };
+		132D2731170076AA00967E5C /* tiltak_hvis_uhellet_er_ute_general.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26EC170076AA00967E5C /* tiltak_hvis_uhellet_er_ute_general.html */; };
+		132D2732170076AA00967E5C /* unconcious_general.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26ED170076AA00967E5C /* unconcious_general.html */; };
+		132D2733170076AA00967E5C /* Acetyl.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26EF170076AA00967E5C /* Acetyl.html */; };
+		132D2734170076AA00967E5C /* Aftershave.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26F0170076AA00967E5C /* Aftershave.html */; };
+		132D2735170076AA00967E5C /* Alcohol.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26F1170076AA00967E5C /* Alcohol.html */; };
+		132D2737170076AA00967E5C /* Battery.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26F3170076AA00967E5C /* Battery.html */; };
+		132D2738170076AA00967E5C /* Bleach.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26F4170076AA00967E5C /* Bleach.html */; };
+		132D2739170076AA00967E5C /* Breakfluid.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26F5170076AA00967E5C /* Breakfluid.html */; };
+		132D273A170076AA00967E5C /* Calc.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26F6170076AA00967E5C /* Calc.html */; };
+		132D273B170076AA00967E5C /* Car_battery_acid.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26F7170076AA00967E5C /* Car_battery_acid.html */; };
+		132D273C170076AA00967E5C /* Contactglue.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26F8170076AA00967E5C /* Contactglue.html */; };
+		132D273D170076AA00967E5C /* Crayons.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26F9170076AA00967E5C /* Crayons.html */; };
+		132D273E170076AA00967E5C /* Degrease.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26FA170076AA00967E5C /* Degrease.html */; };
+		132D273F170076AA00967E5C /* Desinfection_other.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26FB170076AA00967E5C /* Desinfection_other.html */; };
+		132D2740170076AA00967E5C /* Desinfection_wound.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26FC170076AA00967E5C /* Desinfection_wound.html */; };
+		132D2741170076AA00967E5C /* Detergent_clothes.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26FD170076AA00967E5C /* Detergent_clothes.html */; };
+		132D2742170076AA00967E5C /* Dish_detergent_machine.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26FE170076AA00967E5C /* Dish_detergent_machine.html */; };
+		132D2743170076AA00967E5C /* Etheric_oils.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26FF170076AA00967E5C /* Etheric_oils.html */; };
+		132D2744170076AA00967E5C /* Extinghisher.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D2700170076AA00967E5C /* Extinghisher.html */; };
+		132D2745170076AA00967E5C /* Fertilizer.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D2701170076AA00967E5C /* Fertilizer.html */; };
+		132D2746170076AA00967E5C /* Flowerwater.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D2702170076AA00967E5C /* Flowerwater.html */; };
+		132D2747170076AA00967E5C /* Fluor.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D2703170076AA00967E5C /* Fluor.html */; };
+		132D2748170076AA00967E5C /* Frostfluid.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D2704170076AA00967E5C /* Frostfluid.html */; };
+		132D2749170076AA00967E5C /* Fungus_killer.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D2705170076AA00967E5C /* Fungus_killer.html */; };
+		132D274A170076AA00967E5C /* Glue.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D2706170076AA00967E5C /* Glue.html */; };
+		132D274B170076AA00967E5C /* Hairstyling.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D2707170076AA00967E5C /* Hairstyling.html */; };
+		132D274C170076AA00967E5C /* Lampoil.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D2708170076AA00967E5C /* Lampoil.html */; };
+		132D274D170076AA00967E5C /* Lye.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D2709170076AA00967E5C /* Lye.html */; };
+		132D274E170076AA00967E5C /* Malaria.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D270A170076AA00967E5C /* Malaria.html */; };
+		132D274F170076AA00967E5C /* Matches.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D270B170076AA00967E5C /* Matches.html */; };
+		132D2750170076AA00967E5C /* Nailpolishremover.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D270C170076AA00967E5C /* Nailpolishremover.html */; };
+		132D2751170076AA00967E5C /* Nosedrops.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D270D170076AA00967E5C /* Nosedrops.html */; };
+		132D2752170076AA00967E5C /* Ovenclean.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D270E170076AA00967E5C /* Ovenclean.html */; };
+		132D2753170076AA00967E5C /* P_pill.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D270F170076AA00967E5C /* P_pill.html */; };
+		132D2754170076AA00967E5C /* Painkiller.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D2710170076AA00967E5C /* Painkiller.html */; };
+		132D2755170076AA00967E5C /* Paintreomver_metanol.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D2711170076AA00967E5C /* Paintreomver_metanol.html */; };
+		132D2756170076AA00967E5C /* Paperglue.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D2712170076AA00967E5C /* Paperglue.html */; };
+		132D2757170076AA00967E5C /* Paracet.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D2713170076AA00967E5C /* Paracet.html */; };
+		132D2758170076AA00967E5C /* Perfume.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D2714170076AA00967E5C /* Perfume.html */; };
+		132D2759170076AA00967E5C /* Pesticides.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D2715170076AA00967E5C /* Pesticides.html */; };
+		132D275A170076AA00967E5C /* Petrol.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D2716170076AA00967E5C /* Petrol.html */; };
+		132D275B170076AA00967E5C /* Petroliumbased.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D2717170076AA00967E5C /* Petroliumbased.html */; };
+		132D275C170076AA00967E5C /* Ratpoison.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D2718170076AA00967E5C /* Ratpoison.html */; };
+		132D275D170076AA00967E5C /* Redspirit.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D2719170076AA00967E5C /* Redspirit.html */; };
+		132D275E170076AA00967E5C /* Rustremover.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D271A170076AA00967E5C /* Rustremover.html */; };
+		132D275F170076AA00967E5C /* Salmiakk.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D271B170076AA00967E5C /* Salmiakk.html */; };
+		132D2760170076AA00967E5C /* Sement.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D271C170076AA00967E5C /* Sement.html */; };
+		132D2761170076AA00967E5C /* Shampoo.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D271D170076AA00967E5C /* Shampoo.html */; };
+		132D2762170076AA00967E5C /* Superglue.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D271E170076AA00967E5C /* Superglue.html */; };
+		132D2763170076AA00967E5C /* Tobacco.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D271F170076AA00967E5C /* Tobacco.html */; };
+		132D2764170076AA00967E5C /* Toiletopeners.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D2720170076AA00967E5C /* Toiletopeners.html */; };
+		132D2765170076AA00967E5C /* Tranqualizer.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D2721170076AA00967E5C /* Tranqualizer.html */; };
+		132D2766170076AA00967E5C /* Vitamin.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D2722170076AA00967E5C /* Vitamin.html */; };
+		132D2767170076AA00967E5C /* White_spirit.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D2723170076AA00967E5C /* White_spirit.html */; };
 		13794DDA16EBE0C6003EF093 /* LPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DD916EBE0C6003EF093 /* LPDataSource.m */; };
 		13794DDD16EBE223003EF093 /* LPTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DDC16EBE223003EF093 /* LPTableViewController.m */; };
 		13794DE516EC000A003EF093 /* LPEntryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DE416EC000A003EF093 /* LPEntryViewCell.m */; };
 		1381B33C16F123A700143FEA /* color.png in Resources */ = {isa = PBXBuildFile; fileRef = 1381B33B16F123A700143FEA /* color.png */; };
 		1381B34516F4A4B400143FEA /* Poison.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B34416F4A4B400143FEA /* Poison.m */; };
-		1381B34F16F4B60E00143FEA /* eye_contact.html in Resources */ = {isa = PBXBuildFile; fileRef = 1381B34716F4B60E00143FEA /* eye_contact.html */; };
-		1381B35016F4B60E00143FEA /* footer.html in Resources */ = {isa = PBXBuildFile; fileRef = 1381B34816F4B60E00143FEA /* footer.html */; };
-		1381B35116F4B60E00143FEA /* header.html in Resources */ = {isa = PBXBuildFile; fileRef = 1381B34916F4B60E00143FEA /* header.html */; };
-		1381B35216F4B60E00143FEA /* inhaled.html in Resources */ = {isa = PBXBuildFile; fileRef = 1381B34A16F4B60E00143FEA /* inhaled.html */; };
-		1381B35316F4B60E00143FEA /* skin_contact.html in Resources */ = {isa = PBXBuildFile; fileRef = 1381B34B16F4B60E00143FEA /* skin_contact.html */; };
-		1381B35416F4B60E00143FEA /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 1381B34C16F4B60E00143FEA /* style.css */; };
-		1381B35516F4B60E00143FEA /* swollowed.html in Resources */ = {isa = PBXBuildFile; fileRef = 1381B34D16F4B60E00143FEA /* swollowed.html */; };
-		1381B35616F4B60E00143FEA /* test-1.html in Resources */ = {isa = PBXBuildFile; fileRef = 1381B34E16F4B60E00143FEA /* test-1.html */; };
 		1381B36216F4E82800143FEA /* LPHtmlStringHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B36116F4E82800143FEA /* LPHtmlStringHelper.m */; };
-		1381B36416F4E9F800143FEA /* summary.html in Resources */ = {isa = PBXBuildFile; fileRef = 1381B36316F4E9F800143FEA /* summary.html */; };
 		1381B36A16F4F7EA00143FEA /* LPToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B36916F4F7EA00143FEA /* LPToolbar.m */; };
-		1381B36C16F5D18700143FEA /* main-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 1381B36B16F5D18700143FEA /* main-info.plist */; };
 		1381B36F16F5F5EB00143FEA /* LPContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B36E16F5F5EB00143FEA /* LPContentViewController.m */; };
 		1397DDA116ED099C0061087F /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1397DD9D16ED099C0061087F /* libTestFlight.a */; };
 		1397DDA216ED099C0061087F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1397DD9E16ED099C0061087F /* README.md */; };
@@ -75,17 +121,73 @@
 /* Begin PBXFileReference section */
 		131341C416EDF08900734F5E /* Term.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Term.h; sourceTree = "<group>"; };
 		131341C516EDF08900734F5E /* Term.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Term.m; sourceTree = "<group>"; };
-		1321793416F601F900E93451 /* acetyl.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = acetyl.html; sourceTree = "<group>"; };
-		1321793516F601F900E93451 /* Fluor.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Fluor.html; sourceTree = "<group>"; };
-		1321793616F601F900E93451 /* Malaria.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Malaria.html; sourceTree = "<group>"; };
-		1321793716F601F900E93451 /* Nosedrops.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Nosedrops.html; sourceTree = "<group>"; };
-		1321793816F601F900E93451 /* P_pill.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = P_pill.html; sourceTree = "<group>"; };
-		1321793916F601F900E93451 /* Painkiller.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Painkiller.html; sourceTree = "<group>"; };
-		1321793A16F601F900E93451 /* Paracet.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Paracet.html; sourceTree = "<group>"; };
-		1321793B16F601F900E93451 /* Tobacco.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Tobacco.html; sourceTree = "<group>"; };
-		1321793C16F601F900E93451 /* tranqualizer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = tranqualizer.html; sourceTree = "<group>"; };
-		1321793D16F601F900E93451 /* Vitamin.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Vitamin.html; sourceTree = "<group>"; };
-		1321794816F604A600E93451 /* poison-data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "poison-data.plist"; sourceTree = "<group>"; };
+		132D26DE170076AA00967E5C /* footer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = footer.html; sourceTree = "<group>"; };
+		132D26DF170076AA00967E5C /* header.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = header.html; sourceTree = "<group>"; };
+		132D26E0170076AA00967E5C /* main-info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "main-info.plist"; sourceTree = "<group>"; };
+		132D26E1170076AA00967E5C /* poison-data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "poison-data.plist"; sourceTree = "<group>"; };
+		132D26E2170076AA00967E5C /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
+		132D26E4170076AA00967E5C /* eye_contact.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = eye_contact.html; sourceTree = "<group>"; };
+		132D26E5170076AA00967E5C /* inhaled.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = inhaled.html; sourceTree = "<group>"; };
+		132D26E6170076AA00967E5C /* skin_contact.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = skin_contact.html; sourceTree = "<group>"; };
+		132D26E7170076AA00967E5C /* summary.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = summary.html; sourceTree = "<group>"; };
+		132D26E8170076AA00967E5C /* swallow_general.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = swallow_general.html; sourceTree = "<group>"; };
+		132D26E9170076AA00967E5C /* swollowed.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = swollowed.html; sourceTree = "<group>"; };
+		132D26EA170076AA00967E5C /* test-1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "test-1.html"; sourceTree = "<group>"; };
+		132D26EB170076AA00967E5C /* test.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = test.html; sourceTree = "<group>"; };
+		132D26EC170076AA00967E5C /* tiltak_hvis_uhellet_er_ute_general.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = tiltak_hvis_uhellet_er_ute_general.html; sourceTree = "<group>"; };
+		132D26ED170076AA00967E5C /* unconcious_general.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = unconcious_general.html; sourceTree = "<group>"; };
+		132D26EF170076AA00967E5C /* Acetyl.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Acetyl.html; sourceTree = "<group>"; };
+		132D26F0170076AA00967E5C /* Aftershave.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Aftershave.html; sourceTree = "<group>"; };
+		132D26F1170076AA00967E5C /* Alcohol.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Alcohol.html; sourceTree = "<group>"; };
+		132D26F3170076AA00967E5C /* Battery.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Battery.html; sourceTree = "<group>"; };
+		132D26F4170076AA00967E5C /* Bleach.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Bleach.html; sourceTree = "<group>"; };
+		132D26F5170076AA00967E5C /* Breakfluid.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Breakfluid.html; sourceTree = "<group>"; };
+		132D26F6170076AA00967E5C /* Calc.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Calc.html; sourceTree = "<group>"; };
+		132D26F7170076AA00967E5C /* Car_battery_acid.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Car_battery_acid.html; sourceTree = "<group>"; };
+		132D26F8170076AA00967E5C /* Contactglue.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Contactglue.html; sourceTree = "<group>"; };
+		132D26F9170076AA00967E5C /* Crayons.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Crayons.html; sourceTree = "<group>"; };
+		132D26FA170076AA00967E5C /* Degrease.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Degrease.html; sourceTree = "<group>"; };
+		132D26FB170076AA00967E5C /* Desinfection_other.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Desinfection_other.html; sourceTree = "<group>"; };
+		132D26FC170076AA00967E5C /* Desinfection_wound.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Desinfection_wound.html; sourceTree = "<group>"; };
+		132D26FD170076AA00967E5C /* Detergent_clothes.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Detergent_clothes.html; sourceTree = "<group>"; };
+		132D26FE170076AA00967E5C /* Dish_detergent_machine.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Dish_detergent_machine.html; sourceTree = "<group>"; };
+		132D26FF170076AA00967E5C /* Etheric_oils.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Etheric_oils.html; sourceTree = "<group>"; };
+		132D2700170076AA00967E5C /* Extinghisher.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Extinghisher.html; sourceTree = "<group>"; };
+		132D2701170076AA00967E5C /* Fertilizer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Fertilizer.html; sourceTree = "<group>"; };
+		132D2702170076AA00967E5C /* Flowerwater.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Flowerwater.html; sourceTree = "<group>"; };
+		132D2703170076AA00967E5C /* Fluor.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Fluor.html; sourceTree = "<group>"; };
+		132D2704170076AA00967E5C /* Frostfluid.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Frostfluid.html; sourceTree = "<group>"; };
+		132D2705170076AA00967E5C /* Fungus_killer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Fungus_killer.html; sourceTree = "<group>"; };
+		132D2706170076AA00967E5C /* Glue.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Glue.html; sourceTree = "<group>"; };
+		132D2707170076AA00967E5C /* Hairstyling.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Hairstyling.html; sourceTree = "<group>"; };
+		132D2708170076AA00967E5C /* Lampoil.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Lampoil.html; sourceTree = "<group>"; };
+		132D2709170076AA00967E5C /* Lye.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Lye.html; sourceTree = "<group>"; };
+		132D270A170076AA00967E5C /* Malaria.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Malaria.html; sourceTree = "<group>"; };
+		132D270B170076AA00967E5C /* Matches.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Matches.html; sourceTree = "<group>"; };
+		132D270C170076AA00967E5C /* Nailpolishremover.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Nailpolishremover.html; sourceTree = "<group>"; };
+		132D270D170076AA00967E5C /* Nosedrops.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Nosedrops.html; sourceTree = "<group>"; };
+		132D270E170076AA00967E5C /* Ovenclean.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Ovenclean.html; sourceTree = "<group>"; };
+		132D270F170076AA00967E5C /* P_pill.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = P_pill.html; sourceTree = "<group>"; };
+		132D2710170076AA00967E5C /* Painkiller.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Painkiller.html; sourceTree = "<group>"; };
+		132D2711170076AA00967E5C /* Paintreomver_metanol.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Paintreomver_metanol.html; sourceTree = "<group>"; };
+		132D2712170076AA00967E5C /* Paperglue.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Paperglue.html; sourceTree = "<group>"; };
+		132D2713170076AA00967E5C /* Paracet.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Paracet.html; sourceTree = "<group>"; };
+		132D2714170076AA00967E5C /* Perfume.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Perfume.html; sourceTree = "<group>"; };
+		132D2715170076AA00967E5C /* Pesticides.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Pesticides.html; sourceTree = "<group>"; };
+		132D2716170076AA00967E5C /* Petrol.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Petrol.html; sourceTree = "<group>"; };
+		132D2717170076AA00967E5C /* Petroliumbased.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Petroliumbased.html; sourceTree = "<group>"; };
+		132D2718170076AA00967E5C /* Ratpoison.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Ratpoison.html; sourceTree = "<group>"; };
+		132D2719170076AA00967E5C /* Redspirit.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Redspirit.html; sourceTree = "<group>"; };
+		132D271A170076AA00967E5C /* Rustremover.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Rustremover.html; sourceTree = "<group>"; };
+		132D271B170076AA00967E5C /* Salmiakk.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Salmiakk.html; sourceTree = "<group>"; };
+		132D271C170076AA00967E5C /* Sement.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Sement.html; sourceTree = "<group>"; };
+		132D271D170076AA00967E5C /* Shampoo.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Shampoo.html; sourceTree = "<group>"; };
+		132D271E170076AA00967E5C /* Superglue.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Superglue.html; sourceTree = "<group>"; };
+		132D271F170076AA00967E5C /* Tobacco.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Tobacco.html; sourceTree = "<group>"; };
+		132D2720170076AA00967E5C /* Toiletopeners.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Toiletopeners.html; sourceTree = "<group>"; };
+		132D2721170076AA00967E5C /* Tranqualizer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Tranqualizer.html; sourceTree = "<group>"; };
+		132D2722170076AA00967E5C /* Vitamin.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Vitamin.html; sourceTree = "<group>"; };
+		132D2723170076AA00967E5C /* White_spirit.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = White_spirit.html; sourceTree = "<group>"; };
 		13794DD816EBE0C6003EF093 /* LPDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPDataSource.h; sourceTree = "<group>"; };
 		13794DD916EBE0C6003EF093 /* LPDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPDataSource.m; sourceTree = "<group>"; };
 		13794DDB16EBE223003EF093 /* LPTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTableViewController.h; sourceTree = "<group>"; };
@@ -95,20 +197,10 @@
 		1381B33B16F123A700143FEA /* color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = color.png; sourceTree = "<group>"; };
 		1381B34316F4A4B400143FEA /* Poison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Poison.h; sourceTree = "<group>"; };
 		1381B34416F4A4B400143FEA /* Poison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Poison.m; sourceTree = "<group>"; };
-		1381B34716F4B60E00143FEA /* eye_contact.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = eye_contact.html; sourceTree = "<group>"; };
-		1381B34816F4B60E00143FEA /* footer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = footer.html; sourceTree = "<group>"; };
-		1381B34916F4B60E00143FEA /* header.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = header.html; sourceTree = "<group>"; };
-		1381B34A16F4B60E00143FEA /* inhaled.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = inhaled.html; sourceTree = "<group>"; };
-		1381B34B16F4B60E00143FEA /* skin_contact.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = skin_contact.html; sourceTree = "<group>"; };
-		1381B34C16F4B60E00143FEA /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; path = style.css; sourceTree = "<group>"; };
-		1381B34D16F4B60E00143FEA /* swollowed.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = swollowed.html; sourceTree = "<group>"; };
-		1381B34E16F4B60E00143FEA /* test-1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "test-1.html"; sourceTree = "<group>"; };
 		1381B36016F4E82800143FEA /* LPHtmlStringHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPHtmlStringHelper.h; sourceTree = "<group>"; };
 		1381B36116F4E82800143FEA /* LPHtmlStringHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPHtmlStringHelper.m; sourceTree = "<group>"; };
-		1381B36316F4E9F800143FEA /* summary.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = summary.html; sourceTree = "<group>"; };
 		1381B36816F4F7EA00143FEA /* LPToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPToolbar.h; sourceTree = "<group>"; };
 		1381B36916F4F7EA00143FEA /* LPToolbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPToolbar.m; sourceTree = "<group>"; };
-		1381B36B16F5D18700143FEA /* main-info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "main-info.plist"; sourceTree = "<group>"; };
 		1381B36D16F5F5EB00143FEA /* LPContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPContentViewController.h; sourceTree = "<group>"; };
 		1381B36E16F5F5EB00143FEA /* LPContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPContentViewController.m; sourceTree = "<group>"; };
 		1397DD9D16ED099C0061087F /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
@@ -194,6 +286,104 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		132D26DC1700769E00967E5C /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				132D26DD170076AA00967E5C /* structure */,
+				132D26E3170076AA00967E5C /* general */,
+				132D26EE170076AA00967E5C /* poisons */,
+			);
+			name = Content;
+			sourceTree = "<group>";
+		};
+		132D26DD170076AA00967E5C /* structure */ = {
+			isa = PBXGroup;
+			children = (
+				132D26DE170076AA00967E5C /* footer.html */,
+				132D26DF170076AA00967E5C /* header.html */,
+				132D26E0170076AA00967E5C /* main-info.plist */,
+				132D26E1170076AA00967E5C /* poison-data.plist */,
+				132D26E2170076AA00967E5C /* style.css */,
+			);
+			path = structure;
+			sourceTree = "<group>";
+		};
+		132D26E3170076AA00967E5C /* general */ = {
+			isa = PBXGroup;
+			children = (
+				132D26E4170076AA00967E5C /* eye_contact.html */,
+				132D26E5170076AA00967E5C /* inhaled.html */,
+				132D26E6170076AA00967E5C /* skin_contact.html */,
+				132D26E7170076AA00967E5C /* summary.html */,
+				132D26E8170076AA00967E5C /* swallow_general.html */,
+				132D26E9170076AA00967E5C /* swollowed.html */,
+				132D26EA170076AA00967E5C /* test-1.html */,
+				132D26EB170076AA00967E5C /* test.html */,
+				132D26EC170076AA00967E5C /* tiltak_hvis_uhellet_er_ute_general.html */,
+				132D26ED170076AA00967E5C /* unconcious_general.html */,
+			);
+			path = general;
+			sourceTree = "<group>";
+		};
+		132D26EE170076AA00967E5C /* poisons */ = {
+			isa = PBXGroup;
+			children = (
+				132D26EF170076AA00967E5C /* Acetyl.html */,
+				132D26F0170076AA00967E5C /* Aftershave.html */,
+				132D26F1170076AA00967E5C /* Alcohol.html */,
+				132D26F3170076AA00967E5C /* Battery.html */,
+				132D26F4170076AA00967E5C /* Bleach.html */,
+				132D26F5170076AA00967E5C /* Breakfluid.html */,
+				132D26F6170076AA00967E5C /* Calc.html */,
+				132D26F7170076AA00967E5C /* Car_battery_acid.html */,
+				132D26F8170076AA00967E5C /* Contactglue.html */,
+				132D26F9170076AA00967E5C /* Crayons.html */,
+				132D26FA170076AA00967E5C /* Degrease.html */,
+				132D26FB170076AA00967E5C /* Desinfection_other.html */,
+				132D26FC170076AA00967E5C /* Desinfection_wound.html */,
+				132D26FD170076AA00967E5C /* Detergent_clothes.html */,
+				132D26FE170076AA00967E5C /* Dish_detergent_machine.html */,
+				132D26FF170076AA00967E5C /* Etheric_oils.html */,
+				132D2700170076AA00967E5C /* Extinghisher.html */,
+				132D2701170076AA00967E5C /* Fertilizer.html */,
+				132D2702170076AA00967E5C /* Flowerwater.html */,
+				132D2703170076AA00967E5C /* Fluor.html */,
+				132D2704170076AA00967E5C /* Frostfluid.html */,
+				132D2705170076AA00967E5C /* Fungus_killer.html */,
+				132D2706170076AA00967E5C /* Glue.html */,
+				132D2707170076AA00967E5C /* Hairstyling.html */,
+				132D2708170076AA00967E5C /* Lampoil.html */,
+				132D2709170076AA00967E5C /* Lye.html */,
+				132D270A170076AA00967E5C /* Malaria.html */,
+				132D270B170076AA00967E5C /* Matches.html */,
+				132D270C170076AA00967E5C /* Nailpolishremover.html */,
+				132D270D170076AA00967E5C /* Nosedrops.html */,
+				132D270E170076AA00967E5C /* Ovenclean.html */,
+				132D270F170076AA00967E5C /* P_pill.html */,
+				132D2710170076AA00967E5C /* Painkiller.html */,
+				132D2711170076AA00967E5C /* Paintreomver_metanol.html */,
+				132D2712170076AA00967E5C /* Paperglue.html */,
+				132D2713170076AA00967E5C /* Paracet.html */,
+				132D2714170076AA00967E5C /* Perfume.html */,
+				132D2715170076AA00967E5C /* Pesticides.html */,
+				132D2716170076AA00967E5C /* Petrol.html */,
+				132D2717170076AA00967E5C /* Petroliumbased.html */,
+				132D2718170076AA00967E5C /* Ratpoison.html */,
+				132D2719170076AA00967E5C /* Redspirit.html */,
+				132D271A170076AA00967E5C /* Rustremover.html */,
+				132D271B170076AA00967E5C /* Salmiakk.html */,
+				132D271C170076AA00967E5C /* Sement.html */,
+				132D271D170076AA00967E5C /* Shampoo.html */,
+				132D271E170076AA00967E5C /* Superglue.html */,
+				132D271F170076AA00967E5C /* Tobacco.html */,
+				132D2720170076AA00967E5C /* Toiletopeners.html */,
+				132D2721170076AA00967E5C /* Tranqualizer.html */,
+				132D2722170076AA00967E5C /* Vitamin.html */,
+				132D2723170076AA00967E5C /* White_spirit.html */,
+			);
+			path = poisons;
+			sourceTree = "<group>";
+		};
 		1381B33A16F1239D00143FEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -205,34 +395,6 @@
 			);
 			name = Resources;
 			sourceTree = "<group>";
-		};
-		1381B34616F4B60E00143FEA /* Content */ = {
-			isa = PBXGroup;
-			children = (
-				1321794816F604A600E93451 /* poison-data.plist */,
-				1321793416F601F900E93451 /* acetyl.html */,
-				1321793516F601F900E93451 /* Fluor.html */,
-				1321793616F601F900E93451 /* Malaria.html */,
-				1321793716F601F900E93451 /* Nosedrops.html */,
-				1321793816F601F900E93451 /* P_pill.html */,
-				1321793916F601F900E93451 /* Painkiller.html */,
-				1321793A16F601F900E93451 /* Paracet.html */,
-				1321793B16F601F900E93451 /* Tobacco.html */,
-				1321793C16F601F900E93451 /* tranqualizer.html */,
-				1321793D16F601F900E93451 /* Vitamin.html */,
-				1381B34716F4B60E00143FEA /* eye_contact.html */,
-				1381B34816F4B60E00143FEA /* footer.html */,
-				1381B34916F4B60E00143FEA /* header.html */,
-				1381B34A16F4B60E00143FEA /* inhaled.html */,
-				1381B34B16F4B60E00143FEA /* skin_contact.html */,
-				1381B34C16F4B60E00143FEA /* style.css */,
-				1381B34D16F4B60E00143FEA /* swollowed.html */,
-				1381B34E16F4B60E00143FEA /* test-1.html */,
-				1381B36316F4E9F800143FEA /* summary.html */,
-				1381B36B16F5D18700143FEA /* main-info.plist */,
-			);
-			path = Content;
-			sourceTree = SOURCE_ROOT;
 		};
 		1397DD9C16ED099C0061087F /* TestFlightSDK1.2 */ = {
 			isa = PBXGroup;
@@ -282,7 +444,7 @@
 		13EC391016EB9FE8005244BD /* Lilly Poison */ = {
 			isa = PBXGroup;
 			children = (
-				1381B34616F4B60E00143FEA /* Content */,
+				132D26DC1700769E00967E5C /* Content */,
 				1381B33A16F1239D00143FEA /* Resources */,
 				131341D416EE0C3B00734F5E /* Controller */,
 				131341D316EE0C0200734F5E /* Model */,
@@ -413,27 +575,73 @@
 				1397DDA216ED099C0061087F /* README.md in Resources */,
 				1397DDA316ED099C0061087F /* release_notes.md in Resources */,
 				1381B33C16F123A700143FEA /* color.png in Resources */,
-				1381B34F16F4B60E00143FEA /* eye_contact.html in Resources */,
-				1381B35016F4B60E00143FEA /* footer.html in Resources */,
-				1381B35116F4B60E00143FEA /* header.html in Resources */,
-				1381B35216F4B60E00143FEA /* inhaled.html in Resources */,
-				1381B35316F4B60E00143FEA /* skin_contact.html in Resources */,
-				1381B35416F4B60E00143FEA /* style.css in Resources */,
-				1381B35516F4B60E00143FEA /* swollowed.html in Resources */,
-				1381B35616F4B60E00143FEA /* test-1.html in Resources */,
-				1381B36416F4E9F800143FEA /* summary.html in Resources */,
-				1381B36C16F5D18700143FEA /* main-info.plist in Resources */,
-				1321793E16F601F900E93451 /* acetyl.html in Resources */,
-				1321793F16F601F900E93451 /* Fluor.html in Resources */,
-				1321794016F601F900E93451 /* Malaria.html in Resources */,
-				1321794116F601F900E93451 /* Nosedrops.html in Resources */,
-				1321794216F601F900E93451 /* P_pill.html in Resources */,
-				1321794316F601F900E93451 /* Painkiller.html in Resources */,
-				1321794416F601F900E93451 /* Paracet.html in Resources */,
-				1321794516F601F900E93451 /* Tobacco.html in Resources */,
-				1321794616F601F900E93451 /* tranqualizer.html in Resources */,
-				1321794716F601F900E93451 /* Vitamin.html in Resources */,
-				1321794916F604A600E93451 /* poison-data.plist in Resources */,
+				132D2724170076AA00967E5C /* footer.html in Resources */,
+				132D2725170076AA00967E5C /* header.html in Resources */,
+				132D2726170076AA00967E5C /* main-info.plist in Resources */,
+				132D2727170076AA00967E5C /* poison-data.plist in Resources */,
+				132D2728170076AA00967E5C /* style.css in Resources */,
+				132D2729170076AA00967E5C /* eye_contact.html in Resources */,
+				132D272A170076AA00967E5C /* inhaled.html in Resources */,
+				132D272B170076AA00967E5C /* skin_contact.html in Resources */,
+				132D272C170076AA00967E5C /* summary.html in Resources */,
+				132D272D170076AA00967E5C /* swallow_general.html in Resources */,
+				132D272E170076AA00967E5C /* swollowed.html in Resources */,
+				132D272F170076AA00967E5C /* test-1.html in Resources */,
+				132D2730170076AA00967E5C /* test.html in Resources */,
+				132D2731170076AA00967E5C /* tiltak_hvis_uhellet_er_ute_general.html in Resources */,
+				132D2732170076AA00967E5C /* unconcious_general.html in Resources */,
+				132D2733170076AA00967E5C /* Acetyl.html in Resources */,
+				132D2734170076AA00967E5C /* Aftershave.html in Resources */,
+				132D2735170076AA00967E5C /* Alcohol.html in Resources */,
+				132D2737170076AA00967E5C /* Battery.html in Resources */,
+				132D2738170076AA00967E5C /* Bleach.html in Resources */,
+				132D2739170076AA00967E5C /* Breakfluid.html in Resources */,
+				132D273A170076AA00967E5C /* Calc.html in Resources */,
+				132D273B170076AA00967E5C /* Car_battery_acid.html in Resources */,
+				132D273C170076AA00967E5C /* Contactglue.html in Resources */,
+				132D273D170076AA00967E5C /* Crayons.html in Resources */,
+				132D273E170076AA00967E5C /* Degrease.html in Resources */,
+				132D273F170076AA00967E5C /* Desinfection_other.html in Resources */,
+				132D2740170076AA00967E5C /* Desinfection_wound.html in Resources */,
+				132D2741170076AA00967E5C /* Detergent_clothes.html in Resources */,
+				132D2742170076AA00967E5C /* Dish_detergent_machine.html in Resources */,
+				132D2743170076AA00967E5C /* Etheric_oils.html in Resources */,
+				132D2744170076AA00967E5C /* Extinghisher.html in Resources */,
+				132D2745170076AA00967E5C /* Fertilizer.html in Resources */,
+				132D2746170076AA00967E5C /* Flowerwater.html in Resources */,
+				132D2747170076AA00967E5C /* Fluor.html in Resources */,
+				132D2748170076AA00967E5C /* Frostfluid.html in Resources */,
+				132D2749170076AA00967E5C /* Fungus_killer.html in Resources */,
+				132D274A170076AA00967E5C /* Glue.html in Resources */,
+				132D274B170076AA00967E5C /* Hairstyling.html in Resources */,
+				132D274C170076AA00967E5C /* Lampoil.html in Resources */,
+				132D274D170076AA00967E5C /* Lye.html in Resources */,
+				132D274E170076AA00967E5C /* Malaria.html in Resources */,
+				132D274F170076AA00967E5C /* Matches.html in Resources */,
+				132D2750170076AA00967E5C /* Nailpolishremover.html in Resources */,
+				132D2751170076AA00967E5C /* Nosedrops.html in Resources */,
+				132D2752170076AA00967E5C /* Ovenclean.html in Resources */,
+				132D2753170076AA00967E5C /* P_pill.html in Resources */,
+				132D2754170076AA00967E5C /* Painkiller.html in Resources */,
+				132D2755170076AA00967E5C /* Paintreomver_metanol.html in Resources */,
+				132D2756170076AA00967E5C /* Paperglue.html in Resources */,
+				132D2757170076AA00967E5C /* Paracet.html in Resources */,
+				132D2758170076AA00967E5C /* Perfume.html in Resources */,
+				132D2759170076AA00967E5C /* Pesticides.html in Resources */,
+				132D275A170076AA00967E5C /* Petrol.html in Resources */,
+				132D275B170076AA00967E5C /* Petroliumbased.html in Resources */,
+				132D275C170076AA00967E5C /* Ratpoison.html in Resources */,
+				132D275D170076AA00967E5C /* Redspirit.html in Resources */,
+				132D275E170076AA00967E5C /* Rustremover.html in Resources */,
+				132D275F170076AA00967E5C /* Salmiakk.html in Resources */,
+				132D2760170076AA00967E5C /* Sement.html in Resources */,
+				132D2761170076AA00967E5C /* Shampoo.html in Resources */,
+				132D2762170076AA00967E5C /* Superglue.html in Resources */,
+				132D2763170076AA00967E5C /* Tobacco.html in Resources */,
+				132D2764170076AA00967E5C /* Toiletopeners.html in Resources */,
+				132D2765170076AA00967E5C /* Tranqualizer.html in Resources */,
+				132D2766170076AA00967E5C /* Vitamin.html in Resources */,
+				132D2767170076AA00967E5C /* White_spirit.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
