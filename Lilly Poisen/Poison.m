@@ -17,7 +17,7 @@
 {
     NSString *contentString = self.content;
     NSString *summaryString = [LPHtmlStringHelper stringFromHtmlFileWithName:@"summary"];
-    summaryString = [NSString stringWithFormat:summaryString, self.risk, self.symptoms, self.coal, self.action];
+    summaryString = [NSString stringWithFormat:summaryString, self.name, self.risk, self.symptoms, self.coal, self.action];
     
     return [NSString stringWithFormat:@"%@\n%@", summaryString, contentString];
 }
@@ -27,6 +27,7 @@
     Poison *poison = [[Poison alloc] init];
     if(poison)
     {
+        poison.key = poisonDict[@"slug"];
         poison.name = poisonDict[@"title"];
         poison.content = poisonDict[@"content"];
         poison.symptoms = poisonDict[@"custom_fields"][@"wpcf-symptoms"][0];

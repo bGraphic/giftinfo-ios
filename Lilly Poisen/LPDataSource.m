@@ -99,22 +99,33 @@
     
     NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
     
-    NSLog(@"Error %@", error.description);
-    
-    NSLog(@"json dict: %@", [json description]);
+    if(error) {
+        NSLog(@"Error: %@", [error description]);
+    }
     
     NSArray *poisonRawData = [json objectForKey:@"posts"];
-
-    NSLog(@"raw data: %@", [poisonRawData description]);
     
-//    NSString *propertyFile = [[NSBundle mainBundle] pathForResource:@"poison-data" ofType:@"plist"];
-//    NSArray *poisonRawData = [NSArray arrayWithContentsOfFile:propertyFile];
-//    
     NSMutableArray *poisonDataUnsorted = [NSMutableArray arrayWithCapacity:poisonRawData.count];
     
     for(NSDictionary *poisonDict in poisonRawData)
     {
-        [poisonDataUnsorted addObject:[Poison poisonWithDict:poisonDict]];
+        if([[poisonDict[@"title"] componentsSeparatedByString:@","] count] > 1)
+        {
+            NSLog(@"more than one title %@", poisonDict[@"title"]);
+            
+            for (NSString *nameRawData in [poisonDict[@"title"] componentsSeparatedByString:@","])
+            {
+                NSString *name = [nameRawData stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+                
+                Poison *poison = [Poison poisonWithDict:poisonDict];
+                poison.name = name;
+                [poisonDataUnsorted addObject:poison];
+            }
+        }
+        else
+        {
+            [poisonDataUnsorted addObject:[Poison poisonWithDict:poisonDict]];
+        }
     }
 
     NSSortDescriptor *lastDescriptor =
