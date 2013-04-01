@@ -2,139 +2,112 @@
 //  LPDataSource.m
 //  Lilly Poison
 //
-//  Created by Benedicte Raae on 09.03.13.
+//  Created by Benedicte Raae on 01.04.13.
 //  Copyright (c) 2013 bGraphic. All rights reserved.
 //
 
 #import "LPDataSource.h"
-#import "LPAppDelegate.h"
-#import "Term.h"
-#import "LPEntryViewCell.h"
-#import "LPContentViewController.h"
-
-@interface LPDataSource ()
-
-@property (nonatomic) NSManagedObjectContext *context;
-
-@property NSArray *poisonData;
-@property NSMutableArray *filteredData;
-@property NSString *selectedKey;
-@property NSString *searchString;
-
-@end
+#import "Poison.h"
 
 @implementation LPDataSource
 
-- (id)init {
-    self = [super init];
+static NSArray *poisonArray;
 
-    if(self)
++ (NSArray *) poisonWithDict:(NSDictionary *) poisonDict
+{
+    NSArray *nameArray = [poisonDict[@"title"] componentsSeparatedByString:@","];
+    
+    NSMutableArray *poisons = [[NSMutableArray alloc] initWithCapacity:nameArray.count];
+    
+    NSLog(@"name array %d", nameArray.count);
+    
+    for (int i=0; i < nameArray.count; i++)
     {
-        self.poisonData = [Poison poisonList];
+        NSString *name = [[nameArray objectAtIndex:i] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        
+        Poison *poison = [[Poison alloc] init];
+        
+        poison.name = name;
+        poison.key = poisonDict[@"slug"];
+        poison.content = poisonDict[@"content"];
+        poison.symptoms = poisonDict[@"custom_fields"][@"wpcf-symptoms"][0];
+        poison.action = poisonDict[@"custom_fields"][@"wpcf-action"][0];
+        poison.coal = poisonDict[@"custom_fields"][@"wpcf-coal"][0];
+        poison.risk = poisonDict[@"custom_fields"][@"wpcf-risk"][0];
+        
+        NSMutableArray *tagArray = [[NSMutableArray alloc] init];
+        
+        for (NSDictionary *tagDict in poisonDict[@"tags"])
+        {
+            NSLog(@"%@", poisonDict[@"tags"]);
+            
+            [tagArray addObject:tagDict[@"title"]];
+        }
+        
+        NSLog(@"%@", [tagArray description]);
+        
+        poison.synonyms = [[NSArray alloc] initWithArray:tagArray];
+        
+        if(i > 0)
+        {
+            poison.key = [NSString stringWithFormat:@"%@-%d", poison.key, i];
+            poison.synonyms = nil;
+        }
+        
+        [poisons addObject:poison];
     }
     
-    return self;
+    return poisons;
 }
 
-- (NSManagedObjectContext *) context
++ (NSArray *) loadPoisonsArrayFromJSONFile:(NSString *) poisonFile
 {
-    LPAppDelegate *appDelegate = (LPAppDelegate *)[UIApplication sharedApplication].delegate;
+    NSString *contentPath = [[NSBundle mainBundle] pathForResource:poisonFile ofType:@"json"];
     
-    return appDelegate.managedObjectContext;
-}
-
-- (void) filterContentForSearchText:(NSString*)searchText
-{
-    if(!self.filteredData)
-        self.filteredData = [NSMutableArray arrayWithCapacity:self.poisonData.count];
-    else
-        [self.filteredData removeAllObjects];
+    NSData *data = [NSData dataWithContentsOfFile:contentPath];
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(SELF.name contains[c] %@) OR (ANY SELF.synonyms contains[c] %@)", searchText, searchText];
+    NSError *error;
     
-    self.filteredData = [NSMutableArray arrayWithArray:[self.poisonData filteredArrayUsingPredicate:predicate]];
+    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&error];
     
-//    if(self.filteredData.count == 0)
-//    {
-//        predicate = [NSPredicate predicateWithFormat:@"ANY SELF.synonyms contains[c] %@", searchText];
-//        self.filteredData = [NSMutableArray arrayWithArray:[self.poisonData filteredArrayUsingPredicate:predicate]];
-//    }
-}
-
-- (Poison *) getPoisonAtIndexPath:(NSIndexPath *)indexPath
-{
-    if(self.filteredData)
-        return self.filteredData[indexPath.row];
-    else
-        return self.poisonData[indexPath.row];
-}
-
-#pragma mark - Search Display Delegate
-
-- (void)searchDisplayController:(UISearchDisplayController *)controller didHideSearchResultsTableView:(UITableView *)tableView
-{
-    self.filteredData = nil;
-}
-
-- (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
-{
-    
-    self.searchString = searchString;
-    
-    [self filterContentForSearchText:searchString];
-
-    return YES;
-}
-
-#pragma mark - Table view data source
-
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-    return 1;
-}
-
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    if(self.filteredData)
-        return self.filteredData.count;
-    else
-        return self.poisonData.count;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *CellIdentifier = @"PoisonCell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    
-    if(!cell)
-    {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-    }
-
-    Poison *poisonEntry = [self getPoisonAtIndexPath:indexPath];
-    
-    
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(SELF contains[c] %@)", self.searchString];
-    
-    
-    NSString *synonymsString;
-    
-    for(NSString *synonym in [poisonEntry.synonyms filteredArrayUsingPredicate:predicate])
-    {
-        if(!synonymsString)
-            synonymsString = synonym;
-        else
-            synonymsString = [NSString stringWithFormat:@"%@, %@", synonymsString, synonym];
+    if(error) {
+        NSLog(@"Error: %@", [error description]);
     }
     
-    cell.textLabel.text = poisonEntry.name;
-    cell.detailTextLabel.text = synonymsString;
+    return [json objectForKey:@"posts"];
+}
+
++ (NSArray *) createPoisonListFromJSONArray:(NSArray *) poisonJSONArray
+{
+    NSMutableArray *poisonDataUnsorted = [NSMutableArray array];
     
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    cell.selectionStyle = UITableViewCellSelectionStyleGray;
+    for(NSDictionary *poisonDict in poisonJSONArray)
+    {
+        [poisonDataUnsorted addObjectsFromArray:[LPDataSource poisonWithDict:poisonDict]];
+    }
     
-    return cell;
+    NSSortDescriptor *lastDescriptor =
+    [[NSSortDescriptor alloc] initWithKey:@"name"
+                                ascending:YES
+                                 selector:@selector(localizedCaseInsensitiveCompare:)];
+    
+    return [poisonDataUnsorted sortedArrayUsingDescriptors:[NSArray arrayWithObject:lastDescriptor]];
+}
+
++ (void) loadPoisonData
+{
+    NSArray *poisonJSONArray = [LPDataSource loadPoisonsArrayFromJSONFile:@"poisons"];
+    poisonArray = [LPDataSource createPoisonListFromJSONArray:poisonJSONArray];
+}
+
++ (NSArray *) poisonArray
+{
+    if(!poisonArray)
+    {
+        [LPDataSource loadPoisonData];
+    }
+    
+    return poisonArray;
 }
 
 @end

@@ -8,7 +8,7 @@
 
 #import "LPAppDelegate.h"
 #import "TestFlight.h"
-#import "Poison.h"
+#import "LPDataSource.h"
 #import "Term.h"
 
 @implementation LPAppDelegate
@@ -22,6 +22,8 @@
     [self setUpTestFlight];
     
     [self customizeAppearance];
+    
+    [LPDataSource poisonArray];
     
     return YES;
 }

@@ -20,7 +20,7 @@
 {
     [super viewDidLoad];
     
-    self.poisonDataSource = [[LPDataSource alloc] init];
+    self.poisonDataSource = [[LPTableDataSource alloc] init];
     
     self.toolbarItems = self.navigationController.toolbarItems;
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 10, 0);

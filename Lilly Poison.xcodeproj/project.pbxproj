@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		131341C616EDF08900734F5E /* Term.m in Sources */ = {isa = PBXBuildFile; fileRef = 131341C516EDF08900734F5E /* Term.m */; };
 		132D2724170076AA00967E5C /* footer.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26DE170076AA00967E5C /* footer.html */; };
 		132D2725170076AA00967E5C /* header.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26DF170076AA00967E5C /* header.html */; };
 		132D2726170076AA00967E5C /* main-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 132D26E0170076AA00967E5C /* main-info.plist */; };
@@ -75,7 +74,7 @@
 		132D2765170076AA00967E5C /* Tranqualizer.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D2721170076AA00967E5C /* Tranqualizer.html */; };
 		132D2766170076AA00967E5C /* Vitamin.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D2722170076AA00967E5C /* Vitamin.html */; };
 		132D2767170076AA00967E5C /* White_spirit.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D2723170076AA00967E5C /* White_spirit.html */; };
-		13794DDA16EBE0C6003EF093 /* LPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DD916EBE0C6003EF093 /* LPDataSource.m */; };
+		13794DDA16EBE0C6003EF093 /* LPTableDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DD916EBE0C6003EF093 /* LPTableDataSource.m */; };
 		13794DDD16EBE223003EF093 /* LPTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DDC16EBE223003EF093 /* LPTableViewController.m */; };
 		13794DE516EC000A003EF093 /* LPEntryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DE416EC000A003EF093 /* LPEntryViewCell.m */; };
 		1381B33C16F123A700143FEA /* color.png in Resources */ = {isa = PBXBuildFile; fileRef = 1381B33B16F123A700143FEA /* color.png */; };
@@ -87,6 +86,7 @@
 		1397DDA216ED099C0061087F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1397DD9E16ED099C0061087F /* README.md */; };
 		1397DDA316ED099C0061087F /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 1397DD9F16ED099C0061087F /* release_notes.md */; };
 		1397DDA716ED0A060061087F /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1397DDA616ED0A060061087F /* libz.1.1.3.dylib */; };
+		13A0B66E1709BDE500B4970F /* LPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0B66D1709BDE500B4970F /* LPDataSource.m */; };
 		13D7F440170455EB001D7F93 /* poisons.json in Resources */ = {isa = PBXBuildFile; fileRef = 13D7F43F170455EB001D7F93 /* poisons.json */; };
 		13EB1A1F16EBA9EE00170579 /* LPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EB1A1E16EBA9EE00170579 /* LPMainViewController.m */; };
 		13EC390916EB9FE8005244BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390816EB9FE8005244BD /* UIKit.framework */; };
@@ -120,8 +120,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		131341C416EDF08900734F5E /* Term.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Term.h; sourceTree = "<group>"; };
-		131341C516EDF08900734F5E /* Term.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Term.m; sourceTree = "<group>"; };
 		132D26DE170076AA00967E5C /* footer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = footer.html; sourceTree = "<group>"; };
 		132D26DF170076AA00967E5C /* header.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = header.html; sourceTree = "<group>"; };
 		132D26E0170076AA00967E5C /* main-info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "main-info.plist"; sourceTree = "<group>"; };
@@ -189,8 +187,8 @@
 		132D2721170076AA00967E5C /* Tranqualizer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Tranqualizer.html; sourceTree = "<group>"; };
 		132D2722170076AA00967E5C /* Vitamin.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = Vitamin.html; sourceTree = "<group>"; };
 		132D2723170076AA00967E5C /* White_spirit.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = White_spirit.html; sourceTree = "<group>"; };
-		13794DD816EBE0C6003EF093 /* LPDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPDataSource.h; sourceTree = "<group>"; };
-		13794DD916EBE0C6003EF093 /* LPDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPDataSource.m; sourceTree = "<group>"; };
+		13794DD816EBE0C6003EF093 /* LPTableDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTableDataSource.h; sourceTree = "<group>"; };
+		13794DD916EBE0C6003EF093 /* LPTableDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTableDataSource.m; sourceTree = "<group>"; };
 		13794DDB16EBE223003EF093 /* LPTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTableViewController.h; sourceTree = "<group>"; };
 		13794DDC16EBE223003EF093 /* LPTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTableViewController.m; sourceTree = "<group>"; };
 		13794DE316EC000A003EF093 /* LPEntryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPEntryViewCell.h; sourceTree = "<group>"; };
@@ -210,6 +208,8 @@
 		1397DDA016ED099C0061087F /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		1397DDA416ED09EE0061087F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		1397DDA616ED0A060061087F /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
+		13A0B66C1709BDE500B4970F /* LPDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPDataSource.h; sourceTree = "<group>"; };
+		13A0B66D1709BDE500B4970F /* LPDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPDataSource.m; sourceTree = "<group>"; };
 		13D7F43F170455EB001D7F93 /* poisons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = poisons.json; sourceTree = "<group>"; };
 		13EB1A1D16EBA9EE00170579 /* LPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPMainViewController.h; sourceTree = "<group>"; };
 		13EB1A1E16EBA9EE00170579 /* LPMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPMainViewController.m; sourceTree = "<group>"; };
@@ -269,8 +269,8 @@
 			children = (
 				1381B34316F4A4B400143FEA /* Poison.h */,
 				1381B34416F4A4B400143FEA /* Poison.m */,
-				131341C416EDF08900734F5E /* Term.h */,
-				131341C516EDF08900734F5E /* Term.m */,
+				13A0B66C1709BDE500B4970F /* LPDataSource.h */,
+				13A0B66D1709BDE500B4970F /* LPDataSource.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -455,8 +455,8 @@
 				13EC391A16EB9FE8005244BD /* LPAppDelegate.m */,
 				13EC391116EB9FE8005244BD /* Supporting Files */,
 				13EC394316EBA0A8005244BD /* MainStoryboard.storyboard */,
-				13794DD816EBE0C6003EF093 /* LPDataSource.h */,
-				13794DD916EBE0C6003EF093 /* LPDataSource.m */,
+				13794DD816EBE0C6003EF093 /* LPTableDataSource.h */,
+				13794DD916EBE0C6003EF093 /* LPTableDataSource.m */,
 				13794DE316EC000A003EF093 /* LPEntryViewCell.h */,
 				13794DE416EC000A003EF093 /* LPEntryViewCell.m */,
 			);
@@ -684,14 +684,14 @@
 				13EC391716EB9FE8005244BD /* main.m in Sources */,
 				13EC391B16EB9FE8005244BD /* LPAppDelegate.m in Sources */,
 				13EB1A1F16EBA9EE00170579 /* LPMainViewController.m in Sources */,
-				13794DDA16EBE0C6003EF093 /* LPDataSource.m in Sources */,
+				13794DDA16EBE0C6003EF093 /* LPTableDataSource.m in Sources */,
 				13794DDD16EBE223003EF093 /* LPTableViewController.m in Sources */,
 				13794DE516EC000A003EF093 /* LPEntryViewCell.m in Sources */,
-				131341C616EDF08900734F5E /* Term.m in Sources */,
 				1381B34516F4A4B400143FEA /* Poison.m in Sources */,
 				1381B36216F4E82800143FEA /* LPHtmlStringHelper.m in Sources */,
 				1381B36A16F4F7EA00143FEA /* LPToolbar.m in Sources */,
 				1381B36F16F5F5EB00143FEA /* LPContentViewController.m in Sources */,
+				13A0B66E1709BDE500B4970F /* LPDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
