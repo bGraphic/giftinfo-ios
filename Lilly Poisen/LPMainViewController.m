@@ -106,8 +106,6 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    NSLog(@"cell for row");
-    
     if(self.tableView != tableView)
     {
         return [super tableView:tableView cellForRowAtIndexPath:indexPath];
