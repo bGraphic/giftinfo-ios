@@ -46,12 +46,12 @@ static NSArray *poisonArray;
         
         NSLog(@"%@", [tagArray description]);
         
-        poison.synonyms = [[NSArray alloc] initWithArray:tagArray];
+        poison.tags = [[NSArray alloc] initWithArray:tagArray];
         
         if(i > 0)
         {
             poison.key = [NSString stringWithFormat:@"%@-%d", poison.key, i];
-            poison.synonyms = nil;
+            poison.tags = nil;
         }
         
         [poisons addObject:poison];

@@ -50,7 +50,7 @@
     else
         [self.filteredData removeAllObjects];
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(SELF.name contains[c] %@) OR (ANY SELF.synonyms contains[c] %@)", searchText, searchText];
+    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(SELF.name contains[c] %@) OR (ANY SELF.tags contains[c] %@)", searchText, searchText];
     
     self.filteredData = [NSMutableArray arrayWithArray:[self.poisonData filteredArrayUsingPredicate:predicate]];
     
@@ -120,7 +120,7 @@
     
     NSString *synonymsString;
     
-    for(NSString *synonym in [poisonEntry.synonyms filteredArrayUsingPredicate:predicate])
+    for(NSString *synonym in [poisonEntry.tags filteredArrayUsingPredicate:predicate])
     {
         if(!synonymsString)
             synonymsString = synonym;
