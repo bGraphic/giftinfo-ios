@@ -17,12 +17,16 @@
 static NSString *headerString;
 static NSString *footerString;
 
+BOOL webView1HasLoaded;
+BOOL webView2HasLoaded;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    self.webView.delegate = self;
+    self.webView1.delegate = self;
+    self.webView2.delegate = self;
     
     [self configureView];
     
@@ -30,7 +34,7 @@ static NSString *footerString;
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 10, 0);
     self.tableView.scrollIndicatorInsets = UIEdgeInsetsMake(5, 0, 10, 0);
     
-    self.webView.scrollView.bounces = NO;
+    self.webView1.scrollView.bounces = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -89,37 +93,65 @@ static NSString *footerString;
 
         }
         
-        NSString *contentString;
+        NSString *htmlString1;
+        NSString *htmlString2;
         
         if(self.topic)
-            contentString = self.topic.content;
+        {
+            htmlString1 = [NSString stringWithFormat:@"%@\n%@\n%@", headerString, self.topic.content, footerString];
+        }
         else if (self.poison)
-            contentString = self.poison.content;
-            
+        {
+            htmlString1 = [NSString stringWithFormat:@"%@\n%@\n%@", headerString, self.poison.content, footerString];
+            htmlString2 = [NSString stringWithFormat:@"%@\n%@\n%@", headerString, self.poison.content, footerString];
+        }
         
-        NSString *htmlString = [NSString stringWithFormat:@"%@\n%@\n%@", headerString, contentString, footerString];
         
-        [self.webView loadHTMLString:htmlString baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] resourcePath]]];
+        [self.webView1 loadHTMLString:htmlString1 baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] resourcePath]]];
+        [self.webView2 loadHTMLString:htmlString2 baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] resourcePath]]];
     }
 }
 
-
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return self.webView.frame.size.height + 10.f;
+    if(indexPath.section == 0)
+        return self.webView1.frame.size.height + 10.f;
+    else
+        return self.webView2.frame.size.height + 10.f;
+}
+
+- (int) numberOfSectionsInTableView:(UITableView *)tableView
+{
+    if(self.poison)
+        return 2;
+    
+    return 1;
 }
 
 - (void)viewDidUnload {
-    [self setWebView:nil];
+    [self setWebView1:nil];
+    [self setWebView2:nil];
+    [self setWebView2:nil];
     [super viewDidUnload];
 }
 
 - (void) webViewDidFinishLoad:(UIWebView *)sender {
-    [self performSelector:@selector(calculateWebViewSize) withObject:nil afterDelay:0.1];
+    if(sender == self.webView1)
+        webView1HasLoaded = YES;
+    else
+        webView2HasLoaded = YES;
+    
+    if(webView1HasLoaded && webView2HasLoaded)
+        [self performSelector:@selector(calculateWebViewSize) withObject:nil afterDelay:0.1];
 }
 
 - (void) calculateWebViewSize {
-    [self.webView sizeToFit];
+    
+    NSLog(@"calcilate");
+    
+    [self.webView1 sizeToFit];
+    [self.webView2 sizeToFit];
+    
     [self.tableView reloadData];
 }
 

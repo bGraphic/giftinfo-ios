@@ -15,6 +15,7 @@
 @property (strong, nonatomic) LPTopic *topic;
 @property (strong, nonatomic) LPPoison *poison;
 
-@property (weak, nonatomic) IBOutlet UIWebView *webView;
+@property (weak, nonatomic) IBOutlet UIWebView *webView1;
 
+@property (weak, nonatomic) IBOutlet UIWebView *webView2;
 @end
