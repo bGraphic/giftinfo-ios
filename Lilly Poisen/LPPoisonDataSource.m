@@ -9,7 +9,7 @@
 #import "LPPoisonDataSource.h"
 #import "LPAppDelegate.h"
 #import "LPContentViewController.h"
-#import "LPPoisonDataLoader.h"
+#import "LPPoisonDataFromWP.h"
 
 @interface LPPoisonDataSource ()
 
@@ -29,7 +29,7 @@
 
     if(self)
     {
-        self.poisonData = [LPPoisonDataLoader poisonArray];
+        self.poisonData = [LPPoisonDataFromWP poisonData];
     }
     
     return self;
@@ -114,7 +114,7 @@
     LPPoison *poisonEntry = [self getPoisonAtIndexPath:indexPath];
     
     
-    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(SELF contains[c] %@)", self.searchString];
+//    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(SELF contains[c] %@)", self.searchString];
     
     
     NSString *synonymsString;

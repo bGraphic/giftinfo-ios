@@ -1,5 +1,5 @@
 //
-//  LPDataSource.h
+//  LPJSONtoObject.h
 //  Lilly Poison
 //
 //  Created by Benedicte Raae on 01.04.13.
@@ -8,9 +8,8 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LPPoisonDataLoader : NSObject
+@interface LPPoisonDataFromWP : NSObject
 
-+ (NSArray *) poisonArray;
-+ (void) loadPoisonData;
++ (NSArray *) poisonData;
 
 @end

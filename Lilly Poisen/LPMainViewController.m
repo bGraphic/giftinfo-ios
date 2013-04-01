@@ -10,7 +10,7 @@
 #import "LPContentViewController.h"
 #import "LPPoison.h"
 #import "LPHtmlStringHelper.h"
-#import "LPTopicDataLoader.h"
+#import "LPTopicDataFromWP.h"
 #import "LPTopic.h"
 
 @interface LPMainViewController ()
@@ -34,8 +34,6 @@
     self.navigationController.toolbar.frame = toolbarFrame;
     
     [self loadTableData];
-    
-    NSLog(@"%@", self.topicDictonary.description);
 }
 
 - (void) didReceiveMemoryWarning
@@ -56,7 +54,7 @@
     NSString *propertyFile = [[NSBundle mainBundle] pathForResource:@"main-info" ofType:@"plist"];
     self.mainInfoData = [NSArray arrayWithContentsOfFile:propertyFile];
     
-    self.topicDictonary = [LPTopicDataLoader topicDictonary];
+    self.topicDictonary = [LPTopicDataFromWP topicData];
 }
 
 - (LPTopic *) topicAtIndexPath:(NSIndexPath *) indexPath

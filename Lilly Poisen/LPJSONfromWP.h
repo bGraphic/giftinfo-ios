@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LPWPtoJSON : NSObject
+@interface LPJSONfromWP : NSObject
 
 @property (nonatomic, strong) NSString *fileName;
 @property (nonatomic, strong) NSArray *wpPostsInFile;

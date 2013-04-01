@@ -1,20 +1,60 @@
 //
-//  LPDataSource.m
+//  LPJSONtoObject.m
 //  Lilly Poison
 //
 //  Created by Benedicte Raae on 01.04.13.
 //  Copyright (c) 2013 bGraphic. All rights reserved.
 //
 
-#import "LPPoisonDataLoader.h"
+#import "LPPoisonDataFromWP.h"
+#import "LPTopic.h"
 #import "LPPoison.h"
-#import "LPWPtoJSON.h"
+#import "LPJSONfromWP.h"
 
-@implementation LPPoisonDataLoader
+@interface LPPoisonDataFromWP ()
 
-static NSArray *poisonArray;
+@property (nonatomic, strong) NSString *fileName;
+@property (nonatomic, strong) NSMutableArray *poisonData;
 
-+ (NSArray *) poisonWithDict:(NSDictionary *) poisonDict
+@end
+
+@implementation LPPoisonDataFromWP
+
+static NSArray *poisonData;
+
+
+- (id) initWithFileName: (NSString *) fileName
+{
+    self = [super init];
+    if(self)
+    {
+        self.fileName = fileName;
+        [self loadPoisonData];
+    }
+    
+    return self;
+}
+
+- (void) loadPoisonData
+{
+    NSArray *wpPostsInFile = [LPJSONfromWP wpPostsInFile:@"poisons"];
+    
+    self.poisonData = [NSMutableArray arrayWithCapacity:wpPostsInFile.count];
+    
+    for(NSDictionary *poisonDict in wpPostsInFile)
+    {
+        [self.poisonData addObjectsFromArray:[self poisonsWithDict:poisonDict]];
+    }
+    
+    NSSortDescriptor *lastDescriptor =
+    [[NSSortDescriptor alloc] initWithKey:@"name"
+                                ascending:YES
+                                 selector:@selector(localizedCaseInsensitiveCompare:)];
+    
+    self.poisonData = [NSMutableArray arrayWithArray:[self.poisonData sortedArrayUsingDescriptors:[NSArray arrayWithObject:lastDescriptor]]];
+}
+
+- (NSArray *) poisonsWithDict:(NSDictionary *) poisonDict
 {
     NSArray *nameDataArray = [poisonDict[@"title"] componentsSeparatedByString:@","];
     
@@ -22,7 +62,7 @@ static NSArray *poisonArray;
     NSMutableArray *poisons = [[NSMutableArray alloc] initWithCapacity:nameDataArray.count];
     
     int i = 0;
-
+    
     for (NSString *nameData in nameDataArray)
     {
         NSString *name = [nameData stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
@@ -43,7 +83,7 @@ static NSArray *poisonArray;
         if(i > 0)
         {
             poison.key = [NSString stringWithFormat:@"%@-%d", poison.key, i];
-        
+            
             NSMutableArray *tagArray = [[NSMutableArray alloc] init];
             
             for (NSDictionary *tagDict in poisonDict[@"tags"])
@@ -53,7 +93,7 @@ static NSArray *poisonArray;
             
             poison.tags = tagArray;
         }
-    
+        
         i++;
     }
     
@@ -65,37 +105,15 @@ static NSArray *poisonArray;
     return poisons;
 }
 
-+ (NSArray *) createPoisonArrayFromDataArray:(NSArray *) poisonDataArray
++ (NSArray *) poisonData
 {
-    NSMutableArray *poisonDataUnsorted = [NSMutableArray array];
-    
-    for(NSDictionary *poisonDict in poisonDataArray)
+    if(!poisonData)
     {
-        [poisonDataUnsorted addObjectsFromArray:[LPPoisonDataLoader poisonWithDict:poisonDict]];
+        LPPoisonDataFromWP *poisonDataFromWP = [[LPPoisonDataFromWP alloc] initWithFileName:@"poisons"];
+        poisonData = poisonDataFromWP.poisonData;
     }
     
-    NSSortDescriptor *lastDescriptor =
-    [[NSSortDescriptor alloc] initWithKey:@"name"
-                                ascending:YES
-                                 selector:@selector(localizedCaseInsensitiveCompare:)];
-    
-    return [poisonDataUnsorted sortedArrayUsingDescriptors:[NSArray arrayWithObject:lastDescriptor]];
-}
-
-+ (void) loadPoisonData
-{
-    NSArray *dataArray = [LPWPtoJSON wpPostsInFile:@"poisons"];
-    poisonArray = [LPPoisonDataLoader createPoisonArrayFromDataArray:dataArray];
-}
-
-+ (NSArray *) poisonArray
-{
-    if(!poisonArray)
-    {
-        [LPPoisonDataLoader loadPoisonData];
-    }
-    
-    return poisonArray;
+    return poisonData;
 }
 
 @end

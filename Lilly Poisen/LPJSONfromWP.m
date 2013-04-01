@@ -6,9 +6,9 @@
 //  Copyright (c) 2013 bGraphic. All rights reserved.
 //
 
-#import "LPWPtoJSON.h"
+#import "LPJSONfromWP.h"
 
-@implementation LPWPtoJSON
+@implementation LPJSONfromWP
 
 - (id) initWithFileName: (NSString *) fileName
 {
@@ -54,7 +54,7 @@
 
 + (NSArray *) wpPostsInFile: (NSString *) fileName
 {
-    LPWPtoJSON *wpToJson = [[LPWPtoJSON alloc] initWithFileName:fileName];
+    LPJSONfromWP *wpToJson = [[LPJSONfromWP alloc] initWithFileName:fileName];
     
     return wpToJson.wpPostsInFile;
 }

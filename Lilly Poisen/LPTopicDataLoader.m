@@ -8,7 +8,7 @@
 
 #import "LPTopicDataLoader.h"
 #import "LPTopic.h"
-#import "LPWPtoJSON.h"
+#import "LPJSONfromWP.h"
 
 @implementation LPTopicDataLoader
 
@@ -33,7 +33,7 @@ static NSDictionary *topicDictonary;
 
 + (void) loadTopicData
 {
-    NSArray *dataArray = [LPWPtoJSON wpPostsInFile:@"topics"];
+    NSArray *dataArray = [LPJSONfromWP wpPostsInFile:@"topics"];
     topicDictonary = [LPTopicDataLoader createTopicsArrayFromDataArray:dataArray];
 }
 
