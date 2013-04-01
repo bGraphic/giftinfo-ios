@@ -28,6 +28,7 @@
 		13A0B6801709F7BD00B4970F /* LPJSONfromWP.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0B67F1709F7BD00B4970F /* LPJSONfromWP.m */; };
 		13A0B6831709FBF100B4970F /* LPPoisonDataFromWP.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0B6821709FBF100B4970F /* LPPoisonDataFromWP.m */; };
 		13A0B686170A08C900B4970F /* LPTopicDataFromWP.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0B685170A08C900B4970F /* LPTopicDataFromWP.m */; };
+		13A0B689170A3ECF00B4970F /* LPTopicDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0B688170A3ECE00B4970F /* LPTopicDataSource.m */; };
 		13D7F440170455EB001D7F93 /* poisons.json in Resources */ = {isa = PBXBuildFile; fileRef = 13D7F43F170455EB001D7F93 /* poisons.json */; };
 		13EB1A1F16EBA9EE00170579 /* LPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EB1A1E16EBA9EE00170579 /* LPMainViewController.m */; };
 		13EC390916EB9FE8005244BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390816EB9FE8005244BD /* UIKit.framework */; };
@@ -94,6 +95,8 @@
 		13A0B6821709FBF100B4970F /* LPPoisonDataFromWP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPoisonDataFromWP.m; sourceTree = "<group>"; };
 		13A0B684170A08C900B4970F /* LPTopicDataFromWP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTopicDataFromWP.h; sourceTree = "<group>"; };
 		13A0B685170A08C900B4970F /* LPTopicDataFromWP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTopicDataFromWP.m; sourceTree = "<group>"; };
+		13A0B687170A3ECE00B4970F /* LPTopicDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTopicDataSource.h; sourceTree = "<group>"; };
+		13A0B688170A3ECE00B4970F /* LPTopicDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTopicDataSource.m; sourceTree = "<group>"; };
 		13D7F43F170455EB001D7F93 /* poisons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = poisons.json; sourceTree = "<group>"; };
 		13EB1A1D16EBA9EE00170579 /* LPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPMainViewController.h; sourceTree = "<group>"; };
 		13EB1A1E16EBA9EE00170579 /* LPMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPMainViewController.m; sourceTree = "<group>"; };
@@ -262,6 +265,8 @@
 				131341D316EE0C0200734F5E /* Model */,
 				1381B33A16F1239D00143FEA /* Resources */,
 				13EC391116EB9FE8005244BD /* Supporting Files */,
+				13A0B687170A3ECE00B4970F /* LPTopicDataSource.h */,
+				13A0B688170A3ECE00B4970F /* LPTopicDataSource.m */,
 			);
 			name = "Lilly Poison";
 			path = "Lilly Poisen";
@@ -436,6 +441,7 @@
 				13A0B6801709F7BD00B4970F /* LPJSONfromWP.m in Sources */,
 				13A0B6831709FBF100B4970F /* LPPoisonDataFromWP.m in Sources */,
 				13A0B686170A08C900B4970F /* LPTopicDataFromWP.m in Sources */,
+				13A0B689170A3ECF00B4970F /* LPTopicDataSource.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

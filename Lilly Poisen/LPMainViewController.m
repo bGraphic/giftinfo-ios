@@ -10,13 +10,13 @@
 #import "LPContentViewController.h"
 #import "LPPoison.h"
 #import "LPHtmlStringHelper.h"
-#import "LPTopicDataFromWP.h"
+#import "LPTopicDataSource.h"
 #import "LPTopic.h"
 
 @interface LPMainViewController ()
 
-@property (strong, nonatomic) NSArray *mainInfoData;
-@property (strong, nonatomic) NSDictionary *topicDictonary;
+@property (nonatomic, strong) LPTopicDataSource *topicDataSource;
+
 
 @end
 
@@ -33,7 +33,7 @@
     toolbarFrame.origin.y -= 5;
     self.navigationController.toolbar.frame = toolbarFrame;
     
-    [self loadTableData];
+    self.topicDataSource = [[LPTopicDataSource alloc] init];
 }
 
 - (void) didReceiveMemoryWarning
@@ -46,58 +46,26 @@
     [super viewDidUnload];
 }
 
-
 #pragma mark - Table View Data Source
-
-- (void) loadTableData
-{
-    NSString *propertyFile = [[NSBundle mainBundle] pathForResource:@"main-info" ofType:@"plist"];
-    self.mainInfoData = [NSArray arrayWithContentsOfFile:propertyFile];
-    
-    self.topicDictonary = [LPTopicDataFromWP topicData];
-}
-
-- (LPTopic *) topicAtIndexPath:(NSIndexPath *) indexPath
-{
-    NSDictionary *section = self.mainInfoData[indexPath.section];
-    
-    if(indexPath.section == 0)
-    {
-        LPTopic *topic = [LPTopic alloc];
-        topic.title = section[@"topics"][indexPath.row][@"title"];
-        
-        return topic;
-    }
-    else
-    {
-        NSString *slug = section[@"topics"][indexPath.row];
-        LPTopic *topic = [self.topicDictonary valueForKey:slug];
-        
-        return topic;
-    }
-}
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    return self.mainInfoData.count;
+    return [self.topicDataSource numberOfSectionsInTableView:tableView];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
 {
-    return self.mainInfoData[section][@"title"];
+    return [self.topicDataSource tableView:tableView titleForHeaderInSection:section];
 }
 
 - (NSString *)tableView:(UITableView *)tableView titleForFooterInSection:(NSInteger)section
 {
-    return self.mainInfoData[section][@"footer"];
+    return [self.topicDataSource tableView:tableView titleForFooterInSection:section];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    NSDictionary *sectionDict = self.mainInfoData[section];
-    NSArray *topics = sectionDict[@"topics"];
-    
-    return topics.count;
+    return [self.topicDataSource tableView:tableView numberOfRowsInSection:section];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -108,20 +76,7 @@
     }
     else
     {
-        NSString *CellIdentifier = @"infoCell";
-        
-        UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-        
-        if(!cell)
-        {
-            cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
-        }
-        
-        cell.textLabel.text = [self topicAtIndexPath:indexPath].title;
-        cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-        cell.selectionStyle = UITableViewCellSelectionStyleGray;
-        
-        return cell;
+        return [self.topicDataSource tableView:tableView cellForRowAtIndexPath:indexPath];
     }
 }
 
@@ -145,7 +100,7 @@
             UIStoryboard * storyboard = self.storyboard;
             LPContentViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
             
-            LPTopic *topic = [self topicAtIndexPath:indexPath];
+            LPTopic *topic = [self.topicDataSource topicAtIndexPath:indexPath];
             detail.topic = topic;
             
             [self.navigationController pushViewController: detail animated: YES];

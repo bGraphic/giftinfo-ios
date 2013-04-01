@@ -9,6 +9,7 @@
 #import "LPContentViewController.h"
 #import "LPHtmlStringHelper.h"
 #import "LPPoisonDataSource.h"
+#import "LPTopicDataSource.h"
 
 @interface LPContentViewController ()
 
@@ -165,30 +166,69 @@ BOOL webView2HasLoaded;
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
-    BOOL shouldStartLoad = YES;
-    
     if (navigationType == UIWebViewNavigationTypeLinkClicked) {
-        shouldStartLoad = NO;
         
-        NSArray *stringArray = [request.URL.absoluteString componentsSeparatedByString:@"/"];
-        NSString *slug = [stringArray objectAtIndex:stringArray.count-1];
+        NSString *absoluteString = request.URL.absoluteString;
         
-        if([slug isEqualToString:@""])
-            slug = [stringArray objectAtIndex:stringArray.count-2];
+        NSRange range1 = [absoluteString rangeOfString:@"http://data-poison.lillyapps.no/" options:NSCaseInsensitiveSearch];
+        NSRange range2 = [absoluteString rangeOfString:@"data-poison.lillyapps.no/" options:NSCaseInsensitiveSearch];
         
-        LPPoison *poison = [LPPoisonDataSource poisonWithSlug:slug];
+        BOOL isLocalLink = range1.location != NSNotFound || range2.location != NSNotFound;
         
-        if(poison)
+        if (isLocalLink)
         {
-            UIStoryboard * storyboard = self.storyboard;
-            LPContentViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
+            NSArray *stringArray = [request.URL.absoluteString componentsSeparatedByString:@"/"];
+            NSString *slug = [stringArray objectAtIndex:stringArray.count-1];
             
-            detail.poison = poison;
+            if([slug isEqualToString:@""])
+                slug = [stringArray objectAtIndex:stringArray.count-2];
             
-            [self.navigationController pushViewController: detail animated: YES];
+            BOOL isPoisonLink = [absoluteString rangeOfString:@"/poison/" options:NSCaseInsensitiveSearch].location != NSNotFound;
+            
+            if(isPoisonLink) {
+            
+                LPPoison *poison = [LPPoisonDataSource poisonWithSlug:slug];
+            
+                if(poison)
+                {
+                    UIStoryboard * storyboard = self.storyboard;
+                    LPContentViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
+                    
+                    detail.poison = poison;
+                    
+                    [self.navigationController pushViewController: detail animated: YES];
+                    
+                    return NO;
+                }
+            }
+            else
+            {
+                LPTopic *topic = [LPTopicDataSource topicAtSlug:slug];
+                
+                if(topic)
+                {
+                    UIStoryboard * storyboard = self.storyboard;
+                    LPContentViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
+                    
+                    detail.topic = topic;
+                    
+                    [self.navigationController pushViewController: detail animated: YES];
+                    
+                    return NO;
+                }
+
+            }
+
         }
+
+        UIApplication *appDelegate = [UIApplication sharedApplication];
+        
+        if([appDelegate openURL:request.URL])
+            return NO;
+        
     }
-    return shouldStartLoad;
+    
+    return YES;
 }
 
 @end
