@@ -10,13 +10,4 @@
 
 @implementation LPTopic
 
-+ (LPTopic *) topicFromDict:(NSDictionary *) poisonDict
-{
-    LPTopic *topic = [[LPTopic alloc] init];
-    topic.title = poisonDict[@"title"];
-    topic.content = poisonDict[@"content"];
-    
-    return topic;
-}
-
 @end

@@ -60,7 +60,7 @@
 //    }
 }
 
-- (Poison *) getPoisonAtIndexPath:(NSIndexPath *)indexPath
+- (LPPoison *) getPoisonAtIndexPath:(NSIndexPath *)indexPath
 {
     if(self.filteredData)
         return self.filteredData[indexPath.row];
@@ -111,7 +111,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
 
-    Poison *poisonEntry = [self getPoisonAtIndexPath:indexPath];
+    LPPoison *poisonEntry = [self getPoisonAtIndexPath:indexPath];
     
     
     NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(SELF contains[c] %@)", self.searchString];

@@ -13,6 +13,4 @@
 @property (nonatomic, strong) NSString * title;
 @property (nonatomic, strong) NSString * content;
 
-+ (LPTopic *) topicFromDict:(NSDictionary *) poisonDict;
-
 @end

@@ -10,7 +10,7 @@
 
 @class Term;
 
-@interface Poison : NSObject
+@interface LPPoison : NSObject
 
 @property (nonatomic, strong) NSString * key;
 @property (nonatomic, strong) NSString * name;

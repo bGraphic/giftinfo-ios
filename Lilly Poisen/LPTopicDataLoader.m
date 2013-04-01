@@ -8,37 +8,24 @@
 
 #import "LPTopicDataLoader.h"
 #import "LPTopic.h"
+#import "LPWPtoJSON.h"
 
 @implementation LPTopicDataLoader
 
 static NSDictionary *topicDictonary;
 
-+ (NSArray *) loadDataArrayFromJSONFile:(NSString *) poisonFile
-{
-    NSString *contentPath = [[NSBundle mainBundle] pathForResource:poisonFile ofType:@"json"];
-    
-    NSData *data = [NSData dataWithContentsOfFile:contentPath];
-    
-    NSError *error;
-    
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&error];
-    
-    if(error) {
-        NSLog(@"Error: %@", [error description]);
-    }
-    
-    data = nil;
-    
-    return [json objectForKey:@"posts"];
-}
 
-+ (NSDictionary *) createPoisonArrayFromDataArray:(NSArray *) poisonDataArray
++ (NSDictionary *) createTopicsArrayFromDataArray:(NSArray *) poisonDataArray
 {
     NSMutableDictionary *poisonDataUnsorted = [NSMutableDictionary dictionaryWithCapacity:poisonDataArray.count];
     
     for(NSDictionary *poisonDict in poisonDataArray)
     {
-        [poisonDataUnsorted setObject:[LPTopic topicFromDict:poisonDict] forKey:poisonDict[@"slug"]];
+        LPTopic *topic = [[LPTopic alloc] init];
+        topic.title = poisonDict[@"title"];
+        topic.content = poisonDict[@"content"];
+        
+        [poisonDataUnsorted setValue:topic forKey:poisonDict[@"slug"]];
     }
     
     return poisonDataUnsorted;
@@ -46,8 +33,8 @@ static NSDictionary *topicDictonary;
 
 + (void) loadTopicData
 {
-    NSArray *dataArray = [LPTopicDataLoader loadDataArrayFromJSONFile:@"topics"];
-    topicDictonary = [LPTopicDataLoader createPoisonArrayFromDataArray:dataArray];
+    NSArray *dataArray = [LPWPtoJSON wpPostsInFile:@"topics"];
+    topicDictonary = [LPTopicDataLoader createTopicsArrayFromDataArray:dataArray];
 }
 
 + (NSDictionary *) topicDictonary

@@ -77,7 +77,7 @@
 		13794DDA16EBE0C6003EF093 /* LPPoisonDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DD916EBE0C6003EF093 /* LPPoisonDataSource.m */; };
 		13794DDD16EBE223003EF093 /* LPPoisonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DDC16EBE223003EF093 /* LPPoisonTableViewController.m */; };
 		1381B33C16F123A700143FEA /* color.png in Resources */ = {isa = PBXBuildFile; fileRef = 1381B33B16F123A700143FEA /* color.png */; };
-		1381B34516F4A4B400143FEA /* Poison.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B34416F4A4B400143FEA /* Poison.m */; };
+		1381B34516F4A4B400143FEA /* LPPoison.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B34416F4A4B400143FEA /* LPPoison.m */; };
 		1381B36216F4E82800143FEA /* LPHtmlStringHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B36116F4E82800143FEA /* LPHtmlStringHelper.m */; };
 		1381B36A16F4F7EA00143FEA /* LPToolbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B36916F4F7EA00143FEA /* LPToolbar.m */; };
 		1381B36F16F5F5EB00143FEA /* LPContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B36E16F5F5EB00143FEA /* LPContentViewController.m */; };
@@ -89,6 +89,7 @@
 		13A0B6721709E67F00B4970F /* topics.json in Resources */ = {isa = PBXBuildFile; fileRef = 13A0B6711709E67F00B4970F /* topics.json */; };
 		13A0B67A1709EB7200B4970F /* LPTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0B6791709EB7200B4970F /* LPTopic.m */; };
 		13A0B67D1709EED300B4970F /* LPTopicDataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0B67C1709EED300B4970F /* LPTopicDataLoader.m */; };
+		13A0B6801709F7BD00B4970F /* LPWPtoJSON.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0B67F1709F7BD00B4970F /* LPWPtoJSON.m */; };
 		13D7F440170455EB001D7F93 /* poisons.json in Resources */ = {isa = PBXBuildFile; fileRef = 13D7F43F170455EB001D7F93 /* poisons.json */; };
 		13EB1A1F16EBA9EE00170579 /* LPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EB1A1E16EBA9EE00170579 /* LPMainViewController.m */; };
 		13EC390916EB9FE8005244BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390816EB9FE8005244BD /* UIKit.framework */; };
@@ -194,8 +195,8 @@
 		13794DDB16EBE223003EF093 /* LPPoisonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPPoisonTableViewController.h; sourceTree = "<group>"; };
 		13794DDC16EBE223003EF093 /* LPPoisonTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPoisonTableViewController.m; sourceTree = "<group>"; };
 		1381B33B16F123A700143FEA /* color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = color.png; sourceTree = "<group>"; };
-		1381B34316F4A4B400143FEA /* Poison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Poison.h; sourceTree = "<group>"; };
-		1381B34416F4A4B400143FEA /* Poison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Poison.m; sourceTree = "<group>"; };
+		1381B34316F4A4B400143FEA /* LPPoison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPPoison.h; sourceTree = "<group>"; };
+		1381B34416F4A4B400143FEA /* LPPoison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPoison.m; sourceTree = "<group>"; };
 		1381B36016F4E82800143FEA /* LPHtmlStringHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPHtmlStringHelper.h; sourceTree = "<group>"; };
 		1381B36116F4E82800143FEA /* LPHtmlStringHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPHtmlStringHelper.m; sourceTree = "<group>"; };
 		1381B36816F4F7EA00143FEA /* LPToolbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPToolbar.h; sourceTree = "<group>"; };
@@ -215,6 +216,8 @@
 		13A0B6791709EB7200B4970F /* LPTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTopic.m; sourceTree = "<group>"; };
 		13A0B67B1709EED300B4970F /* LPTopicDataLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTopicDataLoader.h; sourceTree = "<group>"; };
 		13A0B67C1709EED300B4970F /* LPTopicDataLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTopicDataLoader.m; sourceTree = "<group>"; };
+		13A0B67E1709F7BD00B4970F /* LPWPtoJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPWPtoJSON.h; sourceTree = "<group>"; };
+		13A0B67F1709F7BD00B4970F /* LPWPtoJSON.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPWPtoJSON.m; sourceTree = "<group>"; };
 		13D7F43F170455EB001D7F93 /* poisons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = poisons.json; sourceTree = "<group>"; };
 		13EB1A1D16EBA9EE00170579 /* LPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPMainViewController.h; sourceTree = "<group>"; };
 		13EB1A1E16EBA9EE00170579 /* LPMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPMainViewController.m; sourceTree = "<group>"; };
@@ -272,8 +275,8 @@
 		131341D316EE0C0200734F5E /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				1381B34316F4A4B400143FEA /* Poison.h */,
-				1381B34416F4A4B400143FEA /* Poison.m */,
+				1381B34316F4A4B400143FEA /* LPPoison.h */,
+				1381B34416F4A4B400143FEA /* LPPoison.m */,
 				13A0B6781709EB7200B4970F /* LPTopic.h */,
 				13A0B6791709EB7200B4970F /* LPTopic.m */,
 			);
@@ -423,6 +426,8 @@
 				13A0B66D1709BDE500B4970F /* LPPoisonDataLoader.m */,
 				13A0B67B1709EED300B4970F /* LPTopicDataLoader.h */,
 				13A0B67C1709EED300B4970F /* LPTopicDataLoader.m */,
+				13A0B67E1709F7BD00B4970F /* LPWPtoJSON.h */,
+				13A0B67F1709F7BD00B4970F /* LPWPtoJSON.m */,
 			);
 			name = "Data Handlers";
 			sourceTree = "<group>";
@@ -703,13 +708,14 @@
 				13EB1A1F16EBA9EE00170579 /* LPMainViewController.m in Sources */,
 				13794DDA16EBE0C6003EF093 /* LPPoisonDataSource.m in Sources */,
 				13794DDD16EBE223003EF093 /* LPPoisonTableViewController.m in Sources */,
-				1381B34516F4A4B400143FEA /* Poison.m in Sources */,
+				1381B34516F4A4B400143FEA /* LPPoison.m in Sources */,
 				1381B36216F4E82800143FEA /* LPHtmlStringHelper.m in Sources */,
 				1381B36A16F4F7EA00143FEA /* LPToolbar.m in Sources */,
 				1381B36F16F5F5EB00143FEA /* LPContentViewController.m in Sources */,
 				13A0B66E1709BDE500B4970F /* LPPoisonDataLoader.m in Sources */,
 				13A0B67A1709EB7200B4970F /* LPTopic.m in Sources */,
 				13A0B67D1709EED300B4970F /* LPTopicDataLoader.m in Sources */,
+				13A0B6801709F7BD00B4970F /* LPWPtoJSON.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

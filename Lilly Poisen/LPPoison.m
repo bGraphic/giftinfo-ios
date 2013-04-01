@@ -6,11 +6,11 @@
 //  Copyright (c) 2013 bGraphic. All rights reserved.
 //
 
-#import "Poison.h"
+#import "LPPoison.h"
 #import "Term.h"
 #import "LPHtmlStringHelper.h"
 
-@implementation Poison
+@implementation LPPoison
 
 - (NSString *) htmlContentString
 {

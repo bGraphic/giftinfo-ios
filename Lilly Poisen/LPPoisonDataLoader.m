@@ -7,7 +7,8 @@
 //
 
 #import "LPPoisonDataLoader.h"
-#import "Poison.h"
+#import "LPPoison.h"
+#import "LPWPtoJSON.h"
 
 @implementation LPPoisonDataLoader
 
@@ -27,7 +28,7 @@ static NSArray *poisonArray;
         NSString *name = [nameData stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         [nameArray addObject:name];
         
-        Poison *poison = [[Poison alloc] init];
+        LPPoison *poison = [[LPPoison alloc] init];
         
         poison.name = name;
         poison.key = poisonDict[@"slug"];
@@ -56,31 +57,12 @@ static NSArray *poisonArray;
         i++;
     }
     
-    Poison *firstPoison = [poisons objectAtIndex:0];
+    LPPoison *firstPoison = [poisons objectAtIndex:0];
     NSMutableArray *firstPoisonsOtherNames = [NSMutableArray arrayWithArray:nameArray];
     [firstPoisonsOtherNames removeObject:firstPoison.name];
     firstPoison.otherNames = firstPoisonsOtherNames;
     
     return poisons;
-}
-
-+ (NSArray *) loadDataArrayFromJSONFile:(NSString *) poisonFile
-{
-    NSString *contentPath = [[NSBundle mainBundle] pathForResource:poisonFile ofType:@"json"];
-    
-    NSData *data = [NSData dataWithContentsOfFile:contentPath];
-    
-    NSError *error;
-    
-    NSDictionary *json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:&error];
-    
-    if(error) {
-        NSLog(@"Error: %@", [error description]);
-    }
-    
-    data = nil;
-    
-    return [json objectForKey:@"posts"];
 }
 
 + (NSArray *) createPoisonArrayFromDataArray:(NSArray *) poisonDataArray
@@ -102,7 +84,7 @@ static NSArray *poisonArray;
 
 + (void) loadPoisonData
 {
-    NSArray *dataArray = [LPPoisonDataLoader loadDataArrayFromJSONFile:@"poisons"];
+    NSArray *dataArray = [LPWPtoJSON wpPostsInFile:@"poisons"];
     poisonArray = [LPPoisonDataLoader createPoisonArrayFromDataArray:dataArray];
 }
 

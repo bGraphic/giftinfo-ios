@@ -8,8 +8,6 @@
 
 #import "LPAppDelegate.h"
 #import "TestFlight.h"
-#import "LPPoisonDataLoader.h"
-#import "Term.h"
 
 @implementation LPAppDelegate
 
@@ -22,8 +20,6 @@
     [self setUpTestFlight];
     
     [self customizeAppearance];
-    
-    [LPPoisonDataLoader loadPoisonData];
     
     return YES;
 }

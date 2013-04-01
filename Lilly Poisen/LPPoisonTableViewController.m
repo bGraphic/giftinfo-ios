@@ -8,7 +8,7 @@
 
 #import "LPPoisonTableViewController.h"
 #import "LPContentViewController.h"
-#import "Poison.h"
+#import "LPPoison.h"
 
 @interface LPPoisonTableViewController ()
 
@@ -42,7 +42,7 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {   
-    Poison *poison = [self.poisonDataSource getPoisonAtIndexPath:indexPath];
+    LPPoison *poison = [self.poisonDataSource getPoisonAtIndexPath:indexPath];
     
     UIStoryboard * storyboard = self.storyboard;
     LPContentViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];

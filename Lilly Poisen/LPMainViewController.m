@@ -8,7 +8,7 @@
 
 #import "LPMainViewController.h"
 #import "LPContentViewController.h"
-#import "Poison.h"
+#import "LPPoison.h"
 #import "LPHtmlStringHelper.h"
 #import "LPTopicDataLoader.h"
 #import "LPTopic.h"
