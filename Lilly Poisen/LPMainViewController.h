@@ -7,8 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LPTableViewController.h"
+#import "LPPoisonTableViewController.h"
 
-@interface LPMainViewController : LPTableViewController
+@interface LPMainViewController : LPPoisonTableViewController
 
 @end

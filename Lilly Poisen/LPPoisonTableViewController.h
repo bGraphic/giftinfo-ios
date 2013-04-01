@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LPTableDataSource.h"
+#import "LPPoisonDataSource.h"
 
-@interface LPTableViewController : UITableViewController
+@interface LPPoisonTableViewController : UITableViewController
 
-@property (strong, nonatomic) IBOutlet LPTableDataSource *poisonDataSource;
+@property (strong, nonatomic) IBOutlet LPPoisonDataSource *poisonDataSource;
 
 @end

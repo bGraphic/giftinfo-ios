@@ -15,13 +15,17 @@ static NSArray *poisonArray;
 
 + (NSArray *) poisonWithDict:(NSDictionary *) poisonDict
 {
-    NSArray *nameArray = [poisonDict[@"title"] componentsSeparatedByString:@","];
+    NSArray *nameDataArray = [poisonDict[@"title"] componentsSeparatedByString:@","];
     
-    NSMutableArray *poisons = [[NSMutableArray alloc] initWithCapacity:nameArray.count];
+    NSMutableArray *nameArray = [[NSMutableArray alloc] initWithCapacity:nameDataArray.count];
+    NSMutableArray *poisons = [[NSMutableArray alloc] initWithCapacity:nameDataArray.count];
     
-    for (int i=0; i < nameArray.count; i++)
+    int i = 0;
+
+    for (NSString *nameData in nameDataArray)
     {
-        NSString *name = [[nameArray objectAtIndex:i] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        NSString *name = [nameData stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        [nameArray addObject:name];
         
         Poison *poison = [[Poison alloc] init];
         
@@ -33,23 +37,29 @@ static NSArray *poisonArray;
         poison.coal = poisonDict[@"custom_fields"][@"wpcf-coal"][0];
         poison.risk = poisonDict[@"custom_fields"][@"wpcf-risk"][0];
         
-        NSMutableArray *tagArray = [[NSMutableArray alloc] init];
-        
-        for (NSDictionary *tagDict in poisonDict[@"tags"])
-        {   
-            [tagArray addObject:tagDict[@"title"]];
-        }
-        
-        poison.tags = [[NSArray alloc] initWithArray:tagArray];
+        [poisons addObject:poison];
         
         if(i > 0)
         {
             poison.key = [NSString stringWithFormat:@"%@-%d", poison.key, i];
-            poison.tags = nil;
-        }
         
-        [poisons addObject:poison];
+            NSMutableArray *tagArray = [[NSMutableArray alloc] init];
+            
+            for (NSDictionary *tagDict in poisonDict[@"tags"])
+            {
+                [tagArray addObject:tagDict[@"title"]];
+            }
+            
+            poison.tags = tagArray;
+        }
+    
+        i++;
     }
+    
+    Poison *firstPoison = [poisons objectAtIndex:0];
+    NSMutableArray *firstPoisonsOtherNames = [NSMutableArray arrayWithArray:nameArray];
+    [firstPoisonsOtherNames removeObject:firstPoison.name];
+    firstPoison.otherNames = firstPoisonsOtherNames;
     
     return poisons;
 }

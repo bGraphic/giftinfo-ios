@@ -6,21 +6,21 @@
 //  Copyright (c) 2013 bGraphic. All rights reserved.
 //
 
-#import "LPTableViewController.h"
+#import "LPPoisonTableViewController.h"
 #import "LPContentViewController.h"
 #import "Poison.h"
 
-@interface LPTableViewController ()
+@interface LPPoisonTableViewController ()
 
 @end
 
-@implementation LPTableViewController
+@implementation LPPoisonTableViewController
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    self.poisonDataSource = [[LPTableDataSource alloc] init];
+    self.poisonDataSource = [[LPPoisonDataSource alloc] init];
     
     self.toolbarItems = self.navigationController.toolbarItems;
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 10, 0);

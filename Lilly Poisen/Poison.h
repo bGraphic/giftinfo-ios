@@ -14,7 +14,7 @@
 
 @property (nonatomic, strong) NSString * key;
 @property (nonatomic, strong) NSString * name;
-@property (nonatomic, strong) NSString * otherNames;
+@property (nonatomic, strong) NSArray * otherNames;
 @property (nonatomic, strong) NSString * content;
 @property (nonatomic, strong) NSString * symptoms;
 @property (nonatomic, strong) NSString * action;

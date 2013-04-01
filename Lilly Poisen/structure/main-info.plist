@@ -22,30 +22,10 @@
 		<string>Generelle råd</string>
 		<key>topics</key>
 		<array>
-			<dict>
-				<key>title</key>
-				<string>Svelging</string>
-				<key>html</key>
-				<string>swollowed</string>
-			</dict>
-			<dict>
-				<key>title</key>
-				<string>Hudkontakt</string>
-				<key>html</key>
-				<string>skin_contact</string>
-			</dict>
-			<dict>
-				<key>title</key>
-				<string>Søl i øyet</string>
-				<key>html</key>
-				<string>eye_contact</string>
-			</dict>
-			<dict>
-				<key>title</key>
-				<string>Innånding</string>
-				<key>html</key>
-				<string>inhaled</string>
-			</dict>
+			<string>svelging</string>
+			<string>hudkontakt</string>
+			<string>sol-i-oyet</string>
+			<string>innanding</string>
 		</array>
 	</dict>
 	<dict>
@@ -53,24 +33,9 @@
 		<string>Mer om</string>
 		<key>topics</key>
 		<array>
-			<dict>
-				<key>title</key>
-				<string>Brekning</string>
-				<key>html</key>
-				<string></string>
-			</dict>
-			<dict>
-				<key>title</key>
-				<string>Medisink kull</string>
-				<key>html</key>
-				<string></string>
-			</dict>
-			<dict>
-				<key>title</key>
-				<string>Bevisstløshet</string>
-				<key>html</key>
-				<string></string>
-			</dict>
+			<string>brekninger</string>
+			<string>medisinsk-kull</string>
+			<string>bevisstloshet</string>
 		</array>
 	</dict>
 </array>

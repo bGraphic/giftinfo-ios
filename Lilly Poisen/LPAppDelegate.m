@@ -23,7 +23,7 @@
     
     [self customizeAppearance];
     
-    [LPDataSource poisonArray];
+    [LPDataSource loadPoisonData];
     
     return YES;
 }

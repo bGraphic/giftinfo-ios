@@ -6,13 +6,13 @@
 //  Copyright (c) 2013 bGraphic. All rights reserved.
 //
 
-#import "LPTableDataSource.h"
+#import "LPPoisonDataSource.h"
 #import "LPAppDelegate.h"
 #import "LPEntryViewCell.h"
 #import "LPContentViewController.h"
 #import "LPDataSource.h"
 
-@interface LPTableDataSource ()
+@interface LPPoisonDataSource ()
 
 @property (nonatomic) NSManagedObjectContext *context;
 
@@ -23,7 +23,7 @@
 
 @end
 
-@implementation LPTableDataSource
+@implementation LPPoisonDataSource
 
 - (id)init {
     self = [super init];
@@ -120,7 +120,7 @@
     
     NSString *synonymsString;
     
-    for(NSString *synonym in [poisonEntry.tags filteredArrayUsingPredicate:predicate])
+    for(NSString *synonym in poisonEntry.otherNames)
     {
         if(!synonymsString)
             synonymsString = synonym;

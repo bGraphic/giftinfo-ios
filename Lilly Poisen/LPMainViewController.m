@@ -101,7 +101,11 @@
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
         }
         
-        cell.textLabel.text = [self topicAtIndexPath:indexPath][@"title"];
+        if(indexPath.section == 0)
+        {
+            cell.textLabel.text = [self topicAtIndexPath:indexPath][@"title"];
+        }
+
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
         
