@@ -7,7 +7,6 @@
 //
 
 #import "LPPoison.h"
-#import "Term.h"
 #import "LPHtmlStringHelper.h"
 
 @implementation LPPoison

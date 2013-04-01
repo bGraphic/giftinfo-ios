@@ -10,6 +10,7 @@
 #import "LPAppDelegate.h"
 #import "LPContentViewController.h"
 #import "LPPoisonDataFromWP.h"
+#import "LPHtmlStringHelper.h"
 
 @interface LPPoisonDataSource ()
 
@@ -117,18 +118,10 @@
 //    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(SELF contains[c] %@)", self.searchString];
     
     
-    NSString *synonymsString;
-    
-    for(NSString *synonym in poisonEntry.otherNames)
-    {
-        if(!synonymsString)
-            synonymsString = synonym;
-        else
-            synonymsString = [NSString stringWithFormat:@"%@, %@", synonymsString, synonym];
-    }
+
     
     cell.textLabel.text = poisonEntry.name;
-    cell.detailTextLabel.text = synonymsString;
+    cell.detailTextLabel.text = [LPHtmlStringHelper stringFromArray:poisonEntry.otherNames withSeperator:@", "];
     
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     cell.selectionStyle = UITableViewCellSelectionStyleGray;

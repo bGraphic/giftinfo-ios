@@ -12,4 +12,6 @@
 
 + (NSString *) stringFromHtmlFileWithName:(NSString *) name;
 
++ (NSString *) stringFromArray:(NSArray *) array withSeperator:(NSString *) seperator;
+
 @end

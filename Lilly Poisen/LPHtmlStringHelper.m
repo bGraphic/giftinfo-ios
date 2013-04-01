@@ -26,4 +26,19 @@
     return contentString;
 }
 
++ (NSString *) stringFromArray:(NSArray *) array withSeperator:(NSString *) seperator
+{
+    NSString *arrayString;
+    
+    for(NSString *string in array)
+    {
+        if(!arrayString)
+            arrayString = string;
+        else
+            arrayString = [NSString stringWithFormat:@"%@%@%@", arrayString, seperator, string];
+    }
+    
+    return arrayString;
+}
+
 @end
