@@ -78,17 +78,14 @@ BOOL webView2HasLoaded;
     
     if (self.poison || self.topic)
     {
-        if(!headerString) {
+        if(!headerString)
             headerString = [LPHtmlStringHelper stringFromHtmlFileWithName:@"header"];
-        }
         
-        if(!footerString) {
+        if(!footerString)
             footerString = [LPHtmlStringHelper stringFromHtmlFileWithName:@"footer"];
-        }
         
-        if(!summaryString) {
+        if(!summaryString)
             summaryString = [LPHtmlStringHelper stringFromHtmlFileWithName:@"summary"];
-        }
         
         NSString *htmlString1;
         NSString *htmlString2;
