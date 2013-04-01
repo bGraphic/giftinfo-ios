@@ -12,7 +12,7 @@
 
 @interface LPPoison : NSObject
 
-@property (nonatomic, strong) NSString * key;
+@property (nonatomic, strong) NSString * slug;
 @property (nonatomic, strong) NSString * name;
 @property (nonatomic, strong) NSArray * otherNames;
 @property (nonatomic, strong) NSString * content;

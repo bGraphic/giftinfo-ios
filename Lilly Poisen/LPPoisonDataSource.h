@@ -11,6 +11,9 @@
 
 @interface LPPoisonDataSource : NSObject <UITableViewDataSource, UISearchDisplayDelegate>
 
-- (LPPoison *) getPoisonAtIndexPath:(NSIndexPath *)indexPath;
+- (LPPoison *) poisonAtIndexPath:(NSIndexPath *) indexPath;
+- (LPPoison *) poisonWithSlug:(NSString *) slug;
+
++ (LPPoison *) poisonWithSlug:(NSString *) slug;
 
 @end

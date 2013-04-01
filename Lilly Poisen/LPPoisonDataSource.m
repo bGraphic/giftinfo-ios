@@ -61,12 +61,25 @@
 //    }
 }
 
-- (LPPoison *) getPoisonAtIndexPath:(NSIndexPath *)indexPath
+- (LPPoison *) poisonAtIndexPath:(NSIndexPath *)indexPath
 {
     if(self.filteredData)
         return self.filteredData[indexPath.row];
     else
         return self.poisonData[indexPath.row];
+}
+
+- (LPPoison *) poisonWithSlug:(NSString *) slug;
+{
+    for (LPPoison *poison in self.poisonData)
+    {
+        if([poison.slug isEqualToString:slug])
+        {
+            return poison;
+        }
+    }
+    
+    return nil;
 }
 
 #pragma mark - Search Display Delegate
@@ -112,13 +125,7 @@
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
     }
 
-    LPPoison *poisonEntry = [self getPoisonAtIndexPath:indexPath];
-    
-    
-//    NSPredicate *predicate = [NSPredicate predicateWithFormat:@"(SELF contains[c] %@)", self.searchString];
-    
-    
-
+    LPPoison *poisonEntry = [self poisonAtIndexPath:indexPath];
     
     cell.textLabel.text = poisonEntry.name;
     cell.detailTextLabel.text = [LPHtmlStringHelper stringFromArray:poisonEntry.otherNames withSeperator:@", "];
@@ -127,6 +134,13 @@
     cell.selectionStyle = UITableViewCellSelectionStyleGray;
     
     return cell;
+}
+
++ (LPPoison *) poisonWithSlug:(NSString *)slug
+{
+    LPPoisonDataSource *dataSource = [[LPPoisonDataSource alloc] init];
+    
+    return [dataSource poisonWithSlug:slug];
 }
 
 @end

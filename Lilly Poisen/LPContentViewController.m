@@ -8,6 +8,7 @@
 
 #import "LPContentViewController.h"
 #import "LPHtmlStringHelper.h"
+#import "LPPoisonDataSource.h"
 
 @interface LPContentViewController ()
 
@@ -142,6 +143,16 @@ BOOL webView2HasLoaded;
     [super viewDidUnload];
 }
 
+- (void) calculateWebViewSize {
+    
+    [self.webView1 sizeToFit];
+    [self.webView2 sizeToFit];
+    
+    [self.tableView reloadData];
+}
+
+#pragma mark - UIWebViewDelegate
+
 - (void) webViewDidFinishLoad:(UIWebView *)sender {
     if(sender == self.webView1)
         webView1HasLoaded = YES;
@@ -152,14 +163,32 @@ BOOL webView2HasLoaded;
         [self performSelector:@selector(calculateWebViewSize) withObject:nil afterDelay:0.1];
 }
 
-- (void) calculateWebViewSize {
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
+{
+    BOOL shouldStartLoad = YES;
     
-    NSLog(@"calcilate");
-    
-    [self.webView1 sizeToFit];
-    [self.webView2 sizeToFit];
-    
-    [self.tableView reloadData];
+    if (navigationType == UIWebViewNavigationTypeLinkClicked) {
+        shouldStartLoad = NO;
+        
+        NSArray *stringArray = [request.URL.absoluteString componentsSeparatedByString:@"/"];
+        NSString *slug = [stringArray objectAtIndex:stringArray.count-1];
+        
+        if([slug isEqualToString:@""])
+            slug = [stringArray objectAtIndex:stringArray.count-2];
+        
+        LPPoison *poison = [LPPoisonDataSource poisonWithSlug:slug];
+        
+        if(poison)
+        {
+            UIStoryboard * storyboard = self.storyboard;
+            LPContentViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
+            
+            detail.poison = poison;
+            
+            [self.navigationController pushViewController: detail animated: YES];
+        }
+    }
+    return shouldStartLoad;
 }
 
 @end

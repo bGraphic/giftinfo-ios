@@ -71,7 +71,7 @@ static NSArray *poisonData;
         LPPoison *poison = [[LPPoison alloc] init];
         
         poison.name = name;
-        poison.key = poisonDict[@"slug"];
+        poison.slug = poisonDict[@"slug"];
         poison.content = poisonDict[@"content"];
         poison.symptoms = poisonDict[@"custom_fields"][@"wpcf-symptoms"][0];
         poison.action = poisonDict[@"custom_fields"][@"wpcf-action"][0];
@@ -82,7 +82,7 @@ static NSArray *poisonData;
         
         if(i > 0)
         {
-            poison.key = [NSString stringWithFormat:@"%@-%d", poison.key, i];
+            poison.slug = [NSString stringWithFormat:@"%@-%d", poison.slug, i];
             
             NSMutableArray *tagArray = [[NSMutableArray alloc] init];
             

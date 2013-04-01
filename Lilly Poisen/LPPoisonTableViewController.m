@@ -45,7 +45,7 @@
     UIStoryboard * storyboard = self.storyboard;
     LPContentViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
     
-    LPPoison *poison = [self.poisonDataSource getPoisonAtIndexPath:indexPath];
+    LPPoison *poison = [self.poisonDataSource poisonAtIndexPath:indexPath];
     detail.poison = poison;
     
     [self.navigationController pushViewController: detail animated: YES];
