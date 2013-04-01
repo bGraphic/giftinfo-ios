@@ -41,13 +41,11 @@
 #pragma mark - Table view delegate
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{   
-    LPPoison *poison = [self.poisonDataSource getPoisonAtIndexPath:indexPath];
-    
+{
     UIStoryboard * storyboard = self.storyboard;
     LPContentViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
-
-    detail.title = poison.name;
+    
+    LPPoison *poison = [self.poisonDataSource getPoisonAtIndexPath:indexPath];
     detail.poison = poison;
     
     [self.navigationController pushViewController: detail animated: YES];

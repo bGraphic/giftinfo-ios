@@ -481,8 +481,8 @@ a:hover {
 	/* background-color: #fff; */
 }
 .site-content {
-	margin: 24px 0 0;
-	margin: 1.714285714rem 0 0;
+	/* margin: 24px 0 0; */
+	margin: 1em 0 0;
 }
 .widget-area {
 	margin: 24px 0 0;

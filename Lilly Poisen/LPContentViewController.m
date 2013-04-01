@@ -37,6 +37,9 @@ BOOL webView2HasLoaded;
     self.tableView.scrollIndicatorInsets = UIEdgeInsetsMake(5, 0, 10, 0);
     
     self.webView1.scrollView.bounces = NO;
+    self.webView2.scrollView.bounces = NO;
+    
+    self.title = @"Giftinfo";
 }
 
 - (void)didReceiveMemoryWarning
@@ -94,7 +97,7 @@ BOOL webView2HasLoaded;
         }
         else if (self.poison)
         {
-            NSString *summaryWithData = [NSString stringWithFormat:summaryString, self.poison.risk, self.poison.symptoms, self.poison.coal, self.poison.action];
+            NSString *summaryWithData = [NSString stringWithFormat:summaryString, self.poison.risk, self.poison.symptoms, self.poison.coal?@"Ja":@"Nei", self.poison.action];
             
             htmlString1 = [NSString stringWithFormat:@"%@\n%@\n%@", headerString, summaryWithData, footerString];
             htmlString2 = [NSString stringWithFormat:@"%@\n%@\n%@", headerString, self.poison.content, footerString];
@@ -112,6 +115,16 @@ BOOL webView2HasLoaded;
         return self.webView1.frame.size.height + 10.f;
     else
         return self.webView2.frame.size.height + 10.f;
+}
+
+- (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+{
+    if(self.topic)
+        return self.topic.title;
+    else if(section == 0)
+        return self.poison.name;
+    else
+        return @"Mer informasjon";
 }
 
 - (int) numberOfSectionsInTableView:(UITableView *)tableView
