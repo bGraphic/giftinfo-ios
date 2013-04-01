@@ -14,6 +14,9 @@
 
 @implementation LPContentViewController
 
+static NSString *headerString;
+static NSString *footerString;
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -22,8 +25,6 @@
     self.webView.delegate = self;
     
     [self configureView];
-    
-    self.toolbarItems = self.navigationController.toolbarItems;
     
     self.toolbarItems = self.navigationController.toolbarItems;
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 10, 0);
@@ -40,36 +41,63 @@
 
 #pragma mark - Content
 
-- (void)setHtmlContentString:(NSString *) newHtmlContentString
+- (void) setPoison:(LPPoison *) poison
 {
-    _htmlContentString = newHtmlContentString;
+    _topic = nil;
     
-//    [self configureView];
+    if(_poison != poison)
+    {
+        _poison = poison;
+    }
+}
+
+- (void) setTopic:(LPTopic *) topic
+{
+    _poison = nil;
+    
+    if(_topic != topic)
+    {
+        _topic = topic;
+    }
 }
 
 - (void)configureView
 {
-    // Update the user interface for the detail item.
-    if (self.htmlContentString)
+    if(self.view)
+    
+    if (self.poison || self.topic)
     {
-        NSString *headerPath = [[NSBundle mainBundle] pathForResource:@"header" ofType:@"html"];
+        if(!headerString) {
         
-        NSError *headerError;
-        NSString *headerString = [NSString stringWithContentsOfFile:headerPath encoding:NSUTF8StringEncoding error:&headerError];
+            NSString *headerPath = [[NSBundle mainBundle] pathForResource:@"header" ofType:@"html"];
         
-        if(headerError)
-            NSLog(@"Problems loading content %@", headerError.description);
+            NSError *headerError;
+            headerString = [NSString stringWithContentsOfFile:headerPath encoding:NSUTF8StringEncoding error:&headerError];
         
-        NSString *footerPath = [[NSBundle mainBundle] pathForResource:@"footer" ofType:@"html"];
+            if(headerError)
+                NSLog(@"Problems loading content %@", headerError.description);
+        }
         
-        NSError *footerError;
-        NSString *footerString = [NSString stringWithContentsOfFile:footerPath encoding:NSUTF8StringEncoding error:&footerError];
+        if(!footerString) {
+            NSString *footerPath = [[NSBundle mainBundle] pathForResource:@"footer" ofType:@"html"];
+            
+            NSError *footerError;
+            footerString = [NSString stringWithContentsOfFile:footerPath encoding:NSUTF8StringEncoding error:&footerError];
+            
+            if(footerError)
+                NSLog(@"Problems loading content %@", footerError.description);
+
+        }
         
-        if(footerError)
-            NSLog(@"Problems loading content %@", footerError.description);
+        NSString *contentString;
         
+        if(self.topic)
+            contentString = self.topic.content;
+        else if (self.poison)
+            contentString = self.poison.content;
+            
         
-        NSString *htmlString = [NSString stringWithFormat:@"%@\n%@\n%@", headerString, self.htmlContentString, footerString];
+        NSString *htmlString = [NSString stringWithFormat:@"%@\n%@\n%@", headerString, contentString, footerString];
         
         [self.webView loadHTMLString:htmlString baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] resourcePath]]];
     }

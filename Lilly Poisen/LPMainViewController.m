@@ -79,8 +79,6 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-    NSLog(@"Sections: %d", self.mainInfoData.count);
-    
     return self.mainInfoData.count;
 }
 
@@ -149,8 +147,8 @@
             
             LPTopic *topic = [self topicAtIndexPath:indexPath];
             
-            detail.htmlContentString = topic.content;
             detail.title = topic.title;
+            detail.topic = topic;
             
             [self.navigationController pushViewController: detail animated: YES];
         }

@@ -46,8 +46,9 @@
     
     UIStoryboard * storyboard = self.storyboard;
     LPContentViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
-    detail.htmlContentString = poison.htmlContentString;
+
     detail.title = poison.name;
+    detail.poison = poison;
     
     [self.navigationController pushViewController: detail animated: YES];
 }

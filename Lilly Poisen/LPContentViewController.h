@@ -7,10 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "LPTopic.h"
+#import "LPPoison.h"
 
 @interface LPContentViewController : UITableViewController <UIWebViewDelegate>
 
-@property (strong, nonatomic) NSString *htmlContentString;
+@property (strong, nonatomic) LPTopic *topic;
+@property (strong, nonatomic) LPPoison *poison;
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView;
 
