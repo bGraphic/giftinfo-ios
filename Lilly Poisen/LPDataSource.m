@@ -19,8 +19,6 @@ static NSArray *poisonArray;
     
     NSMutableArray *poisons = [[NSMutableArray alloc] initWithCapacity:nameArray.count];
     
-    NSLog(@"name array %d", nameArray.count);
-    
     for (int i=0; i < nameArray.count; i++)
     {
         NSString *name = [[nameArray objectAtIndex:i] stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
@@ -38,13 +36,9 @@ static NSArray *poisonArray;
         NSMutableArray *tagArray = [[NSMutableArray alloc] init];
         
         for (NSDictionary *tagDict in poisonDict[@"tags"])
-        {
-            NSLog(@"%@", poisonDict[@"tags"]);
-            
+        {   
             [tagArray addObject:tagDict[@"title"]];
         }
-        
-        NSLog(@"%@", [tagArray description]);
         
         poison.tags = [[NSArray alloc] initWithArray:tagArray];
         
@@ -60,7 +54,7 @@ static NSArray *poisonArray;
     return poisons;
 }
 
-+ (NSArray *) loadPoisonsArrayFromJSONFile:(NSString *) poisonFile
++ (NSArray *) loadDataArrayFromJSONFile:(NSString *) poisonFile
 {
     NSString *contentPath = [[NSBundle mainBundle] pathForResource:poisonFile ofType:@"json"];
     
@@ -74,14 +68,18 @@ static NSArray *poisonArray;
         NSLog(@"Error: %@", [error description]);
     }
     
+    data = nil;
+    
     return [json objectForKey:@"posts"];
 }
 
-+ (NSArray *) createPoisonListFromJSONArray:(NSArray *) poisonJSONArray
++ (NSArray *) createPoisonArrayFromDataArray:(NSArray *) poisonDataArray
 {
+    NSLog(@"%@", [poisonDataArray description]);
+    
     NSMutableArray *poisonDataUnsorted = [NSMutableArray array];
     
-    for(NSDictionary *poisonDict in poisonJSONArray)
+    for(NSDictionary *poisonDict in poisonDataArray)
     {
         [poisonDataUnsorted addObjectsFromArray:[LPDataSource poisonWithDict:poisonDict]];
     }
@@ -96,8 +94,8 @@ static NSArray *poisonArray;
 
 + (void) loadPoisonData
 {
-    NSArray *poisonJSONArray = [LPDataSource loadPoisonsArrayFromJSONFile:@"poisons"];
-    poisonArray = [LPDataSource createPoisonListFromJSONArray:poisonJSONArray];
+    NSArray *dataArray = [LPDataSource loadDataArrayFromJSONFile:@"poisons"];
+    poisonArray = [LPDataSource createPoisonArrayFromDataArray:dataArray];
 }
 
 + (NSArray *) poisonArray
