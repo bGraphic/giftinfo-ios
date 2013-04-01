@@ -9,7 +9,7 @@
 #import "LPPoisonDataSource.h"
 #import "LPAppDelegate.h"
 #import "LPContentViewController.h"
-#import "LPDataSource.h"
+#import "LPPoisonDataLoader.h"
 
 @interface LPPoisonDataSource ()
 
@@ -29,7 +29,7 @@
 
     if(self)
     {
-        self.poisonData = [LPDataSource poisonArray];
+        self.poisonData = [LPPoisonDataLoader poisonArray];
     }
     
     return self;

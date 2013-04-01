@@ -6,10 +6,10 @@
 //  Copyright (c) 2013 bGraphic. All rights reserved.
 //
 
-#import "LPDataSource.h"
+#import "LPPoisonDataLoader.h"
 #import "Poison.h"
 
-@implementation LPDataSource
+@implementation LPPoisonDataLoader
 
 static NSArray *poisonArray;
 
@@ -89,7 +89,7 @@ static NSArray *poisonArray;
     
     for(NSDictionary *poisonDict in poisonDataArray)
     {
-        [poisonDataUnsorted addObjectsFromArray:[LPDataSource poisonWithDict:poisonDict]];
+        [poisonDataUnsorted addObjectsFromArray:[LPPoisonDataLoader poisonWithDict:poisonDict]];
     }
     
     NSSortDescriptor *lastDescriptor =
@@ -102,15 +102,15 @@ static NSArray *poisonArray;
 
 + (void) loadPoisonData
 {
-    NSArray *dataArray = [LPDataSource loadDataArrayFromJSONFile:@"poisons"];
-    poisonArray = [LPDataSource createPoisonArrayFromDataArray:dataArray];
+    NSArray *dataArray = [LPPoisonDataLoader loadDataArrayFromJSONFile:@"poisons"];
+    poisonArray = [LPPoisonDataLoader createPoisonArrayFromDataArray:dataArray];
 }
 
 + (NSArray *) poisonArray
 {
     if(!poisonArray)
     {
-        [LPDataSource loadPoisonData];
+        [LPPoisonDataLoader loadPoisonData];
     }
     
     return poisonArray;

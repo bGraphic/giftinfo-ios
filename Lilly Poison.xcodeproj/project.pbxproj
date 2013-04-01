@@ -85,8 +85,10 @@
 		1397DDA216ED099C0061087F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1397DD9E16ED099C0061087F /* README.md */; };
 		1397DDA316ED099C0061087F /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 1397DD9F16ED099C0061087F /* release_notes.md */; };
 		1397DDA716ED0A060061087F /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1397DDA616ED0A060061087F /* libz.1.1.3.dylib */; };
-		13A0B66E1709BDE500B4970F /* LPDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0B66D1709BDE500B4970F /* LPDataSource.m */; };
+		13A0B66E1709BDE500B4970F /* LPPoisonDataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0B66D1709BDE500B4970F /* LPPoisonDataLoader.m */; };
 		13A0B6721709E67F00B4970F /* topics.json in Resources */ = {isa = PBXBuildFile; fileRef = 13A0B6711709E67F00B4970F /* topics.json */; };
+		13A0B67A1709EB7200B4970F /* LPTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0B6791709EB7200B4970F /* LPTopic.m */; };
+		13A0B67D1709EED300B4970F /* LPTopicDataLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0B67C1709EED300B4970F /* LPTopicDataLoader.m */; };
 		13D7F440170455EB001D7F93 /* poisons.json in Resources */ = {isa = PBXBuildFile; fileRef = 13D7F43F170455EB001D7F93 /* poisons.json */; };
 		13EB1A1F16EBA9EE00170579 /* LPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EB1A1E16EBA9EE00170579 /* LPMainViewController.m */; };
 		13EC390916EB9FE8005244BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390816EB9FE8005244BD /* UIKit.framework */; };
@@ -206,9 +208,13 @@
 		1397DDA016ED099C0061087F /* TestFlight.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestFlight.h; sourceTree = "<group>"; };
 		1397DDA416ED09EE0061087F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		1397DDA616ED0A060061087F /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
-		13A0B66C1709BDE500B4970F /* LPDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPDataSource.h; sourceTree = "<group>"; };
-		13A0B66D1709BDE500B4970F /* LPDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPDataSource.m; sourceTree = "<group>"; };
+		13A0B66C1709BDE500B4970F /* LPPoisonDataLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPPoisonDataLoader.h; sourceTree = "<group>"; };
+		13A0B66D1709BDE500B4970F /* LPPoisonDataLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPoisonDataLoader.m; sourceTree = "<group>"; };
 		13A0B6711709E67F00B4970F /* topics.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topics.json; sourceTree = "<group>"; };
+		13A0B6781709EB7200B4970F /* LPTopic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTopic.h; sourceTree = "<group>"; };
+		13A0B6791709EB7200B4970F /* LPTopic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTopic.m; sourceTree = "<group>"; };
+		13A0B67B1709EED300B4970F /* LPTopicDataLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTopicDataLoader.h; sourceTree = "<group>"; };
+		13A0B67C1709EED300B4970F /* LPTopicDataLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTopicDataLoader.m; sourceTree = "<group>"; };
 		13D7F43F170455EB001D7F93 /* poisons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = poisons.json; sourceTree = "<group>"; };
 		13EB1A1D16EBA9EE00170579 /* LPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPMainViewController.h; sourceTree = "<group>"; };
 		13EB1A1E16EBA9EE00170579 /* LPMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPMainViewController.m; sourceTree = "<group>"; };
@@ -268,6 +274,8 @@
 			children = (
 				1381B34316F4A4B400143FEA /* Poison.h */,
 				1381B34416F4A4B400143FEA /* Poison.m */,
+				13A0B6781709EB7200B4970F /* LPTopic.h */,
+				13A0B6791709EB7200B4970F /* LPTopic.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -408,22 +416,15 @@
 			path = TestFlightSDK1.2;
 			sourceTree = "<group>";
 		};
-		13A0B6731709E74500B4970F /* Data Loading */ = {
+		13A0B6731709E74500B4970F /* Data Handlers */ = {
 			isa = PBXGroup;
 			children = (
-				13A0B66C1709BDE500B4970F /* LPDataSource.h */,
-				13A0B66D1709BDE500B4970F /* LPDataSource.m */,
+				13A0B66C1709BDE500B4970F /* LPPoisonDataLoader.h */,
+				13A0B66D1709BDE500B4970F /* LPPoisonDataLoader.m */,
+				13A0B67B1709EED300B4970F /* LPTopicDataLoader.h */,
+				13A0B67C1709EED300B4970F /* LPTopicDataLoader.m */,
 			);
-			name = "Data Loading";
-			sourceTree = "<group>";
-		};
-		13A0B6741709E75B00B4970F /* Data Sources */ = {
-			isa = PBXGroup;
-			children = (
-				13794DD816EBE0C6003EF093 /* LPPoisonDataSource.h */,
-				13794DD916EBE0C6003EF093 /* LPPoisonDataSource.m */,
-			);
-			name = "Data Sources";
+			name = "Data Handlers";
 			sourceTree = "<group>";
 		};
 		13EC38FC16EB9FE8005244BD = {
@@ -463,8 +464,9 @@
 		13EC391016EB9FE8005244BD /* Lilly Poison */ = {
 			isa = PBXGroup;
 			children = (
-				13A0B6741709E75B00B4970F /* Data Sources */,
-				13A0B6731709E74500B4970F /* Data Loading */,
+				13794DD816EBE0C6003EF093 /* LPPoisonDataSource.h */,
+				13794DD916EBE0C6003EF093 /* LPPoisonDataSource.m */,
+				13A0B6731709E74500B4970F /* Data Handlers */,
 				132D26DC1700769E00967E5C /* Content */,
 				1381B33A16F1239D00143FEA /* Resources */,
 				131341D416EE0C3B00734F5E /* Controller */,
@@ -705,7 +707,9 @@
 				1381B36216F4E82800143FEA /* LPHtmlStringHelper.m in Sources */,
 				1381B36A16F4F7EA00143FEA /* LPToolbar.m in Sources */,
 				1381B36F16F5F5EB00143FEA /* LPContentViewController.m in Sources */,
-				13A0B66E1709BDE500B4970F /* LPDataSource.m in Sources */,
+				13A0B66E1709BDE500B4970F /* LPPoisonDataLoader.m in Sources */,
+				13A0B67A1709EB7200B4970F /* LPTopic.m in Sources */,
+				13A0B67D1709EED300B4970F /* LPTopicDataLoader.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

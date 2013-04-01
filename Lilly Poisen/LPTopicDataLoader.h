@@ -1,5 +1,5 @@
 //
-//  LPDataSource.h
+//  LPTopicDataLoader.h
 //  Lilly Poison
 //
 //  Created by Benedicte Raae on 01.04.13.
@@ -8,9 +8,9 @@
 
 #import <Foundation/Foundation.h>
 
-@interface LPDataSource : NSObject
+@interface LPTopicDataLoader : NSObject
 
-+ (NSArray *) poisonArray;
-+ (void) loadPoisonData;
++ (NSDictionary *) topicDictonary;
++ (void) loadTopicData;
 
 @end

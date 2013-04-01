@@ -10,10 +10,13 @@
 #import "LPContentViewController.h"
 #import "Poison.h"
 #import "LPHtmlStringHelper.h"
+#import "LPTopicDataLoader.h"
+#import "LPTopic.h"
 
 @interface LPMainViewController ()
 
 @property (strong, nonatomic) NSArray *mainInfoData;
+@property (strong, nonatomic) NSDictionary *topicDictonary;
 
 @end
 
@@ -30,8 +33,9 @@
     toolbarFrame.origin.y -= 5;
     self.navigationController.toolbar.frame = toolbarFrame;
     
-    
     [self loadTableData];
+    
+    NSLog(@"%@", self.topicDictonary.description);
 }
 
 - (void) didReceiveMemoryWarning
@@ -51,18 +55,34 @@
 {
     NSString *propertyFile = [[NSBundle mainBundle] pathForResource:@"main-info" ofType:@"plist"];
     self.mainInfoData = [NSArray arrayWithContentsOfFile:propertyFile];
+    
+    self.topicDictonary = [LPTopicDataLoader topicDictonary];
 }
 
-- (NSDictionary *) topicAtIndexPath:(NSIndexPath *) indexPath
+- (LPTopic *) topicAtIndexPath:(NSIndexPath *) indexPath
 {
     NSDictionary *section = self.mainInfoData[indexPath.section];
-    NSDictionary *topic = section[@"topics"][indexPath.row];
     
-    return topic;
+    if(indexPath.section == 0)
+    {
+        LPTopic *topic = [LPTopic alloc];
+        topic.title = section[@"topics"][indexPath.row][@"title"];
+        
+        return topic;
+    }
+    else
+    {
+        NSString *slug = section[@"topics"][indexPath.row];
+        LPTopic *topic = [self.topicDictonary valueForKey:slug];
+        
+        return topic;
+    }
 }
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
+    NSLog(@"Sections: %d", self.mainInfoData.count);
+    
     return self.mainInfoData.count;
 }
 
@@ -86,6 +106,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    NSLog(@"cell for row");
+    
     if(self.tableView != tableView)
     {
         return [super tableView:tableView cellForRowAtIndexPath:indexPath];
@@ -101,11 +123,7 @@
             cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:CellIdentifier];
         }
         
-        if(indexPath.section == 0)
-        {
-            cell.textLabel.text = [self topicAtIndexPath:indexPath][@"title"];
-        }
-
+        cell.textLabel.text = [self topicAtIndexPath:indexPath].title;
         cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
         cell.selectionStyle = UITableViewCellSelectionStyleGray;
         
@@ -133,10 +151,10 @@
             UIStoryboard * storyboard = self.storyboard;
             LPContentViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
             
-            NSDictionary *topic = [self topicAtIndexPath:indexPath];
+            LPTopic *topic = [self topicAtIndexPath:indexPath];
             
-            detail.htmlContentString = [LPHtmlStringHelper stringFromHtmlFileWithName:topic[@"html"]];
-            detail.title = topic[@"title"];
+            detail.htmlContentString = topic.content;
+            detail.title = topic.title;
             
             [self.navigationController pushViewController: detail animated: YES];
         }
