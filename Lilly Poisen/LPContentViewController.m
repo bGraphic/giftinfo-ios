@@ -7,6 +7,7 @@
 //
 
 #import "LPContentViewController.h"
+#import "LPHtmlStringHelper.h"
 
 @interface LPContentViewController ()
 
@@ -16,6 +17,7 @@
 
 static NSString *headerString;
 static NSString *footerString;
+static NSString *summaryString;
 
 BOOL webView1HasLoaded;
 BOOL webView2HasLoaded;
@@ -72,25 +74,15 @@ BOOL webView2HasLoaded;
     if (self.poison || self.topic)
     {
         if(!headerString) {
-        
-            NSString *headerPath = [[NSBundle mainBundle] pathForResource:@"header" ofType:@"html"];
-        
-            NSError *headerError;
-            headerString = [NSString stringWithContentsOfFile:headerPath encoding:NSUTF8StringEncoding error:&headerError];
-        
-            if(headerError)
-                NSLog(@"Problems loading content %@", headerError.description);
+            headerString = [LPHtmlStringHelper stringFromHtmlFileWithName:@"header"];
         }
         
         if(!footerString) {
-            NSString *footerPath = [[NSBundle mainBundle] pathForResource:@"footer" ofType:@"html"];
-            
-            NSError *footerError;
-            footerString = [NSString stringWithContentsOfFile:footerPath encoding:NSUTF8StringEncoding error:&footerError];
-            
-            if(footerError)
-                NSLog(@"Problems loading content %@", footerError.description);
-
+            footerString = [LPHtmlStringHelper stringFromHtmlFileWithName:@"footer"];
+        }
+        
+        if(!summaryString) {
+            summaryString = [LPHtmlStringHelper stringFromHtmlFileWithName:@"summary"];
         }
         
         NSString *htmlString1;
@@ -102,7 +94,9 @@ BOOL webView2HasLoaded;
         }
         else if (self.poison)
         {
-            htmlString1 = [NSString stringWithFormat:@"%@\n%@\n%@", headerString, self.poison.content, footerString];
+            NSString *summaryWithData = [NSString stringWithFormat:summaryString, self.poison.risk, self.poison.symptoms, self.poison.coal, self.poison.action];
+            
+            htmlString1 = [NSString stringWithFormat:@"%@\n%@\n%@", headerString, summaryWithData, footerString];
             htmlString2 = [NSString stringWithFormat:@"%@\n%@\n%@", headerString, self.poison.content, footerString];
         }
         

@@ -131,7 +131,7 @@
 		132D26E4170076AA00967E5C /* eye_contact.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = eye_contact.html; sourceTree = "<group>"; };
 		132D26E5170076AA00967E5C /* inhaled.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = inhaled.html; sourceTree = "<group>"; };
 		132D26E6170076AA00967E5C /* skin_contact.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = skin_contact.html; sourceTree = "<group>"; };
-		132D26E7170076AA00967E5C /* summary.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = summary.html; sourceTree = "<group>"; };
+		132D26E7170076AA00967E5C /* summary.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = summary.html; path = ../general/summary.html; sourceTree = "<group>"; };
 		132D26E8170076AA00967E5C /* swallow_general.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = swallow_general.html; sourceTree = "<group>"; };
 		132D26E9170076AA00967E5C /* swollowed.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = swollowed.html; sourceTree = "<group>"; };
 		132D26EA170076AA00967E5C /* test-1.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = "test-1.html"; sourceTree = "<group>"; };
@@ -298,6 +298,7 @@
 		132D26DD170076AA00967E5C /* structure */ = {
 			isa = PBXGroup;
 			children = (
+				132D26E7170076AA00967E5C /* summary.html */,
 				132D26DE170076AA00967E5C /* footer.html */,
 				132D26DF170076AA00967E5C /* header.html */,
 				132D26E0170076AA00967E5C /* main-info.plist */,
@@ -313,7 +314,6 @@
 				132D26E4170076AA00967E5C /* eye_contact.html */,
 				132D26E5170076AA00967E5C /* inhaled.html */,
 				132D26E6170076AA00967E5C /* skin_contact.html */,
-				132D26E7170076AA00967E5C /* summary.html */,
 				132D26E8170076AA00967E5C /* swallow_general.html */,
 				132D26E9170076AA00967E5C /* swollowed.html */,
 				132D26EA170076AA00967E5C /* test-1.html */,
