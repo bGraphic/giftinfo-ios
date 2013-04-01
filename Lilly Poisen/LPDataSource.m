@@ -85,8 +85,6 @@ static NSArray *poisonArray;
 
 + (NSArray *) createPoisonArrayFromDataArray:(NSArray *) poisonDataArray
 {
-    NSLog(@"%@", [poisonDataArray description]);
-    
     NSMutableArray *poisonDataUnsorted = [NSMutableArray array];
     
     for(NSDictionary *poisonDict in poisonDataArray)
