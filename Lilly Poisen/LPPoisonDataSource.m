@@ -8,7 +8,6 @@
 
 #import "LPPoisonDataSource.h"
 #import "LPAppDelegate.h"
-#import "LPEntryViewCell.h"
 #import "LPContentViewController.h"
 #import "LPDataSource.h"
 

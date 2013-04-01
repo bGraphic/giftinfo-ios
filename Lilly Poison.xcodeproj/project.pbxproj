@@ -76,7 +76,6 @@
 		132D2767170076AA00967E5C /* White_spirit.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D2723170076AA00967E5C /* White_spirit.html */; };
 		13794DDA16EBE0C6003EF093 /* LPPoisonDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DD916EBE0C6003EF093 /* LPPoisonDataSource.m */; };
 		13794DDD16EBE223003EF093 /* LPPoisonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DDC16EBE223003EF093 /* LPPoisonTableViewController.m */; };
-		13794DE516EC000A003EF093 /* LPEntryViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DE416EC000A003EF093 /* LPEntryViewCell.m */; };
 		1381B33C16F123A700143FEA /* color.png in Resources */ = {isa = PBXBuildFile; fileRef = 1381B33B16F123A700143FEA /* color.png */; };
 		1381B34516F4A4B400143FEA /* Poison.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B34416F4A4B400143FEA /* Poison.m */; };
 		1381B36216F4E82800143FEA /* LPHtmlStringHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B36116F4E82800143FEA /* LPHtmlStringHelper.m */; };
@@ -192,8 +191,6 @@
 		13794DD916EBE0C6003EF093 /* LPPoisonDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPoisonDataSource.m; sourceTree = "<group>"; };
 		13794DDB16EBE223003EF093 /* LPPoisonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPPoisonTableViewController.h; sourceTree = "<group>"; };
 		13794DDC16EBE223003EF093 /* LPPoisonTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPoisonTableViewController.m; sourceTree = "<group>"; };
-		13794DE316EC000A003EF093 /* LPEntryViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPEntryViewCell.h; sourceTree = "<group>"; };
-		13794DE416EC000A003EF093 /* LPEntryViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPEntryViewCell.m; sourceTree = "<group>"; };
 		1381B33B16F123A700143FEA /* color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = color.png; sourceTree = "<group>"; };
 		1381B34316F4A4B400143FEA /* Poison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Poison.h; sourceTree = "<group>"; };
 		1381B34416F4A4B400143FEA /* Poison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Poison.m; sourceTree = "<group>"; };
@@ -271,8 +268,6 @@
 			children = (
 				1381B34316F4A4B400143FEA /* Poison.h */,
 				1381B34416F4A4B400143FEA /* Poison.m */,
-				13A0B66C1709BDE500B4970F /* LPDataSource.h */,
-				13A0B66D1709BDE500B4970F /* LPDataSource.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -413,6 +408,24 @@
 			path = TestFlightSDK1.2;
 			sourceTree = "<group>";
 		};
+		13A0B6731709E74500B4970F /* Data Loading */ = {
+			isa = PBXGroup;
+			children = (
+				13A0B66C1709BDE500B4970F /* LPDataSource.h */,
+				13A0B66D1709BDE500B4970F /* LPDataSource.m */,
+			);
+			name = "Data Loading";
+			sourceTree = "<group>";
+		};
+		13A0B6741709E75B00B4970F /* Data Sources */ = {
+			isa = PBXGroup;
+			children = (
+				13794DD816EBE0C6003EF093 /* LPPoisonDataSource.h */,
+				13794DD916EBE0C6003EF093 /* LPPoisonDataSource.m */,
+			);
+			name = "Data Sources";
+			sourceTree = "<group>";
+		};
 		13EC38FC16EB9FE8005244BD = {
 			isa = PBXGroup;
 			children = (
@@ -450,6 +463,8 @@
 		13EC391016EB9FE8005244BD /* Lilly Poison */ = {
 			isa = PBXGroup;
 			children = (
+				13A0B6741709E75B00B4970F /* Data Sources */,
+				13A0B6731709E74500B4970F /* Data Loading */,
 				132D26DC1700769E00967E5C /* Content */,
 				1381B33A16F1239D00143FEA /* Resources */,
 				131341D416EE0C3B00734F5E /* Controller */,
@@ -458,10 +473,6 @@
 				13EC391A16EB9FE8005244BD /* LPAppDelegate.m */,
 				13EC391116EB9FE8005244BD /* Supporting Files */,
 				13EC394316EBA0A8005244BD /* MainStoryboard.storyboard */,
-				13794DD816EBE0C6003EF093 /* LPPoisonDataSource.h */,
-				13794DD916EBE0C6003EF093 /* LPPoisonDataSource.m */,
-				13794DE316EC000A003EF093 /* LPEntryViewCell.h */,
-				13794DE416EC000A003EF093 /* LPEntryViewCell.m */,
 			);
 			name = "Lilly Poison";
 			path = "Lilly Poisen";
@@ -690,7 +701,6 @@
 				13EB1A1F16EBA9EE00170579 /* LPMainViewController.m in Sources */,
 				13794DDA16EBE0C6003EF093 /* LPPoisonDataSource.m in Sources */,
 				13794DDD16EBE223003EF093 /* LPPoisonTableViewController.m in Sources */,
-				13794DE516EC000A003EF093 /* LPEntryViewCell.m in Sources */,
 				1381B34516F4A4B400143FEA /* Poison.m in Sources */,
 				1381B36216F4E82800143FEA /* LPHtmlStringHelper.m in Sources */,
 				1381B36A16F4F7EA00143FEA /* LPToolbar.m in Sources */,
