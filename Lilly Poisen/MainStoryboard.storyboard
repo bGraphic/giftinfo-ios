@@ -39,7 +39,7 @@
             </objects>
             <point key="canvasLocation" x="-37" y="-20"/>
         </scene>
-        <!--Main View Controller - Lilly Poison-->
+        <!--Main View Controller - Giftinformasjon-->
         <scene sceneID="ReD-8F-dZn">
             <objects>
                 <tableViewController id="uOL-K2-nVU" customClass="LPMainViewController" sceneMemberID="viewController">
@@ -61,7 +61,9 @@
                             <outlet property="delegate" destination="uOL-K2-nVU" id="4If-Bz-1K9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Lilly Poison" id="Ml9-me-Vl5"/>
+                    <navigationItem key="navigationItem" title="Giftinformasjon" id="Ml9-me-Vl5">
+                        <barButtonItem key="backBarButtonItem" title="Tilbake" id="s0Z-GB-ctc"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="Ni7-ZO-UYb" id="mmQ-ul-tPJ"/>
                         <segue destination="FCD-TZ-I4L" kind="push" identifier="showTable" id="3ih-R6-ncp"/>
@@ -100,7 +102,9 @@
                             <outlet property="delegate" destination="FCD-TZ-I4L" id="SdJ-28-M9w"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Lilly Poison" id="gtV-VO-ut1"/>
+                    <navigationItem key="navigationItem" title="Alfabetisk liste" id="gtV-VO-ut1">
+                        <barButtonItem key="backBarButtonItem" title="Tilbake" id="Hsb-e3-aiW"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="searchDisplayController" destination="oHl-3x-TdB" id="pv3-0y-aiG"/>
                     </connections>
@@ -175,7 +179,9 @@
                             <outlet property="delegate" destination="tXo-fa-XGO" id="rAV-md-tpX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Bbd-9F-Wl6"/>
+                    <navigationItem key="navigationItem" title="Giftinformasjon" id="Bbd-9F-Wl6">
+                        <barButtonItem key="backBarButtonItem" title="Tilbake" id="KES-rd-Zhn"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="webView1" destination="zId-EI-8e7" id="P24-Gf-ejm"/>
                         <outlet property="webView2" destination="U4O-fp-ZJJ" id="Zvp-kz-ihF"/>
@@ -186,6 +192,34 @@
             <point key="canvasLocation" x="1005" y="436"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="LPContentViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPContentViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView1" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="webView2" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="LPMainViewController" superclassName="LPPoisonTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPMainViewController.h"/>
+        </class>
+        <class className="LPPhoneBooth" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPPhoneBooth.h"/>
+            <relationships>
+                <relationship kind="action" name="callAmbulance:"/>
+                <relationship kind="action" name="callInfo:"/>
+            </relationships>
+        </class>
+        <class className="LPPoisonDataSource" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPPoisonDataSource.h"/>
+        </class>
+        <class className="LPPoisonTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPPoisonTableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="poisonDataSource" candidateClass="LPPoisonDataSource"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

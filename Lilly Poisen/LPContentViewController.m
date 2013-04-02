@@ -40,8 +40,6 @@ BOOL webView2HasLoaded;
     
     self.webView1.scrollView.bounces = NO;
     self.webView2.scrollView.bounces = NO;
-    
-    self.title = @"Giftinfo";
 }
 
 - (void)didReceiveMemoryWarning
