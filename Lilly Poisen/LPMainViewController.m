@@ -101,7 +101,7 @@
             LPContentViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
             
             LPTopic *topic = [self.topicDataSource topicAtIndexPath:indexPath];
-            detail.topic = topic;
+            detail.htmlString = topic.htmlString;
             
             [self.navigationController pushViewController: detail animated: YES];
         }

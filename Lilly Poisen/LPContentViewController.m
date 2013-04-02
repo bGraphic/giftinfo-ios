@@ -13,8 +13,6 @@
 
 @interface LPContentViewController ()
 
-@property (nonatomic, strong) NSString *htmlString;
-
 @end
 
 @implementation LPContentViewController
@@ -39,36 +37,19 @@
 
 #pragma mark - Content
 
-- (void) setPoison:(LPPoison *) poison
+- (void) setHtmlString:(NSString *)htmlString
 {
-    _topic = nil;
+    _htmlString = nil;
     
-    if(_poison != poison)
+    if(![_htmlString isEqualToString:htmlString])
     {
-        _poison = poison;
-    }
-}
-
-- (void) setTopic:(LPTopic *) topic
-{
-    _poison = nil;
-    
-    if(_topic != topic)
-    {
-        _topic = topic;
+        _htmlString = htmlString;
     }
 }
 
 - (void)configureView
 {
-    if(self.view)
-    
-    if (self.poison)
-        [self.webView1 loadHTMLString:self.poison.htmlString baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] resourcePath]]];
-    
-    if (self.topic) {
-        [self.webView1 loadHTMLString:self.topic.htmlString baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] resourcePath]]];
-    }
+    [self.webView1 loadHTMLString:self.htmlString baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] resourcePath]]];
 }
 
 #pragma mark - UIWebViewDelegate
@@ -104,7 +85,7 @@
                     UIStoryboard * storyboard = self.storyboard;
                     LPContentViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
                     
-                    detail.poison = poison;
+                    detail.htmlString = poison.htmlString;
                     
                     [self.navigationController pushViewController: detail animated: YES];
                     
@@ -120,7 +101,7 @@
                     UIStoryboard * storyboard = self.storyboard;
                     LPContentViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
                     
-                    detail.topic = topic;
+                    detail.htmlString = topic.htmlString;
                     
                     [self.navigationController pushViewController: detail animated: YES];
                     

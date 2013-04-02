@@ -12,8 +12,7 @@
 
 @interface LPContentViewController : UIViewController <UIWebViewDelegate>
 
-@property (strong, nonatomic) LPTopic *topic;
-@property (strong, nonatomic) LPPoison *poison;
+@property (strong, nonatomic) NSString *htmlString;
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView1;
 

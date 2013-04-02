@@ -50,7 +50,7 @@
     LPContentViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
     
     LPPoison *poison = [self.poisonDataSource poisonAtIndexPath:indexPath];
-    detail.poison = poison;
+    detail.htmlString = poison.htmlString;
     
     [self.navigationController pushViewController: detail animated: YES];
 }
