@@ -103,8 +103,6 @@ static NSArray *poisonData;
             poison.slug = [NSString stringWithFormat:@"%@-%d", poison.slug, i];
         }
         
-        NSLog(@"%@", [poison description]);
-        
         i++;
     }
         
