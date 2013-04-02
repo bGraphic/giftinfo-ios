@@ -85,7 +85,7 @@
         <scene sceneID="BAK-QL-aKe">
             <objects>
                 <tableViewController restorationIdentifier="" storyboardIdentifier="tableView" title="tableView" id="FCD-TZ-I4L" userLabel="tableView" customClass="LPPoisonTableViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="B6T-zB-ieJ" customClass="L">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="B6T-zB-ieJ">
                         <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -192,6 +192,37 @@
             <point key="canvasLocation" x="1005" y="436"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="LPContentViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPContentViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView1" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="webView2" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="LPMainViewController" superclassName="LPPoisonTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPMainViewController.h"/>
+        </class>
+        <class className="LPPhoneBooth" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPPhoneBooth.h"/>
+            <relationships>
+                <relationship kind="action" name="callAmbulance:"/>
+                <relationship kind="action" name="callInfo:"/>
+            </relationships>
+        </class>
+        <class className="LPPoisonDataSource" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPPoisonDataSource.h"/>
+        </class>
+        <class className="LPPoisonTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPPoisonTableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="poisonDataSource" candidateClass="LPPoisonDataSource"/>
+            </relationships>
+        </class>
+        <class className="LPSearchBar" superclassName="UISearchBar">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPSearchBar.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
