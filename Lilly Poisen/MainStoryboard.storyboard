@@ -192,6 +192,34 @@
             <point key="canvasLocation" x="1005" y="436"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="LPContentViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPContentViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="webView1" candidateClass="UIWebView"/>
+                <relationship kind="outlet" name="webView2" candidateClass="UIWebView"/>
+            </relationships>
+        </class>
+        <class className="LPMainViewController" superclassName="LPPoisonTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPMainViewController.h"/>
+        </class>
+        <class className="LPPhoneBooth" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPPhoneBooth.h"/>
+            <relationships>
+                <relationship kind="action" name="callAmbulance:"/>
+                <relationship kind="action" name="callInfo:"/>
+            </relationships>
+        </class>
+        <class className="LPPoisonDataSource" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPPoisonDataSource.h"/>
+        </class>
+        <class className="LPPoisonTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPPoisonTableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="poisonDataSource" candidateClass="LPPoisonDataSource"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

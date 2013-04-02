@@ -11,6 +11,7 @@
 #import "LPContentViewController.h"
 #import "LPPoisonDataFromWP.h"
 #import "LPHtmlStringHelper.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface LPPoisonDataSource ()
 

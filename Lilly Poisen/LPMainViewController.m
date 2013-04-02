@@ -108,4 +108,16 @@
     }
 }
 
+- (CGFloat) tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(self.tableView != tableView)
+    {
+        return [super tableView:tableView heightForRowAtIndexPath:indexPath];
+    }
+    else
+    {
+        return 50.f;
+    }
+}
+
 @end
