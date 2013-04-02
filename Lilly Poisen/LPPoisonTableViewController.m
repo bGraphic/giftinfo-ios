@@ -33,6 +33,7 @@
     self.searchDisplayController.searchResultsDataSource = self.poisonDataSource;
     
     UISearchBar *searchBar = self.searchDisplayController.searchBar;
+    searchBar.clipsToBounds = YES;
     
     //to remove searchbar default background layer
     if ([[[searchBar subviews] objectAtIndex:0] isKindOfClass:[UIImageView class]]){
