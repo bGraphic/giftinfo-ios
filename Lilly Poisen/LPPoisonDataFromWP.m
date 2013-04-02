@@ -100,6 +100,7 @@ static NSArray *poisonData;
         }
         else
         {
+            poison.otherNames = [NSArray arrayWithObject:[nameArray objectAtIndex:0]];
             poison.slug = [NSString stringWithFormat:@"%@-%d", poison.slug, i];
         }
         

@@ -24,7 +24,7 @@
         
         NSString *summaryWithData = [NSString stringWithFormat:summaryString, self.risk, self.symptoms, self.coal?@"Ja":@"Nei", self.action?self.action:@"Ingen spesielle tiltak"];
             
-        NSString *headerWithData = [NSString stringWithFormat:headerString, self.name, [LPHtmlStringHelper stringFromArray:self.otherNames withSeperator:@", "]];
+        NSString *headerWithData = [NSString stringWithFormat:headerString, self.name, self.otherNames?[LPHtmlStringHelper stringFromArray:self.otherNames withSeperator:@", "]:@""];
             
         self.htmlString = [NSString stringWithFormat:@"%@\n%@\n%@\n%@", headerWithData, summaryWithData, self.content, footerString];
     }
