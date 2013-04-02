@@ -67,7 +67,6 @@
                     <connections>
                         <outlet property="searchDisplayController" destination="Ni7-ZO-UYb" id="mmQ-ul-tPJ"/>
                         <segue destination="FCD-TZ-I4L" kind="push" identifier="showTable" id="3ih-R6-ncp"/>
-                        <segue destination="2oB-1U-1Yf" kind="push" identifier="showContent" id="mwz-kC-1SL"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gpp-FI-YGd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -80,31 +79,6 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="466" y="-19"/>
-        </scene>
-        <!--Content View Controller - contentView-->
-        <scene sceneID="Nc6-CK-b8d">
-            <objects>
-                <viewController restorationIdentifier="" storyboardIdentifier="contentView" title="contentView" id="2oB-1U-1Yf" customClass="LPContentViewController" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="j3N-5C-rXz">
-                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                        <subviews>
-                            <webView contentMode="scaleToFill" id="GFk-Sw-0t3">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                            </webView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="ONZ-0B-yFt"/>
-                    <connections>
-                        <outlet property="webView1" destination="GFk-Sw-0t3" id="Sxx-Oh-MUi"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="W1d-Ai-M0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1009" y="381"/>
         </scene>
         <!--tableView-->
         <scene sceneID="BAK-QL-aKe">
@@ -143,7 +117,7 @@
                     </connections>
                 </searchDisplayController>
             </objects>
-            <point key="canvasLocation" x="1005" y="-297"/>
+            <point key="canvasLocation" x="984" y="-19"/>
         </scene>
     </scenes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
