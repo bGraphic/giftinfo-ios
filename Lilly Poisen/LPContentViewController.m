@@ -94,7 +94,7 @@ BOOL webView2HasLoaded;
         }
         else if (self.poison)
         {
-            NSString *summaryWithData = [NSString stringWithFormat:summaryString, self.poison.risk, self.poison.symptoms, self.poison.coal?@"Ja":@"Nei", self.poison.action];
+            NSString *summaryWithData = [NSString stringWithFormat:summaryString, self.poison.risk, self.poison.symptoms, self.poison.coal?@"Ja":@"Nei", self.poison.action?self.poison.action:@"Ingen spesielle tiltak"];
             
             htmlString1 = [NSString stringWithFormat:@"%@\n%@\n%@", headerString, summaryWithData, footerString];
             htmlString2 = [NSString stringWithFormat:@"%@\n%@\n%@", headerString, self.poison.content, footerString];
