@@ -11,7 +11,7 @@
 #import "LPContentViewController.h"
 #import "LPPoisonDataFromWP.h"
 #import "LPHtmlStringHelper.h"
-#import <QuartzCore/QuartzCore.h>
+#import "LPSearchBar.h"
 
 @interface LPPoisonDataSource ()
 
@@ -92,12 +92,23 @@
 
 - (BOOL)searchDisplayController:(UISearchDisplayController *)controller shouldReloadTableForSearchString:(NSString *)searchString
 {
-    
     self.searchString = searchString;
     
     [self filterContentForSearchText:searchString];
 
     return YES;
+}
+
+- (void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller
+{
+    LPSearchBar *searchBar = (LPSearchBar *) controller.searchBar;
+    searchBar.borderView.hidden = YES;
+}
+
+- (void)searchDisplayControllerWillEndSearch:(UISearchDisplayController *)controller
+{
+    LPSearchBar *searchBar = (LPSearchBar *) controller.searchBar;
+    searchBar.borderView.hidden = NO;
 }
 
 #pragma mark - Table view data source

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1304F438170B1BFB007EE125 /* LPSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1304F437170B1BFB007EE125 /* LPSearchBar.m */; };
 		13252474170ABCC70025B78D /* LPPhoneBooth.m in Sources */ = {isa = PBXBuildFile; fileRef = 13252473170ABCC70025B78D /* LPPhoneBooth.m */; };
 		132D2724170076AA00967E5C /* footer.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26DE170076AA00967E5C /* footer.html */; };
 		132D2725170076AA00967E5C /* header.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26DF170076AA00967E5C /* header.html */; };
@@ -63,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1304F436170B1BFB007EE125 /* LPSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPSearchBar.h; sourceTree = "<group>"; };
+		1304F437170B1BFB007EE125 /* LPSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPSearchBar.m; sourceTree = "<group>"; };
 		13252472170ABCC70025B78D /* LPPhoneBooth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPPhoneBooth.h; sourceTree = "<group>"; };
 		13252473170ABCC70025B78D /* LPPhoneBooth.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPhoneBooth.m; sourceTree = "<group>"; };
 		132D26DE170076AA00967E5C /* footer.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = footer.html; path = structure/footer.html; sourceTree = "<group>"; };
@@ -187,6 +190,8 @@
 				1381B36116F4E82800143FEA /* LPHtmlStringHelper.m */,
 				1381B36816F4F7EA00143FEA /* LPToolbar.h */,
 				1381B36916F4F7EA00143FEA /* LPToolbar.m */,
+				1304F436170B1BFB007EE125 /* LPSearchBar.h */,
+				1304F437170B1BFB007EE125 /* LPSearchBar.m */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -448,6 +453,7 @@
 				13A0B686170A08C900B4970F /* LPTopicDataFromWP.m in Sources */,
 				13A0B689170A3ECF00B4970F /* LPTopicDataSource.m in Sources */,
 				13252474170ABCC70025B78D /* LPPhoneBooth.m in Sources */,
+				1304F438170B1BFB007EE125 /* LPSearchBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
