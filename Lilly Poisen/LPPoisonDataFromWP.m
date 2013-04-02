@@ -80,7 +80,7 @@ static NSArray *poisonData;
         
         [poisons addObject:poison];
         
-        if(i > 0)
+        if(i == 0)
         {
             poison.slug = [NSString stringWithFormat:@"%@-%d", poison.slug, i];
             
