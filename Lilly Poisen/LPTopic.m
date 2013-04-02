@@ -11,18 +11,13 @@
 
 @implementation LPTopic
 
-static NSString *headerString;
-static NSString *footerString;
-
 - (NSString *) htmlString
 {
     if(_htmlString == nil)
     {
-        if(!headerString)
-            headerString = [LPHtmlStringHelper stringFromHtmlFileWithName:@"header"];
-    
-        if(!footerString)
-            footerString = [LPHtmlStringHelper stringFromHtmlFileWithName:@"footer"];
+        NSString *headerString = [LPHtmlStringHelper stringFromHtmlFileWithName:@"header"];
+        
+        NSString *footerString = [LPHtmlStringHelper stringFromHtmlFileWithName:@"footer"];
 
         NSString *headerWithData = [NSString stringWithFormat:headerString, self.title, @""];
         

@@ -7,13 +7,8 @@
 //
 
 #import "LPPoisonTableViewController.h"
-#import "LPContentViewController.h"
 #import "LPPoison.h"
 #import "LPSearchBar.h"
-
-@interface LPPoisonTableViewController ()
-
-@end
 
 @implementation LPPoisonTableViewController
 
@@ -46,13 +41,16 @@
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UIStoryboard * storyboard = self.storyboard;
-    LPContentViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
-    
     LPPoison *poison = [self.poisonDataSource poisonAtIndexPath:indexPath];
-    detail.htmlString = poison.htmlString;
     
-    [self.navigationController pushViewController: detail animated: YES];
+    
+    self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
+    [self.webView loadHTMLString:poison.htmlString baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] resourcePath]]];
+    self.webView.hidden = YES;
+    
+    [self.view addSubview:self.webView];
+    
+    self.webView.delegate = self;
 }
 
 - (void)viewDidUnload {
@@ -63,6 +61,21 @@
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return 70.f;
+}
+
+#pragma mark - UIWebViewDelegate
+
+- (void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    UIViewController *detail = [[UIViewController alloc] init];
+    
+    [detail.view addSubview:webView];
+    self.webView.hidden = NO;
+    
+    detail.toolbarItems = self.toolbarItems;
+    self.webView.scrollView.scrollIndicatorInsets = UIEdgeInsetsMake(5, 0, 10, 0);
+    
+    [self.navigationController pushViewController: detail animated: YES];
 }
 
 @end

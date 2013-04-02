@@ -10,10 +10,21 @@
 
 @implementation LPHtmlStringHelper
 
+static NSMutableDictionary *htmlDict;
+
 + (NSString *) stringFromHtmlFileWithName:(NSString *) name
 {
+    if(htmlDict == nil)
+        htmlDict = [NSMutableDictionary dictionary];
+    
     if(!name || [name isEqualToString:@""])
+    {
         return @"";
+    }
+    else if ([htmlDict valueForKey:name])
+    {
+        return [htmlDict valueForKey:name];
+    }
     
     NSString *contentPath = [[NSBundle mainBundle] pathForResource:name ofType:@"html"];
     
@@ -22,6 +33,8 @@
     
     if(contentError)
         NSLog(@"Problems loading html content with name:%@ because: %@", name, contentError.description);
+    
+    [htmlDict setValue:contentString forKey:name];
 
     return contentString;
 }

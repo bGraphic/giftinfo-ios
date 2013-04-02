@@ -8,6 +8,7 @@
 
 #import "LPAppDelegate.h"
 #import "TestFlight.h"
+#import "LPHtmlStringHelper.h"
 
 @implementation LPAppDelegate
 

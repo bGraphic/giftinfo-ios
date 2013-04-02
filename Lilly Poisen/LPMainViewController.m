@@ -7,7 +7,6 @@
 //
 
 #import "LPMainViewController.h"
-#import "LPContentViewController.h"
 #import "LPPoison.h"
 #import "LPHtmlStringHelper.h"
 #import "LPTopicDataSource.h"
@@ -34,6 +33,13 @@
     self.navigationController.toolbar.frame = toolbarFrame;
     
     self.topicDataSource = [[LPTopicDataSource alloc] init];
+    
+    self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
+    self.webView.hidden = YES;
+    
+    [self.view addSubview:self.webView];
+    
+    [self.webView loadHTMLString:@"" baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] resourcePath]]];
 }
 
 - (void) didReceiveMemoryWarning
@@ -96,14 +102,15 @@
             [self performSegueWithIdentifier:@"showTable" sender:self];
         }
         else
-        {
-            UIStoryboard * storyboard = self.storyboard;
-            LPContentViewController *detail = [storyboard instantiateViewControllerWithIdentifier:@"contentView"];
-            
+        {            
             LPTopic *topic = [self.topicDataSource topicAtIndexPath:indexPath];
-            detail.htmlString = topic.htmlString;
             
-            [self.navigationController pushViewController: detail animated: YES];
+            self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
+            [self.webView loadHTMLString:topic.htmlString baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] resourcePath]]];
+            self.webView.hidden = YES;
+            [self.view addSubview:self.webView];
+            
+            self.webView.delegate = self;
         }
     }
 }

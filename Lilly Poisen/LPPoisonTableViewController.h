@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "LPPoisonDataSource.h"
 
-@interface LPPoisonTableViewController : UITableViewController
+@interface LPPoisonTableViewController : UITableViewController <UIWebViewDelegate>
 
 @property (strong, nonatomic) IBOutlet LPPoisonDataSource *poisonDataSource;
+
+@property UIWebView *webView;
 
 @end

@@ -19,7 +19,6 @@
 		1381B33C16F123A700143FEA /* color.png in Resources */ = {isa = PBXBuildFile; fileRef = 1381B33B16F123A700143FEA /* color.png */; };
 		1381B34516F4A4B400143FEA /* LPPoison.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B34416F4A4B400143FEA /* LPPoison.m */; };
 		1381B36216F4E82800143FEA /* LPHtmlStringHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B36116F4E82800143FEA /* LPHtmlStringHelper.m */; };
-		1381B36F16F5F5EB00143FEA /* LPContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B36E16F5F5EB00143FEA /* LPContentViewController.m */; };
 		1397DDA116ED099C0061087F /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1397DD9D16ED099C0061087F /* libTestFlight.a */; };
 		1397DDA216ED099C0061087F /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 1397DD9E16ED099C0061087F /* README.md */; };
 		1397DDA316ED099C0061087F /* release_notes.md in Resources */ = {isa = PBXBuildFile; fileRef = 1397DD9F16ED099C0061087F /* release_notes.md */; };
@@ -81,8 +80,6 @@
 		1381B34416F4A4B400143FEA /* LPPoison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPoison.m; sourceTree = "<group>"; };
 		1381B36016F4E82800143FEA /* LPHtmlStringHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPHtmlStringHelper.h; sourceTree = "<group>"; };
 		1381B36116F4E82800143FEA /* LPHtmlStringHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPHtmlStringHelper.m; sourceTree = "<group>"; };
-		1381B36D16F5F5EB00143FEA /* LPContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPContentViewController.h; sourceTree = "<group>"; };
-		1381B36E16F5F5EB00143FEA /* LPContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPContentViewController.m; sourceTree = "<group>"; };
 		1397DD9D16ED099C0061087F /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		1397DD9E16ED099C0061087F /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
 		1397DD9F16ED099C0061087F /* release_notes.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.md; sourceTree = "<group>"; };
@@ -256,8 +253,6 @@
 				13A0B6731709E74500B4970F /* Data from WP */,
 				13EC391916EB9FE8005244BD /* LPAppDelegate.h */,
 				13EC391A16EB9FE8005244BD /* LPAppDelegate.m */,
-				1381B36D16F5F5EB00143FEA /* LPContentViewController.h */,
-				1381B36E16F5F5EB00143FEA /* LPContentViewController.m */,
 				13EB1A1D16EBA9EE00170579 /* LPMainViewController.h */,
 				13EB1A1E16EBA9EE00170579 /* LPMainViewController.m */,
 				13794DD816EBE0C6003EF093 /* LPPoisonDataSource.h */,
@@ -440,7 +435,6 @@
 				13794DDD16EBE223003EF093 /* LPPoisonTableViewController.m in Sources */,
 				1381B34516F4A4B400143FEA /* LPPoison.m in Sources */,
 				1381B36216F4E82800143FEA /* LPHtmlStringHelper.m in Sources */,
-				1381B36F16F5F5EB00143FEA /* LPContentViewController.m in Sources */,
 				13A0B67A1709EB7200B4970F /* LPTopic.m in Sources */,
 				13A0B6801709F7BD00B4970F /* LPJSONfromWP.m in Sources */,
 				13A0B6831709FBF100B4970F /* LPPoisonDataFromWP.m in Sources */,

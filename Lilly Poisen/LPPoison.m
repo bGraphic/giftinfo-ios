@@ -11,23 +11,16 @@
 
 @implementation LPPoison
 
-static NSString *headerString;
-static NSString *footerString;
-static NSString *summaryString;
-
-
 - (NSString *) htmlString
 {
     if (_htmlString == nil)
     {
-        if(!headerString)
-        headerString = [LPHtmlStringHelper stringFromHtmlFileWithName:@"header"];
+
+        NSString *headerString = [LPHtmlStringHelper stringFromHtmlFileWithName:@"header"];
         
-        if(!footerString)
-            footerString = [LPHtmlStringHelper stringFromHtmlFileWithName:@"footer"];
+        NSString *footerString = [LPHtmlStringHelper stringFromHtmlFileWithName:@"footer"];
         
-        if(!summaryString)
-            summaryString = [LPHtmlStringHelper stringFromHtmlFileWithName:@"summary"];
+        NSString *summaryString = [LPHtmlStringHelper stringFromHtmlFileWithName:@"summary"];
         
         NSString *summaryWithData = [NSString stringWithFormat:summaryString, self.risk, self.symptoms, self.coal?@"Ja":@"Nei", self.action?self.action:@"Ingen spesielle tiltak"];
             

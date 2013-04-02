@@ -8,7 +8,6 @@
 
 #import "LPPoisonDataSource.h"
 #import "LPAppDelegate.h"
-#import "LPContentViewController.h"
 #import "LPPoisonDataFromWP.h"
 #import "LPHtmlStringHelper.h"
 #import "LPSearchBar.h"
