@@ -21,4 +21,9 @@
     return [NSString stringWithFormat:@"%@\n%@", summaryString, contentString];
 }
 
+- (NSString *) description
+{
+    return [NSString stringWithFormat:@"Name: %@ \nSlug: %@ \nTag: %@", self.name, self.slug, [LPHtmlStringHelper stringFromArray:self.tags withSeperator:@", "]];
+}
+
 @end

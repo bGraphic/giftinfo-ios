@@ -61,13 +61,16 @@ static NSArray *poisonData;
     NSMutableArray *nameArray = [[NSMutableArray alloc] initWithCapacity:nameDataArray.count];
     NSMutableArray *poisons = [[NSMutableArray alloc] initWithCapacity:nameDataArray.count];
     
-    int i = 0;
-    
     for (NSString *nameData in nameDataArray)
     {
         NSString *name = [nameData stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
         [nameArray addObject:name];
-        
+    }
+    
+    int i = 0;
+    
+    for (NSString *name in nameArray)
+    {
         LPPoison *poison = [[LPPoison alloc] init];
         
         poison.name = name;
@@ -82,6 +85,10 @@ static NSArray *poisonData;
         
         if(i == 0)
         {
+            NSMutableArray *firstPoisonsOtherNames = [NSMutableArray arrayWithArray:nameArray];
+            [firstPoisonsOtherNames removeObject:poison.name];
+            poison.otherNames = firstPoisonsOtherNames;
+            
             NSMutableArray *tagArray = [[NSMutableArray alloc] init];
             
             for (NSDictionary *tagDict in poisonDict[@"tags"])
@@ -96,14 +103,11 @@ static NSArray *poisonData;
             poison.slug = [NSString stringWithFormat:@"%@-%d", poison.slug, i];
         }
         
+        NSLog(@"%@", [poison description]);
+        
         i++;
     }
-    
-    LPPoison *firstPoison = [poisons objectAtIndex:0];
-    NSMutableArray *firstPoisonsOtherNames = [NSMutableArray arrayWithArray:nameArray];
-    [firstPoisonsOtherNames removeObject:firstPoison.name];
-    firstPoison.otherNames = firstPoisonsOtherNames;
-    
+        
     return poisons;
 }
 
