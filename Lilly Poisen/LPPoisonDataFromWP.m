@@ -82,8 +82,6 @@ static NSArray *poisonData;
         
         if(i == 0)
         {
-            poison.slug = [NSString stringWithFormat:@"%@-%d", poison.slug, i];
-            
             NSMutableArray *tagArray = [[NSMutableArray alloc] init];
             
             for (NSDictionary *tagDict in poisonDict[@"tags"])
@@ -92,6 +90,10 @@ static NSArray *poisonData;
             }
             
             poison.tags = tagArray;
+        }
+        else
+        {
+            poison.slug = [NSString stringWithFormat:@"%@-%d", poison.slug, i];
         }
         
         i++;
