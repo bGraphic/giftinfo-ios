@@ -84,7 +84,7 @@
         <!--Content View Controller - contentView-->
         <scene sceneID="Nc6-CK-b8d">
             <objects>
-                <viewController restorationIdentifier="contentView" storyboardIdentifier="contentView" title="contentView" id="2oB-1U-1Yf" customClass="LPContentViewController" sceneMemberID="viewController">
+                <viewController restorationIdentifier="" storyboardIdentifier="contentView" title="contentView" id="2oB-1U-1Yf" customClass="LPContentViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="j3N-5C-rXz">
                         <rect key="frame" x="0.0" y="64" width="320" height="460"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>

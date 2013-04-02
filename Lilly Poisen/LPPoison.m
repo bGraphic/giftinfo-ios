@@ -11,14 +11,32 @@
 
 @implementation LPPoison
 
+static NSString *headerString;
+static NSString *footerString;
+static NSString *summaryString;
 
-- (NSString *) htmlContentString
+
+- (NSString *) htmlString
 {
-    NSString *contentString = self.content;
-    NSString *summaryString = [LPHtmlStringHelper stringFromHtmlFileWithName:@"summary"];
-    summaryString = [NSString stringWithFormat:summaryString, self.name, self.risk, self.symptoms, self.coal, self.action];
+    if (_htmlString == nil)
+    {
+        if(!headerString)
+        headerString = [LPHtmlStringHelper stringFromHtmlFileWithName:@"header"];
+        
+        if(!footerString)
+            footerString = [LPHtmlStringHelper stringFromHtmlFileWithName:@"footer"];
+        
+        if(!summaryString)
+            summaryString = [LPHtmlStringHelper stringFromHtmlFileWithName:@"summary"];
+        
+        NSString *summaryWithData = [NSString stringWithFormat:summaryString, self.risk, self.symptoms, self.coal?@"Ja":@"Nei", self.action?self.action:@"Ingen spesielle tiltak"];
+            
+        NSString *headerWithData = [NSString stringWithFormat:headerString, self.name, [LPHtmlStringHelper stringFromArray:self.otherNames withSeperator:@", "]];
+            
+        self.htmlString = [NSString stringWithFormat:@"%@\n%@\n%@\n%@", headerWithData, summaryWithData, self.content, footerString];
+    }
     
-    return [NSString stringWithFormat:@"%@\n%@", summaryString, contentString];
+    return _htmlString;
 }
 
 - (NSString *) description

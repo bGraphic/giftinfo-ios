@@ -13,13 +13,11 @@
 
 @interface LPContentViewController ()
 
+@property (nonatomic, strong) NSString *htmlString;
+
 @end
 
 @implementation LPContentViewController
-
-static NSString *headerString;
-static NSString *footerString;
-static NSString *summaryString;
 
 - (void)viewDidLoad
 {
@@ -31,8 +29,6 @@ static NSString *summaryString;
     self.toolbarItems = self.navigationController.toolbarItems;
     self.webView1.scrollView.contentInset = UIEdgeInsetsMake(0, 0, 10, 0);
     self.webView1.scrollView.scrollIndicatorInsets = UIEdgeInsetsMake(5, 0, 10, 0);
-    
-    self.webView1.scrollView.bounces = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -67,36 +63,11 @@ static NSString *summaryString;
 {
     if(self.view)
     
-    if (self.poison || self.topic)
-    {
-        if(!headerString)
-            headerString = [LPHtmlStringHelper stringFromHtmlFileWithName:@"header"];
-        
-        if(!footerString)
-            footerString = [LPHtmlStringHelper stringFromHtmlFileWithName:@"footer"];
-        
-        if(!summaryString)
-            summaryString = [LPHtmlStringHelper stringFromHtmlFileWithName:@"summary"];
-        
-        NSString *htmlString;
-        
-        if(self.topic)
-        {
-            NSString *headerWithData = [NSString stringWithFormat:headerString, self.topic.title, @""];
-            
-            htmlString = [NSString stringWithFormat:@"%@\n%@\n%@", headerWithData, self.topic.content, footerString];
-        }
-        else if (self.poison)
-        {
-            NSString *summaryWithData = [NSString stringWithFormat:summaryString, self.poison.risk, self.poison.symptoms, self.poison.coal?@"Ja":@"Nei", self.poison.action?self.poison.action:@"Ingen spesielle tiltak"];
-            
-            NSString *headerWithData = [NSString stringWithFormat:headerString, self.poison.name, [LPHtmlStringHelper stringFromArray:self.poison.otherNames withSeperator:@", "]];
-            
-            htmlString = [NSString stringWithFormat:@"%@\n%@\n%@\n%@", headerWithData, summaryWithData, self.poison.content, footerString];
-        }
-        
-        
-        [self.webView1 loadHTMLString:htmlString baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] resourcePath]]];
+    if (self.poison)
+        [self.webView1 loadHTMLString:self.poison.htmlString baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] resourcePath]]];
+    
+    if (self.topic) {
+        [self.webView1 loadHTMLString:self.topic.htmlString baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] resourcePath]]];
     }
 }
 

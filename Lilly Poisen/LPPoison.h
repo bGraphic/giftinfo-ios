@@ -22,6 +22,6 @@
 @property (nonatomic, strong) NSString * risk;
 @property (nonatomic, strong) NSArray * tags;
 
-@property (strong, nonatomic, readonly) NSString *htmlContentString;
+@property (nonatomic, strong) NSString * htmlString;
 
 @end
