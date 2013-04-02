@@ -120,4 +120,19 @@
     }
 }
 
+- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+    if(self.tableView != tableView)
+    {
+        return [super tableView:tableView heightForHeaderInSection:(NSInteger)section];
+    }
+    else
+    {
+        if(section == 0)
+            return 20.f;
+        else
+            return 40.f;
+    }
+}
+
 @end
