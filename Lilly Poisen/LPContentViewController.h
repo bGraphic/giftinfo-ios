@@ -10,12 +10,11 @@
 #import "LPTopic.h"
 #import "LPPoison.h"
 
-@interface LPContentViewController : UITableViewController <UIWebViewDelegate>
+@interface LPContentViewController : UIViewController <UIWebViewDelegate>
 
 @property (strong, nonatomic) LPTopic *topic;
 @property (strong, nonatomic) LPPoison *poison;
 
 @property (weak, nonatomic) IBOutlet UIWebView *webView1;
 
-@property (weak, nonatomic) IBOutlet UIWebView *webView2;
 @end

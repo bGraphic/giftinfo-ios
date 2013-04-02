@@ -67,7 +67,7 @@
                     <connections>
                         <outlet property="searchDisplayController" destination="Ni7-ZO-UYb" id="mmQ-ul-tPJ"/>
                         <segue destination="FCD-TZ-I4L" kind="push" identifier="showTable" id="3ih-R6-ncp"/>
-                        <segue destination="tXo-fa-XGO" kind="push" identifier="showContent" id="13g-5X-z9X"/>
+                        <segue destination="2oB-1U-1Yf" kind="push" identifier="showContent" id="mwz-kC-1SL"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gpp-FI-YGd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -80,6 +80,31 @@
                 </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="466" y="-19"/>
+        </scene>
+        <!--Content View Controller - contentView-->
+        <scene sceneID="Nc6-CK-b8d">
+            <objects>
+                <viewController restorationIdentifier="contentView" storyboardIdentifier="contentView" title="contentView" id="2oB-1U-1Yf" customClass="LPContentViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="j3N-5C-rXz">
+                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" id="GFk-Sw-0t3">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="460"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="ONZ-0B-yFt"/>
+                    <connections>
+                        <outlet property="webView1" destination="GFk-Sw-0t3" id="Sxx-Oh-MUi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W1d-Ai-M0l" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1009" y="381"/>
         </scene>
         <!--tableView-->
         <scene sceneID="BAK-QL-aKe">
@@ -120,109 +145,7 @@
             </objects>
             <point key="canvasLocation" x="1005" y="-297"/>
         </scene>
-        <!--Content View Controller - contentView-->
-        <scene sceneID="otp-R4-4fk">
-            <objects>
-                <tableViewController storyboardIdentifier="contentView" title="contentView" id="tXo-fa-XGO" customClass="LPContentViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="singleLineEtched" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="AtM-Q9-anF">
-                        <rect key="frame" x="0.0" y="64" width="320" height="460"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="0.90000000000000002" alpha="1" colorSpace="calibratedWhite"/>
-                        <sections>
-                            <tableViewSection id="a5a-n6-faW">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="208" id="sPl-Rb-545">
-                                        <rect key="frame" x="0.0" y="10" width="320" height="210"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="300" height="207"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <webView opaque="NO" contentMode="scaleToFill" id="zId-EI-8e7">
-                                                    <rect key="frame" x="5" y="6" width="291" height="195"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
-                                                </webView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection id="gEd-0h-8e2">
-                                <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="208" id="w55-rG-9wB">
-                                        <rect key="frame" x="0.0" y="240" width="320" height="210"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
-                                            <rect key="frame" x="10" y="1" width="300" height="207"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <webView opaque="NO" contentMode="scaleToFill" id="U4O-fp-ZJJ">
-                                                    <rect key="frame" x="5" y="6" width="291" height="195"/>
-                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                                    <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES"/>
-                                                </webView>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                        </view>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="tXo-fa-XGO" id="qyw-df-TtE"/>
-                            <outlet property="delegate" destination="tXo-fa-XGO" id="rAV-md-tpX"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Giftinformasjon" id="Bbd-9F-Wl6">
-                        <barButtonItem key="backBarButtonItem" title="Tilbake" id="KES-rd-Zhn"/>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="webView1" destination="zId-EI-8e7" id="P24-Gf-ejm"/>
-                        <outlet property="webView2" destination="U4O-fp-ZJJ" id="Zvp-kz-ihF"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="CQV-m6-6d0" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1005" y="436"/>
-        </scene>
     </scenes>
-    <classes>
-        <class className="LPContentViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPContentViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="webView1" candidateClass="UIWebView"/>
-                <relationship kind="outlet" name="webView2" candidateClass="UIWebView"/>
-            </relationships>
-        </class>
-        <class className="LPMainViewController" superclassName="LPPoisonTableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPMainViewController.h"/>
-        </class>
-        <class className="LPPhoneBooth" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPPhoneBooth.h"/>
-            <relationships>
-                <relationship kind="action" name="callAmbulance:"/>
-                <relationship kind="action" name="callInfo:"/>
-            </relationships>
-        </class>
-        <class className="LPPoisonDataSource" superclassName="NSObject">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPPoisonDataSource.h"/>
-        </class>
-        <class className="LPPoisonTableViewController" superclassName="UITableViewController">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPPoisonTableViewController.h"/>
-            <relationships>
-                <relationship kind="outlet" name="poisonDataSource" candidateClass="LPPoisonDataSource"/>
-            </relationships>
-        </class>
-        <class className="LPSearchBar" superclassName="UISearchBar">
-            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPSearchBar.h"/>
-        </class>
-    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

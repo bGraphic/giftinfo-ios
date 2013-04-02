@@ -21,25 +21,18 @@ static NSString *headerString;
 static NSString *footerString;
 static NSString *summaryString;
 
-BOOL webView1HasLoaded;
-BOOL webView2HasLoaded;
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
     
-    self.webView1.delegate = self;
-    self.webView2.delegate = self;
-    
     [self configureView];
     
     self.toolbarItems = self.navigationController.toolbarItems;
-    self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 10, 0);
-    self.tableView.scrollIndicatorInsets = UIEdgeInsetsMake(5, 0, 10, 0);
+    self.webView1.scrollView.contentInset = UIEdgeInsetsMake(0, 0, 10, 0);
+    self.webView1.scrollView.scrollIndicatorInsets = UIEdgeInsetsMake(5, 0, 10, 0);
     
     self.webView1.scrollView.bounces = NO;
-    self.webView2.scrollView.bounces = NO;
 }
 
 - (void)didReceiveMemoryWarning
@@ -85,79 +78,30 @@ BOOL webView2HasLoaded;
         if(!summaryString)
             summaryString = [LPHtmlStringHelper stringFromHtmlFileWithName:@"summary"];
         
-        NSString *htmlString1;
-        NSString *htmlString2;
+        NSString *htmlString;
         
         if(self.topic)
         {
-            htmlString1 = [NSString stringWithFormat:@"%@\n%@\n%@", headerString, self.topic.content, footerString];
+            NSString *headerWithData = [NSString stringWithFormat:headerString, self.topic.title, @""];
+            
+            htmlString = [NSString stringWithFormat:@"%@\n%@\n%@", headerWithData, self.topic.content, footerString];
         }
         else if (self.poison)
         {
             NSString *summaryWithData = [NSString stringWithFormat:summaryString, self.poison.risk, self.poison.symptoms, self.poison.coal?@"Ja":@"Nei", self.poison.action?self.poison.action:@"Ingen spesielle tiltak"];
             
-            htmlString1 = [NSString stringWithFormat:@"%@\n%@\n%@", headerString, summaryWithData, footerString];
-            htmlString2 = [NSString stringWithFormat:@"%@\n%@\n%@", headerString, self.poison.content, footerString];
+            NSString *headerWithData = [NSString stringWithFormat:headerString, self.poison.name, [LPHtmlStringHelper stringFromArray:self.poison.otherNames withSeperator:@", "]];
+            
+            htmlString = [NSString stringWithFormat:@"%@\n%@\n%@\n%@", headerWithData, summaryWithData, self.poison.content, footerString];
         }
         
         
-        [self.webView1 loadHTMLString:htmlString1 baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] resourcePath]]];
-        [self.webView2 loadHTMLString:htmlString2 baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] resourcePath]]];
+        [self.webView1 loadHTMLString:htmlString baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] resourcePath]]];
     }
-}
-
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if(indexPath.section == 0)
-        return self.webView1.frame.size.height + 10.f;
-    else
-        return self.webView2.frame.size.height + 10.f;
-}
-
-- (NSString *) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
-{
-    if(self.topic)
-        return self.topic.title;
-    else if(section == 0)
-        return self.poison.name;
-    else
-        return @"Mer informasjon";
-}
-
-- (int) numberOfSectionsInTableView:(UITableView *)tableView
-{
-    if(self.poison)
-        return 2;
-    
-    return 1;
-}
-
-- (void)viewDidUnload {
-    [self setWebView1:nil];
-    [self setWebView2:nil];
-    [self setWebView2:nil];
-    [super viewDidUnload];
-}
-
-- (void) calculateWebViewSize {
-    
-    [self.webView1 sizeToFit];
-    [self.webView2 sizeToFit];
-    
-    [self.tableView reloadData];
 }
 
 #pragma mark - UIWebViewDelegate
 
-- (void) webViewDidFinishLoad:(UIWebView *)sender {
-    if(sender == self.webView1)
-        webView1HasLoaded = YES;
-    else
-        webView2HasLoaded = YES;
-    
-    if(webView1HasLoaded && webView2HasLoaded)
-        [self performSelector:@selector(calculateWebViewSize) withObject:nil afterDelay:0.1];
-}
 
 - (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
 {
