@@ -34,7 +34,7 @@
     CGRect frame = self.bounds;
     
     UIView *searchBackground = [[UIView alloc] initWithFrame:frame];
-    searchBackground.backgroundColor = [UIColor whiteColor];
+    searchBackground.backgroundColor = [UIColor colorWithWhite:1.0 alpha:1.0];
     
     frame.origin.y = frame.size.height-1.f;
     frame.size.height = 1.f;

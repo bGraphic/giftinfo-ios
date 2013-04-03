@@ -8,7 +8,7 @@
 
 #import "LPAppDelegate.h"
 #import "TestFlight.h"
-#import "LPHtmlStringHelper.h"
+#import "LPMainViewController.h"
 
 @implementation LPAppDelegate
 
@@ -19,8 +19,6 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     [self setUpTestFlight];
-    
-    [self customizeAppearance];
     
     return YES;
 }
@@ -156,24 +154,6 @@
     [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
     [TestFlight takeOff:@"2841f101-4339-4501-8a5d-bc6ceefe00b3"];
 #endif
-}
-
-#pragma mark - Customize Appearance
-- (void)customizeAppearance
-{
-    UIImage *colorImage = [[UIImage imageNamed:@"color"] resizableImageWithCapInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
-    UIColor *color = [UIColor colorWithRed:204.f/255.f green:204.f/255.f blue:0.f alpha:1.f];
-    
-    [[UINavigationBar appearance] setBackgroundImage:colorImage forBarMetrics:UIBarMetricsDefault];
-    
-    [[UINavigationBar appearance] setTintColor:color];
-    
-    [[UIToolbar appearance] setBackgroundImage:colorImage
-                            forToolbarPosition:UIToolbarPositionBottom
-                                    barMetrics:UIBarMetricsDefault];
-    [[UIToolbar appearance] setTintColor:color];
-    
-    [[UINavigationBar appearance] setTitleTextAttributes:[NSDictionary dictionaryWithObjectsAndKeys:[NSValue valueWithUIOffset:UIOffsetMake(0, 1)], UITextAttributeTextShadowOffset, [UIColor whiteColor], UITextAttributeTextShadowColor, [UIColor darkGrayColor], UITextAttributeTextColor, nil]];
 }
 
 

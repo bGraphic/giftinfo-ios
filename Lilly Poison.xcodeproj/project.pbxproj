@@ -14,9 +14,9 @@
 		132D2726170076AA00967E5C /* main-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 132D26E0170076AA00967E5C /* main-info.plist */; };
 		132D2728170076AA00967E5C /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 132D26E2170076AA00967E5C /* style.css */; };
 		132D272C170076AA00967E5C /* summary.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26E7170076AA00967E5C /* summary.html */; };
+		135BBE83170C511200F3BE90 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 135BBE82170C511200F3BE90 /* background.png */; };
 		13794DDA16EBE0C6003EF093 /* LPPoisonDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DD916EBE0C6003EF093 /* LPPoisonDataSource.m */; };
 		13794DDD16EBE223003EF093 /* LPPoisonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DDC16EBE223003EF093 /* LPPoisonTableViewController.m */; };
-		1381B33C16F123A700143FEA /* color.png in Resources */ = {isa = PBXBuildFile; fileRef = 1381B33B16F123A700143FEA /* color.png */; };
 		1381B34516F4A4B400143FEA /* LPPoison.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B34416F4A4B400143FEA /* LPPoison.m */; };
 		1381B36216F4E82800143FEA /* LPHtmlStringHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B36116F4E82800143FEA /* LPHtmlStringHelper.m */; };
 		1397DDA116ED099C0061087F /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 1397DD9D16ED099C0061087F /* libTestFlight.a */; };
@@ -71,11 +71,11 @@
 		132D26E0170076AA00967E5C /* main-info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "main-info.plist"; path = "structure/main-info.plist"; sourceTree = "<group>"; };
 		132D26E2170076AA00967E5C /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = style.css; path = structure/style.css; sourceTree = "<group>"; };
 		132D26E7170076AA00967E5C /* summary.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = summary.html; path = general/summary.html; sourceTree = "<group>"; };
+		135BBE82170C511200F3BE90 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
 		13794DD816EBE0C6003EF093 /* LPPoisonDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPPoisonDataSource.h; sourceTree = "<group>"; };
 		13794DD916EBE0C6003EF093 /* LPPoisonDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPoisonDataSource.m; sourceTree = "<group>"; };
 		13794DDB16EBE223003EF093 /* LPPoisonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPPoisonTableViewController.h; sourceTree = "<group>"; };
 		13794DDC16EBE223003EF093 /* LPPoisonTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPoisonTableViewController.m; sourceTree = "<group>"; };
-		1381B33B16F123A700143FEA /* color.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = color.png; sourceTree = "<group>"; };
 		1381B34316F4A4B400143FEA /* LPPoison.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPPoison.h; sourceTree = "<group>"; };
 		1381B34416F4A4B400143FEA /* LPPoison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPoison.m; sourceTree = "<group>"; };
 		1381B36016F4E82800143FEA /* LPHtmlStringHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPHtmlStringHelper.h; sourceTree = "<group>"; };
@@ -179,7 +179,7 @@
 		1381B33A16F1239D00143FEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				1381B33B16F123A700143FEA /* color.png */,
+				135BBE82170C511200F3BE90 /* background.png */,
 				1381B36016F4E82800143FEA /* LPHtmlStringHelper.h */,
 				1381B36116F4E82800143FEA /* LPHtmlStringHelper.m */,
 				1304F436170B1BFB007EE125 /* LPSearchBar.h */,
@@ -385,7 +385,6 @@
 				13EC394416EBA0A8005244BD /* MainStoryboard.storyboard in Resources */,
 				1397DDA216ED099C0061087F /* README.md in Resources */,
 				1397DDA316ED099C0061087F /* release_notes.md in Resources */,
-				1381B33C16F123A700143FEA /* color.png in Resources */,
 				132D2724170076AA00967E5C /* footer.html in Resources */,
 				132D2725170076AA00967E5C /* header.html in Resources */,
 				132D2726170076AA00967E5C /* main-info.plist in Resources */,
@@ -393,6 +392,7 @@
 				132D272C170076AA00967E5C /* summary.html in Resources */,
 				13D7F440170455EB001D7F93 /* poisons.json in Resources */,
 				13A0B6721709E67F00B4970F /* topics.json in Resources */,
+				135BBE83170C511200F3BE90 /* background.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

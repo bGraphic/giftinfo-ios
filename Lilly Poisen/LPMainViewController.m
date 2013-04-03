@@ -40,6 +40,10 @@
     [self.view addSubview:self.webView];
     
     [self.webView loadHTMLString:@"" baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] resourcePath]]];
+    
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background"]];
+    imageView.alpha = 0.6;
+    self.tableView.backgroundView = imageView;
 }
 
 - (void) didReceiveMemoryWarning
