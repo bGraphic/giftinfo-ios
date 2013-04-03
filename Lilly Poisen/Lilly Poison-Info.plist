@@ -14,13 +14,13 @@
 		<dict>
 			<key>CFBundleIconFiles</key>
 			<array>
-				<string>Icon-poison_57.png</string>
-				<string>Icon-poison_114.png</string>
+				<string>Icon-poison_57-beta.png</string>
+				<string>Icon-poison_114-beta.png</string>
 			</array>
 		</dict>
 	</dict>
 	<key>CFBundleIdentifier</key>
-	<string>no.bgraphic.beta.lillyapps.lillypoison</string>
+	<string>no.bgraphic.beta.poisoninfo</string>
 	<key>CFBundleInfoDictionaryVersion</key>
 	<string>6.0</string>
 	<key>CFBundleName</key>

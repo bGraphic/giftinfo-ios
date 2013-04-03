@@ -150,10 +150,12 @@
 
 - (void)setUpTestFlight
 {
+    
 #if ADHOC
     [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
-    [TestFlight takeOff:@"2841f101-4339-4501-8a5d-bc6ceefe00b3"];
+    [TestFlight takeOff:@"7408f64d-2a18-4ec2-8974-e60fb4a2dcdf"];
 #endif
+    
 }
 
 
