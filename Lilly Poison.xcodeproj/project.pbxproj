@@ -15,6 +15,8 @@
 		132D2728170076AA00967E5C /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 132D26E2170076AA00967E5C /* style.css */; };
 		132D272C170076AA00967E5C /* summary.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26E7170076AA00967E5C /* summary.html */; };
 		135BBE83170C511200F3BE90 /* background.png in Resources */ = {isa = PBXBuildFile; fileRef = 135BBE82170C511200F3BE90 /* background.png */; };
+		135BBE89170C618900F3BE90 /* Icon-poison_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 135BBE88170C618900F3BE90 /* Icon-poison_57.png */; };
+		135BBE8B170C618B00F3BE90 /* Icon-poison_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 135BBE8A170C618B00F3BE90 /* Icon-poison_114.png */; };
 		13794DDA16EBE0C6003EF093 /* LPPoisonDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DD916EBE0C6003EF093 /* LPPoisonDataSource.m */; };
 		13794DDD16EBE223003EF093 /* LPPoisonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DDC16EBE223003EF093 /* LPPoisonTableViewController.m */; };
 		1381B34516F4A4B400143FEA /* LPPoison.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B34416F4A4B400143FEA /* LPPoison.m */; };
@@ -72,6 +74,8 @@
 		132D26E2170076AA00967E5C /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = style.css; path = structure/style.css; sourceTree = "<group>"; };
 		132D26E7170076AA00967E5C /* summary.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = summary.html; path = general/summary.html; sourceTree = "<group>"; };
 		135BBE82170C511200F3BE90 /* background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = background.png; sourceTree = "<group>"; };
+		135BBE88170C618900F3BE90 /* Icon-poison_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-poison_57.png"; sourceTree = "<group>"; };
+		135BBE8A170C618B00F3BE90 /* Icon-poison_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-poison_114.png"; sourceTree = "<group>"; };
 		13794DD816EBE0C6003EF093 /* LPPoisonDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPPoisonDataSource.h; sourceTree = "<group>"; };
 		13794DD916EBE0C6003EF093 /* LPPoisonDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPoisonDataSource.m; sourceTree = "<group>"; };
 		13794DDB16EBE223003EF093 /* LPPoisonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPPoisonTableViewController.h; sourceTree = "<group>"; };
@@ -215,6 +219,8 @@
 		13EC38FC16EB9FE8005244BD = {
 			isa = PBXGroup;
 			children = (
+				135BBE8A170C618B00F3BE90 /* Icon-poison_114.png */,
+				135BBE88170C618900F3BE90 /* Icon-poison_57.png */,
 				13EC391016EB9FE8005244BD /* Lilly Poison */,
 				13EC393216EB9FE8005244BD /* Lilly PoisonTests */,
 				13EC390716EB9FE8005244BD /* Frameworks */,
@@ -393,6 +399,8 @@
 				13D7F440170455EB001D7F93 /* poisons.json in Resources */,
 				13A0B6721709E67F00B4970F /* topics.json in Resources */,
 				135BBE83170C511200F3BE90 /* background.png in Resources */,
+				135BBE89170C618900F3BE90 /* Icon-poison_57.png in Resources */,
+				135BBE8B170C618B00F3BE90 /* Icon-poison_114.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
