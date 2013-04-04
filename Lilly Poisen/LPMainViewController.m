@@ -41,7 +41,7 @@
     
     [self.webView loadHTMLString:@"" baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] resourcePath]]];
     
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"background"]];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"GUI-911_background"]];
     imageView.alpha = 0.6;
     self.tableView.backgroundView = imageView;
 }

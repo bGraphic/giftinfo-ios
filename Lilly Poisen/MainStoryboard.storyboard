@@ -31,11 +31,13 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
+                        <outlet property="delegate" destination="9Hq-6Q-RMi" id="jk6-Fe-3Xg"/>
                         <segue destination="uOL-K2-nVU" kind="relationship" relationship="rootViewController" id="9VO-l3-9RA"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KGQ-az-CQz" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <customObject id="iB9-HH-aE2" customClass="LPPhoneBooth"/>
+                <customObject id="9Hq-6Q-RMi" customClass="BGInfoNavigationControllerDelegate"/>
             </objects>
             <point key="canvasLocation" x="-37" y="-20"/>
         </scene>

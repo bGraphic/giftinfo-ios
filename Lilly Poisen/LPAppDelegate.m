@@ -9,6 +9,7 @@
 #import "LPAppDelegate.h"
 #import "TestFlight.h"
 #import "LPMainViewController.h"
+#import "BGInfoViewController.h"
 
 @implementation LPAppDelegate
 
