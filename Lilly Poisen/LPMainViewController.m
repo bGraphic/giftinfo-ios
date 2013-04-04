@@ -11,6 +11,7 @@
 #import "LPHtmlStringHelper.h"
 #import "LPTopicDataSource.h"
 #import "LPTopic.h"
+#import "BGCommonGraphics.h"
 
 @interface LPMainViewController ()
 
@@ -41,9 +42,7 @@
     
     [self.webView loadHTMLString:@"" baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] resourcePath]]];
     
-    UIImageView *imageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"GUI-911_background"]];
-    imageView.alpha = 0.6;
-    self.tableView.backgroundView = imageView;
+    self.tableView.backgroundView = [BGCommonGraphics backgroundView];
 }
 
 - (void) didReceiveMemoryWarning
