@@ -15,4 +15,6 @@
 
 @property UIWebView *webView;
 
+- (UIWebView *) addWebViewToView:(UIView *) view withHtmlString:(NSString *) htmlString;
+
 @end

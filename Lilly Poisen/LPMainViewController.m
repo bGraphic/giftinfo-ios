@@ -12,11 +12,14 @@
 #import "LPTopicDataSource.h"
 #import "LPTopic.h"
 #import "BGCommonGraphics.h"
+#import "BGInfoNavigationControllerDelegate.h"
+#import "LPPhoneBooth.h"
 
 @interface LPMainViewController ()
 
 @property (nonatomic, strong) LPTopicDataSource *topicDataSource;
-
+@property (nonatomic, strong) BGInfoNavigationControllerDelegate *navDelegate;
+@property (nonatomic, strong) LPPhoneBooth *phoneBooth;
 
 @end
 
@@ -35,14 +38,13 @@
     
     self.topicDataSource = [[LPTopicDataSource alloc] init];
     
-    self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
-    self.webView.hidden = YES;
-    
-    [self.view addSubview:self.webView];
-    
-    [self.webView loadHTMLString:@"" baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] resourcePath]]];
+    self.webView = [super addWebViewToView:self.view withHtmlString:@""];
     
     self.tableView.backgroundView = [BGCommonGraphics backgroundView];
+    
+    [self configureInfoButton];
+    
+    [self configurePhoneButtons];
 }
 
 - (void) didReceiveMemoryWarning
@@ -108,9 +110,10 @@
         {            
             LPTopic *topic = [self.topicDataSource topicAtIndexPath:indexPath];
             
-            self.webView = [[UIWebView alloc] initWithFrame:self.view.frame];
-            [self.webView loadHTMLString:topic.htmlString baseURL:[NSURL fileURLWithPath:[[NSBundle mainBundle] resourcePath]]];
-            self.webView.hidden = YES;
+            self.webView = [super addWebViewToView:self.view withHtmlString:topic.htmlString];
+            
+            self.webView.scrollView.scrollIndicatorInsets = UIEdgeInsetsMake(5.f, 0, 10.f, 0);
+            
             [self.view addSubview:self.webView];
             
             self.webView.delegate = self;
@@ -139,10 +142,28 @@
     else
     {
         if(section == 0)
-            return 20.f;
+            return 15.f;
         else
             return 40.f;
     }
+}
+
+#pragma mark - Toolbar Items
+
+- (void)configureInfoButton
+{
+    self.navDelegate = [[BGInfoNavigationControllerDelegate alloc] init];
+    self.navigationController.delegate = self.navDelegate;
+}
+
+- (void)configurePhoneButtons
+{
+    self.phoneBooth = [[LPPhoneBooth alloc] init];
+    
+    [[self.toolbarItems objectAtIndex:0] setAction:@selector(callAmbulance:)];
+    [[self.toolbarItems objectAtIndex:0] setTarget:self.phoneBooth];
+    [[self.toolbarItems objectAtIndex:2] setAction:@selector(callInfo:)];
+    [[self.toolbarItems objectAtIndex:2] setTarget:self.phoneBooth];
 }
 
 @end

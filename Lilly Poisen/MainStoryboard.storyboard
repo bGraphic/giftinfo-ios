@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="12D78" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="pIc-uV-b2x">
     <dependencies>
-        <deployment version="1280" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
@@ -10,17 +9,9 @@
             <objects>
                 <navigationController definesPresentationContext="YES" toolbarHidden="NO" id="pIc-uV-b2x" sceneMemberID="viewController">
                     <toolbarItems>
-                        <barButtonItem title="Legevakt: 113" width="115" id="U16-3s-RQo">
-                            <connections>
-                                <action selector="callAmbulance:" destination="iB9-HH-aE2" id="T1O-q1-SzH"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem title="Legevakt: 113" width="115" id="U16-3s-RQo"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="5u6-bO-73c"/>
-                        <barButtonItem title="Giftinformasjon: 22 59 13 00" width="185" id="Xp0-41-bW7">
-                            <connections>
-                                <action selector="callInfo:" destination="iB9-HH-aE2" id="PT0-wT-nKT"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem tag="1" title="Giftinformasjon: 22 59 13 00" width="185" id="Xp0-41-bW7"/>
                     </toolbarItems>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="nap-bd-yGA">
@@ -31,13 +22,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                     </toolbar>
                     <connections>
-                        <outlet property="delegate" destination="9Hq-6Q-RMi" id="jk6-Fe-3Xg"/>
                         <segue destination="uOL-K2-nVU" kind="relationship" relationship="rootViewController" id="9VO-l3-9RA"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KGQ-az-CQz" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <customObject id="iB9-HH-aE2" customClass="LPPhoneBooth"/>
-                <customObject id="9Hq-6Q-RMi" customClass="BGInfoNavigationControllerDelegate"/>
             </objects>
             <point key="canvasLocation" x="-37" y="-20"/>
         </scene>
