@@ -8,7 +8,7 @@
 
 #import "LPPoisonTableViewController.h"
 #import "LPPoison.h"
-#import "LPSearchBar.h"
+#import "BGSearchBar.h"
 
 @implementation LPPoisonTableViewController
 
@@ -27,7 +27,7 @@
     self.searchDisplayController.delegate = self.poisonDataSource;
     self.searchDisplayController.searchResultsDataSource = self.poisonDataSource;
     
-    LPSearchBar *searchBar = (LPSearchBar *) self.searchDisplayController.searchBar;
+    BGSearchBar *searchBar = (BGSearchBar *) self.searchDisplayController.searchBar;
     searchBar.borderColor = self.tableView.separatorColor;
 }
 

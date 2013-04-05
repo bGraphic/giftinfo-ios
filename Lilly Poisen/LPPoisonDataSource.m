@@ -10,7 +10,7 @@
 #import "LPAppDelegate.h"
 #import "LPPoisonDataFromWP.h"
 #import "LPHtmlStringHelper.h"
-#import "LPSearchBar.h"
+#import "BGSearchBar.h"
 
 @interface LPPoisonDataSource ()
 
@@ -100,13 +100,13 @@
 
 - (void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller
 {
-    LPSearchBar *searchBar = (LPSearchBar *) controller.searchBar;
+    BGSearchBar *searchBar = (BGSearchBar *) controller.searchBar;
     searchBar.borderView.hidden = YES;
 }
 
 - (void)searchDisplayControllerWillEndSearch:(UISearchDisplayController *)controller
 {
-    LPSearchBar *searchBar = (LPSearchBar *) controller.searchBar;
+    BGSearchBar *searchBar = (BGSearchBar *) controller.searchBar;
     searchBar.borderView.hidden = NO;
 }
 
