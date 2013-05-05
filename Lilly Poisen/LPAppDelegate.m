@@ -156,6 +156,10 @@
     [TestFlight takeOff:@"7408f64d-2a18-4ec2-8974-e60fb4a2dcdf"];
 #endif
     
+#if RELEASE
+    [TestFlight takeOff:@"13a6333a-0d2b-4799-afaa-8b0c6b08970d"];
+#endif
+    
 }
 
 

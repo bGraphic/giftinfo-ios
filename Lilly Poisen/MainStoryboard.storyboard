@@ -9,7 +9,7 @@
             <objects>
                 <navigationController definesPresentationContext="YES" toolbarHidden="NO" id="pIc-uV-b2x" sceneMemberID="viewController">
                     <toolbarItems>
-                        <barButtonItem title="Legevakt: 113" width="115" id="U16-3s-RQo"/>
+                        <barButtonItem title="Ambulanse: 113" width="115" id="U16-3s-RQo"/>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="5u6-bO-73c"/>
                         <barButtonItem tag="1" title="Giftinformasjon: 22 59 13 00" width="185" id="Xp0-41-bW7"/>
                     </toolbarItems>
@@ -121,6 +121,23 @@
             <point key="canvasLocation" x="984" y="-19"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="BGSearchBar" superclassName="UISearchBar">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/BGSearchBar.h"/>
+        </class>
+        <class className="LPMainViewController" superclassName="LPPoisonTableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPMainViewController.h"/>
+        </class>
+        <class className="LPPoisonDataSource" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPPoisonDataSource.h"/>
+        </class>
+        <class className="LPPoisonTableViewController" superclassName="UITableViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/LPPoisonTableViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="poisonDataSource" candidateClass="LPPoisonDataSource"/>
+            </relationships>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

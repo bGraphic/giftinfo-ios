@@ -14,9 +14,24 @@
 			<key>orderHint</key>
 			<integer>0</integer>
 		</dict>
+		<key>Lilly Poison (release - debug).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Lilly Poison (release).xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
+		<key>13323A3E17103B3D0097C0AD</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>13EC390416EB9FE8005244BD</key>
 		<dict>
 			<key>primary</key>

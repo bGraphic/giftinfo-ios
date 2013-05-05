@@ -13,24 +13,54 @@
 		132D2726170076AA00967E5C /* main-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 132D26E0170076AA00967E5C /* main-info.plist */; };
 		132D2728170076AA00967E5C /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 132D26E2170076AA00967E5C /* style.css */; };
 		132D272C170076AA00967E5C /* summary.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26E7170076AA00967E5C /* summary.html */; };
+		13323A4017103B3D0097C0AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EC391616EB9FE8005244BD /* main.m */; };
+		13323A4117103B3D0097C0AD /* LPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EC391A16EB9FE8005244BD /* LPAppDelegate.m */; };
+		13323A4217103B3D0097C0AD /* LPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EB1A1E16EBA9EE00170579 /* LPMainViewController.m */; };
+		13323A4317103B3D0097C0AD /* LPPoisonDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DD916EBE0C6003EF093 /* LPPoisonDataSource.m */; };
+		13323A4417103B3D0097C0AD /* LPPoisonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DDC16EBE223003EF093 /* LPPoisonTableViewController.m */; };
+		13323A4517103B3D0097C0AD /* LPPoison.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B34416F4A4B400143FEA /* LPPoison.m */; };
+		13323A4617103B3D0097C0AD /* LPHtmlStringHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B36116F4E82800143FEA /* LPHtmlStringHelper.m */; };
+		13323A4717103B3D0097C0AD /* LPTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0B6791709EB7200B4970F /* LPTopic.m */; };
+		13323A4817103B3D0097C0AD /* LPJSONfromWP.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0B67F1709F7BD00B4970F /* LPJSONfromWP.m */; };
+		13323A4917103B3D0097C0AD /* LPPoisonDataFromWP.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0B6821709FBF100B4970F /* LPPoisonDataFromWP.m */; };
+		13323A4A17103B3D0097C0AD /* LPTopicDataFromWP.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0B685170A08C900B4970F /* LPTopicDataFromWP.m */; };
+		13323A4B17103B3D0097C0AD /* LPTopicDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0B688170A3ECE00B4970F /* LPTopicDataSource.m */; };
+		13323A4C17103B3D0097C0AD /* LPPhoneBooth.m in Sources */ = {isa = PBXBuildFile; fileRef = 13252473170ABCC70025B78D /* LPPhoneBooth.m */; };
+		13323A5217103B3D0097C0AD /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134EA9A1170DB7BE00F4D166 /* MessageUI.framework */; };
+		13323A5317103B3D0097C0AD /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1397DDA616ED0A060061087F /* libz.1.1.3.dylib */; };
+		13323A5417103B3D0097C0AD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390816EB9FE8005244BD /* UIKit.framework */; };
+		13323A5517103B3D0097C0AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390A16EB9FE8005244BD /* Foundation.framework */; };
+		13323A5617103B3D0097C0AD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390C16EB9FE8005244BD /* CoreGraphics.framework */; };
+		13323A5717103B3D0097C0AD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390E16EB9FE8005244BD /* CoreData.framework */; };
+		13323A5817103B3D0097C0AD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFC2B241B0EB42DF9EDE0157 /* libPods.a */; };
+		13323A5D17103B3D0097C0AD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13EC394316EBA0A8005244BD /* MainStoryboard.storyboard */; };
+		13323A5E17103B3D0097C0AD /* footer.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26DE170076AA00967E5C /* footer.html */; };
+		13323A5F17103B3D0097C0AD /* header.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26DF170076AA00967E5C /* header.html */; };
+		13323A6017103B3D0097C0AD /* main-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 132D26E0170076AA00967E5C /* main-info.plist */; };
+		13323A6117103B3D0097C0AD /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 132D26E2170076AA00967E5C /* style.css */; };
+		13323A6217103B3D0097C0AD /* summary.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26E7170076AA00967E5C /* summary.html */; };
+		13323A6317103B3D0097C0AD /* poisons.json in Resources */ = {isa = PBXBuildFile; fileRef = 13D7F43F170455EB001D7F93 /* poisons.json */; };
+		13323A6417103B3D0097C0AD /* topics.json in Resources */ = {isa = PBXBuildFile; fileRef = 13A0B6711709E67F00B4970F /* topics.json */; };
+		13323A6A17103B3D0097C0AD /* InfoPage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 134EA9B3170DBF8700F4D166 /* InfoPage.plist */; };
+		13323A7817103DA90097C0AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 13323A7717103DA90097C0AD /* InfoPlist.strings */; };
+		13323A7917103DA90097C0AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 13323A7717103DA90097C0AD /* InfoPlist.strings */; };
 		134EA9A2170DB7BE00F4D166 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134EA9A1170DB7BE00F4D166 /* MessageUI.framework */; };
 		134EA9AB170DBB6000F4D166 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 134EA9AD170DBB6000F4D166 /* Localizable.strings */; };
 		134EA9B4170DBF8700F4D166 /* InfoPage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 134EA9B3170DBF8700F4D166 /* InfoPage.plist */; };
-		134EAA4C170DC4FE00F4D166 /* BG-background.png in Resources */ = {isa = PBXBuildFile; fileRef = 134EAA42170DC4FE00F4D166 /* BG-background.png */; };
-		134EAA4D170DC4FE00F4D166 /* BG-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 134EAA43170DC4FE00F4D166 /* BG-logo.png */; };
-		134EAA4E170DC4FE00F4D166 /* BG-twitter.png in Resources */ = {isa = PBXBuildFile; fileRef = 134EAA44170DC4FE00F4D166 /* BG-twitter.png */; };
-		134EAA4F170DC4FE00F4D166 /* BGCommonGraphics.m in Sources */ = {isa = PBXBuildFile; fileRef = 134EAA46170DC4FE00F4D166 /* BGCommonGraphics.m */; };
-		134EAA50170DC4FE00F4D166 /* BGInfoNavigationControllerDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 134EAA48170DC4FE00F4D166 /* BGInfoNavigationControllerDelegate.m */; };
-		134EAA51170DC4FE00F4D166 /* BGInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 134EAA4A170DC4FE00F4D166 /* BGInfoViewController.m */; };
-		134EAA52170DC4FE00F4D166 /* BGInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 134EAA4B170DC4FE00F4D166 /* BGInfoViewController.xib */; };
-		135BBE89170C618900F3BE90 /* Icon-poison_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 135BBE88170C618900F3BE90 /* Icon-poison_57.png */; };
-		135BBE8B170C618B00F3BE90 /* Icon-poison_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 135BBE8A170C618B00F3BE90 /* Icon-poison_114.png */; };
-		1363FE54170C8B7A003624BE /* Icon-poison_57-beta.png in Resources */ = {isa = PBXBuildFile; fileRef = 1363FE53170C8B7A003624BE /* Icon-poison_57-beta.png */; };
-		1363FE56170C8B7F003624BE /* Icon-poison_114-beta.png in Resources */ = {isa = PBXBuildFile; fileRef = 1363FE55170C8B7F003624BE /* Icon-poison_114-beta.png */; };
 		13794DDA16EBE0C6003EF093 /* LPPoisonDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DD916EBE0C6003EF093 /* LPPoisonDataSource.m */; };
 		13794DDD16EBE223003EF093 /* LPPoisonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DDC16EBE223003EF093 /* LPPoisonTableViewController.m */; };
 		1381B34516F4A4B400143FEA /* LPPoison.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B34416F4A4B400143FEA /* LPPoison.m */; };
 		1381B36216F4E82800143FEA /* LPHtmlStringHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B36116F4E82800143FEA /* LPHtmlStringHelper.m */; };
+		138AACB917104A5A00D40198 /* PoisonInfo_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 138AACB817104A5A00D40198 /* PoisonInfo_57.png */; };
+		138AACBB17104A5D00D40198 /* PoisonInfo_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 138AACBA17104A5D00D40198 /* PoisonInfo_114.png */; };
+		138AACBD17104BCC00D40198 /* PoisonInfo_57-beta.png in Resources */ = {isa = PBXBuildFile; fileRef = 138AACBC17104BCC00D40198 /* PoisonInfo_57-beta.png */; };
+		138AACBF17104BCF00D40198 /* PoisonInfo_114-beta.png in Resources */ = {isa = PBXBuildFile; fileRef = 138AACBE17104BCF00D40198 /* PoisonInfo_114-beta.png */; };
+		138AACC51711D66500D40198 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 138AACC41711D66500D40198 /* Default-568h@2x.png */; };
+		138AACC71711D67D00D40198 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 138AACC61711D67D00D40198 /* Default.png */; };
+		138AACC91711D68000D40198 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 138AACC81711D68000D40198 /* Default@2x.png */; };
+		138AACCA1711D6E800D40198 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 138AACC41711D66500D40198 /* Default-568h@2x.png */; };
+		138AACCB1711D6EB00D40198 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 138AACC81711D68000D40198 /* Default@2x.png */; };
+		138AACCC1711D6ED00D40198 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 138AACC61711D67D00D40198 /* Default.png */; };
 		1397DDA716ED0A060061087F /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1397DDA616ED0A060061087F /* libz.1.1.3.dylib */; };
 		13A0B6721709E67F00B4970F /* topics.json in Resources */ = {isa = PBXBuildFile; fileRef = 13A0B6711709E67F00B4970F /* topics.json */; };
 		13A0B67A1709EB7200B4970F /* LPTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0B6791709EB7200B4970F /* LPTopic.m */; };
@@ -38,7 +68,6 @@
 		13A0B6831709FBF100B4970F /* LPPoisonDataFromWP.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0B6821709FBF100B4970F /* LPPoisonDataFromWP.m */; };
 		13A0B686170A08C900B4970F /* LPTopicDataFromWP.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0B685170A08C900B4970F /* LPTopicDataFromWP.m */; };
 		13A0B689170A3ECF00B4970F /* LPTopicDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0B688170A3ECE00B4970F /* LPTopicDataSource.m */; };
-		13C82F0E170EFCCD0066B31E /* BGSearchBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 13C82F0D170EFCCD0066B31E /* BGSearchBar.m */; };
 		13D7F440170455EB001D7F93 /* poisons.json in Resources */ = {isa = PBXBuildFile; fileRef = 13D7F43F170455EB001D7F93 /* poisons.json */; };
 		13EB1A1F16EBA9EE00170579 /* LPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EB1A1E16EBA9EE00170579 /* LPMainViewController.m */; };
 		13EC390916EB9FE8005244BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390816EB9FE8005244BD /* UIKit.framework */; };
@@ -47,9 +76,6 @@
 		13EC390F16EB9FE8005244BD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390E16EB9FE8005244BD /* CoreData.framework */; };
 		13EC391716EB9FE8005244BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EC391616EB9FE8005244BD /* main.m */; };
 		13EC391B16EB9FE8005244BD /* LPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EC391A16EB9FE8005244BD /* LPAppDelegate.m */; };
-		13EC391D16EB9FE8005244BD /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 13EC391C16EB9FE8005244BD /* Default.png */; };
-		13EC391F16EB9FE8005244BD /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13EC391E16EB9FE8005244BD /* Default@2x.png */; };
-		13EC392116EB9FE8005244BD /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 13EC392016EB9FE8005244BD /* Default-568h@2x.png */; };
 		13EC392C16EB9FE8005244BD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC392B16EB9FE8005244BD /* SenTestingKit.framework */; };
 		13EC392D16EB9FE8005244BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390816EB9FE8005244BD /* UIKit.framework */; };
 		13EC392E16EB9FE8005244BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390A16EB9FE8005244BD /* Foundation.framework */; };
@@ -78,23 +104,12 @@
 		132D26E0170076AA00967E5C /* main-info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "main-info.plist"; path = "structure/main-info.plist"; sourceTree = "<group>"; };
 		132D26E2170076AA00967E5C /* style.css */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.css; name = style.css; path = structure/style.css; sourceTree = "<group>"; };
 		132D26E7170076AA00967E5C /* summary.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; name = summary.html; path = general/summary.html; sourceTree = "<group>"; };
+		13323A7417103B3D0097C0AD /* PoisonInfo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoisonInfo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13323A7617103C5E0097C0AD /* Lilly Poison - Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lilly Poison - Info.plist"; sourceTree = "<group>"; };
+		13323A7717103DA90097C0AD /* InfoPlist.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = InfoPlist.strings; sourceTree = "<group>"; };
 		134EA9A1170DB7BE00F4D166 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		134EA9AE170DBB6A00F4D166 /* nb */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nb; path = nb.lproj/Localizable.strings; sourceTree = "<group>"; };
 		134EA9B3170DBF8700F4D166 /* InfoPage.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = InfoPage.plist; sourceTree = "<group>"; };
-		134EAA42170DC4FE00F4D166 /* BG-background.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BG-background.png"; sourceTree = "<group>"; };
-		134EAA43170DC4FE00F4D166 /* BG-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BG-logo.png"; sourceTree = "<group>"; };
-		134EAA44170DC4FE00F4D166 /* BG-twitter.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BG-twitter.png"; sourceTree = "<group>"; };
-		134EAA45170DC4FE00F4D166 /* BGCommonGraphics.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGCommonGraphics.h; sourceTree = "<group>"; };
-		134EAA46170DC4FE00F4D166 /* BGCommonGraphics.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGCommonGraphics.m; sourceTree = "<group>"; };
-		134EAA47170DC4FE00F4D166 /* BGInfoNavigationControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGInfoNavigationControllerDelegate.h; sourceTree = "<group>"; };
-		134EAA48170DC4FE00F4D166 /* BGInfoNavigationControllerDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGInfoNavigationControllerDelegate.m; sourceTree = "<group>"; };
-		134EAA49170DC4FE00F4D166 /* BGInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGInfoViewController.h; sourceTree = "<group>"; };
-		134EAA4A170DC4FE00F4D166 /* BGInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGInfoViewController.m; sourceTree = "<group>"; };
-		134EAA4B170DC4FE00F4D166 /* BGInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BGInfoViewController.xib; sourceTree = "<group>"; };
-		135BBE88170C618900F3BE90 /* Icon-poison_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-poison_57.png"; sourceTree = "<group>"; };
-		135BBE8A170C618B00F3BE90 /* Icon-poison_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-poison_114.png"; sourceTree = "<group>"; };
-		1363FE53170C8B7A003624BE /* Icon-poison_57-beta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-poison_57-beta.png"; sourceTree = "<group>"; };
-		1363FE55170C8B7F003624BE /* Icon-poison_114-beta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Icon-poison_114-beta.png"; sourceTree = "<group>"; };
 		13794DD816EBE0C6003EF093 /* LPPoisonDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPPoisonDataSource.h; sourceTree = "<group>"; };
 		13794DD916EBE0C6003EF093 /* LPPoisonDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPoisonDataSource.m; sourceTree = "<group>"; };
 		13794DDB16EBE223003EF093 /* LPPoisonTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPPoisonTableViewController.h; sourceTree = "<group>"; };
@@ -103,6 +118,13 @@
 		1381B34416F4A4B400143FEA /* LPPoison.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPPoison.m; sourceTree = "<group>"; };
 		1381B36016F4E82800143FEA /* LPHtmlStringHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPHtmlStringHelper.h; sourceTree = "<group>"; };
 		1381B36116F4E82800143FEA /* LPHtmlStringHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPHtmlStringHelper.m; sourceTree = "<group>"; };
+		138AACB817104A5A00D40198 /* PoisonInfo_57.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PoisonInfo_57.png; sourceTree = "<group>"; };
+		138AACBA17104A5D00D40198 /* PoisonInfo_114.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = PoisonInfo_114.png; sourceTree = "<group>"; };
+		138AACBC17104BCC00D40198 /* PoisonInfo_57-beta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PoisonInfo_57-beta.png"; sourceTree = "<group>"; };
+		138AACBE17104BCF00D40198 /* PoisonInfo_114-beta.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PoisonInfo_114-beta.png"; sourceTree = "<group>"; };
+		138AACC41711D66500D40198 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		138AACC61711D67D00D40198 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		138AACC81711D68000D40198 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
 		1397DDA416ED09EE0061087F /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		1397DDA616ED0A060061087F /* libz.1.1.3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.1.3.dylib; path = usr/lib/libz.1.1.3.dylib; sourceTree = SDKROOT; };
 		13A0B6711709E67F00B4970F /* topics.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = topics.json; sourceTree = "<group>"; };
@@ -116,24 +138,19 @@
 		13A0B685170A08C900B4970F /* LPTopicDataFromWP.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTopicDataFromWP.m; sourceTree = "<group>"; };
 		13A0B687170A3ECE00B4970F /* LPTopicDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPTopicDataSource.h; sourceTree = "<group>"; };
 		13A0B688170A3ECE00B4970F /* LPTopicDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPTopicDataSource.m; sourceTree = "<group>"; };
-		13C82F0C170EFCCD0066B31E /* BGSearchBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BGSearchBar.h; sourceTree = "<group>"; };
-		13C82F0D170EFCCD0066B31E /* BGSearchBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BGSearchBar.m; sourceTree = "<group>"; };
 		13D7F43F170455EB001D7F93 /* poisons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = poisons.json; sourceTree = "<group>"; };
 		13EB1A1D16EBA9EE00170579 /* LPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPMainViewController.h; sourceTree = "<group>"; };
 		13EB1A1E16EBA9EE00170579 /* LPMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPMainViewController.m; sourceTree = "<group>"; };
-		13EC390516EB9FE8005244BD /* Lilly Poison.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Lilly Poison.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		13EC390516EB9FE8005244BD /* PoisonInfoBeta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoisonInfoBeta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13EC390816EB9FE8005244BD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		13EC390A16EB9FE8005244BD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		13EC390C16EB9FE8005244BD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		13EC390E16EB9FE8005244BD /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
-		13EC391216EB9FE8005244BD /* Lilly Poison-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lilly Poison-Info.plist"; sourceTree = "<group>"; };
+		13EC391216EB9FE8005244BD /* Lilly Poison Beta - Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lilly Poison Beta - Info.plist"; sourceTree = "<group>"; };
 		13EC391616EB9FE8005244BD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		13EC391816EB9FE8005244BD /* Lilly Poison-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Lilly Poison-Prefix.pch"; sourceTree = "<group>"; };
 		13EC391916EB9FE8005244BD /* LPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LPAppDelegate.h; sourceTree = "<group>"; };
 		13EC391A16EB9FE8005244BD /* LPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LPAppDelegate.m; sourceTree = "<group>"; };
-		13EC391C16EB9FE8005244BD /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		13EC391E16EB9FE8005244BD /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		13EC392016EB9FE8005244BD /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		13EC392A16EB9FE8005244BD /* Lilly PoisonTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Lilly PoisonTests.octest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		13EC392B16EB9FE8005244BD /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		13EC393416EB9FE8005244BD /* Lilly PoisonTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Lilly PoisonTests-Info.plist"; sourceTree = "<group>"; };
@@ -145,6 +162,20 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		13323A5117103B3D0097C0AD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13323A5217103B3D0097C0AD /* MessageUI.framework in Frameworks */,
+				13323A5317103B3D0097C0AD /* libz.1.1.3.dylib in Frameworks */,
+				13323A5417103B3D0097C0AD /* UIKit.framework in Frameworks */,
+				13323A5517103B3D0097C0AD /* Foundation.framework in Frameworks */,
+				13323A5617103B3D0097C0AD /* CoreGraphics.framework in Frameworks */,
+				13323A5717103B3D0097C0AD /* CoreData.framework in Frameworks */,
+				13323A5817103B3D0097C0AD /* libPods.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		13EC390216EB9FE8005244BD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -198,26 +229,6 @@
 			name = Content;
 			sourceTree = "<group>";
 		};
-		134EAA41170DC4FE00F4D166 /* bGraphicCommonStuff */ = {
-			isa = PBXGroup;
-			children = (
-				13C82F0C170EFCCD0066B31E /* BGSearchBar.h */,
-				13C82F0D170EFCCD0066B31E /* BGSearchBar.m */,
-				134EAA42170DC4FE00F4D166 /* BG-background.png */,
-				134EAA43170DC4FE00F4D166 /* BG-logo.png */,
-				134EAA44170DC4FE00F4D166 /* BG-twitter.png */,
-				134EAA45170DC4FE00F4D166 /* BGCommonGraphics.h */,
-				134EAA46170DC4FE00F4D166 /* BGCommonGraphics.m */,
-				134EAA47170DC4FE00F4D166 /* BGInfoNavigationControllerDelegate.h */,
-				134EAA48170DC4FE00F4D166 /* BGInfoNavigationControllerDelegate.m */,
-				134EAA49170DC4FE00F4D166 /* BGInfoViewController.h */,
-				134EAA4A170DC4FE00F4D166 /* BGInfoViewController.m */,
-				134EAA4B170DC4FE00F4D166 /* BGInfoViewController.xib */,
-			);
-			name = bGraphicCommonStuff;
-			path = ../bGraphicCommonStuff/bGraphicCommonStuff;
-			sourceTree = "<group>";
-		};
 		1381B33A16F1239D00143FEA /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -243,11 +254,13 @@
 		13EC38FC16EB9FE8005244BD = {
 			isa = PBXGroup;
 			children = (
-				134EAA41170DC4FE00F4D166 /* bGraphicCommonStuff */,
-				1363FE55170C8B7F003624BE /* Icon-poison_114-beta.png */,
-				1363FE53170C8B7A003624BE /* Icon-poison_57-beta.png */,
-				135BBE8A170C618B00F3BE90 /* Icon-poison_114.png */,
-				135BBE88170C618900F3BE90 /* Icon-poison_57.png */,
+				138AACC81711D68000D40198 /* Default@2x.png */,
+				138AACC61711D67D00D40198 /* Default.png */,
+				138AACC41711D66500D40198 /* Default-568h@2x.png */,
+				138AACBE17104BCF00D40198 /* PoisonInfo_114-beta.png */,
+				138AACBC17104BCC00D40198 /* PoisonInfo_57-beta.png */,
+				138AACBA17104A5D00D40198 /* PoisonInfo_114.png */,
+				138AACB817104A5A00D40198 /* PoisonInfo_57.png */,
 				13EC391016EB9FE8005244BD /* Lilly Poison */,
 				13EC393216EB9FE8005244BD /* Lilly PoisonTests */,
 				13EC390716EB9FE8005244BD /* Frameworks */,
@@ -259,8 +272,9 @@
 		13EC390616EB9FE8005244BD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13EC390516EB9FE8005244BD /* Lilly Poison.app */,
+				13EC390516EB9FE8005244BD /* PoisonInfoBeta.app */,
 				13EC392A16EB9FE8005244BD /* Lilly PoisonTests.octest */,
+				13323A7417103B3D0097C0AD /* PoisonInfo.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -310,14 +324,13 @@
 		13EC391116EB9FE8005244BD /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				13323A7617103C5E0097C0AD /* Lilly Poison - Info.plist */,
 				134EA9B3170DBF8700F4D166 /* InfoPage.plist */,
-				13EC391216EB9FE8005244BD /* Lilly Poison-Info.plist */,
+				13EC391216EB9FE8005244BD /* Lilly Poison Beta - Info.plist */,
 				13EC391616EB9FE8005244BD /* main.m */,
 				13EC391816EB9FE8005244BD /* Lilly Poison-Prefix.pch */,
-				13EC391C16EB9FE8005244BD /* Default.png */,
-				13EC391E16EB9FE8005244BD /* Default@2x.png */,
-				13EC392016EB9FE8005244BD /* Default-568h@2x.png */,
 				134EA9AD170DBB6000F4D166 /* Localizable.strings */,
+				13323A7717103DA90097C0AD /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -344,6 +357,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		13323A3E17103B3D0097C0AD /* Lilly Poison */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 13323A7017103B3D0097C0AD /* Build configuration list for PBXNativeTarget "Lilly Poison" */;
+			buildPhases = (
+				13323A3F17103B3D0097C0AD /* Sources */,
+				13323A5117103B3D0097C0AD /* Frameworks */,
+				13323A5917103B3D0097C0AD /* Resources */,
+				13323A6F17103B3D0097C0AD /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Lilly Poison";
+			productName = "Lilly Poisen";
+			productReference = 13323A7417103B3D0097C0AD /* PoisonInfo.app */;
+			productType = "com.apple.product-type.application";
+		};
 		13EC390416EB9FE8005244BD /* Lilly Poison Beta */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13EC393D16EB9FE8005244BD /* Build configuration list for PBXNativeTarget "Lilly Poison Beta" */;
@@ -359,7 +390,7 @@
 			);
 			name = "Lilly Poison Beta";
 			productName = "Lilly Poisen";
-			productReference = 13EC390516EB9FE8005244BD /* Lilly Poison.app */;
+			productReference = 13EC390516EB9FE8005244BD /* PoisonInfoBeta.app */;
 			productType = "com.apple.product-type.application";
 		};
 		13EC392916EB9FE8005244BD /* Lilly PoisonTests */ = {
@@ -404,6 +435,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				13323A3E17103B3D0097C0AD /* Lilly Poison */,
 				13EC390416EB9FE8005244BD /* Lilly Poison Beta */,
 				13EC392916EB9FE8005244BD /* Lilly PoisonTests */,
 			);
@@ -411,13 +443,32 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		13323A5917103B3D0097C0AD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13323A5D17103B3D0097C0AD /* MainStoryboard.storyboard in Resources */,
+				13323A5E17103B3D0097C0AD /* footer.html in Resources */,
+				13323A5F17103B3D0097C0AD /* header.html in Resources */,
+				13323A6017103B3D0097C0AD /* main-info.plist in Resources */,
+				13323A6117103B3D0097C0AD /* style.css in Resources */,
+				13323A6217103B3D0097C0AD /* summary.html in Resources */,
+				13323A6317103B3D0097C0AD /* poisons.json in Resources */,
+				13323A6417103B3D0097C0AD /* topics.json in Resources */,
+				13323A6A17103B3D0097C0AD /* InfoPage.plist in Resources */,
+				13323A7917103DA90097C0AD /* InfoPlist.strings in Resources */,
+				138AACB917104A5A00D40198 /* PoisonInfo_57.png in Resources */,
+				138AACBB17104A5D00D40198 /* PoisonInfo_114.png in Resources */,
+				138AACCA1711D6E800D40198 /* Default-568h@2x.png in Resources */,
+				138AACCB1711D6EB00D40198 /* Default@2x.png in Resources */,
+				138AACCC1711D6ED00D40198 /* Default.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		13EC390316EB9FE8005244BD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				13EC391D16EB9FE8005244BD /* Default.png in Resources */,
-				13EC391F16EB9FE8005244BD /* Default@2x.png in Resources */,
-				13EC392116EB9FE8005244BD /* Default-568h@2x.png in Resources */,
 				13EC394416EBA0A8005244BD /* MainStoryboard.storyboard in Resources */,
 				132D2724170076AA00967E5C /* footer.html in Resources */,
 				132D2725170076AA00967E5C /* header.html in Resources */,
@@ -426,16 +477,14 @@
 				132D272C170076AA00967E5C /* summary.html in Resources */,
 				13D7F440170455EB001D7F93 /* poisons.json in Resources */,
 				13A0B6721709E67F00B4970F /* topics.json in Resources */,
-				135BBE89170C618900F3BE90 /* Icon-poison_57.png in Resources */,
-				135BBE8B170C618B00F3BE90 /* Icon-poison_114.png in Resources */,
-				1363FE54170C8B7A003624BE /* Icon-poison_57-beta.png in Resources */,
-				1363FE56170C8B7F003624BE /* Icon-poison_114-beta.png in Resources */,
 				134EA9AB170DBB6000F4D166 /* Localizable.strings in Resources */,
 				134EA9B4170DBF8700F4D166 /* InfoPage.plist in Resources */,
-				134EAA4C170DC4FE00F4D166 /* BG-background.png in Resources */,
-				134EAA4D170DC4FE00F4D166 /* BG-logo.png in Resources */,
-				134EAA4E170DC4FE00F4D166 /* BG-twitter.png in Resources */,
-				134EAA52170DC4FE00F4D166 /* BGInfoViewController.xib in Resources */,
+				13323A7817103DA90097C0AD /* InfoPlist.strings in Resources */,
+				138AACBD17104BCC00D40198 /* PoisonInfo_57-beta.png in Resources */,
+				138AACBF17104BCF00D40198 /* PoisonInfo_114-beta.png in Resources */,
+				138AACC51711D66500D40198 /* Default-568h@2x.png in Resources */,
+				138AACC71711D67D00D40198 /* Default.png in Resources */,
+				138AACC91711D68000D40198 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -450,6 +499,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		13323A6F17103B3D0097C0AD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
+		};
 		13EC392816EB9FE8005244BD /* ShellScript */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -480,6 +543,26 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		13323A3F17103B3D0097C0AD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				13323A4017103B3D0097C0AD /* main.m in Sources */,
+				13323A4117103B3D0097C0AD /* LPAppDelegate.m in Sources */,
+				13323A4217103B3D0097C0AD /* LPMainViewController.m in Sources */,
+				13323A4317103B3D0097C0AD /* LPPoisonDataSource.m in Sources */,
+				13323A4417103B3D0097C0AD /* LPPoisonTableViewController.m in Sources */,
+				13323A4517103B3D0097C0AD /* LPPoison.m in Sources */,
+				13323A4617103B3D0097C0AD /* LPHtmlStringHelper.m in Sources */,
+				13323A4717103B3D0097C0AD /* LPTopic.m in Sources */,
+				13323A4817103B3D0097C0AD /* LPJSONfromWP.m in Sources */,
+				13323A4917103B3D0097C0AD /* LPPoisonDataFromWP.m in Sources */,
+				13323A4A17103B3D0097C0AD /* LPTopicDataFromWP.m in Sources */,
+				13323A4B17103B3D0097C0AD /* LPTopicDataSource.m in Sources */,
+				13323A4C17103B3D0097C0AD /* LPPhoneBooth.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		13EC390116EB9FE8005244BD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -497,10 +580,6 @@
 				13A0B686170A08C900B4970F /* LPTopicDataFromWP.m in Sources */,
 				13A0B689170A3ECF00B4970F /* LPTopicDataSource.m in Sources */,
 				13252474170ABCC70025B78D /* LPPhoneBooth.m in Sources */,
-				134EAA4F170DC4FE00F4D166 /* BGCommonGraphics.m in Sources */,
-				134EAA50170DC4FE00F4D166 /* BGInfoNavigationControllerDelegate.m in Sources */,
-				134EAA51170DC4FE00F4D166 /* BGInfoViewController.m in Sources */,
-				13C82F0E170EFCCD0066B31E /* BGSearchBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -534,6 +613,51 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		13323A7117103B3D0097C0AD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CD8C7B8B26B4371B8B30F79 /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lilly Poisen/Lilly Poison-Prefix.pch";
+				INFOPLIST_FILE = "Lilly Poisen/Lilly Poison - Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = PoisonInfo;
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		13323A7217103B3D0097C0AD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CD8C7B8B26B4371B8B30F79 /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lilly Poisen/Lilly Poison-Prefix.pch";
+				INFOPLIST_FILE = "Lilly Poisen/Lilly Poison - Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = PoisonInfo;
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		13323A7317103B3D0097C0AD /* AdHoc */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CD8C7B8B26B4371B8B30F79 /* Pods.xcconfig */;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "Lilly Poisen/Lilly Poison-Prefix.pch";
+				INFOPLIST_FILE = "Lilly Poisen/Lilly Poison - Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = PoisonInfo;
+				TARGETED_DEVICE_FAMILY = 1;
+				WRAPPER_EXTENSION = app;
+			};
+			name = AdHoc;
+		};
 		1397DDA816ED0A270061087F /* AdHoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -567,10 +691,10 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Lilly Poisen/Lilly Poison-Prefix.pch";
-				INFOPLIST_FILE = "Lilly Poisen/Lilly Poison-Info.plist";
+				INFOPLIST_FILE = "Lilly Poisen/Lilly Poison Beta - Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_NAME = "Lilly Poison";
+				PRODUCT_NAME = PoisonInfoBeta;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -636,14 +760,17 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Distribution: bGraphic AS";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "A786AAA3-040F-4BD8-8085-AF6FC71B0D41";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -655,10 +782,10 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Lilly Poisen/Lilly Poison-Prefix.pch";
-				INFOPLIST_FILE = "Lilly Poisen/Lilly Poison-Info.plist";
+				INFOPLIST_FILE = "Lilly Poisen/Lilly Poison Beta - Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_NAME = "Lilly Poison";
+				PRODUCT_NAME = PoisonInfoBeta;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -670,10 +797,10 @@
 			buildSettings = {
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Lilly Poisen/Lilly Poison-Prefix.pch";
-				INFOPLIST_FILE = "Lilly Poisen/Lilly Poison-Info.plist";
+				INFOPLIST_FILE = "Lilly Poisen/Lilly Poison Beta - Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_NAME = "Lilly Poison";
+				PRODUCT_NAME = PoisonInfoBeta;
 				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
@@ -716,6 +843,16 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		13323A7017103B3D0097C0AD /* Build configuration list for PBXNativeTarget "Lilly Poison" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				13323A7117103B3D0097C0AD /* Debug */,
+				13323A7217103B3D0097C0AD /* Release */,
+				13323A7317103B3D0097C0AD /* AdHoc */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		13EC390016EB9FE8005244BD /* Build configuration list for PBXProject "Lilly Poison" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

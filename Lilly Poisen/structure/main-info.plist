@@ -33,9 +33,11 @@
 		<string>Mer om</string>
 		<key>topics</key>
 		<array>
+			<string>om-giftinformasjonen</string>
 			<string>brekninger</string>
-			<string>medisinsk-kull</string>
 			<string>bevisstloshet</string>
+			<string>medisinsk-kull</string>
+			<string>forebygging</string>
 		</array>
 	</dict>
 </array>

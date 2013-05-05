@@ -101,13 +101,13 @@
 - (void)searchDisplayControllerWillBeginSearch:(UISearchDisplayController *)controller
 {
     BGSearchBar *searchBar = (BGSearchBar *) controller.searchBar;
-    searchBar.borderView.hidden = YES;
+    [searchBar setBorderHidden:YES];
 }
 
 - (void)searchDisplayControllerWillEndSearch:(UISearchDisplayController *)controller
 {
     BGSearchBar *searchBar = (BGSearchBar *) controller.searchBar;
-    searchBar.borderView.hidden = NO;
+    [searchBar setBorderHidden:NO];
 }
 
 #pragma mark - Table view data source
