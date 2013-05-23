@@ -11,6 +11,8 @@
 
 @interface LPPoisonDataSource : NSObject <UITableViewDataSource, UISearchDisplayDelegate>
 
+- (id)initWithBlock:(void (^)(BOOL succeded)) completionBlock;
+
 - (LPPoison *) poisonAtIndexPath:(NSIndexPath *) indexPath;
 - (LPPoison *) poisonWithSlug:(NSString *) slug;
 

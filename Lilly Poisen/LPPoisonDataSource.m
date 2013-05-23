@@ -25,12 +25,23 @@
 
 @implementation LPPoisonDataSource
 
-- (id)init {
+- (id)initWithBlock:(void (^)(BOOL succeded)) completionBlock {
     self = [super init];
 
     if(self)
     {
-        self.poisonData = [LPPoisonDataFromWP poisonData];
+        PFQuery *poisonQuery = [LPPoison query];
+        poisonQuery.limit = 200;
+        
+        [poisonQuery findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+            if(objects) {
+                self.poisonData = objects;
+                completionBlock(YES);
+            }
+            else
+                completionBlock(NO);
+                    
+        }];
     }
     
     return self;

@@ -6,10 +6,20 @@
 //  Copyright (c) 2013 bGraphic. All rights reserved.
 //
 
+
 #import "LPPoison.h"
+#import <Parse/PFObject+Subclass.h>
 #import "LPHtmlStringHelper.h"
 
 @implementation LPPoison
+
+@synthesize htmlString = _htmlString;
+
+@dynamic slug,name,otherNames,content,symptoms,action,coal,risk,tags;
+
++ (NSString *)parseClassName {
+    return @"Poison";
+}
 
 - (NSString *) htmlString
 {

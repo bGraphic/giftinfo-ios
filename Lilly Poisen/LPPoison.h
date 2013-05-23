@@ -7,20 +7,21 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <Parse/Parse.h>
 
 @class Term;
 
-@interface LPPoison : NSObject
+@interface LPPoison : PFObject <PFSubclassing>
 
-@property (nonatomic, strong) NSString * slug;
-@property (nonatomic, strong) NSString * name;
-@property (nonatomic, strong) NSArray * otherNames;
-@property (nonatomic, strong) NSString * content;
-@property (nonatomic, strong) NSString * symptoms;
-@property (nonatomic, strong) NSString * action;
-@property (nonatomic, strong) NSString * coal;
-@property (nonatomic, strong) NSString * risk;
-@property (nonatomic, strong) NSArray * tags;
+@property (retain) NSString * slug;
+@property (retain) NSString * name;
+@property (retain) NSArray * otherNames;
+@property (retain) NSString * content;
+@property (retain) NSString * symptoms;
+@property (retain) NSString * action;
+@property (retain) NSString * coal;
+@property (retain) NSString * risk;
+@property (retain) NSArray * tags;
 
 @property (nonatomic, strong) NSString * htmlString;
 

@@ -16,7 +16,12 @@
 {
     [super viewDidLoad];
     
-    self.poisonDataSource = [[LPPoisonDataSource alloc] init];
+    self.poisonDataSource = [[LPPoisonDataSource alloc] initWithBlock:^(BOOL succeded) {
+        if(succeded)
+            [self.tableView reloadData];
+        else
+            NSLog(@"No data");
+    }];
     
     self.toolbarItems = self.navigationController.toolbarItems;
     self.tableView.contentInset = UIEdgeInsetsMake(0, 0, 10, 0);

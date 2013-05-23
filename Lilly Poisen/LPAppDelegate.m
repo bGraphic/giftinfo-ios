@@ -9,6 +9,8 @@
 #import "LPAppDelegate.h"
 #import "TestFlight.h"
 #import "LPMainViewController.h"
+#import "LPPoison.h"
+#import <Parse/PFObject+Subclass.h>
 
 @implementation LPAppDelegate
 
@@ -165,6 +167,8 @@
 
 - (void)initializeParse:(NSDictionary *)launchOptions
 {
+    
+    [LPPoison registerSubclass];
     
     [Parse setApplicationId:@"shC8z7Gd5GkJdtubJqdk6fIvFSXk7vnfYaZCBTD4"
                   clientKey:@"WkAQUy4FgoxICx82o3D0qXh9GigidzgPmrcJ3P4L"];
