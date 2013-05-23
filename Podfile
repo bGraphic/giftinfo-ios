@@ -1,2 +1,6 @@
-pod 'TestFlightSDK', '~> 1.2.4'
-pod 'bGraphicCommon', { :git => 'https://raae@bitbucket.org/raae/bgraphic-common-stuff.git', :tag => '1.0' }
+platform :ios, '5.0'
+
+pod 'Parse'
+pod 'TestFlightSDK'
+pod 'MBProgressHUD'
+pod 'bGraphicCommon', { :git => 'https://github.com/bGraphic/bGraphic-common-ios.git' }
