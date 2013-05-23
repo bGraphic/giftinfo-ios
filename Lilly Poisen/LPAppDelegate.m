@@ -18,7 +18,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [self setUpTestFlight];
+    [self initializeTestFlight];
+    [self initializeParse:launchOptions];
     
     return YES;
 }
@@ -148,7 +149,7 @@
 
 #pragma mark - Test Flight
 
-- (void)setUpTestFlight
+- (void)initializeTestFlight
 {
     
 #if ADHOC
@@ -161,6 +162,19 @@
 #endif
     
 }
+
+- (void)initializeParse:(NSDictionary *)launchOptions
+{
+    
+    [Parse setApplicationId:@"shC8z7Gd5GkJdtubJqdk6fIvFSXk7vnfYaZCBTD4"
+                  clientKey:@"WkAQUy4FgoxICx82o3D0qXh9GigidzgPmrcJ3P4L"];
+    
+#ifndef DEBUG
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+#endif
+}
+
+
 
 
 @end

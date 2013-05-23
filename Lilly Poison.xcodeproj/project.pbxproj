@@ -7,12 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		13252474170ABCC70025B78D /* LPPhoneBooth.m in Sources */ = {isa = PBXBuildFile; fileRef = 13252473170ABCC70025B78D /* LPPhoneBooth.m */; };
-		132D2724170076AA00967E5C /* footer.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26DE170076AA00967E5C /* footer.html */; };
-		132D2725170076AA00967E5C /* header.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26DF170076AA00967E5C /* header.html */; };
-		132D2726170076AA00967E5C /* main-info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 132D26E0170076AA00967E5C /* main-info.plist */; };
-		132D2728170076AA00967E5C /* style.css in Resources */ = {isa = PBXBuildFile; fileRef = 132D26E2170076AA00967E5C /* style.css */; };
-		132D272C170076AA00967E5C /* summary.html in Resources */ = {isa = PBXBuildFile; fileRef = 132D26E7170076AA00967E5C /* summary.html */; };
 		13323A4017103B3D0097C0AD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EC391616EB9FE8005244BD /* main.m */; };
 		13323A4117103B3D0097C0AD /* LPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EC391A16EB9FE8005244BD /* LPAppDelegate.m */; };
 		13323A4217103B3D0097C0AD /* LPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EB1A1E16EBA9EE00170579 /* LPMainViewController.m */; };
@@ -42,60 +36,20 @@
 		13323A6317103B3D0097C0AD /* poisons.json in Resources */ = {isa = PBXBuildFile; fileRef = 13D7F43F170455EB001D7F93 /* poisons.json */; };
 		13323A6417103B3D0097C0AD /* topics.json in Resources */ = {isa = PBXBuildFile; fileRef = 13A0B6711709E67F00B4970F /* topics.json */; };
 		13323A6A17103B3D0097C0AD /* InfoPage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 134EA9B3170DBF8700F4D166 /* InfoPage.plist */; };
-		13323A7817103DA90097C0AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 13323A7717103DA90097C0AD /* InfoPlist.strings */; };
 		13323A7917103DA90097C0AD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 13323A7717103DA90097C0AD /* InfoPlist.strings */; };
-		134EA9A2170DB7BE00F4D166 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 134EA9A1170DB7BE00F4D166 /* MessageUI.framework */; };
-		134EA9AB170DBB6000F4D166 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 134EA9AD170DBB6000F4D166 /* Localizable.strings */; };
-		134EA9B4170DBF8700F4D166 /* InfoPage.plist in Resources */ = {isa = PBXBuildFile; fileRef = 134EA9B3170DBF8700F4D166 /* InfoPage.plist */; };
-		13794DDA16EBE0C6003EF093 /* LPPoisonDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DD916EBE0C6003EF093 /* LPPoisonDataSource.m */; };
-		13794DDD16EBE223003EF093 /* LPPoisonTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13794DDC16EBE223003EF093 /* LPPoisonTableViewController.m */; };
-		1381B34516F4A4B400143FEA /* LPPoison.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B34416F4A4B400143FEA /* LPPoison.m */; };
-		1381B36216F4E82800143FEA /* LPHtmlStringHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 1381B36116F4E82800143FEA /* LPHtmlStringHelper.m */; };
 		138AACB917104A5A00D40198 /* PoisonInfo_57.png in Resources */ = {isa = PBXBuildFile; fileRef = 138AACB817104A5A00D40198 /* PoisonInfo_57.png */; };
 		138AACBB17104A5D00D40198 /* PoisonInfo_114.png in Resources */ = {isa = PBXBuildFile; fileRef = 138AACBA17104A5D00D40198 /* PoisonInfo_114.png */; };
-		138AACBD17104BCC00D40198 /* PoisonInfo_57-beta.png in Resources */ = {isa = PBXBuildFile; fileRef = 138AACBC17104BCC00D40198 /* PoisonInfo_57-beta.png */; };
-		138AACBF17104BCF00D40198 /* PoisonInfo_114-beta.png in Resources */ = {isa = PBXBuildFile; fileRef = 138AACBE17104BCF00D40198 /* PoisonInfo_114-beta.png */; };
-		138AACC51711D66500D40198 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 138AACC41711D66500D40198 /* Default-568h@2x.png */; };
-		138AACC71711D67D00D40198 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 138AACC61711D67D00D40198 /* Default.png */; };
-		138AACC91711D68000D40198 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 138AACC81711D68000D40198 /* Default@2x.png */; };
 		138AACCA1711D6E800D40198 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 138AACC41711D66500D40198 /* Default-568h@2x.png */; };
 		138AACCB1711D6EB00D40198 /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 138AACC81711D68000D40198 /* Default@2x.png */; };
 		138AACCC1711D6ED00D40198 /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 138AACC61711D67D00D40198 /* Default.png */; };
-		1397DDA716ED0A060061087F /* libz.1.1.3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 1397DDA616ED0A060061087F /* libz.1.1.3.dylib */; };
 		139F8A77174E4FA4007B20B4 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 134EA9AD170DBB6000F4D166 /* Localizable.strings */; };
-		13A0B6721709E67F00B4970F /* topics.json in Resources */ = {isa = PBXBuildFile; fileRef = 13A0B6711709E67F00B4970F /* topics.json */; };
-		13A0B67A1709EB7200B4970F /* LPTopic.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0B6791709EB7200B4970F /* LPTopic.m */; };
-		13A0B6801709F7BD00B4970F /* LPJSONfromWP.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0B67F1709F7BD00B4970F /* LPJSONfromWP.m */; };
-		13A0B6831709FBF100B4970F /* LPPoisonDataFromWP.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0B6821709FBF100B4970F /* LPPoisonDataFromWP.m */; };
-		13A0B686170A08C900B4970F /* LPTopicDataFromWP.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0B685170A08C900B4970F /* LPTopicDataFromWP.m */; };
-		13A0B689170A3ECF00B4970F /* LPTopicDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 13A0B688170A3ECE00B4970F /* LPTopicDataSource.m */; };
-		13D7F440170455EB001D7F93 /* poisons.json in Resources */ = {isa = PBXBuildFile; fileRef = 13D7F43F170455EB001D7F93 /* poisons.json */; };
-		13EB1A1F16EBA9EE00170579 /* LPMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EB1A1E16EBA9EE00170579 /* LPMainViewController.m */; };
-		13EC390916EB9FE8005244BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390816EB9FE8005244BD /* UIKit.framework */; };
-		13EC390B16EB9FE8005244BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390A16EB9FE8005244BD /* Foundation.framework */; };
-		13EC390D16EB9FE8005244BD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390C16EB9FE8005244BD /* CoreGraphics.framework */; };
-		13EC390F16EB9FE8005244BD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390E16EB9FE8005244BD /* CoreData.framework */; };
-		13EC391716EB9FE8005244BD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EC391616EB9FE8005244BD /* main.m */; };
-		13EC391B16EB9FE8005244BD /* LPAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EC391A16EB9FE8005244BD /* LPAppDelegate.m */; };
 		13EC392C16EB9FE8005244BD /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC392B16EB9FE8005244BD /* SenTestingKit.framework */; };
 		13EC392D16EB9FE8005244BD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390816EB9FE8005244BD /* UIKit.framework */; };
 		13EC392E16EB9FE8005244BD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390A16EB9FE8005244BD /* Foundation.framework */; };
 		13EC392F16EB9FE8005244BD /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13EC390E16EB9FE8005244BD /* CoreData.framework */; };
 		13EC393A16EB9FE8005244BD /* Lilly_PoisenTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13EC393916EB9FE8005244BD /* Lilly_PoisenTests.m */; };
-		13EC394416EBA0A8005244BD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13EC394316EBA0A8005244BD /* MainStoryboard.storyboard */; };
 		13EC394516EBA0A8005244BD /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13EC394316EBA0A8005244BD /* MainStoryboard.storyboard */; };
-		5341C5AB4CC94BEBAC81624D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CFC2B241B0EB42DF9EDE0157 /* libPods.a */; };
 /* End PBXBuildFile section */
-
-/* Begin PBXContainerItemProxy section */
-		13EC393016EB9FE8005244BD /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 13EC38FD16EB9FE8005244BD /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 13EC390416EB9FE8005244BD;
-			remoteInfo = "Lilly Poisen";
-		};
-/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		13252472170ABCC70025B78D /* LPPhoneBooth.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPPhoneBooth.h; sourceTree = "<group>"; };
@@ -142,7 +96,6 @@
 		13D7F43F170455EB001D7F93 /* poisons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = poisons.json; sourceTree = "<group>"; };
 		13EB1A1D16EBA9EE00170579 /* LPMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LPMainViewController.h; sourceTree = "<group>"; };
 		13EB1A1E16EBA9EE00170579 /* LPMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LPMainViewController.m; sourceTree = "<group>"; };
-		13EC390516EB9FE8005244BD /* PoisonInfoBeta.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PoisonInfoBeta.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13EC390816EB9FE8005244BD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		13EC390A16EB9FE8005244BD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		13EC390C16EB9FE8005244BD /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -174,20 +127,6 @@
 				13323A5617103B3D0097C0AD /* CoreGraphics.framework in Frameworks */,
 				13323A5717103B3D0097C0AD /* CoreData.framework in Frameworks */,
 				13323A5817103B3D0097C0AD /* libPods.a in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		13EC390216EB9FE8005244BD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				134EA9A2170DB7BE00F4D166 /* MessageUI.framework in Frameworks */,
-				1397DDA716ED0A060061087F /* libz.1.1.3.dylib in Frameworks */,
-				13EC390916EB9FE8005244BD /* UIKit.framework in Frameworks */,
-				13EC390B16EB9FE8005244BD /* Foundation.framework in Frameworks */,
-				13EC390D16EB9FE8005244BD /* CoreGraphics.framework in Frameworks */,
-				13EC390F16EB9FE8005244BD /* CoreData.framework in Frameworks */,
-				5341C5AB4CC94BEBAC81624D /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -273,7 +212,6 @@
 		13EC390616EB9FE8005244BD /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13EC390516EB9FE8005244BD /* PoisonInfoBeta.app */,
 				13EC392A16EB9FE8005244BD /* Lilly PoisonTests.octest */,
 				13323A7417103B3D0097C0AD /* PoisonInfo.app */,
 			);
@@ -376,24 +314,6 @@
 			productReference = 13323A7417103B3D0097C0AD /* PoisonInfo.app */;
 			productType = "com.apple.product-type.application";
 		};
-		13EC390416EB9FE8005244BD /* Lilly Poison Beta */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 13EC393D16EB9FE8005244BD /* Build configuration list for PBXNativeTarget "Lilly Poison Beta" */;
-			buildPhases = (
-				13EC390116EB9FE8005244BD /* Sources */,
-				13EC390216EB9FE8005244BD /* Frameworks */,
-				13EC390316EB9FE8005244BD /* Resources */,
-				FFB1BA935DC74273B9DBC0DB /* Copy Pods Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Lilly Poison Beta";
-			productName = "Lilly Poisen";
-			productReference = 13EC390516EB9FE8005244BD /* PoisonInfoBeta.app */;
-			productType = "com.apple.product-type.application";
-		};
 		13EC392916EB9FE8005244BD /* Lilly PoisonTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 13EC394016EB9FE8005244BD /* Build configuration list for PBXNativeTarget "Lilly PoisonTests" */;
@@ -406,7 +326,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				13EC393116EB9FE8005244BD /* PBXTargetDependency */,
 			);
 			name = "Lilly PoisonTests";
 			productName = "Lilly PoisenTests";
@@ -437,7 +356,6 @@
 			projectRoot = "";
 			targets = (
 				13323A3E17103B3D0097C0AD /* Lilly Poison */,
-				13EC390416EB9FE8005244BD /* Lilly Poison Beta */,
 				13EC392916EB9FE8005244BD /* Lilly PoisonTests */,
 			);
 		};
@@ -464,29 +382,6 @@
 				138AACCB1711D6EB00D40198 /* Default@2x.png in Resources */,
 				138AACCC1711D6ED00D40198 /* Default.png in Resources */,
 				139F8A77174E4FA4007B20B4 /* Localizable.strings in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		13EC390316EB9FE8005244BD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				13EC394416EBA0A8005244BD /* MainStoryboard.storyboard in Resources */,
-				132D2724170076AA00967E5C /* footer.html in Resources */,
-				132D2725170076AA00967E5C /* header.html in Resources */,
-				132D2726170076AA00967E5C /* main-info.plist in Resources */,
-				132D2728170076AA00967E5C /* style.css in Resources */,
-				132D272C170076AA00967E5C /* summary.html in Resources */,
-				13D7F440170455EB001D7F93 /* poisons.json in Resources */,
-				13A0B6721709E67F00B4970F /* topics.json in Resources */,
-				134EA9AB170DBB6000F4D166 /* Localizable.strings in Resources */,
-				134EA9B4170DBF8700F4D166 /* InfoPage.plist in Resources */,
-				13323A7817103DA90097C0AD /* InfoPlist.strings in Resources */,
-				138AACBD17104BCC00D40198 /* PoisonInfo_57-beta.png in Resources */,
-				138AACBF17104BCF00D40198 /* PoisonInfo_114-beta.png in Resources */,
-				138AACC51711D66500D40198 /* Default-568h@2x.png in Resources */,
-				138AACC71711D67D00D40198 /* Default.png in Resources */,
-				138AACC91711D68000D40198 /* Default@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -528,20 +423,6 @@
 			shellPath = /bin/sh;
 			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
 		};
-		FFB1BA935DC74273B9DBC0DB /* Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Pods-resources.sh\"\n";
-		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -565,26 +446,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		13EC390116EB9FE8005244BD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				13EC391716EB9FE8005244BD /* main.m in Sources */,
-				13EC391B16EB9FE8005244BD /* LPAppDelegate.m in Sources */,
-				13EB1A1F16EBA9EE00170579 /* LPMainViewController.m in Sources */,
-				13794DDA16EBE0C6003EF093 /* LPPoisonDataSource.m in Sources */,
-				13794DDD16EBE223003EF093 /* LPPoisonTableViewController.m in Sources */,
-				1381B34516F4A4B400143FEA /* LPPoison.m in Sources */,
-				1381B36216F4E82800143FEA /* LPHtmlStringHelper.m in Sources */,
-				13A0B67A1709EB7200B4970F /* LPTopic.m in Sources */,
-				13A0B6801709F7BD00B4970F /* LPJSONfromWP.m in Sources */,
-				13A0B6831709FBF100B4970F /* LPPoisonDataFromWP.m in Sources */,
-				13A0B686170A08C900B4970F /* LPTopicDataFromWP.m in Sources */,
-				13A0B689170A3ECF00B4970F /* LPTopicDataSource.m in Sources */,
-				13252474170ABCC70025B78D /* LPPhoneBooth.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		13EC392516EB9FE8005244BD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -594,14 +455,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
-
-/* Begin PBXTargetDependency section */
-		13EC393116EB9FE8005244BD /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 13EC390416EB9FE8005244BD /* Lilly Poison Beta */;
-			targetProxy = 13EC393016EB9FE8005244BD /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		134EA9AD170DBB6000F4D166 /* Localizable.strings */ = {
@@ -687,21 +540,6 @@
 			};
 			name = AdHoc;
 		};
-		1397DDA916ED0A270061087F /* AdHoc */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CD8C7B8B26B4371B8B30F79 /* Pods.xcconfig */;
-			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Lilly Poisen/Lilly Poison-Prefix.pch";
-				INFOPLIST_FILE = "Lilly Poisen/Lilly Poison Beta - Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_NAME = PoisonInfoBeta;
-				TARGETED_DEVICE_FAMILY = 1;
-				WRAPPER_EXTENSION = app;
-			};
-			name = AdHoc;
-		};
 		1397DDAA16ED0A270061087F /* AdHoc */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -778,36 +616,6 @@
 			};
 			name = Release;
 		};
-		13EC393E16EB9FE8005244BD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CD8C7B8B26B4371B8B30F79 /* Pods.xcconfig */;
-			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Lilly Poisen/Lilly Poison-Prefix.pch";
-				INFOPLIST_FILE = "Lilly Poisen/Lilly Poison Beta - Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_NAME = PoisonInfoBeta;
-				TARGETED_DEVICE_FAMILY = 1;
-				WRAPPER_EXTENSION = app;
-			};
-			name = Debug;
-		};
-		13EC393F16EB9FE8005244BD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9CD8C7B8B26B4371B8B30F79 /* Pods.xcconfig */;
-			buildSettings = {
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "Lilly Poisen/Lilly Poison-Prefix.pch";
-				INFOPLIST_FILE = "Lilly Poisen/Lilly Poison Beta - Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
-				LIBRARY_SEARCH_PATHS = "$(inherited)";
-				PRODUCT_NAME = PoisonInfoBeta;
-				TARGETED_DEVICE_FAMILY = 1;
-				WRAPPER_EXTENSION = app;
-			};
-			name = Release;
-		};
 		13EC394116EB9FE8005244BD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -861,16 +669,6 @@
 				13EC393B16EB9FE8005244BD /* Debug */,
 				13EC393C16EB9FE8005244BD /* Release */,
 				1397DDA816ED0A270061087F /* AdHoc */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		13EC393D16EB9FE8005244BD /* Build configuration list for PBXNativeTarget "Lilly Poison Beta" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				13EC393E16EB9FE8005244BD /* Debug */,
-				13EC393F16EB9FE8005244BD /* Release */,
-				1397DDA916ED0A270061087F /* AdHoc */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
